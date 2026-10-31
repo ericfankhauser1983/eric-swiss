@@ -1,0 +1,56 @@
+# Landing page « Investir en Géorgie » (lien des réseaux sociaux) — FR
+# Adresse : eric.swiss/fr/georgie/
+seo:
+  title: "Investir en Géorgie — Réservez votre appel avec Eric Fankhauser"
+  description: "Réservez un appel gratuit, simulez votre investissement immobilier à Batumi ou Tbilissi et découvrez pourquoi la Géorgie attire les investisseurs européens."
+
+hero:
+  eyebrow: "FFI · Immobilier en Géorgie"
+  title: "Investissez en Géorgie avec un <em>Suisse sur place</em>"
+  lead: "Batumi, Tbilissi : nous sélectionnons, achetons, gérons et revendons des biens pour nos clients. Réservez un appel de 30 minutes pour parler de votre projet."
+  person: "Eric Fankhauser"
+  role: "Associé FFI · basé à Tbilissi"
+  proofs:
+    - "Plus de 15 ans d’expérience FFI"
+    - "Plus de 1 200 clients accompagnés"
+    - "Une équipe sur place"
+
+steps:
+  - "Réservez votre appel"
+  - "Simulez votre investissement"
+  - "Pourquoi la Géorgie ?"
+
+booking:
+  title: "Choisissez votre créneau"
+  text: "Un appel gratuit et sans engagement : vos objectifs, votre budget et les opportunités du moment."
+
+simulator:
+  eyebrow: "Étape 2"
+  title: "Simulez votre investissement"
+  text: "Paiement à 100 %, plan de paiement ou crédit bancaire, location ou achat-revente : estimez en une minute le capital à mobiliser et le rendement de votre projet."
+
+why:
+  eyebrow: "Étape 3"
+  title: "Pourquoi investir en Géorgie ?"
+  text: "Une économie qui accélère, une fiscalité légère et un marché immobilier encore en phase de rattrapage."
+  reasons:
+    - title: "Une économie qui accélère"
+      text: "Une croissance du PIB de 7 à 10 % par an et une dette publique d’environ 33 % du PIB."
+    - title: "Une fiscalité légère"
+      text: "0 % d’impôt sur la plus-value après deux ans, 5 % sur les loyers et aucun impôt foncier."
+    - title: "Un marché en rattrapage"
+      text: "9 % de plus-value moyenne par an au niveau national, 15 % à Batumi."
+    - title: "Un achat simple à distance"
+      text: "Un appartement s’achète en pleine propriété, même sans résider en Géorgie. Paiement par virement ou en cryptomonnaies."
+  statsTitle: "La Géorgie en chiffres"
+
+team:
+  eyebrow: "Vous n’êtes pas seul"
+  title: "Une équipe à vos côtés, avant et après l’achat"
+  text: "Je vis à Tbilissi. Avec mes associés Adrien Boucher et Léo Lawless, spécialiste de la gestion locative, nous vous accompagnons de la sélection du bien jusqu’à sa revente."
+
+final:
+  title: "Prêt à parler de votre projet ?"
+  text: "Réservez votre appel ou écrivez-moi directement sur WhatsApp."
+  book: "Réserver mon appel"
+  whatsapp: "M’écrire sur WhatsApp"

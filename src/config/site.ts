@@ -159,3 +159,6 @@ export function path(key: RouteKey, lang: Lang): string {
 export function absolute(p: string): string {
   return new URL(p, SITE.url).toString();
 }
+
+/** Page d'atterrissage « Investir en Géorgie » (lien à mettre dans les bios des réseaux sociaux) */
+export const LANDING: Partial<Record<Lang, string>> = { fr: '/fr/georgie/', en: '/en/georgia/' };

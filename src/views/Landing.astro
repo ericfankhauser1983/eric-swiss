@@ -1,0 +1,203 @@
+---
+/**
+ * Page d'atterrissage « Investir en Géorgie » (lien des réseaux sociaux).
+ * 1. Prise de rendez-vous — 2. Simulation — 3. Pourquoi la Géorgie.
+ * Textes : src/content/pages/<lang>/landing.yaml (chiffres et villes repris de invest.yaml).
+ */
+import Calendly from '../components/Calendly.astro';
+import Simulator from '../components/Simulator.astro';
+import Photo from '../components/Photo.astro';
+import { SITE, CALENDLY, PHOTOS, path, type Lang } from '../config/site';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = await page(lang, 'landing');
+const inv = await page(lang, 'invest');
+const stats = inv.georgia.stats.slice(0, 6);
+const anchors = ['rdv', 'simulation', 'pourquoi'];
+const year = new Date().getFullYear();
+const wa = `https://wa.me/${SITE.whatsapp}`;
+---
+<section class="lhero">
+  <img class="lhero__mark" src="/images/sign-gold.svg" alt="" aria-hidden="true" width="540" height="340" />
+  <div class="wrap lhero__in">
+    <div class="lhero__txt">
+      <p class="eyebrow">{d.hero.eyebrow}</p>
+      <h1 set:html={d.hero.title} />
+      <p class="lead">{d.hero.lead}</p>
+      <ul class="lhero__proofs">{d.hero.proofs.map((p: string) => <li>{p}</li>)}</ul>
+    </div>
+    <div class="lhero__me">
+      <div class="lhero__ph"><Photo src={PHOTOS.heroPortrait} alt={d.hero.person} ratio="1 / 1" position="50% 18%" eager /></div>
+      <p><strong>{d.hero.person}</strong><span>{d.hero.role}</span></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <ol class="lsteps">
+      {d.steps.map((s: string, i: number) => <li><a href={`#${anchors[i]}`}><span>{i + 1}</span>{s}</a></li>)}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--sand lsec" id="rdv">
+  <div class="wrap">
+    <div class="lhead">
+      <span class="lnum">1</span>
+      <div><h2>{d.booking.title}</h2><p class="lead">{d.booking.text}</p></div>
+    </div>
+    <Calendly url={CALENDLY.invest[lang]} lang={lang} height={700} />
+  </div>
+</section>
+
+<section class="section lsec" id="simulation">
+  <div class="wrap">
+    <div class="lhead reveal">
+      <span class="lnum">2</span>
+      <div><h2>{d.simulator.title}</h2><p class="lead">{d.simulator.text}</p></div>
+    </div>
+    <Simulator lang={lang} bookHref="#rdv" source={lang === 'fr' ? 'Landing réseaux sociaux (FR)' : 'Landing réseaux sociaux (EN)'} />
+  </div>
+</section>
+
+<section class="section section--navy lsec" id="pourquoi">
+  <div class="wrap">
+    <div class="lhead reveal">
+      <span class="lnum">3</span>
+      <div><h2>{d.why.title}</h2><p class="lead">{d.why.text}</p></div>
+    </div>
+    <div class="lreasons">
+      {d.why.reasons.map((r: any, i: number) => (
+        <article class="reveal" style={`transition-delay:${i * 80}ms`}>
+          <h3>{r.title}</h3>
+          <p>{r.text}</p>
+        </article>
+      ))}
+    </div>
+    <p class="lsub reveal">{d.why.statsTitle}</p>
+    <dl class="lstats">
+      {stats.map((s: any, i: number) => (
+        <div class="reveal" style={`transition-delay:${i * 60}ms`}><dt>{s.value}</dt><dd>{s.label}</dd></div>
+      ))}
+    </dl>
+    <div class="lcities">
+      {inv.cities.items.map((c: any) => (
+        <article class="reveal"><p class="eyebrow">{c.label}</p><h3>{c.name}</h3><p>{c.text}</p></article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand lsec">
+  <div class="wrap lteam">
+    <div class="reveal">
+      <p class="eyebrow">{d.team.eyebrow}</p>
+      <h2>{d.team.title}</h2>
+      <p class="lead">{d.team.text}</p>
+      <a class="link" href={path('invest', lang)}>FFI · Real Estate Asset Management <span class="arrow">→</span></a>
+    </div>
+    {PHOTOS.team && <div class="reveal"><Photo src={PHOTOS.team} alt={d.team.title} ratio="4 / 3" position="50% 28%" /></div>}
+  </div>
+</section>
+
+<section class="section section--navy lfinal">
+  <div class="wrap reveal">
+    <h2>{d.final.title}</h2>
+    <p class="lead">{d.final.text}</p>
+    <div class="lfinal__btns">
+      <a class="btn" href="#rdv">{d.final.book} <span class="arrow">↑</span></a>
+      <a class="btn btn--ghost" href={wa} target="_blank" rel="noopener">{d.final.whatsapp}</a>
+    </div>
+  </div>
+</section>
+
+<div class="lsticky" data-sticky>
+  <a class="btn" href="#rdv">{d.final.book}</a>
+  <a class="lsticky__wa" href={wa} target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+</div>
+
+<footer class="lfoot">
+  <div class="wrap lfoot__in">
+    <span>© {year} Eric Fankhauser · <a href={path('home', lang)}>eric.swiss</a></span>
+    <span><a href={path('legal', lang)}>{lang === 'fr' ? 'Mentions légales' : 'Legal notice'}</a> · <a href={path('privacy', lang)}>{lang === 'fr' ? 'Confidentialité' : 'Privacy'}</a></span>
+  </div>
+</footer>
+
+<style>
+  .lhero { position: relative; overflow: hidden; background: var(--navy); color: var(--cream); }
+  .lhero__mark { position: absolute; right: -6%; bottom: -18%; width: min(46vw, 560px); height: auto; opacity: 0.07; pointer-events: none; }
+  .lhero__in { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(28px, 5vw, 72px); align-items: center; padding-top: clamp(48px, 7vw, 96px); padding-bottom: clamp(32px, 4vw, 48px); }
+  .lhero h1 { font-weight: 400; font-size: clamp(2rem, 4.6vw, 3.6rem); max-width: 780px; margin-bottom: 22px; }
+  .lhero h1 :global(em) { font-style: normal; color: var(--gold-light); }
+  .lhero .lead { color: var(--muted-light); max-width: 620px; }
+  .lhero__proofs { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .lhero__proofs li { font-size: 0.82rem; padding: 7px 14px; border: 1px solid rgba(173, 142, 104, 0.45); border-radius: 999px; color: var(--gold-light); }
+  .lhero__me { text-align: center; }
+  .lhero__ph { width: clamp(150px, 18vw, 230px); margin: 0 auto 16px; border-radius: 50%; overflow: hidden; border: 2px solid var(--gold); }
+  .lhero__ph :global(.ph) { border-radius: 50%; }
+  .lhero__me p { display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; margin: 0; }
+  .lhero__me span { color: var(--muted-light); font-size: 0.8rem; }
+  .lsteps { position: relative; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-light); }
+  .lsteps a { display: flex; align-items: center; gap: 12px; padding: 20px 0; color: var(--cream); text-decoration: none; font-size: 0.92rem; }
+  .lsteps a:hover { color: var(--gold-light); }
+  .lsteps span, .lnum { display: inline-grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold); font-size: 0.9rem; }
+  .lsec { scroll-margin-top: 72px; }
+  .lsec.section { padding: clamp(56px, 8vw, 104px) 0; }
+  .lhead { display: flex; gap: 20px; align-items: flex-start; margin-bottom: clamp(28px, 4vw, 48px); }
+  .lnum { width: 48px; height: 48px; font-size: 1.15rem; margin-top: 4px; background: var(--cream); }
+  .section--navy .lnum { background: transparent; color: var(--gold-light); }
+  .lhead h2 { margin-bottom: 10px; }
+  .lreasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); }
+  .lreasons article { background: var(--navy); padding: clamp(24px, 3vw, 36px); }
+  .lreasons h3 { font-size: 1.12rem; color: var(--gold-light); margin-bottom: 12px; }
+  .lreasons p { color: var(--muted-light); margin: 0; font-size: 0.95rem; }
+  .lsub { margin: clamp(48px, 6vw, 72px) 0 20px; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); }
+  .lstats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0; }
+  .lstats div { padding: 22px 0; border-top: 1px solid var(--line-light); }
+  .lstats dt { font-family: var(--f-title); font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: var(--cream); line-height: 1.1; }
+  .lstats dd { margin: 6px 16px 0 0; color: var(--muted-light); font-size: 0.9rem; }
+  .lcities { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); margin-top: clamp(40px, 5vw, 64px); }
+  .lcities article { border-left: 1px solid var(--gold); padding-left: 24px; }
+  .lcities h3 { font-size: 1.6rem; margin: 6px 0 10px; }
+  .lcities p:last-child { color: var(--muted-light); margin: 0; }
+  .lteam { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+  .lteam .lead { margin-bottom: 24px; }
+  .lfinal { text-align: center; }
+  .lfinal .lead { margin: 14px auto 32px; }
+  .lfinal__btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+  .lfoot { background: var(--navy-deep); color: var(--muted-light); font-size: 0.8rem; padding: 22px 0 90px; }
+  .lfoot__in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .lfoot a { color: var(--muted-light); }
+  .lsticky { display: none; }
+  @media (max-width: 960px) { .lreasons { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 760px) {
+    .lhero__in { grid-template-columns: 1fr; }
+    .lhero__me { order: -1; display: flex; align-items: center; gap: 14px; text-align: left; }
+    .lhero__ph { width: 72px; margin: 0; }
+    .lsteps { grid-template-columns: 1fr; }
+    .lsteps a { padding: 12px 0; }
+    .lsteps li + li { border-top: 1px solid var(--line-light); }
+    .lhead { gap: 14px; }
+    .lnum { width: 40px; height: 40px; }
+    .lreasons, .lstats, .lcities, .lteam { grid-template-columns: 1fr; }
+    .lstats { grid-template-columns: 1fr 1fr; }
+    .lsticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(11, 22, 56, 0.96); border-top: 1px solid rgba(173, 142, 104, 0.3); transition: transform 0.35s var(--ease); }
+    .lsticky .btn { flex: 1; justify-content: center; }
+    .lsticky__wa { display: grid; place-items: center; padding: 0 16px; border-radius: 999px; background: #25d366; color: #fff; text-decoration: none; font-size: 0.85rem; }
+    .lsticky.is-hidden { transform: translateY(110%); }
+  }
+</style>
+
+<script>
+  // barre fixe (mobile) : visible seulement hors de l'en-tête et hors de l'agenda
+  const bar = document.querySelector<HTMLElement>('[data-sticky]');
+  const watch = [document.querySelector('.lhero'), document.getElementById('rdv')].filter(Boolean) as Element[];
+  if (bar) {
+    const seen = new Set<Element>();
+    bar.classList.add('is-hidden');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? seen.add(e.target) : seen.delete(e.target)));
+      bar.classList.toggle('is-hidden', seen.size > 0);
+    }, { threshold: 0.05 });
+    watch.forEach((w) => io.observe(w));
+  }
+</script>

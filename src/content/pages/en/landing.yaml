@@ -1,0 +1,56 @@
+# "Invest in Georgia" landing page (social media link) — EN
+# Address: eric.swiss/en/georgia/
+seo:
+  title: "Invest in Georgia — Book your call with Eric Fankhauser"
+  description: "Book a free call, simulate your real estate investment in Batumi or Tbilisi and discover why Georgia attracts European investors."
+
+hero:
+  eyebrow: "FFI · Real estate in Georgia"
+  title: "Invest in Georgia with a <em>Swiss partner on the ground</em>"
+  lead: "Batumi, Tbilisi: we select, buy, manage and resell properties for our clients. Book a 30-minute call to discuss your project."
+  person: "Eric Fankhauser"
+  role: "FFI partner · based in Tbilisi"
+  proofs:
+    - "15+ years of FFI experience"
+    - "1,200+ clients advised"
+    - "A team on the ground"
+
+steps:
+  - "Book your call"
+  - "Simulate your investment"
+  - "Why Georgia?"
+
+booking:
+  title: "Pick your time slot"
+  text: "A free, no-obligation call: your goals, your budget and the current opportunities."
+
+simulator:
+  eyebrow: "Step 2"
+  title: "Simulate your investment"
+  text: "Full payment, payment plan or bank loan, rental or buy-to-resell: estimate in one minute the capital required and the return on your project."
+
+why:
+  eyebrow: "Step 3"
+  title: "Why invest in Georgia?"
+  text: "A fast-growing economy, light taxation and a property market still catching up."
+  reasons:
+    - title: "A fast-growing economy"
+      text: "GDP growth of 7–10% a year and public debt of around 33% of GDP."
+    - title: "Light taxation"
+      text: "0% capital gains tax after two years, 5% on rental income and no property tax."
+    - title: "A market still catching up"
+      text: "9% average annual appreciation nationwide, 15% in Batumi."
+    - title: "Easy to buy remotely"
+      text: "Apartments can be bought freehold, even without living in Georgia. Pay by bank transfer or in cryptocurrency."
+  statsTitle: "Georgia in figures"
+
+team:
+  eyebrow: "You are not alone"
+  title: "A team by your side, before and after the purchase"
+  text: "I live in Tbilisi. With my partners Adrien Boucher and Léo Lawless, our rental management specialist, we support you from selecting the property to reselling it."
+
+final:
+  title: "Ready to discuss your project?"
+  text: "Book your call or message me directly on WhatsApp."
+  book: "Book my call"
+  whatsapp: "Message me on WhatsApp"

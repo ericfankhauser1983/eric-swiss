@@ -1,0 +1,38 @@
+---
+/** En-tête allégé des pages d'atterrissage : logo, langues FR/EN, WhatsApp */
+import { SITE, LOCALES, path, type Lang } from '../config/site';
+interface Props { lang: Lang; alternates: Partial<Record<Lang, string>> }
+const { lang, alternates } = Astro.props;
+const langs = (Object.keys(alternates) as Lang[]);
+---
+<header class="lbar">
+  <div class="wrap lbar__in">
+    <a class="lbar__logo" href={path('home', lang)} aria-label="Eric Fankhauser">
+      <img src="/images/ef-foil.png" srcset="/images/ef-foil.png 1x, /images/ef-foil@2x.png 2x" alt="Eric Fankhauser" width="64" height="44" />
+    </a>
+    <div class="lbar__right">
+      <nav class="lbar__langs" aria-label="Language">
+        {langs.map((l) => (
+          <a href={alternates[l]} hreflang={l} lang={l} data-lang={l} aria-current={l === lang ? 'true' : undefined} title={LOCALES[l].label}>{LOCALES[l].short}</a>
+        ))}
+      </nav>
+      <a class="lbar__wa" href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener" aria-label="WhatsApp" title={`WhatsApp ${SITE.phone}`}>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.29Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .lbar { position: sticky; top: 0; z-index: 50; background: var(--navy); color: var(--cream); border-bottom: 1px solid rgba(173, 142, 104, 0.25); }
+  .lbar__in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .lbar__logo img { height: 42px; width: auto; display: block; }
+  .lbar__right { display: flex; align-items: center; gap: 18px; }
+  .lbar__langs { display: flex; gap: 4px; font-size: 0.8rem; letter-spacing: 0.12em; }
+  .lbar__langs a { color: var(--muted-light); text-decoration: none; padding: 6px 8px; }
+  .lbar__langs a[aria-current] { color: var(--gold-light); }
+  .lbar__wa { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(173, 142, 104, 0.6); color: var(--gold-light); text-decoration: none; font-size: 0.85rem; transition: all 0.3s var(--ease); }
+  .lbar__wa:hover { background: #25d366; border-color: #25d366; color: #fff; }
+  @media (max-width: 480px) { .lbar__wa span { display: none; } .lbar__wa { width: 40px; padding: 0; justify-content: center; } }
+</style>

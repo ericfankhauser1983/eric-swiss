@@ -1,0 +1,21 @@
+---
+/** eric.swiss/georgia/ et /georgie/ : un seul lien pour les bios — redirige vers la landing FR ou EN selon la langue du visiteur */
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Eric Fankhauser — Georgia</title>
+    <script is:inline>
+      (function () {
+        var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+        var fr = String(prefs[0] || '').slice(0, 2).toLowerCase() === 'fr';
+        location.replace((fr ? '/fr/georgie/' : '/en/georgia/') + location.search + location.hash);
+      })();
+    </script>
+    <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#112150;font-family:system-ui,sans-serif}a{color:#cbb291;margin:0 12px}</style>
+  </head>
+  <body><nav><a href="/fr/georgie/">Français</a><a href="/en/georgia/">English</a></nav></body>
+</html>

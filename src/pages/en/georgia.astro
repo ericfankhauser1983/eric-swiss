@@ -1,0 +1,11 @@
+---
+/** Page d'atterrissage réseaux sociaux — eric.swiss/en/georgia/ (textes : src/content/pages/en/landing.yaml) */
+import Base from '../../layouts/Base.astro';
+import Landing from '../../views/Landing.astro';
+import { page } from '../../lib/content';
+import { LANDING } from '../../config/site';
+const d = await page('en', 'landing');
+---
+<Base lang="en" title={d.seo.title} description={d.seo.description} alternates={LANDING} landing noindex>
+  <Landing lang="en" />
+</Base>
