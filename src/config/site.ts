@@ -10,7 +10,7 @@ export const SITE = {
   url: 'https://eric.swiss',
   name: 'Eric Fankhauser',
   tagline: '',
-  email: 'eric.fankhauser@francefinance.ae',
+  email: 'contact@eric.swiss',
   phone: '+971 58 536 2157',
   whatsapp: '971585362157', // sans + ni espaces, pour le lien wa.me
   partners: {

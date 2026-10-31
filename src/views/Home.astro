@@ -70,17 +70,18 @@ const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTO
   .intro .lead { color: var(--muted-light); margin-bottom: 36px; }
   .intro__photo { max-width: 440px; justify-self: end; width: 100%; }
   @media (max-width: 860px) { .intro__in { grid-template-columns: 1fr; } .intro__photo { justify-self: start; max-width: 360px; } }
-  .paths__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.5vw, 36px); }
-  .path { display: flex; flex-direction: column; text-decoration: none; background: var(--cream); }
-  .path__body { display: flex; flex-direction: column; flex: 1; padding: 28px 4px 0; }
-  .path .eyebrow { margin-bottom: 14px; }
-  .path h2 { font-size: clamp(1.35rem, 2vw, 1.7rem); margin-bottom: 14px; }
-  .path p { color: var(--muted); flex: 1; }
-  .path .link { align-self: flex-start; margin-top: 8px; }
+  .paths__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(20px, 2.5vw, 36px); row-gap: 0; }
+  /* chaque carte partage les mêmes lignes (photo, surtitre, titre, texte, lien) : tout reste aligné d'une carte à l'autre */
+  .path { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; text-decoration: none; background: var(--cream); }
+  .path__body { display: contents; }
+  .path .eyebrow { margin: 28px 0 14px; align-self: end; }
+  .path h2 { font-size: clamp(1.35rem, 2vw, 1.7rem); margin-bottom: 14px; align-self: start; }
+  .path p { color: var(--muted); margin-bottom: 0; }
+  .path .link { justify-self: start; align-self: start; margin-top: 18px; }
   .path:hover h2 { color: var(--gold-deep); }
   .path :global(.ph) { transition: transform 0.6s var(--ease); }
   .path:hover :global(.ph) { transform: translateY(-4px); }
-  @media (max-width: 900px) { .paths__grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .paths__grid { grid-template-columns: 1fr; row-gap: 0; } .path + .path { margin-top: 48px; } }
   .story { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 6vw, 96px); align-items: start; }
   .story h2 { margin: 0; }
   @media (max-width: 860px) { .story { grid-template-columns: 1fr; } }

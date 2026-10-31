@@ -13,7 +13,7 @@
 |---|---|---|
 | `immobilier` | Immobilier | Marchés immobiliers (Géorgie d'abord, puis EAU et Bali), fiscalité, financement, projets. **Source principale : le blog FFI** (https://www.francefinance.ae/blog, articles sous `/articles-blog/...`). Choisir un article FFI récent, pas encore repris sur eric.swiss, et le **réécrire entièrement** avec la voix et l'angle d'Eric, sans copier de phrases. Lien vers l'article FFI dans le champ `source`. |
 | `geopolitique` | Géopolitique | Un regard **qui se distancie de la vision mainstream européenne** : la lecture du Caucase, du Golfe, de l'Asie, de la Turquie ou du Sud global sur l'actualité, vue de Tbilissi. On questionne le consensus européen avec des faits sourcés. On ne donne jamais un fait inventé ou non vérifié comme acquis, pas de propagande, pas d'attaque personnelle. Le lien avec l'investisseur ou l'entrepreneur doit rester concret. |
-| `entrepreneuriat` | Entrepreneuriat | Le vécu d'entrepreneur d'Eric : création et revente de Swiss Auto Glass, Carglass, réorganisations, Advisory Board, implantation en Géorgie. Conseils concrets aux dirigeants de PME : stratégie, organisation, développement, performance, mental de compétiteur. |
+| `entrepreneuriat` | Entrepreneuriat | Le vécu d'entrepreneur d'Eric : création et revente de Swiss Auto Glass, Carglass, restructurations, Advisory Board, implantation en Géorgie. Conseils concrets aux dirigeants de PME : stratégie, organisation, développement, performance, mental de compétiteur. |
 
 ## Priorité SEO
 
