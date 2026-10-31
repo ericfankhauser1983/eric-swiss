@@ -162,7 +162,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
         <label class="fld"><span class="opt__l">{ui.firstName}</span><span class="fld__in"><input name="prenom" required autocomplete="given-name" /></span></label>
         <label class="fld"><span class="opt__l">{ui.lastName}</span><span class="fld__in"><input name="nom" required autocomplete="family-name" /></span></label>
         <label class="fld"><span class="opt__l">{ui.email}</span><span class="fld__in"><input name="email" type="email" required autocomplete="email" /></span></label>
-        <label class="fld"><span class="opt__l">{ui.whatsapp}</span><span class="fld__in"><input name="whatsapp" type="tel" required autocomplete="tel" placeholder="+41 79 000 00 00" /></span></label>
+        <label class="fld"><span class="opt__l">{ui.whatsapp} <small class="fld__hint">· {ui.phoneHint}</small></span><span class="fld__in"><input name="whatsapp" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+41 79 000 00 00" pattern="\s*(\+|00)\s*[1-9][\d\s().\-]{6,}" title={ui.phoneIntl} /></span></label>
       </div>
       <label class="chk"><input type="checkbox" name="consentement" value="oui" required /> <span>{ui.consent} <a href={path('privacy', lang)} target="_blank">{ui.privacyLink}</a></span></label>
       <p class="sim__err" data-err hidden>{ui.required}</p>
@@ -304,6 +304,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
   .chk { display: flex; gap: 12px; align-items: flex-start; font-size: 0.85rem; color: var(--muted); margin: 16px 0 22px; cursor: pointer; max-width: 760px; }
   .chk input { margin-top: 4px; accent-color: var(--gold); width: 16px; height: 16px; flex: none; }
   .chk a { color: var(--gold-deep); }
+  .fld__hint { font-size: 0.72rem; color: var(--muted); font-weight: 400; }
   .sim__err { color: #a3442c; font-size: 0.88rem; }
 
   .sim__res { border-top: 1px solid var(--line); padding: clamp(24px, 4vw, 52px); }
@@ -554,7 +555,15 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       if (!r.ok) throw new Error('send');
     }
 
-    const getIdent = (): Record<string, string> | null => { try { return JSON.parse(sessionStorage.getItem(IDENT_KEY) || 'null'); } catch { return null; } };
+    /** Numéro au format international obligatoire : +<indicatif><numéro> (00 accepté et converti en +) */
+    const intlPhone = (v: string): string | null => {
+      let n = v.replace(/[\s().\-\/]/g, '');
+      if (n.startsWith('00')) n = '+' + n.slice(2);
+      return /^\+[1-9]\d{6,14}$/.test(n) ? n : null;
+    };
+    const getIdent = (): Record<string, string> | null => {
+      try { const i = JSON.parse(sessionStorage.getItem(IDENT_KEY) || 'null'); return i && intlPhone(i.whatsapp || '') ? i : null; } catch { return null; }
+    };
     function showStatus(ok: boolean) { statusEl.hidden = false; statusEl.textContent = ok ? ui.sent : ui.error; statusEl.classList.toggle('is-err', !ok); }
 
     async function deliver(ident: Record<string, string>) {
@@ -593,13 +602,20 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       (leadForm.elements.namedItem('prenom') as HTMLInputElement).focus({ preventScroll: true });
     });
 
+    const phoneIn = leadForm.elements.namedItem('whatsapp') as HTMLInputElement;
+    phoneIn.addEventListener('focus', () => { if (!phoneIn.value) phoneIn.value = '+'; });
+    phoneIn.addEventListener('blur', () => { if (phoneIn.value.trim() === '+') phoneIn.value = ''; });
+
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const fd = new FormData(leadForm);
       if ((fd.get('bot-field') as string)?.length) return;
       const ident = { prenom: String(fd.get('prenom') || '').trim(), nom: String(fd.get('nom') || '').trim(), email: String(fd.get('email') || '').trim(), whatsapp: String(fd.get('whatsapp') || '').trim() };
       const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ident.email);
-      if (!ident.prenom || !ident.nom || !emailOk || ident.whatsapp.replace(/\D/g, '').length < 6 || !fd.get('consentement')) { errEl.hidden = false; return; }
+      if (!ident.prenom || !ident.nom || !emailOk || !ident.whatsapp || !fd.get('consentement')) { errEl.textContent = ui.required; errEl.hidden = false; return; }
+      const phone = intlPhone(ident.whatsapp);
+      if (!phone) { errEl.textContent = ui.phoneIntl; errEl.hidden = false; (leadForm.elements.namedItem('whatsapp') as HTMLInputElement).focus(); return; }
+      ident.whatsapp = phone;
       errEl.hidden = true;
       submitBtn.disabled = true; submitBtn.textContent = ui.sending;
       try { sessionStorage.setItem(IDENT_KEY, JSON.stringify(ident)); } catch {}
