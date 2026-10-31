@@ -1,0 +1,56 @@
+# Advisory Board — DE
+seo:
+  title: "Advisory Board für Schweizer KMU — ein Expertengremium für CHF 2’000 pro Monat"
+  description: "The Advisory Board gibt Schweizer KMU-Unternehmern Zugang zu einem Expertengremium: jährliche Standortbestimmung und 4 Strategiesitzungen pro Jahr, für CHF 2’000 pro Monat."
+
+hero:
+  eyebrow: "Advisory Board"
+  title: "Ein Expertengremium an Ihrer Seite – ohne die Kosten einer erweiterten Geschäftsleitung"
+  lead: "The Advisory Board gibt Schweizer KMU Zugang zu einem Expertenpanel, um Abstand zu gewinnen, klar zu entscheiden und eine neue Etappe zu erreichen: Wachstum, Neuausrichtung oder ein persönliches Projekt."
+
+problem:
+  eyebrow: "Für wen"
+  title: "Für Unternehmer, die die grossen Entscheide allein tragen"
+  text: "Vom operativen Geschäft vereinnahmt, fehlt vielen Unternehmern der Abstand und ein vertrauenswürdiges Gegenüber, das ihre Entscheide hinterfragt. Das Advisory Board bringt eine externe, strukturierte und engagierte Sicht."
+  criteria:
+    - "In der Schweiz ansässiges KMU"
+    - "Jahresumsatz von mindestens CHF 500’000"
+    - "Ein Unternehmer, der bereit ist für den nächsten Schritt"
+
+offer:
+  eyebrow: "Das Angebot"
+  price: "CHF 2’000"
+  period: "pro Monat"
+  note: "Laufzeit 12 Monate"
+  includes:
+    - "1 Standortbestimmung pro Jahr, um den Bedarf zu beurteilen und die Strategie anzupassen"
+    - "4 Advisory-Board-Sitzungen pro Jahr für die strategische Begleitung"
+    - "Sitzungen per Videokonferenz"
+    - "Ein auf Ihr Unternehmen abgestimmtes Expertenpanel"
+  exclusivity: "Auf 7 Unternehmen begrenzt – nur eines pro Branche."
+
+domains:
+  eyebrow: "Sechs Kompetenzbereiche"
+  items:
+    - title: "Strategische Planung"
+      text: "Vision und Strategie"
+    - title: "Marktverständnis"
+      text: "Analyse und Wettbewerbsfähigkeit"
+    - title: "HR & Mindset"
+      text: "Führung von Menschen und ihrer Leistung"
+    - title: "Finanzplanung"
+      text: "Finanzielle Performance und Liquidität"
+    - title: "Operative Effizienz"
+      text: "Prozesse und operative Leistung"
+    - title: "Technologische Entwicklung"
+      text: "Technologische Modernisierung"
+
+panel:
+  eyebrow: "Das Panel"
+  title: "Experten, die sich für Ihren Erfolg engagieren"
+  text: "Die Begleitung wird von Patrick Grobéty und Eric Fankhauser geleitet, ergänzt durch einen dritten Experten, der nach den spezifischen Bedürfnissen Ihres Unternehmens ausgewählt wird. Über 120 Unternehmer wurden bereits begleitet."
+  cta: "advisoryboard.ch besuchen"
+
+booking:
+  title: "Ist Ihr Unternehmen bereit für ein Advisory Board?"
+  text: "Buchen Sie ein Gespräch, um es zu besprechen und zu prüfen, ob in Ihrer Branche noch ein Platz frei ist."

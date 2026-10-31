@@ -1,0 +1,24 @@
+---
+import PageHero from '../components/PageHero.astro';
+import PostCard from '../components/PostCard.astro';
+import VideoFeed from '../components/VideoFeed.astro';
+import { type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+import { posts, postHref } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const ui = t(lang);
+const list = await posts(lang);
+---
+<PageHero eyebrow={ui.blog.title} title={ui.blog.title} lead={ui.blog.lead} />
+<section class="section">
+  <div class="wrap">
+    {list.length === 0 ? <p class="lead">{ui.blog.empty}</p> : (
+      <div class="grid grid-3">
+        {list.map((p) => <PostCard lang={lang} href={postHref(lang, p.id)} title={p.data.title} description={p.data.description} date={p.data.date} tags={p.data.tags} />)}
+      </div>
+    )}
+  </div>
+</section>
+
+<VideoFeed lang={lang} sand />

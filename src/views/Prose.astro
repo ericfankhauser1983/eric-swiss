@@ -1,0 +1,15 @@
+---
+import { type Lang } from '../config/site';
+import { page, md } from '../lib/content';
+interface Props { lang: Lang; kind: 'legal' | 'privacy' }
+const { lang, kind } = Astro.props;
+const d = (await page(lang, 'misc'))[kind];
+---
+<section class="section legal">
+  <div class="wrap">
+    <h1>{d.title}</h1>
+    <hr class="rule" style="max-width:120px;margin:28px 0 12px" />
+    <div class="prose" set:html={md(d.body.replace(/\n(?!\n)/g, '  \n'))} />
+  </div>
+</section>
+<style>.legal h1 { font-size: clamp(2rem, 4vw, 3rem); }</style>

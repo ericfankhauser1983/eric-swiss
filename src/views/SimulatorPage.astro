@@ -1,0 +1,16 @@
+---
+import PageHero from '../components/PageHero.astro';
+import Simulator from '../components/Simulator.astro';
+import Booking from '../components/Booking.astro';
+import { CALENDLY, type Lang } from '../config/site';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = (await page(lang, 'misc')).simulator;
+const inv = await page(lang, 'invest');
+---
+<PageHero eyebrow={d.eyebrow} title={d.title} lead={d.lead} />
+<section class="section" style="padding-top:clamp(48px,6vw,80px)">
+  <div class="wrap"><Simulator lang={lang} bookHref="#rendez-vous" /></div>
+</section>
+<Booking lang={lang} url={CALENDLY.invest[lang]} title={inv.booking.title} text={inv.booking.text} />

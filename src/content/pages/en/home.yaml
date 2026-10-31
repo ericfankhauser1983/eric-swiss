@@ -1,0 +1,44 @@
+# Home page — EN
+seo:
+  title: "Eric Fankhauser — Real estate investment in Georgia, strategic consulting & Advisory Board"
+  description: "Swiss entrepreneur based in Tbilisi: real estate investment in Georgia with FFI, strategic consulting for SMEs and market entry in Georgia, Advisory Board for Swiss SMEs."
+
+hero:
+  eyebrow: "Switzerland · Europe · United Arab Emirates · Georgia"
+  title: "Eric Fankhauser"
+  subtitle: "Entrepreneur, investor and strategic advisor"
+  lead: "Together with my partners, I support investors and business leaders in three distinct fields. Choose the one that concerns you."
+
+pillars:
+  items:
+    - key: invest
+      kicker: "FFI · Real Estate Asset Management"
+      title: "Real estate investment in Georgia"
+      text: "With FFI, my company: buy, let and resell in Batumi and Tbilisi, supported end to end by our partners."
+      cta: "Explore real estate investment"
+    - key: consulting
+      kicker: "Strategic consulting"
+      title: "Strategy, growth and organisation for SMEs"
+      text: "An outside perspective to accelerate your business — and a high-level gateway to set up in Georgia."
+      cta: "Explore strategic consulting"
+    - key: board
+      kicker: "Advisory Board"
+      title: "A panel of specialists for your Swiss SME"
+      text: "An annual diagnostic and four strategic sessions a year, for CHF 2,000 per month."
+      cta: "Explore the Advisory Board"
+
+about:
+  eyebrow: "My story"
+  title: "From 15-year-old apprentice to international entrepreneur"
+  text: "Swissair, New York on 11 September 2001, building a call centre from scratch, turning around a struggling company, then ten years growing Swiss Auto Glass into the country’s number three. Now based in Tbilisi, I put this experience to work for my clients."
+  cta: "Read my story"
+
+team:
+  eyebrow: "The team"
+  title: "You never work with me alone"
+  text: "Each activity relies on partners and recognised experts in Switzerland, Europe and Georgia."
+  cta: "Meet the team"
+
+final:
+  title: "Let’s talk about your project"
+  text: "A first, no-obligation conversation to understand your goals and see how we can support you."

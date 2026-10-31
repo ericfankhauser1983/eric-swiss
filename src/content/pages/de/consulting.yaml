@@ -1,0 +1,61 @@
+# Strategieberatung — DE
+seo:
+  title: "Strategieberatung für KMU und Firmenansiedlung in Georgien"
+  description: "Beratung in Strategie, Entwicklung und Organisation für KMU. Spezialisiert auf die Ansiedlung und Entwicklung ausländischer Unternehmen in Georgien dank eines hochrangigen Netzwerks."
+
+hero:
+  eyebrow: "Strategieberatung"
+  title: "Die Entwicklung Ihres Unternehmens klären, strukturieren, beschleunigen"
+  lead: "Ich begleite KMU-Unternehmer bei ihren Fragen zu Strategie, Entwicklung und Organisation – mit einer Spezialisierung: der Ansiedlung und Entwicklung ausländischer Unternehmen in Georgien."
+
+challenges:
+  eyebrow: "Themen, die ich behandle"
+  title: "Wenn das Tagesgeschäft keinen Raum für Weitblick lässt"
+  items:
+    - title: "Strategie"
+      text: "Die Vision klären, die Positionierung definieren, Prioritäten setzen und eine Ambition in eine konkrete Roadmap verwandeln."
+      points: ["Vision und Positionierung", "Wahl der Märkte und Angebote", "Strategieplan über 3–5 Jahre"]
+    - title: "Entwicklung"
+      text: "Neue Wachstumstreiber finden und finanzieren – in der Schweiz, in Frankreich oder international."
+      points: ["Neue Märkte und Kanäle", "Partnerschaften und Allianzen", "Strukturierung der Finanzierung"]
+    - title: "Organisation"
+      text: "Die Struktur an das Wachstum anpassen: Rollen, Governance, Prozesse und Leistungssteuerung."
+      points: ["Governance und Schlüsselrollen", "Prozesse und Effizienz", "Kennzahlen und Steuerung"]
+
+method:
+  eyebrow: "Meine Methode"
+  title: "Von der Analyse bis zur Umsetzung"
+  steps:
+    - title: "Analyse"
+      text: "Lagebeurteilung, Gespräche mit der Geschäftsleitung und Identifikation der wichtigsten Hebel."
+    - title: "Massnahmenplan"
+      text: "Konkrete, bezifferte und priorisierte Empfehlungen, gemeinsam mit Ihnen validiert."
+    - title: "Umsetzung"
+      text: "Operative, langfristige Begleitung bis zum Ergebnis."
+
+georgia:
+  eyebrow: "Spezialisierung Georgien"
+  title: "Sich in Georgien ansiedeln und entwickeln"
+  text: "Georgien bietet eines der günstigsten steuerlichen und administrativen Umfelder der Region, eine stark wachsende Wirtschaft und eine strategische Lage zwischen Europa und Asien. Für eine erfolgreiche Ansiedlung braucht es jedoch die richtigen Kontakte vor Ort."
+  services:
+    - "Marktstudie und Validierung der Chance"
+    - "Rechtliche und steuerliche Strukturierung der Ansiedlung"
+    - "Bankbeziehungen und Kontoeröffnung"
+    - "Vermittlung von Partnern, Lieferanten und Kunden"
+    - "Institutionelle Beziehungen und Begleitung bei Behörden"
+    - "Rekrutierung, Räumlichkeiten und operativer Start"
+
+edge:
+  eyebrow: "Was den Unterschied macht"
+  title: "Die Brücke zwischen Europa und Georgien"
+  items:
+    - title: "Ein Netzwerk auf höchster Ebene"
+      text: "Etablierte Beziehungen zu den Schlüsselakteuren des georgischen Marktes: Unternehmen, Banken und Regierung."
+    - title: "Fundierte Marktkenntnis"
+      text: "Aktive Präsenz vor Ort, im täglichen Kontakt mit lokalen Bauträgern, Investoren und Entscheidungsträgern."
+    - title: "Eine europäische Sicht"
+      text: "Verständnis für die Standards und Erwartungen von Schweizer und europäischen Unternehmen – die perfekte Brücke zwischen beiden Kulturen."
+
+booking:
+  title: "Sprechen wir über Ihr Unternehmen"
+  text: "Buchen Sie ein erstes Gespräch, um Ihre Situation und Ihre Ziele vorzustellen."

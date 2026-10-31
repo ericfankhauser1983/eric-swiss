@@ -1,0 +1,61 @@
+# Strategic consulting — EN
+seo:
+  title: "Strategic consulting for SMEs and company market entry in Georgia"
+  description: "Strategy, growth and organisation consulting for SMEs. Specialist in establishing and developing foreign companies in Georgia thanks to a high-level network."
+
+hero:
+  eyebrow: "Strategic consulting"
+  title: "Clarify, structure and accelerate your company’s growth"
+  lead: "I support SME leaders with their strategy, growth and organisational challenges — with one specialisation: establishing and developing foreign companies in Georgia."
+
+challenges:
+  eyebrow: "The challenges I address"
+  title: "When day-to-day business leaves no room for perspective"
+  items:
+    - title: "Strategy"
+      text: "Clarify the vision, define the positioning, set priorities and turn an ambition into a concrete roadmap."
+      points: ["Vision and positioning", "Choice of markets and offers", "3–5 year strategic plan"]
+    - title: "Growth"
+      text: "Find new growth drivers and finance them, in Switzerland, France or internationally."
+      points: ["New markets and channels", "Partnerships and alliances", "Financing structure"]
+    - title: "Organisation"
+      text: "Adapt the structure to growth: roles, governance, processes and performance management."
+      points: ["Governance and key roles", "Processes and efficiency", "Dashboards and steering"]
+
+method:
+  eyebrow: "My method"
+  title: "From diagnosis to implementation"
+  steps:
+    - title: "Diagnosis"
+      text: "Analysis of the situation, interviews with management and identification of priority levers."
+    - title: "Action plan"
+      text: "Concrete, quantified and sequenced recommendations, validated with you."
+    - title: "Implementation"
+      text: "Hands-on, long-term support until the results are delivered."
+
+georgia:
+  eyebrow: "Georgia specialisation"
+  title: "Establishing and growing your business in Georgia"
+  text: "Georgia offers one of the most favourable tax and administrative environments in the region, a fast-growing economy and a strategic position between Europe and Asia. Success, however, requires the right connections on the ground."
+  services:
+    - "Market study and opportunity validation"
+    - "Legal and tax structuring of the set-up"
+    - "Banking relationships and account opening"
+    - "Introductions to partners, suppliers and clients"
+    - "Institutional relations and support with the authorities"
+    - "Recruitment, premises and operational launch"
+
+edge:
+  eyebrow: "What makes the difference"
+  title: "The bridge between Europe and Georgia"
+  items:
+    - title: "A network at the highest level"
+      text: "Established relationships with the key players of the Georgian market: companies, banks and government."
+    - title: "In-depth market knowledge"
+      text: "An active presence on the ground, in daily contact with local developers, investors and decision-makers."
+    - title: "A European vision"
+      text: "An understanding of the standards and expectations of Swiss and European companies, to bridge the two cultures seamlessly."
+
+booking:
+  title: "Let’s talk about your company"
+  text: "Book a first conversation to present your situation and your goals."

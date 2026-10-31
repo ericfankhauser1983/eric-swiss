@@ -1,0 +1,104 @@
+# Investissement immobilier — Real Estate Asset Management — FR
+seo:
+  title: "Investir dans l’immobilier en Géorgie (Batumi, Tbilissi) — Real Estate Asset Management"
+  description: "Investissement immobilier clé en main en Géorgie : sélection, acquisition, gestion locative et revente à Batumi et Tbilissi. Simulateur cash, plan de paiement ou crédit bancaire."
+
+hero:
+  eyebrow: "FFI · Real Estate Asset Management"
+  title: "Investir dans l’immobilier en Géorgie avec FFI"
+  lead: "Avec FFI, la société que je développe avec mes associés Adrien Boucher et Léo Lawless, nous sélectionnons, acquérons, gérons et revendons des biens à Batumi et Tbilissi pour le compte d’investisseurs suisses, français et belges — avec un objectif unique : faire croître leur patrimoine."
+
+what:
+  eyebrow: "Ce que nous faisons"
+  title: "Un gestionnaire d’actifs immobiliers, pas un simple vendeur"
+  text: "Un investissement réussi se joue sur toute la chaîne : bien acheter, bien gérer, bien revendre. Nous maîtrisons chacune de ces étapes et restons à vos côtés après la signature — pour les arbitrages, les ventes et les réinvestissements."
+  steps:
+    - title: "Acquisition"
+      text: "Sélection rigoureuse du promoteur, du projet et de l’emplacement. Accès aux préventes et négociation des conditions : prix, remise, plan de paiement."
+    - title: "Gestion"
+      text: "Aménagement clé en main, mise en location courte ou longue durée, suivi des revenus et de l’entretien. Vous percevez vos loyers sans gérer le quotidien."
+    - title: "Revente & arbitrage"
+      text: "Choix du bon moment pour revendre, réallocation de la plus-value et réinvestissement dans de nouveaux projets : votre patrimoine reste en mouvement."
+
+why:
+  eyebrow: "Pourquoi nous le faisons"
+  title: "Investir avec nos clients et les accompagner toute la vie de leur investissement"
+  text: "Notre mission est simple : investir avec nos clients et les accompagner pendant toute la durée de leur investissement — arbitrages, ventes, réinvestissements — avec pour seul but de faire croître leur patrimoine au fil des années et des projets."
+
+georgia:
+  eyebrow: "Le marché"
+  title: "La Géorgie en chiffres"
+  stats:
+    - value: "7–10 %"
+      label: "croissance annuelle du PIB"
+    - value: "9 %"
+      label: "plus-value immobilière moyenne par an (moyenne nationale)"
+    - value: "15 %"
+      label: "plus-value immobilière moyenne par an à Batumi"
+    - value: "10–15 %"
+      label: "rendement locatif net annuel en courte durée"
+    - value: "0 %"
+      label: "impôt sur la plus-value après 2 ans de détention"
+    - value: "5 %"
+      label: "impôt sur les revenus locatifs"
+    - value: "0"
+      label: "impôt foncier ni taxe d’habitation"
+    - value: "33 %"
+      label: "dette publique rapportée au PIB"
+
+cities:
+  items:
+    - label: "La station balnéaire"
+      name: "Batumi"
+      text: "Station balnéaire de la mer Noire, destination touristique en plein essor : un marché porté par la location courte durée et une forte prise de valeur."
+    - label: "La capitale"
+      name: "Tbilissi"
+      text: "Capitale économique et administrative du pays : une demande locative structurelle, portée par la croissance, les entreprises et l’arrivée d’expatriés."
+
+criteria:
+  eyebrow: "Nos critères de sélection"
+  title: "Trois filtres avant toute recommandation"
+  items:
+    - title: "Le promoteur"
+      text: "Solidité financière, historique de livraison, qualité de construction et respect des engagements."
+    - title: "Le projet"
+      text: "Conception, prestations, services de gestion locative et potentiel de revente."
+    - title: "La localisation"
+      text: "Attractivité touristique ou résidentielle, accessibilité, environnement et perspectives du quartier."
+
+financing:
+  eyebrow: "Financement"
+  title: "Trois façons d’acheter"
+  items:
+    - title: "Paiement à 100 %"
+      text: "Le règlement intégral à la signature permet de négocier la meilleure remise sur le prix."
+    - title: "Plan de paiement"
+      text: "Un apport à la signature, puis le solde en mensualités sans intérêts directement auprès du promoteur pendant la construction."
+    - title: "Crédit bancaire"
+      text: "Un apport à la signature, puis le solde financé par une banque géorgienne à la livraison : l’effet de levier au service de votre rendement."
+
+payment:
+  eyebrow: "Modes de paiement"
+  title: "Payer simplement, où que vous soyez"
+  items:
+    - title: "Virement bancaire"
+      text: "Virement international en USD, EUR ou CHF, directement au promoteur."
+    - title: "Cryptomonnaies"
+      text: "Le paiement en cryptomonnaies est possible pour régler tout ou partie de votre acquisition."
+    - title: "Compte bancaire en Géorgie"
+      text: "Nous vous accompagnons dans l’ouverture d’un compte bancaire local pour vos paiements et vos loyers."
+
+partner:
+  eyebrow: "Ma société"
+  title: "FFI, l’investissement international sur mesure"
+  text: "FFI est la société de conseil en investissement et en gestion de patrimoine international dont je suis associé. Plus de 15 ans d’expérience, plus de 1 200 clients accompagnés et 13 pays explorés : immobilier à l’étranger, structuration de holdings, fiscalité transfrontalière et accompagnement bancaire."
+  cta: "Découvrir FFI"
+
+simulator:
+  eyebrow: "Simulateur"
+  title: "Simulez votre investissement"
+  text: "Paiement à 100 %, plan de paiement ou crédit bancaire, location ou achat-revente : estimez le capital à mobiliser et le rendement de votre projet."
+
+booking:
+  title: "Parlons de votre projet d’investissement"
+  text: "Choisissez un créneau : nous faisons le point sur vos objectifs, votre budget et les opportunités du moment."

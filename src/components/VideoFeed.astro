@@ -1,0 +1,89 @@
+---
+/**
+ * Dernières vidéos YouTube (et Instagram via Behold si configuré), mises à jour automatiquement.
+ * Configuration : VIDEOS et SOCIAL dans src/config/site.ts.
+ */
+import { VIDEOS, SOCIAL, type Lang } from '../config/site';
+import Social from './Social.astro';
+import { latestVideos } from '../lib/youtube';
+interface Props { lang: Lang; sand?: boolean }
+const { lang, sand = false } = Astro.props;
+const T = {
+  fr: { eyebrow: 'En vidéo', title: 'Mes dernières vidéos', follow: 'Suivez-moi', channel: 'Voir la chaîne YouTube', empty: 'Retrouvez mes vidéos sur l’investissement immobilier, la Géorgie et l’entrepreneuriat sur mes réseaux.' },
+  en: { eyebrow: 'On video', title: 'My latest videos', follow: 'Follow me', channel: 'See the YouTube channel', empty: 'Find my videos on real estate investment, Georgia and entrepreneurship on my social channels.' },
+  de: { eyebrow: 'Im Video', title: 'Meine neuesten Videos', follow: 'Folgen Sie mir', channel: 'YouTube-Kanal ansehen', empty: 'Meine Videos zu Immobilien-Investments, Georgien und Unternehmertum finden Sie auf meinen Kanälen.' },
+}[lang];
+const fetched = VIDEOS.youtubeHandle || VIDEOS.youtubeChannelId ? await latestVideos(VIDEOS.youtubeHandle, VIDEOS.youtubeChannelId, VIDEOS.count) : [];
+const videos = (fetched.length ? fetched : VIDEOS.fallback.map((id) => ({ id, title: '', published: '', short: true }))).slice(0, VIDEOS.count);
+const show = videos.length > 0 || SOCIAL.youtube || VIDEOS.beholdFeedId;
+---
+{show && (
+  <section class:list={['section vids', { 'section--sand': sand }]}>
+    <div class="wrap">
+      <div class="vids__head reveal">
+        <div><p class="eyebrow">{T.eyebrow}</p><h2>{T.title}</h2></div>
+        <div class="vids__follow"><span>{T.follow}</span><Social /></div>
+      </div>
+      {videos.length > 0 ? (
+        <div class="vids__grid vids__grid--3">
+          {videos.map((v) => (
+            <div class="vid reveal">
+              <iframe src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1&playsinline=1`} title={v.title || 'YouTube'} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="vids__empty reveal">
+          <p class="lead">{T.empty}</p>
+          {SOCIAL.youtube && <a class="btn btn--navy" href={SOCIAL.youtube} target="_blank" rel="noopener">{T.channel} <span class="arrow">↗</span></a>}
+        </div>
+      )}
+      {VIDEOS.beholdFeedId && <div class="vids__grid" data-behold={VIDEOS.beholdFeedId} style="margin-top:16px"></div>}
+    </div>
+  </section>
+)}
+<style>
+  .vids__head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+  .vids__head h2 { margin: 0; }
+  .vids__follow { display: flex; align-items: center; gap: 14px; font-family: var(--f-title); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); }
+  .vids__follow :global(.soc a) { border-color: var(--line); color: var(--navy); }
+  .vids__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .vids__grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.5vw, 32px); max-width: 1000px; }
+  .vid { position: relative; display: block; aspect-ratio: 9 / 16; overflow: hidden; background: var(--navy) url('/images/texture-navy.jpg') center / cover; border-radius: var(--radius); box-shadow: 0 24px 60px -30px rgba(17, 33, 80, 0.5); }
+  .vid img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+  .vid:hover img { transform: scale(1.05); }
+  .vid__play { position: absolute; z-index: 1; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: rgba(173, 142, 104, 0.92); }
+  .vid__play::after { content: ''; position: absolute; left: 23px; top: 18px; border-left: 16px solid var(--cream); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+  .vid__t { position: absolute; z-index: 1; left: 14px; right: 14px; bottom: 14px; color: var(--cream); font-family: var(--f-title); font-size: 0.86rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .vid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 2; }
+  .vids__grid :global(a) { position: relative; display: block; aspect-ratio: 9 / 16; overflow: hidden; background: var(--navy); border-radius: var(--radius); }
+  .vids__grid :global(a img) { width: 100%; height: 100%; object-fit: cover; }
+  .vids__empty { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: 36px; border: 1px solid var(--line); }
+  .vids__empty .lead { margin: 0; }
+  @media (max-width: 860px) { .vids__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .vids__grid--3 { grid-template-columns: 1fr; max-width: 360px; } }
+</style>
+<script>
+  document.querySelectorAll<HTMLImageElement>('.vid img[data-fallback]').forEach((img) => {
+    const fix = () => { if (img.naturalWidth && img.naturalWidth <= 120) img.src = img.dataset.fallback!; };
+    img.addEventListener('error', () => (img.src = img.dataset.fallback!), { once: true });
+    img.addEventListener('load', fix, { once: true });
+  });
+  document.querySelectorAll<HTMLButtonElement>('[data-yt]').forEach((b) =>
+    b.addEventListener('click', () => {
+      if (b.querySelector('iframe')) return;
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1&rel=0&playsinline=1`;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      b.appendChild(f);
+    }),
+  );
+  document.querySelectorAll<HTMLElement>('[data-behold]').forEach(async (el) => {
+    try {
+      const r = await fetch(`https://feeds.behold.so/${el.dataset.behold}`);
+      const data = await r.json();
+      const posts = (data.posts || data).filter((p: any) => p.mediaType === 'VIDEO' || p.isReel).slice(0, 8);
+      el.innerHTML = posts.map((p: any) => `<a href="${p.permalink}" target="_blank" rel="noopener"><img src="${p.sizes?.medium?.mediaUrl || p.thumbnailUrl || p.mediaUrl}" alt="" loading="lazy"></a>`).join('');
+    } catch (e) { el.remove(); }
+  });
+</script>

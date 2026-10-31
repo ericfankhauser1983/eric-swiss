@@ -1,0 +1,74 @@
+# Secondary pages — EN: simulator, booking, blog, legal notice, privacy
+simulator:
+  seo:
+    title: "Georgia real estate investment simulator — cash, payment plan or bank loan"
+    description: "Calculate the capital required, rental income, capital gain, ROE and IRR of your real estate investment in Georgia depending on the financing option."
+  eyebrow: "Simulator"
+  title: "Simulate your real estate investment in Georgia"
+  lead: "Choose your financing option and strategy, then adjust the sliders: you instantly get the capital required, the net gain and the return of your project."
+
+contact:
+  seo:
+    title: "Book a meeting with Eric Fankhauser"
+    description: "Book a conversation with Eric Fankhauser: real estate investment in Georgia, strategic consulting or Advisory Board."
+  eyebrow: "Book a meeting"
+  title: "Choose the topic of our conversation"
+  lead: "Select your topic, then the slot that suits you. You can also write to me directly by email or WhatsApp."
+  invest:
+    title: "Real estate investment"
+    text: "Batumi, Tbilisi, financing, wealth strategy."
+  advisory:
+    title: "Strategic consulting & Advisory Board"
+    text: "Strategy, growth, organisation, setting up in Georgia."
+
+blog:
+  seo:
+    title: "Blog — Real estate investment, Georgia and business strategy"
+    description: "Articles by Eric Fankhauser on real estate investment in Georgia, strategy and SME growth."
+
+legal:
+  seo:
+    title: "Legal notice"
+    description: "Legal notice of the eric.swiss website."
+  title: "Legal notice"
+  body: |
+    ## Publisher
+    Eric Fankhauser
+    Email: eric.fankhauser@francefinance.ae
+    Phone / WhatsApp: +971 58 536 2157
+
+    ## Hosting
+    The website is hosted by Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, United States.
+
+    ## Intellectual property
+    All content on this website (texts, logos, graphic elements) is the property of Eric Fankhauser unless otherwise stated. Any reproduction without prior authorisation is prohibited.
+
+    ## External links
+    This website contains links to third-party websites (FFI, The Advisory Board, Calendly). Their content is the responsibility of their respective publishers.
+
+    ## Information
+    The information and simulations on this website are provided for information purposes only and constitute neither an offer nor personalised investment advice.
+
+privacy:
+  seo:
+    title: "Privacy policy"
+    description: "Privacy and data protection policy of the eric.swiss website."
+  title: "Privacy policy"
+  body: |
+    ## Data controller
+    Eric Fankhauser — eric.fankhauser@francefinance.ae
+
+    ## Data collected
+    When you use the simulator, we collect your first name, last name, email address, WhatsApp number and the parameters and results of your simulation. This data is used solely to contact you about your project.
+
+    ## Meeting booking
+    Meeting bookings are handled by Calendly. The data you enter is processed in accordance with Calendly’s privacy policy.
+
+    ## Retention period
+    Your data is kept for as long as necessary to follow up on your request, and at most three years after the last contact.
+
+    ## Cookies
+    This website does not use advertising cookies. Only your language preference is stored in your browser.
+
+    ## Your rights
+    In accordance with the Swiss Federal Act on Data Protection (FADP) and the GDPR, you have the right to access, rectify and delete your data. To exercise it, write to eric.fankhauser@francefinance.ae.

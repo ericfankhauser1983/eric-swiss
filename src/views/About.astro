@@ -1,0 +1,140 @@
+---
+import Photo from '../components/Photo.astro';
+import HeroBg from '../components/HeroBg.astro';
+import Team from '../components/Team.astro';
+import Social from '../components/Social.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { PHOTOS, HERO_VIDEOS, path, type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const ui = t(lang);
+const d = await page(lang, 'about');
+const home = await page(lang, 'home');
+const passionPhoto: Record<string, string> = { rugby: PHOTOS.rugby, travel: PHOTOS.travel };
+const facts = {
+  fr: [['Né à', 'Genève'], ['Origine', 'Alpes bernoises'], ['Langues', 'Français · Suisse allemand · Anglais'], ['Vit à', 'Tbilissi, Géorgie']],
+  en: [['Born in', 'Geneva'], ['Roots', 'Bernese Alps'], ['Languages', 'French · Swiss German · English'], ['Lives in', 'Tbilisi, Georgia']],
+  de: [['Geboren in', 'Genf'], ['Herkunft', 'Berner Alpen'], ['Sprachen', 'Französisch · Schweizerdeutsch · Englisch'], ['Wohnt in', 'Tiflis, Georgien']],
+}[lang];
+const q = { fr: `« ${d.quote.text} »`, en: `“${d.quote.text}”`, de: `«${d.quote.text}»` }[lang];
+---
+<section class="ahero">
+  <HeroBg video={HERO_VIDEOS.about} />
+  <div class="wrap ahero__in">
+    <div>
+      <p class="eyebrow">{d.hero.eyebrow}</p>
+      <h1>{d.hero.title}</h1>
+      <p class="lead">{d.hero.lead}</p>
+      <dl class="facts">{facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+      <Social />
+    </div>
+    <Photo src={PHOTOS.aboutPortrait} alt="Eric Fankhauser" ratio="4 / 5" eager />
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap"><div class="chapters">
+    {d.story.map((s: any) => (
+      <div class="chapter reveal">
+        <h2>{s.title}</h2>
+        <p>{s.text}</p>
+      </div>
+    ))}
+  </div></div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap">
+    <ol class="tl">
+      {d.timeline.map((x: any) => (
+        <li class="reveal"><span>{x.year}</span><p>{x.text}</p></li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">{d.passions.eyebrow}</p></div></div>
+    <div class="grid grid-2">
+      {d.passions.items.map((p: any) => (
+        <article class="passion reveal">
+          {passionPhoto[p.key] && <Photo src={passionPhoto[p.key]} alt={p.title} ratio="3 / 2" />}
+          <h3>{p.title}</h3>
+          <p>{p.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--navy gal">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">{{ fr: 'En images', en: 'In pictures', de: 'In Bildern' }[lang]}</p></div></div>
+    <div class="gal__grid">
+      {PHOTOS.gallery.map((src: string) => <div class="gal__i reveal"><img class="ph" src={src} alt="" loading="lazy" /></div>)}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap quote reveal">
+    <img src="/images/sign-gold.svg" alt="" aria-hidden="true" width="90" height="56" />
+    <blockquote>{q}</blockquote>
+    <p class="quote__a">— {d.quote.author}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">{d.values.eyebrow}</p></div></div>
+    <div class="grid grid-3">
+      {d.values.items.map((v: any) => (
+        <div class="value reveal"><h3>{v.title}</h3><p>{v.text}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<Team lang={lang} sand />
+
+<CtaBand title={home.final.title} text={home.final.text} href={path('contact', lang)} label={ui.cta.book} />
+
+<style>
+  .ahero { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }
+  .ahero__in { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(32px, 6vw, 96px); align-items: center; padding-top: clamp(56px, 8vw, 110px); padding-bottom: clamp(56px, 8vw, 110px); }
+  .ahero h1 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); font-weight: 400; }
+  .ahero .lead { color: var(--muted-light); }
+  .facts { margin: 36px 0 32px; max-width: 520px; }
+  .facts div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line-light); font-size: 0.92rem; }
+  .facts dt { color: var(--gold-light); font-family: var(--f-title); font-weight: 600; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding-top: 3px; }
+  .facts dd { margin: 0; }
+  @media (max-width: 860px) { .ahero__in { grid-template-columns: 1fr; } }
+  .chapters { max-width: 860px; }
+  .chapter { padding-bottom: 44px; margin-bottom: 44px; border-bottom: 1px solid var(--line); }
+  .chapter:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .chapter h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
+  .chapter p { color: var(--muted); font-size: 1.08rem; margin: 0; }
+  .tl { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--gold); max-width: 900px; }
+  .tl li { display: grid; grid-template-columns: 190px 1fr; gap: 24px; padding: 18px 0 18px 32px; position: relative; }
+  .tl li::before { content: ''; position: absolute; left: -4px; top: 29px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+  .tl span { font-family: var(--f-title); color: var(--gold-light); font-size: 1.1rem; }
+  .tl p { margin: 0; color: var(--muted-light); }
+  @media (max-width: 640px) { .tl li { grid-template-columns: 1fr; gap: 4px; } }
+  .passion:not(:has(.ph)) { padding-top: 28px; border-top: 1px solid var(--gold); align-self: start; }
+  .passion:not(:has(.ph)) h3 { margin-top: 0; }
+  .passion h3 { margin: 24px 0 10px; font-size: clamp(1.3rem, 2vw, 1.6rem); }
+  .passion p { color: var(--muted); }
+  .quote { max-width: 900px; text-align: center; }
+  .quote img { width: 72px; height: auto; margin: 0 auto 32px; }
+  .quote blockquote { margin: 0; font-family: var(--f-title); font-size: clamp(1.3rem, 2.6vw, 2rem); line-height: 1.4; font-weight: 400; }
+  .quote__a { margin-top: 28px; color: var(--gold-deep); font-family: var(--f-title); letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.8rem; }
+  .gal__grid { columns: 3 260px; column-gap: 16px; }
+  .gal__i { break-inside: avoid; margin-bottom: 16px; overflow: hidden; border-radius: var(--radius); }
+  .gal__i img { width: 100%; height: auto; display: block; }
+  .value { padding-top: 28px; border-top: 1px solid var(--gold); }
+  .value p { color: var(--muted); }
+</style>

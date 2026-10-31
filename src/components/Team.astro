@@ -1,0 +1,63 @@
+---
+import Photo from './Photo.astro';
+import { PHOTOS, type Lang } from '../config/site';
+import { page } from '../lib/content';
+interface Props { lang: Lang; filter?: string[]; id?: string; sand?: boolean; showNetwork?: boolean; title?: string }
+const { lang, filter, id = 'equipe', sand = false, showNetwork = true, title } = Astro.props;
+const d = await page(lang, 'team');
+const members = filter ? d.members.filter((m: any) => filter.includes(m.name)) : d.members;
+const showGroup = PHOTOS.team && members.some((m: any) => m.name === 'Adrien Boucher');
+const initials = (n: string) => n.split(' ').map((x) => x[0]).join('');
+---
+<section class:list={['section', { 'section--sand': sand }]} id={id}>
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">{d.eyebrow}</p><h2>{title ?? d.title}</h2></div>
+      <p class="lead">{d.lead}</p>
+    </div>
+    {showGroup && (
+      <figure class="team__group reveal">
+        <Photo src={PHOTOS.team} alt={d.groupCaption} ratio="16 / 7" position="50% 28%" />
+        <figcaption>{d.groupCaption}</figcaption>
+      </figure>
+    )}
+    <div class="team">
+      {members.map((m: any) => (
+        <article class="member reveal">
+          {m.photo ? <Photo src={m.photo} alt={m.name} ratio="4 / 5" /> : (
+            <div class="member__ph" role="img" aria-label={m.name}><span>{initials(m.name)}</span></div>
+          )}
+          <p class="member__area">{m.area}</p>
+          <h3>{m.name}</h3>
+          <p class="member__role">{m.role}</p>
+          <p class="member__txt">{m.text}</p>
+          {m.linkedin && <a class="member__li" href={m.linkedin} target="_blank" rel="noopener" aria-label={`LinkedIn — ${m.name}`}><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4V9.75Z"/></svg> LinkedIn</a>}
+        </article>
+      ))}
+      {showNetwork && d.network && (
+        <article class="member member--net reveal">
+          <div class="member__net"><img src="/images/sign-gold.svg" alt="" aria-hidden="true" /></div>
+          <h3>{d.network.title}</h3>
+          <p class="member__txt">{d.network.text}</p>
+        </article>
+      )}
+    </div>
+  </div>
+</section>
+<style>
+  .team__group { margin: 0 0 clamp(32px, 4vw, 48px); }
+  .team__group figcaption { margin-top: 12px; font-family: var(--f-title); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); }
+  .team { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(20px, 2.5vw, 32px); }
+  .member { max-width: 340px; }
+  .member__ph, .member__net { aspect-ratio: 4 / 5; display: grid; place-items: center; background: var(--navy) url('/images/texture-navy.jpg') center / cover; border-radius: var(--radius); position: relative; }
+  .member__ph::after, .member__net::after { content: ''; position: absolute; inset: 12px; border: 1px solid rgba(173, 142, 104, 0.4); }
+  .member__ph span { font-family: var(--f-title); font-size: 3rem; color: var(--gold-light); letter-spacing: 0.04em; }
+  .member__net img { width: 42%; }
+  .member__area { margin: 20px 0 6px; font-family: var(--f-title); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); }
+  .member h3 { margin: 0 0 4px; font-size: 1.25rem; }
+  .member--net h3 { margin-top: 20px; }
+  .member__role { font-size: 0.88rem; color: var(--navy); font-weight: 400; margin-bottom: 10px; }
+  .member__txt { font-size: 0.9rem; color: var(--muted); margin: 0; }
+  .member__li { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-family: var(--f-title); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; }
+  .member__li:hover { color: var(--navy); }
+</style>

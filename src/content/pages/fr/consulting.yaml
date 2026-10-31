@@ -1,0 +1,61 @@
+# Conseil stratégique — FR
+seo:
+  title: "Conseil stratégique aux PME et implantation d’entreprises en Géorgie"
+  description: "Conseil en stratégie, développement et organisation pour PME. Spécialiste de l’implantation et du développement de sociétés étrangères en Géorgie grâce à un réseau de haut niveau."
+
+hero:
+  eyebrow: "Conseil stratégique"
+  title: "Clarifier, structurer, accélérer le développement de votre entreprise"
+  lead: "J’accompagne les dirigeants de PME face à leurs enjeux de stratégie, de développement et d’organisation — avec une spécialisation : l’implantation et le développement de sociétés étrangères en Géorgie."
+
+challenges:
+  eyebrow: "Les enjeux que je traite"
+  title: "Quand le quotidien empêche de prendre de la hauteur"
+  items:
+    - title: "Stratégie"
+      text: "Clarifier la vision, définir le positionnement, arbitrer les priorités et transformer une ambition en feuille de route concrète."
+      points: ["Vision et positionnement", "Choix des marchés et des offres", "Plan stratégique à 3–5 ans"]
+    - title: "Développement"
+      text: "Trouver de nouveaux relais de croissance et les financer, en France, en Suisse ou à l’international."
+      points: ["Nouveaux marchés et canaux", "Partenariats et alliances", "Structuration du financement"]
+    - title: "Organisation"
+      text: "Adapter la structure à la croissance : rôles, gouvernance, processus et pilotage de la performance."
+      points: ["Gouvernance et rôles clés", "Processus et efficacité", "Tableaux de bord et pilotage"]
+
+method:
+  eyebrow: "Ma méthode"
+  title: "Du diagnostic à la mise en œuvre"
+  steps:
+    - title: "Diagnostic"
+      text: "Analyse de la situation, entretiens avec la direction et identification des leviers prioritaires."
+    - title: "Plan d’action"
+      text: "Des recommandations concrètes, chiffrées et séquencées, validées avec vous."
+    - title: "Mise en œuvre"
+      text: "Un accompagnement opérationnel dans la durée, jusqu’aux résultats."
+
+georgia:
+  eyebrow: "Spécialisation Géorgie"
+  title: "S’implanter et se développer en Géorgie"
+  text: "La Géorgie offre un environnement fiscal et administratif parmi les plus favorables de la région, une économie en forte croissance et une position stratégique entre l’Europe et l’Asie. Encore faut-il disposer des bons relais pour s’y implanter avec succès."
+  services:
+    - "Étude de marché et validation de l’opportunité"
+    - "Structuration juridique et fiscale de l’implantation"
+    - "Relations bancaires et ouverture de comptes"
+    - "Mise en relation avec partenaires, fournisseurs et clients"
+    - "Relations institutionnelles et accompagnement auprès des autorités"
+    - "Recrutement, locaux et lancement opérationnel"
+
+edge:
+  eyebrow: "Ce qui fait la différence"
+  title: "Le lien entre l’Europe et la Géorgie"
+  items:
+    - title: "Un réseau au plus haut niveau"
+      text: "Des relations établies avec les acteurs clés du marché géorgien : entreprises, banques et gouvernement."
+    - title: "Une connaissance approfondie du marché"
+      text: "Une présence active sur le terrain, au contact quotidien des promoteurs, investisseurs et décideurs locaux."
+    - title: "Une vision européenne"
+      text: "La compréhension des standards et des attentes des entreprises suisses et européennes, pour faire le lien parfait entre les deux cultures."
+
+booking:
+  title: "Échangeons sur votre entreprise"
+  text: "Réservez un premier échange pour présenter votre situation et vos objectifs."

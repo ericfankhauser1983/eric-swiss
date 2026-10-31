@@ -1,0 +1,83 @@
+---
+import { SITE, LANGS, LOCALES, path, type Lang } from '../config/site';
+import Social from './Social.astro';
+import { t } from '../i18n/ui';
+interface Props { lang: Lang; alternates: Partial<Record<Lang, string>> }
+const { lang, alternates } = Astro.props;
+const ui = t(lang);
+const year = new Date().getFullYear();
+---
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <a href={path('home', lang)} class="ftr__logo"><img src="/images/ef-foil.png" srcset="/images/ef-foil.png 1x, /images/ef-foil@2x.png 2x" alt="Eric Fankhauser" width="110" height="76" loading="lazy" /></a>
+        <Social class="ftr__soc" />
+      </div>
+      <div class="ftr__cols">
+        <div>
+          <p class="ftr__h">{ui.footer.activities}</p>
+          <ul>
+            <li><a href={path('invest', lang)}>{ui.nav.invest}</a></li>
+            <li><a href={path('simulator', lang)}>{ui.nav.simulator}</a></li>
+            <li><a href={path('consulting', lang)}>{ui.nav.consulting}</a></li>
+            <li><a href={path('board', lang)}>{ui.nav.board}</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="ftr__h">{ui.footer.company}</p>
+          <ul>
+            <li><a href={path('about', lang)}>{ui.nav.about}</a></li>
+            <li><a href={path('blog', lang)}>{ui.nav.blog}</a></li>
+            <li><a href={path('contact', lang)}>{ui.nav.contact}</a></li>
+            <li><a href={SITE.partners.ffi} target="_blank" rel="noopener">FFI ↗</a></li>
+            <li><a href={SITE.partners.advisoryBoard} target="_blank" rel="noopener">The Advisory Board ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="ftr__h">{ui.footer.contact}</p>
+          <ul>
+            <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">WhatsApp · {SITE.phone}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="rule" />
+    <div class="ftr__bottom">
+      <p>© {year} Eric Fankhauser. {ui.footer.rights}</p>
+      <div class="ftr__links">
+        <a href={path('legal', lang)}>{ui.footer.legal}</a>
+        <a href={path('privacy', lang)}>{ui.footer.privacy}</a>
+        <span class="ftr__langs">
+          {LANGS.map((l) => (
+            <a href={alternates[l] ?? path('home', l)} hreflang={l} lang={l} data-lang={l} aria-current={l === lang ? 'true' : undefined}>{LOCALES[l].label}</a>
+          ))}
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ftr { background: var(--navy-deep); color: var(--muted-light); padding: clamp(64px, 8vw, 104px) 0 36px; font-size: 0.92rem; }
+  .ftr a { text-decoration: none; transition: color 0.3s; }
+  .ftr a:hover { color: var(--gold-light); }
+  .ftr__top { display: grid; grid-template-columns: 280px 1fr; gap: 48px; margin-bottom: 56px; }
+  .ftr__logo img { width: 96px; height: auto; }
+  .ftr :global(.ftr__soc) { margin-top: 28px; }
+  .ftr__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .ftr__h { font-family: var(--f-title); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .ftr ul { list-style: none; padding: 0; margin: 0; }
+  .ftr li { margin: 0 0 10px; overflow-wrap: anywhere; }
+  .ftr__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 28px; font-size: 0.82rem; }
+  .ftr__bottom p { margin: 0; }
+  .ftr__links { display: flex; flex-wrap: wrap; gap: 22px; }
+  .ftr__langs { display: inline-flex; gap: 14px; padding-left: 22px; border-left: 1px solid var(--line-light); }
+  .ftr__langs a[aria-current] { color: var(--gold-light); }
+  @media (max-width: 900px) {
+    .ftr__top { grid-template-columns: 1fr; }
+    .ftr__cols { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) { .ftr__cols { grid-template-columns: 1fr; } .ftr__langs { border: 0; padding: 0; } }
+</style>

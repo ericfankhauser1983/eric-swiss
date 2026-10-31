@@ -1,0 +1,36 @@
+# Interface d'administration (Decap CMS) accessible sur https://eric.swiss/admin/
+# Permet d'écrire les articles de blog en FR / EN / DE sans toucher au code.
+# Mise en place : voir GUIDE.md, section « Administration du blog ».
+backend:
+  name: github
+  repo: VOTRE-COMPTE-GITHUB/eric-swiss   # ← à remplacer
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+locale: fr
+media_folder: public/images/blog
+public_folder: /images/blog
+
+i18n:
+  structure: multiple_folders
+  locales: [fr, en, de]
+  default_locale: fr
+
+collections:
+  - name: blog
+    label: Articles de blog
+    label_singular: Article
+    folder: src/content/blog
+    create: true
+    slug: '{{slug}}'
+    i18n: true
+    fields:
+      - { label: Titre, name: title, widget: string, i18n: true }
+      - { label: Description (SEO, 150–160 caractères), name: description, widget: text, i18n: true }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'DD.MM.YYYY', time_format: false, i18n: duplicate }
+      - { label: Clé de traduction (identique dans les 3 langues), name: translationKey, widget: string, i18n: duplicate, required: false }
+      - { label: Mots-clés, name: tags, widget: list, i18n: true, required: false }
+      - { label: Image de couverture, name: cover, widget: image, i18n: duplicate, required: false }
+      - { label: Brouillon, name: draft, widget: boolean, default: false, i18n: duplicate }
+      - { label: Contenu, name: body, widget: markdown, i18n: true }

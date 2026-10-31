@@ -1,0 +1,90 @@
+---
+import PageHero from '../components/PageHero.astro';
+import Booking from '../components/Booking.astro';
+import Team from '../components/Team.astro';
+import { SITE, CALENDLY, PHOTOS, HERO_VIDEOS, type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const ui = t(lang);
+const d = await page(lang, 'board');
+---
+<PageHero eyebrow={d.hero.eyebrow} title={d.hero.title} lead={d.hero.lead} photo={PHOTOS.board} video={HERO_VIDEOS.board}>
+  <a class="btn" href="#rendez-vous">{ui.cta.bookAdvisory} <span class="arrow">↓</span></a>
+  <a class="btn btn--ghost" href={SITE.partners.advisoryBoard} target="_blank" rel="noopener">advisoryboard.ch ↗</a>
+</PageHero>
+
+<section class="section">
+  <div class="wrap who">
+    <div class="reveal">
+      <p class="eyebrow">{d.problem.eyebrow}</p>
+      <h2>{d.problem.title}</h2>
+      <p class="lead">{d.problem.text}</p>
+    </div>
+    <ul class="ticks reveal">{d.problem.criteria.map((c: string) => <li>{c}</li>)}</ul>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap offer">
+    <div class="offer__price reveal">
+      <p class="eyebrow">{d.offer.eyebrow}</p>
+      <p class="offer__amount">{d.offer.price}</p>
+      <p class="offer__period">{d.offer.period}</p>
+      <hr class="rule" />
+      <p class="offer__note">{d.offer.note}</p>
+    </div>
+    <div class="reveal">
+      <ul class="ticks">{d.offer.includes.map((c: string) => <li>{c}</li>)}</ul>
+      <p class="offer__excl">{d.offer.exclusivity}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">{d.domains.eyebrow}</p></div></div>
+    <div class="domains">
+      {d.domains.items.map((c: any, i: number) => (
+        <div class="domain reveal"><h3>{c.title}</h3><p>{c.text}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap"><div class="panel reveal">
+    <p class="eyebrow">{d.panel.eyebrow}</p>
+    <h2>{d.panel.title}</h2>
+    <p class="lead">{d.panel.text}</p>
+    <a class="btn btn--navy" href={SITE.partners.advisoryBoard} target="_blank" rel="noopener">{d.panel.cta} <span class="arrow">↗</span></a>
+  </div></div>
+</section>
+
+<Team lang={lang} filter={['Eric Fankhauser', 'Patrick Grobéty']} showNetwork={false} />
+
+<Booking lang={lang} url={CALENDLY.advisory} title={d.booking.title} text={d.booking.text} />
+
+<style>
+  .who { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+  @media (max-width: 860px) { .who { grid-template-columns: 1fr; } }
+  .offer { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+  .offer__price { background: var(--navy); color: var(--cream); padding: clamp(36px, 5vw, 60px); text-align: center; position: relative; }
+  .offer__price::after { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(173, 142, 104, 0.4); pointer-events: none; }
+  .offer__price .eyebrow::before { display: none; }
+  .offer__amount { white-space: nowrap; font-family: var(--f-title); font-size: clamp(2.4rem, 4.4vw, 3.6rem); line-height: 1; color: var(--gold-light); margin: 6px 0 8px; letter-spacing: -0.03em; }
+  .offer__period { color: var(--muted-light); margin-bottom: 26px; }
+  .offer__price .rule { max-width: 120px; margin: 0 auto 22px; }
+  .offer__note { font-family: var(--f-title); font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; margin: 0; }
+  .offer__excl { margin-top: 28px; font-family: var(--f-title); font-weight: 500; color: var(--gold-deep); }
+  @media (max-width: 860px) { .offer { grid-template-columns: 1fr; } }
+  .domains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-light); border-left: 1px solid var(--line-light); }
+  .domain { padding: 36px 32px; border-right: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); }
+  .domain h3 { color: var(--cream); }
+  .domain p { color: var(--muted-light); margin: 0; }
+  @media (max-width: 860px) { .domains { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .domains { grid-template-columns: 1fr; } }
+  .panel { max-width: 860px; }
+  .panel .lead { margin-bottom: 32px; }
+</style>

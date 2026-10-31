@@ -1,0 +1,14 @@
+# Reconstruit le site chaque jour pour afficher automatiquement les dernières vidéos YouTube.
+# Mise en place : Netlify > Site configuration > Build & deploy > Build hooks > « Add build hook »,
+# puis GitHub > Settings > Secrets and variables > Actions > nouveau secret NETLIFY_BUILD_HOOK = l'URL du hook.
+name: Mise à jour quotidienne des vidéos
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déclencher la reconstruction Netlify
+        run: curl -fsS -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"

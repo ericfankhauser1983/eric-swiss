@@ -1,0 +1,47 @@
+---
+/** Widget Calendly intégré (chargé uniquement lorsqu'il devient visible) */
+import type { Lang } from '../config/site';
+import { t } from '../i18n/ui';
+interface Props { url: string; lang: Lang; height?: number }
+const { url, lang, height = 720 } = Astro.props;
+const ui = t(lang);
+const params = new URLSearchParams({
+  hide_gdpr_banner: '1',
+  hide_landing_page_details: '1',
+  background_color: 'fffefb',
+  text_color: '112150',
+  primary_color: 'ad8e68',
+});
+const embed = `${url}?${params.toString()}`;
+---
+<div class="cal" data-calendly={embed} style={`--h:${height}px`}>
+  <div class="cal__frame" data-frame></div>
+  <a class="cal__fallback link" href={url} target="_blank" rel="noopener">{ui.calendly.fallback} <span class="arrow">→</span></a>
+</div>
+
+<style>
+  .cal { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); }
+  .cal__frame { min-height: var(--h); position: relative; }
+  .cal__frame:empty::before { content: ''; position: absolute; inset: 0; margin: auto; width: 34px; height: 34px; border: 2px solid var(--line); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.9s linear infinite; }
+  .cal__frame :global(iframe) { width: 100%; height: var(--h); border: 0; display: block; }
+  .cal__fallback { margin: 18px 24px 22px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script>
+  function mount(el: HTMLElement) {
+    const frame = el.querySelector<HTMLElement>('[data-frame]');
+    if (!frame || frame.dataset.loaded === el.dataset.calendly) return;
+    frame.dataset.loaded = el.dataset.calendly!;
+    frame.innerHTML = '';
+    const iframe = document.createElement('iframe');
+    iframe.src = el.dataset.calendly! + '&embed_domain=' + location.hostname + '&embed_type=Inline';
+    iframe.title = 'Calendly';
+    iframe.loading = 'lazy';
+    frame.appendChild(iframe);
+  }
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { mount(e.target as HTMLElement); } }), { rootMargin: '300px' });
+  document.querySelectorAll<HTMLElement>('[data-calendly]').forEach((el) => io.observe(el));
+  // permet de changer d'agenda (onglets de la page Rendez-vous)
+  (window as any).efMountCalendly = mount;
+</script>

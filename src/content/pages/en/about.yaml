@@ -1,0 +1,65 @@
+# About — EN
+seo:
+  title: "My story — Eric Fankhauser, Swiss entrepreneur in Tbilisi"
+  description: "Swissair apprentice at 15, in New York on 11 September 2001, founder of Swiss Auto Glass and now partner at FFI: the story of Eric Fankhauser."
+
+hero:
+  eyebrow: "My story"
+  title: "Always moving forward. Especially when the ground is rough."
+  lead: "I have never followed a set path. I learned on the ground, took the hits, built — and never stopped striving to do better."
+
+story:
+  - title: "Two languages, one character"
+    text: "I was born in Geneva and my roots are in the Bernese Alps. I grew up between two languages, French and Swiss German, and between two cultures that taught me early on how to adapt. From a very young age, one thing was clear: I wanted to be an entrepreneur. One book acted as a trigger — Richard Branson’s Losing My Virginity. More than a biography, it gave me permission: to dare, to step outside the frame and build my own road."
+  - title: "Leaving school at 15"
+    text: "At 15, I chose action over the classroom and started an apprenticeship at Swissair. There I discovered the standards of a great airline, a sense of service and the rigour of a world where every detail matters."
+  - title: "New York, 2001"
+    text: "At 18, Swissair sent me to New York for a year. On 11 September 2001, I was there. That day, I was thrown into adulthood overnight. Far from home, I learned to face adversity alone, to keep a cool head and to keep going when everything was shaking. That lesson has never left me."
+  - title: "Building"
+    text: "Back in Switzerland, I spent a few more years in travel and aviation, then moved into the automotive sector with Carglass. I was asked to build the Swiss call centre: in 24 months, I took it from zero to thirty employees and helped drive growth of more than 50% a year. At the same time, I became the company’s sales director. I learned how to recruit, rally a team and deliver on ambitious targets."
+  - title: "Turning around"
+    text: "Next came another challenge: reorganising Elixim, a struggling reception services company. Within two years, it was financially balanced again and had become the best-performing company in its group. Proof, to me, that clear organisation and a committed team can change everything."
+  - title: "Founding"
+    text: "Then it was time to build for myself. I founded Swiss Auto Glass and grew it for more than ten years, until it became the third-largest player in the country. Ten years of daily battles, victories and self-questioning, before I sold my shares."
+  - title: "Sharing and investing"
+    text: "After the sale, I launched my consulting activities to put my experience at the service of other business leaders. At the same time, I joined my friend Adrien at FFI and became a shareholder. I first knew him as a client; he became a friend, then my partner. Today I live in Tbilisi and support investors and entrepreneurs across Switzerland, Europe, the Gulf and Georgia."
+
+timeline:
+  - year: "Age 15"
+    text: "Apprenticeship at Swissair"
+  - year: "2001"
+    text: "A year in New York for Swissair"
+  - year: "Carglass"
+    text: "Built the Swiss call centre (0 to 30 employees in 24 months) and led sales"
+  - year: "Elixim"
+    text: "Reorganisation, return to financial balance and top performer of the group"
+  - year: "Swiss Auto Glass"
+    text: "Founded the company, 10+ years of growth, national number three, then sold"
+  - year: "FFI"
+    text: "Partner — real estate investment in Georgia — and consulting activities"
+  - year: "2026"
+    text: "Member of the Iran national team staff"
+
+passions:
+  eyebrow: "What keeps me going"
+  items:
+    - key: rugby
+      title: "Sport — rugby first"
+      text: "Sport gives me daily discipline and helps me clear my head. Rugby above all: a collective combat sport where you only move forward together. Since this year, I have been part of the Iran national team staff — and we recently won a match against Armenia."
+    - key: travel
+      title: "Travel"
+      text: "Travelling opens me up to the world, professionally and personally. It is my way of forming my own opinion on the cultures and realities of our planet, far from preconceptions."
+
+quote:
+  text: "Investing with my clients and supporting them for the entire life of their investment, with one goal: growing their wealth over the years and across projects."
+  author: "Eric Fankhauser"
+
+values:
+  eyebrow: "What guides me"
+  items:
+    - title: "Fighting spirit"
+      text: "In the face of adversity, you don’t back down: you adapt, get up and move forward."
+    - title: "High standards"
+      text: "A constant pursuit of performance and excellence, in every project and every detail."
+    - title: "Loyalty"
+      text: "Lasting relationships: my clients often become friends, sometimes partners."

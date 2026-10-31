@@ -1,0 +1,70 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import { LANGS, SITE, absolute, path, type Lang } from '../../../config/site';
+import { t } from '../../../i18n/ui';
+import { postSlug, postHref, readingTime } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  const all = await getCollection('blog', (p) => !p.data.draft);
+  return all.map((p) => {
+    const lang = p.id.split('/')[0] as Lang;
+    const siblings = Object.fromEntries(
+      all.filter((o) => p.data.translationKey && o.data.translationKey === p.data.translationKey).map((o) => [o.id.split('/')[0], postHref(o.id.split('/')[0] as Lang, o.id)]),
+    );
+    return { params: { lang, slug: postSlug(p.id) }, props: { post: p, siblings } };
+  });
+}
+
+const { post, siblings } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const ui = t(lang);
+const { Content } = await render(post);
+const alts: Partial<Record<Lang, string>> = { ...Object.fromEntries(LANGS.map((l) => [l, path('blog', l)])), ...siblings };
+const url = absolute(Astro.url.pathname);
+const d = post.data.date.toLocaleDateString({ fr: 'fr-CH', en: 'en-GB', de: 'de-CH' }[lang], { day: 'numeric', month: 'long', year: 'numeric' });
+const schema = [{
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  inLanguage: lang,
+  url,
+  mainEntityOfPage: url,
+  author: { '@id': `${SITE.url}/#eric` },
+  publisher: { '@id': `${SITE.url}/#eric` },
+  image: absolute(post.data.cover ?? '/images/og-default.png'),
+  keywords: post.data.tags.join(', '),
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: ui.nav.home, item: absolute(path('home', lang)) },
+    { '@type': 'ListItem', position: 2, name: ui.nav.blog, item: absolute(path('blog', lang)) },
+    { '@type': 'ListItem', position: 3, name: post.data.title, item: url },
+  ],
+}];
+---
+<Base lang={lang} title={post.data.title} description={post.data.description} alternates={alts} ogType="article" ogImage={post.data.cover} schema={schema}>
+  <article>
+    <header class="ph">
+      <div class="wrap">
+        <a class="link" href={path('blog', lang)}>{ui.blog.back}</a>
+        <p class="ph__meta">{ui.blog.published} <time datetime={post.data.date.toISOString()}>{d}</time> · {readingTime(post.body)} {ui.blog.minutes}</p>
+        <h1>{post.data.title}</h1>
+        <p class="lead">{post.data.description}</p>
+      </div>
+    </header>
+    {post.data.cover && <div class="wrap"><img class="cover" src={post.data.cover} alt="" /></div>}
+    <div class="section" style="padding-top:clamp(40px,5vw,72px)">
+      <div class="wrap"><div class="prose"><Content /></div></div>
+    </div>
+  </article>
+  <CtaBand title={{ fr: 'Parlons de votre projet', en: 'Let’s talk about your project', de: 'Sprechen wir über Ihr Projekt' }[lang]} href={path('contact', lang)} label={ui.cta.book} href2={path('simulator', lang)} label2={ui.cta.simulate} />
+</Base>
+<style>
+  .ph { background: var(--sand); padding: clamp(56px, 8vw, 110px) 0 clamp(40px, 5vw, 64px); }
+  .ph h1 { font-size: clamp(2rem, 4.2vw, 3.4rem); max-width: 900px; margin: 18px 0 20px; font-weight: 400; }
+  .ph__meta { margin: 36px 0 0; font-size: 0.85rem; color: var(--gold-deep); }
+  .cover { width: 100%; max-height: 520px; object-fit: cover; margin-top: -24px; }
+</style>

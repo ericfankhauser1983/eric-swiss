@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { path } from '../config/site';
+---
+<Base lang="en" title="404" description="Page not found" alternates={{}} noindex>
+  <section class="section" style="text-align:center;min-height:50vh">
+    <div class="wrap">
+      <p class="eyebrow">404</p>
+      <h1>Page introuvable · Page not found · Seite nicht gefunden</h1>
+      <p style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+        <a class="btn" href={path('home', 'fr')}>Accueil</a>
+        <a class="btn" href={path('home', 'en')}>Home</a>
+        <a class="btn" href={path('home', 'de')}>Start</a>
+      </p>
+    </div>
+  </section>
+</Base>

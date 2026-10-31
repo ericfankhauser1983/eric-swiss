@@ -1,0 +1,104 @@
+# Immobilien-Investment — Real Estate Asset Management — DE
+seo:
+  title: "In Immobilien in Georgien investieren (Batumi, Tiflis) — Real Estate Asset Management"
+  description: "Schlüsselfertige Immobilien-Investments in Georgien: Auswahl, Erwerb, Vermietung und Verkauf in Batumi und Tiflis. Rechner: Barzahlung, Zahlungsplan oder Bankkredit."
+
+hero:
+  eyebrow: "FFI · Real Estate Asset Management"
+  title: "Mit FFI in georgische Immobilien investieren"
+  lead: "Mit FFI, dem Unternehmen, das ich mit meinen Partnern Adrien Boucher und Léo Lawless führe, wählen, erwerben, verwalten und verkaufen wir Immobilien in Batumi und Tiflis im Auftrag von Investoren aus der Schweiz, Frankreich und Belgien – mit einem einzigen Ziel: ihr Vermögen zu vermehren."
+
+what:
+  eyebrow: "Was wir tun"
+  title: "Ein Immobilien-Asset-Manager, nicht bloss ein Verkäufer"
+  text: "Eine erfolgreiche Investition entscheidet sich entlang der ganzen Kette: gut kaufen, gut verwalten, gut verkaufen. Wir beherrschen jeden Schritt und bleiben auch nach der Unterzeichnung an Ihrer Seite – für Umschichtungen, Verkäufe und Reinvestitionen."
+  steps:
+    - title: "Erwerb"
+      text: "Sorgfältige Auswahl von Bauträger, Projekt und Lage. Zugang zu Vorverkäufen und Verhandlung der Konditionen: Preis, Rabatt, Zahlungsplan."
+    - title: "Verwaltung"
+      text: "Schlüsselfertige Einrichtung, Kurz- oder Langzeitvermietung, Überwachung von Einnahmen und Unterhalt. Sie erhalten Ihre Mieten, ohne sich um den Alltag zu kümmern."
+    - title: "Verkauf & Umschichtung"
+      text: "Den richtigen Zeitpunkt für den Verkauf wählen, den Gewinn neu allokieren und in neue Projekte reinvestieren: Ihr Vermögen bleibt in Bewegung."
+
+why:
+  eyebrow: "Warum wir es tun"
+  title: "Mit unseren Kunden investieren und sie während der gesamten Investition begleiten"
+  text: "Unsere Mission ist einfach: mit unseren Kunden investieren und sie während der gesamten Lebensdauer ihrer Investition begleiten – Umschichtungen, Verkäufe, Reinvestitionen – mit dem einzigen Ziel, ihr Vermögen über die Jahre und Projekte hinweg zu vermehren."
+
+georgia:
+  eyebrow: "Der Markt"
+  title: "Georgien in Zahlen"
+  stats:
+    - value: "7–10 %"
+      label: "jährliches BIP-Wachstum"
+    - value: "9 %"
+      label: "durchschnittliche jährliche Wertsteigerung (Landesdurchschnitt)"
+    - value: "15 %"
+      label: "durchschnittliche jährliche Wertsteigerung in Batumi"
+    - value: "10–15 %"
+      label: "jährliche Nettorendite bei Kurzzeitvermietung"
+    - value: "0 %"
+      label: "Grundstückgewinnsteuer nach 2 Jahren Haltedauer"
+    - value: "5 %"
+      label: "Steuer auf Mieteinnahmen"
+    - value: "0"
+      label: "Liegenschaftssteuer"
+    - value: "33 %"
+      label: "Staatsverschuldung im Verhältnis zum BIP"
+
+cities:
+  items:
+    - label: "Der Badeort"
+      name: "Batumi"
+      text: "Badeort am Schwarzen Meer und boomende Tourismusdestination: ein Markt, getragen von Kurzzeitvermietung und starker Wertsteigerung."
+    - label: "Die Hauptstadt"
+      name: "Tiflis"
+      text: "Wirtschafts- und Verwaltungshauptstadt des Landes: strukturelle Mietnachfrage, getragen von Wachstum, Unternehmen und zuziehenden Expats."
+
+criteria:
+  eyebrow: "Unsere Auswahlkriterien"
+  title: "Drei Filter vor jeder Empfehlung"
+  items:
+    - title: "Der Bauträger"
+      text: "Finanzielle Solidität, Erfahrung bei der Fertigstellung, Bauqualität und Verlässlichkeit."
+    - title: "Das Projekt"
+      text: "Konzept, Ausstattung, Vermietungsservices und Wiederverkaufspotenzial."
+    - title: "Die Lage"
+      text: "Touristische oder Wohnattraktivität, Erreichbarkeit, Umgebung und Perspektiven des Quartiers."
+
+financing:
+  eyebrow: "Finanzierung"
+  title: "Drei Arten zu kaufen"
+  items:
+    - title: "Zahlung zu 100 %"
+      text: "Die vollständige Zahlung bei Unterzeichnung ermöglicht den besten Rabatt auf den Preis."
+    - title: "Zahlungsplan"
+      text: "Eine Anzahlung bei Unterzeichnung, danach der Restbetrag in zinsfreien Monatsraten direkt beim Bauträger während der Bauphase."
+    - title: "Bankkredit"
+      text: "Eine Anzahlung bei Unterzeichnung, danach wird der Restbetrag bei Übergabe von einer georgischen Bank finanziert: Hebelwirkung im Dienst Ihrer Rendite."
+
+payment:
+  eyebrow: "Zahlungsarten"
+  title: "Einfach bezahlen, wo immer Sie sind"
+  items:
+    - title: "Banküberweisung"
+      text: "Internationale Überweisung in USD, EUR oder CHF, direkt an den Bauträger."
+    - title: "Kryptowährungen"
+      text: "Die Zahlung in Kryptowährungen ist für den gesamten Kaufpreis oder einen Teil davon möglich."
+    - title: "Bankkonto in Georgien"
+      text: "Wir begleiten Sie bei der Eröffnung eines lokalen Bankkontos für Ihre Zahlungen und Mieteinnahmen."
+
+partner:
+  eyebrow: "Mein Unternehmen"
+  title: "FFI, massgeschneiderte internationale Investments"
+  text: "FFI ist die internationale Beratungsfirma für Investitionen und Vermögensverwaltung, an der ich als Partner beteiligt bin. Über 15 Jahre Erfahrung, mehr als 1’200 begleitete Kunden und 13 erkundete Länder: Immobilien im Ausland, Holdingstrukturen, grenzüberschreitende Steuern und Bankbegleitung."
+  cta: "FFI entdecken"
+
+simulator:
+  eyebrow: "Rechner"
+  title: "Simulieren Sie Ihre Investition"
+  text: "Zahlung zu 100 %, Zahlungsplan oder Bankkredit, Vermietung oder Wiederverkauf: Schätzen Sie das benötigte Eigenkapital und die Rendite Ihres Projekts."
+
+booking:
+  title: "Sprechen wir über Ihr Investitionsprojekt"
+  text: "Wählen Sie einen Termin: Wir besprechen Ihre Ziele, Ihr Budget und die aktuellen Chancen."

@@ -1,0 +1,44 @@
+# Page d'accueil — FR
+seo:
+  title: "Eric Fankhauser — Investissement immobilier en Géorgie, conseil stratégique & Advisory Board"
+  description: "Entrepreneur suisse basé à Tbilissi : investissement immobilier en Géorgie avec FFI, conseil stratégique aux PME et implantation en Géorgie, Advisory Board pour PME suisses."
+
+hero:
+  eyebrow: "Suisse · Europe · Émirats arabes unis · Géorgie"
+  title: "Eric Fankhauser"
+  subtitle: "Entrepreneur, investisseur et conseiller stratégique"
+  lead: "Avec mes associés, j’accompagne investisseurs et dirigeants d’entreprise dans trois domaines distincts. Choisissez celui qui vous concerne."
+
+pillars:
+  items:
+    - key: invest
+      kicker: "FFI · Real Estate Asset Management"
+      title: "Investissement immobilier en Géorgie"
+      text: "Avec FFI, ma société : acheter, louer et revendre à Batumi et Tbilissi, accompagné de bout en bout par nos associés."
+      cta: "Découvrir l’investissement"
+    - key: consulting
+      kicker: "Conseil stratégique"
+      title: "Stratégie, développement et organisation des PME"
+      text: "Un regard extérieur pour accélérer votre entreprise — et une porte d’entrée de haut niveau pour vous implanter en Géorgie."
+      cta: "Découvrir le conseil stratégique"
+    - key: board
+      kicker: "Advisory Board"
+      title: "Un panel de spécialistes pour votre PME suisse"
+      text: "Diagnostic annuel et quatre sessions stratégiques par an, pour CHF 2’000 par mois."
+      cta: "Découvrir l’Advisory Board"
+
+about:
+  eyebrow: "Mon parcours"
+  title: "De l’apprenti de 15 ans à l’entrepreneur international"
+  text: "Swissair, New York le 11 septembre 2001, la création d’un centre d’appel, la reprise d’une entreprise en difficulté, puis dix ans à bâtir Swiss Auto Glass jusqu’à la troisième place nationale. Aujourd’hui à Tbilissi, je mets cette expérience au service de mes clients."
+  cta: "Lire mon histoire"
+
+team:
+  eyebrow: "L’équipe"
+  title: "Vous ne travaillez jamais avec moi seul"
+  text: "Chaque activité s’appuie sur des associés et des experts reconnus, en Suisse, en Europe et en Géorgie."
+  cta: "Rencontrer l’équipe"
+
+final:
+  title: "Parlons de votre projet"
+  text: "Un premier échange sans engagement pour comprendre vos objectifs et voir comment nous pouvons vous accompagner."

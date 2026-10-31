@@ -1,0 +1,125 @@
+---
+import '@fontsource/open-sauce-one/400.css';
+import '@fontsource/open-sauce-one/500.css';
+import '@fontsource/open-sauce-one/600.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, SOCIAL, LANGS, LOCALES, absolute, path, type Lang } from '../config/site';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** chemins de la même page dans chaque langue (pour hreflang + sélecteur de langue) */
+  alternates: Partial<Record<Lang, string>>;
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const { lang, title, description, alternates, ogType = 'website', ogImage = '/images/og-default.png', schema = [], noindex = false } = Astro.props;
+const fullTitle = title.includes('Eric Fankhauser') ? title : `${title} | Eric Fankhauser`;
+const canonical = absolute(Astro.url.pathname);
+
+const person = {
+  '@type': 'Person',
+  '@id': `${SITE.url}/#eric`,
+  name: 'Eric Fankhauser',
+  url: SITE.url,
+  image: absolute('/images/og-default.png'),
+  jobTitle: 'Real Estate Asset Manager & Strategic Advisor',
+  nationality: { '@type': 'Country', name: 'Switzerland' },
+  birthPlace: { '@type': 'Place', name: 'Genève, Suisse' },
+  homeLocation: { '@type': 'Place', name: 'Tbilissi, Géorgie' },
+  email: `mailto:${SITE.email}`,
+  telephone: SITE.phone,
+  knowsLanguage: ['fr', 'en'],
+  worksFor: [
+    { '@type': 'Organization', name: 'FFI', url: SITE.partners.ffi },
+    { '@type': 'Organization', name: 'The Advisory Board', url: SITE.partners.advisoryBoard },
+  ],
+  sameAs: Object.values(SOCIAL).filter(Boolean),
+};
+const website = {
+  '@type': 'WebSite',
+  '@id': `${SITE.url}/#website`,
+  url: SITE.url,
+  name: 'Eric Fankhauser',
+  inLanguage: ['fr', 'en', 'de'],
+  publisher: { '@id': `${SITE.url}/#eric` },
+};
+const jsonld = { '@context': 'https://schema.org', '@graph': [person, website, ...schema] };
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {LANGS.filter((l) => alternates[l]).map((l) => (
+      <link rel="alternate" hreflang={l} href={absolute(alternates[l]!)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={SITE.url + '/'} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Eric Fankhauser" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absolute(ogImage)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={LOCALES[lang].og} />
+    {LANGS.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={LOCALES[l].og} />)}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#112150" />
+    <link rel="alternate" type="application/rss+xml" title="Blog — Eric Fankhauser" href={`/${lang}/rss.xml`} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+    <script is:inline>
+      // Toujours ouvrir une nouvelle page en haut (sauf ancre #)
+      try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+      if (!location.hash) { window.scrollTo(0, 0); addEventListener('load', function () { window.scrollTo(0, 0); }); }
+      // Mémorise la langue choisie par le visiteur (utilisée par la page racine eric.swiss/)
+      try { localStorage.setItem('ef-lang', document.documentElement.lang); } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header lang={lang} alternates={alternates} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} alternates={alternates} />
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }),
+        { rootMargin: '0px 0px -8% 0px' },
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+      // Compteurs animés sur les chiffres clés
+      const countIo = new IntersectionObserver((entries) => entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        countIo.unobserve(e.target);
+        const el = e.target as HTMLElement;
+        const m = (el.textContent || '').match(/^(\D*)(\d+)(.*)$/s);
+        if (!m || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const [, pre, num, post] = m; const end = +num; const t0 = performance.now();
+        const step = (t: number) => { const k = Math.min(1, (t - t0) / 1400); el.textContent = pre + Math.round(end * (1 - Math.pow(1 - k, 3))) + post; if (k < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      }), { threshold: 0.6 });
+      document.querySelectorAll('.stat__v').forEach((el) => countIo.observe(el));
+    </script>
+  </body>
+</html>

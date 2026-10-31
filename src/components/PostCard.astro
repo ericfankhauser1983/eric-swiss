@@ -1,0 +1,24 @@
+---
+import type { Lang } from '../config/site';
+import { t } from '../i18n/ui';
+interface Props { lang: Lang; href: string; title: string; description: string; date: Date; tags?: string[] }
+const { lang, href, title, description, date, tags = [] } = Astro.props;
+const ui = t(lang);
+const d = date.toLocaleDateString({ fr: 'fr-CH', en: 'en-GB', de: 'de-CH' }[lang], { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<article class="post reveal">
+  <a href={href}>
+    <p class="post__meta"><time datetime={date.toISOString()}>{d}</time>{tags[0] && <span> · {tags[0]}</span>}</p>
+    <h3>{title}</h3>
+    <p class="post__desc">{description}</p>
+    <span class="link">{ui.cta.readMore} <span class="arrow">→</span></span>
+  </a>
+</article>
+<style>
+  .post a { display: flex; flex-direction: column; height: 100%; padding: 36px 0 0; border-top: 1px solid var(--navy); text-decoration: none; }
+  .post__meta { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--gold-deep); margin-bottom: 14px; }
+  .post h3 { transition: color 0.3s; }
+  .post a:hover h3 { color: var(--gold-deep); }
+  .post__desc { color: var(--muted); font-size: 0.96rem; flex: 1; }
+  .post .link { align-self: flex-start; margin-top: 12px; }
+</style>

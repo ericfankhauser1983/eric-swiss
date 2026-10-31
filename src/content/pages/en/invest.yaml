@@ -1,0 +1,104 @@
+# Real estate investment — Real Estate Asset Management — EN
+seo:
+  title: "Invest in Georgia real estate (Batumi, Tbilisi) — Real Estate Asset Management"
+  description: "Turnkey real estate investment in Georgia: selection, acquisition, rental management and resale in Batumi and Tbilisi. Simulator: cash, payment plan or bank loan."
+
+hero:
+  eyebrow: "FFI · Real Estate Asset Management"
+  title: "Investing in Georgian real estate with FFI"
+  lead: "With FFI, the company I run with my partners Adrien Boucher and Léo Lawless, we select, acquire, manage and resell properties in Batumi and Tbilisi on behalf of Swiss, French and Belgian investors — with one goal: growing their wealth."
+
+what:
+  eyebrow: "What we do"
+  title: "A real estate asset manager, not just a seller"
+  text: "A successful investment is won across the whole chain: buying well, managing well, selling well. We master each step and stay at your side after signing — for arbitrage, sales and reinvestments."
+  steps:
+    - title: "Acquisition"
+      text: "Rigorous selection of developer, project and location. Access to pre-sales and negotiation of terms: price, discount, payment plan."
+    - title: "Management"
+      text: "Turnkey furnishing, short- or long-term letting, monitoring of income and maintenance. You receive your rent without handling the day-to-day."
+    - title: "Resale & arbitrage"
+      text: "Choosing the right time to sell, reallocating the capital gain and reinvesting in new projects: your wealth keeps moving."
+
+why:
+  eyebrow: "Why we do it"
+  title: "Investing with our clients and supporting them throughout their investment"
+  text: "Our mission is simple: invest with our clients and support them for the entire life of their investment — arbitrage, sales, reinvestments — with the sole aim of growing their wealth over the years and across projects."
+
+georgia:
+  eyebrow: "The market"
+  title: "Georgia in figures"
+  stats:
+    - value: "7–10%"
+      label: "annual GDP growth"
+    - value: "9%"
+      label: "average annual property appreciation (national average)"
+    - value: "15%"
+      label: "average annual property appreciation in Batumi"
+    - value: "10–15%"
+      label: "annual net yield on short-term rentals"
+    - value: "0%"
+      label: "capital gains tax after 2 years of ownership"
+    - value: "5%"
+      label: "tax on rental income"
+    - value: "0"
+      label: "property tax or council tax"
+    - value: "33%"
+      label: "public debt to GDP"
+
+cities:
+  items:
+    - label: "The seaside resort"
+      name: "Batumi"
+      text: "Black Sea resort and booming tourist destination: a market driven by short-term rentals and strong capital appreciation."
+    - label: "The capital"
+      name: "Tbilisi"
+      text: "The country’s economic and administrative capital: structural rental demand, driven by growth, businesses and incoming expatriates."
+
+criteria:
+  eyebrow: "Our selection criteria"
+  title: "Three filters before any recommendation"
+  items:
+    - title: "The developer"
+      text: "Financial strength, delivery track record, build quality and reliability."
+    - title: "The project"
+      text: "Design, amenities, rental management services and resale potential."
+    - title: "The location"
+      text: "Tourist or residential appeal, accessibility, surroundings and neighbourhood prospects."
+
+financing:
+  eyebrow: "Financing"
+  title: "Three ways to buy"
+  items:
+    - title: "100% payment"
+      text: "Paying in full at signing allows you to negotiate the best discount on the price."
+    - title: "Payment plan"
+      text: "A down payment at signing, then the balance in interest-free monthly instalments directly with the developer during construction."
+    - title: "Bank loan"
+      text: "A down payment at signing, then the balance financed by a Georgian bank at delivery: leverage working for your return."
+
+payment:
+  eyebrow: "Payment methods"
+  title: "Pay easily, wherever you are"
+  items:
+    - title: "Bank transfer"
+      text: "International transfer in USD, EUR or CHF, directly to the developer."
+    - title: "Cryptocurrencies"
+      text: "Payment in cryptocurrencies is possible for all or part of your purchase."
+    - title: "Bank account in Georgia"
+      text: "We help you open a local bank account for your payments and rental income."
+
+partner:
+  eyebrow: "My company"
+  title: "FFI, tailor-made international investment"
+  text: "FFI is the international investment and wealth management advisory firm in which I am a partner. More than 15 years of experience, over 1,200 clients supported and 13 countries explored: property abroad, holding structures, cross-border taxation and banking support."
+  cta: "Discover FFI"
+
+simulator:
+  eyebrow: "Simulator"
+  title: "Simulate your investment"
+  text: "100% payment, payment plan or bank loan, rental or buy-to-resell: estimate the capital required and the return of your project."
+
+booking:
+  title: "Let’s talk about your investment project"
+  text: "Pick a slot: we will review your goals, your budget and current opportunities."

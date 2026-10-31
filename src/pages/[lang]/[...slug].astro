@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import Home from '../../views/Home.astro';
+import Invest from '../../views/Invest.astro';
+import Consulting from '../../views/Consulting.astro';
+import Board from '../../views/Board.astro';
+import About from '../../views/About.astro';
+import SimulatorPage from '../../views/SimulatorPage.astro';
+import Contact from '../../views/Contact.astro';
+import BlogIndex from '../../views/BlogIndex.astro';
+import Prose from '../../views/Prose.astro';
+import { LANGS, ROUTES, SITE, absolute, path, type Lang, type RouteKey } from '../../config/site';
+import { t } from '../../i18n/ui';
+import { page, alternates } from '../../lib/content';
+
+export function getStaticPaths() {
+  return LANGS.flatMap((lang) =>
+    (Object.keys(ROUTES) as RouteKey[]).map((key) => ({
+      params: { lang, slug: ROUTES[key][lang] || undefined },
+      props: { key },
+    })),
+  );
+}
+
+const lang = Astro.params.lang as Lang;
+const { key } = Astro.props as { key: RouteKey };
+const ui = t(lang);
+const misc = await page(lang, 'misc');
+
+const seoSource: Record<RouteKey, () => Promise<{ title: string; description: string }>> = {
+  home: async () => (await page(lang, 'home')).seo,
+  invest: async () => (await page(lang, 'invest')).seo,
+  consulting: async () => (await page(lang, 'consulting')).seo,
+  board: async () => (await page(lang, 'board')).seo,
+  about: async () => (await page(lang, 'about')).seo,
+  simulator: async () => misc.simulator.seo,
+  contact: async () => misc.contact.seo,
+  blog: async () => misc.blog.seo,
+  legal: async () => misc.legal.seo,
+  privacy: async () => misc.privacy.seo,
+};
+const seo = await seoSource[key]();
+const url = absolute(path(key, lang));
+
+// Données structurées spécifiques à chaque page
+const crumbs = key === 'home' ? [] : [{
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: ui.nav.home, item: absolute(path('home', lang)) },
+    { '@type': 'ListItem', position: 2, name: (ui.nav as any)[key] ?? seo.title, item: url },
+  ],
+}];
+const service = (name: string, description: string, extra: Record<string, unknown> = {}) => ({
+  '@type': 'Service',
+  name,
+  description,
+  url,
+  provider: { '@id': `${SITE.url}/#eric` },
+  inLanguage: lang,
+  ...extra,
+});
+const schema: Record<string, unknown>[] = [...crumbs];
+if (key === 'invest') schema.push(service(seo.title, seo.description, { serviceType: 'Real Estate Asset Management', areaServed: [{ '@type': 'City', name: 'Batumi' }, { '@type': 'City', name: 'Tbilisi' }, { '@type': 'Country', name: 'Georgia' }] }));
+if (key === 'consulting') schema.push(service(seo.title, seo.description, { serviceType: 'Strategic consulting', areaServed: ['CH', 'FR', 'BE', 'GE'] }));
+if (key === 'board') schema.push(service(seo.title, seo.description, { serviceType: 'Advisory Board', areaServed: 'CH', offers: { '@type': 'Offer', price: '2000', priceCurrency: 'CHF', description: '12 months' } }));
+if (key === 'about') schema.push({ '@type': 'ProfilePage', url, mainEntity: { '@id': `${SITE.url}/#eric` } });
+if (key === 'simulator') schema.push({ '@type': 'WebApplication', name: seo.title, url, applicationCategory: 'FinanceApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0' } });
+---
+<Base lang={lang} title={seo.title} description={seo.description} alternates={alternates(key)} schema={schema} noindex={key === 'legal' || key === 'privacy'}>
+  {key === 'home' && <Home lang={lang} />}
+  {key === 'invest' && <Invest lang={lang} />}
+  {key === 'consulting' && <Consulting lang={lang} />}
+  {key === 'board' && <Board lang={lang} />}
+  {key === 'about' && <About lang={lang} />}
+  {key === 'simulator' && <SimulatorPage lang={lang} />}
+  {key === 'contact' && <Contact lang={lang} />}
+  {key === 'blog' && <BlogIndex lang={lang} />}
+  {key === 'legal' && <Prose lang={lang} kind="legal" />}
+  {key === 'privacy' && <Prose lang={lang} kind="privacy" />}
+</Base>

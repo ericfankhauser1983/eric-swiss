@@ -1,0 +1,87 @@
+---
+import PageHero from '../components/PageHero.astro';
+import Booking from '../components/Booking.astro';
+import Team from '../components/Team.astro';
+import { CALENDLY, PHOTOS, HERO_VIDEOS, path, type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const ui = t(lang);
+const d = await page(lang, 'consulting');
+---
+<PageHero eyebrow={d.hero.eyebrow} title={d.hero.title} lead={d.hero.lead} photo={PHOTOS.consulting} video={HERO_VIDEOS.consulting}>
+  <a class="btn" href="#rendez-vous">{ui.cta.bookAdvisory} <span class="arrow">↓</span></a>
+</PageHero>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">{d.challenges.eyebrow}</p><h2>{d.challenges.title}</h2></div>
+    </div>
+    <div class="grid grid-3">
+      {d.challenges.items.map((c: any, i: number) => (
+        <div class="card reveal">
+          <h3>{c.title}</h3>
+          <p>{c.text}</p>
+          <ul class="ticks" style="margin-top:20px">{c.points.map((p: string) => <li>{p}</li>)}</ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">{d.method.eyebrow}</p><h2>{d.method.title}</h2></div>
+    </div>
+    <ol class="timeline">
+      {d.method.steps.map((s: any, i: number) => (
+        <li class="reveal"><span>0{i + 1}</span><div><h3>{s.title}</h3><p>{s.text}</p></div></li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap geo">
+    <div class="reveal">
+      <p class="eyebrow">{d.georgia.eyebrow}</p>
+      <h2>{d.georgia.title}</h2>
+      <p class="lead">{d.georgia.text}</p>
+    </div>
+    <ul class="ticks reveal">{d.georgia.services.map((s: string) => <li>{s}</li>)}</ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="eyebrow">{d.edge.eyebrow}</p><h2>{d.edge.title}</h2></div>
+    </div>
+    <div class="grid grid-3">
+      {d.edge.items.map((c: any) => (
+        <div class="edge reveal"><h3>{c.title}</h3><p>{c.text}</p></div>
+      ))}
+    </div>
+    <p class="reveal" style="margin-top:48px"><a class="link" href={path('board', lang)}>{ui.nav.board} <span class="arrow">→</span></a></p>
+  </div>
+</section>
+
+<Team lang={lang} filter={['Eric Fankhauser']} sand />
+
+<Booking lang={lang} url={CALENDLY.advisory} title={d.booking.title} text={d.booking.text} />
+
+<style>
+  .timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+  .timeline li { display: flex; gap: 20px; padding: 0 32px 0 0; }
+  .timeline li + li { padding-left: 32px; border-left: 1px solid var(--line); }
+  .timeline span { font-family: var(--f-title); font-size: clamp(2.4rem, 4vw, 3.2rem); line-height: 1; color: var(--gold); font-weight: 400; }
+  .timeline p { color: var(--muted); }
+  @media (max-width: 860px) { .timeline { grid-template-columns: 1fr; gap: 32px; } .timeline li + li { padding-left: 0; border-left: 0; } }
+  .geo { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+  @media (max-width: 860px) { .geo { grid-template-columns: 1fr; } }
+  .edge { padding-top: 28px; border-top: 1px solid var(--gold); }
+  .edge p { color: var(--muted); }
+</style>

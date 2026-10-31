@@ -1,0 +1,56 @@
+# Advisory Board — FR
+seo:
+  title: "Advisory Board pour PME suisses — un panel de spécialistes pour CHF 2’000 par mois"
+  description: "The Advisory Board donne aux dirigeants de PME suisses accès à un panel de spécialistes : diagnostic annuel et 4 sessions stratégiques par an, pour CHF 2’000 par mois."
+
+hero:
+  eyebrow: "Advisory Board"
+  title: "Un conseil de spécialistes à vos côtés, sans le coût d’une direction élargie"
+  lead: "The Advisory Board permet aux PME suisses d’accéder à un panel d’experts pour prendre de la hauteur, décider avec clarté et franchir une nouvelle étape : croissance, pivot ou projet personnel."
+
+problem:
+  eyebrow: "Pour qui"
+  title: "Pour les dirigeants qui portent seuls les grandes décisions"
+  text: "Absorbés par l’opérationnel, de nombreux chefs d’entreprise manquent de recul et d’interlocuteurs de confiance pour challenger leurs choix. L’Advisory Board leur apporte un regard extérieur, structuré et engagé."
+  criteria:
+    - "PME établie en Suisse"
+    - "Chiffre d’affaires d’au moins CHF 500’000 par an"
+    - "Un dirigeant prêt à franchir une nouvelle étape"
+
+offer:
+  eyebrow: "L’offre"
+  price: "CHF 2’000"
+  period: "par mois"
+  note: "Engagement de 12 mois"
+  includes:
+    - "1 session de diagnostic par an pour évaluer les besoins et ajuster la stratégie"
+    - "4 sessions d’Advisory Board par an pour le suivi stratégique"
+    - "Sessions en visioconférence"
+    - "Un panel de spécialistes adapté à votre entreprise"
+  exclusivity: "Limité à 7 entreprises — une seule par domaine d’activité."
+
+domains:
+  eyebrow: "Six domaines d’expertise"
+  items:
+    - title: "Planification stratégique"
+      text: "Vision et stratégie"
+    - title: "Compréhension du marché"
+      text: "Analyse et compétitivité"
+    - title: "RH & mindset"
+      text: "Gestion de l’humain et de sa performance"
+    - title: "Planification financière"
+      text: "Performance financière et flux de liquidités"
+    - title: "Efficacité opérationnelle"
+      text: "Processus et performance opérationnelle"
+    - title: "Évolution technologique"
+      text: "Mise à niveau technologique"
+
+panel:
+  eyebrow: "Le panel"
+  title: "Des experts engagés dans votre réussite"
+  text: "L’accompagnement est mené par Patrick Grobéty et Eric Fankhauser, rejoints par un troisième expert choisi selon les besoins spécifiques de votre entreprise. Plus de 120 entrepreneurs ont déjà été accompagnés."
+  cta: "Découvrir advisoryboard.ch"
+
+booking:
+  title: "Votre entreprise est-elle prête pour un Advisory Board ?"
+  text: "Réservez un échange pour en discuter et vérifier si une place est disponible dans votre domaine d’activité."

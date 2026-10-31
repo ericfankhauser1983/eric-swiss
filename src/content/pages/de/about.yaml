@@ -1,0 +1,65 @@
+# Über mich — DE
+seo:
+  title: "Meine Geschichte — Eric Fankhauser, Schweizer Unternehmer in Tiflis"
+  description: "Mit 15 Lehrling bei der Swissair, am 11. September 2001 in New York, Gründer von Swiss Auto Glass und heute Partner bei FFI: der Werdegang von Eric Fankhauser."
+
+hero:
+  eyebrow: "Meine Geschichte"
+  title: "Immer vorwärts. Gerade dann, wenn das Terrain schwierig ist."
+  lead: "Ich bin nie einem vorgezeichneten Weg gefolgt. Ich habe in der Praxis gelernt, eingesteckt, aufgebaut – und nie aufgehört, besser werden zu wollen."
+
+story:
+  - title: "Zwei Sprachen, ein Charakter"
+    text: "Ich bin in Genf geboren und stamme aus den Berner Alpen. Aufgewachsen bin ich zweisprachig, mit Französisch und Schweizerdeutsch, zwischen zwei Kulturen, die mich früh gelehrt haben, mich anzupassen. Schon sehr jung war für mich klar: Ich will Unternehmer werden. Ein Buch wirkte wie ein Auslöser – «Losing My Virginity» von Richard Branson. Mehr als eine Biografie war es für mich eine Erlaubnis: zu wagen, aus dem Rahmen zu treten und meinen eigenen Weg zu gehen."
+  - title: "Mit 15 die Schule verlassen"
+    text: "Mit 15 entschied ich mich für die Tat statt für die Schulbank und begann eine Lehre bei der Swissair. Dort lernte ich die Ansprüche einer grossen Airline kennen, den Sinn für Service und die Gründlichkeit einer Welt, in der jedes Detail zählt."
+  - title: "New York, 2001"
+    text: "Mit 18 schickte mich die Swissair für ein Jahr nach New York. Am 11. September 2001 war ich dort. An diesem Tag wurde ich schlagartig erwachsen. Weit weg von zu Hause lernte ich, Widrigkeiten allein zu begegnen, einen kühlen Kopf zu bewahren und weiterzugehen, wenn alles wankt. Diese Lektion hat mich nie verlassen."
+  - title: "Aufbauen"
+    text: "Zurück in der Schweiz blieb ich noch einige Jahre in der Reise- und Luftfahrtbranche, bevor ich zu Carglass in die Automobilbranche wechselte. Dort wurde mir der Aufbau des Schweizer Callcenters anvertraut: In 24 Monaten wuchs es von null auf dreissig Mitarbeitende und trug zu einem Wachstum von über 50 % pro Jahr bei. Gleichzeitig übernahm ich die Verkaufsleitung des Unternehmens. Ich lernte zu rekrutieren, ein Team zu begeistern und ehrgeizige Ziele zu erreichen."
+  - title: "Sanieren"
+    text: "Danach nahm ich eine neue Herausforderung an: die Reorganisation von Elixim, einem Empfangsdienstleister in Schwierigkeiten. Innert zwei Jahren fand das Unternehmen sein finanzielles Gleichgewicht wieder und wurde zur leistungsstärksten Gesellschaft seiner Gruppe. Für mich der Beweis, dass eine klare Organisation und ein engagiertes Team alles verändern können."
+  - title: "Gründen"
+    text: "Dann kam der Moment, für mich selbst aufzubauen. Ich gründete Swiss Auto Glass und entwickelte das Unternehmen über zehn Jahre lang bis auf Platz drei in der Schweiz. Zehn Jahre täglicher Kampf, Erfolge und Selbsthinterfragung, bevor ich meine Anteile verkaufte."
+  - title: "Weitergeben und investieren"
+    text: "Nach dem Verkauf startete ich meine Beratungstätigkeit, um meine Erfahrung anderen Unternehmern zur Verfügung zu stellen. Gleichzeitig stiess ich zu meinem Freund Adrien bei FFI und beteiligte mich am Unternehmen. Ich kannte ihn zuerst als Kunde, dann wurde er ein Freund und schliesslich mein Partner. Heute lebe ich in Tiflis und begleite Investoren und Unternehmer zwischen der Schweiz, Europa, dem Golf und Georgien."
+
+timeline:
+  - year: "Mit 15"
+    text: "Lehre bei der Swissair"
+  - year: "2001"
+    text: "Ein Jahr in New York für die Swissair"
+  - year: "Carglass"
+    text: "Aufbau des Schweizer Callcenters (0 auf 30 Mitarbeitende in 24 Monaten) und Verkaufsleitung"
+  - year: "Elixim"
+    text: "Reorganisation, finanzielles Gleichgewicht und leistungsstärkste Gesellschaft der Gruppe"
+  - year: "Swiss Auto Glass"
+    text: "Gründung, über zehn Jahre Wachstum, Nummer drei der Schweiz, dann Verkauf"
+  - year: "FFI"
+    text: "Partner – Immobilien-Investment in Georgien – und Beratungstätigkeit"
+  - year: "2026"
+    text: "Mitglied des Staffs der iranischen Nationalmannschaft"
+
+passions:
+  eyebrow: "Was mich antreibt"
+  items:
+    - key: rugby
+      title: "Sport – allen voran Rugby"
+      text: "Sport gibt mir tägliche Disziplin und hilft mir, den Kopf frei zu bekommen. Vor allem Rugby: ein kollektiver Kampfsport, in dem man nur gemeinsam vorwärtskommt. Seit diesem Jahr gehöre ich zum Staff der iranischen Nationalmannschaft – kürzlich haben wir unter anderem gegen Armenien gewonnen."
+    - key: travel
+      title: "Reisen"
+      text: "Reisen öffnet mich für die Welt, beruflich wie privat. So bilde ich mir meine eigene Meinung über die Kulturen und Realitäten unseres Planeten, fernab von Vorurteilen."
+
+quote:
+  text: "Mit meinen Kunden investieren und sie während der gesamten Lebensdauer ihrer Investition begleiten – mit einem Ziel: ihr Vermögen über die Jahre und Projekte hinweg zu vermehren."
+  author: "Eric Fankhauser"
+
+values:
+  eyebrow: "Was mich leitet"
+  items:
+    - title: "Kampfgeist"
+      text: "Angesichts von Widrigkeiten weicht man nicht zurück: Man passt sich an, steht auf und geht weiter."
+    - title: "Anspruch"
+      text: "Das ständige Streben nach Leistung und Exzellenz, in jedem Projekt und jedem Detail."
+    - title: "Treue"
+      text: "Beziehungen, die halten: Meine Kunden werden oft zu Freunden, manchmal zu Partnern."

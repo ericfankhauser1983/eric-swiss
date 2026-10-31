@@ -1,0 +1,56 @@
+# Advisory Board — EN
+seo:
+  title: "Advisory Board for Swiss SMEs — a panel of specialists for CHF 2,000 per month"
+  description: "The Advisory Board gives Swiss SME leaders access to a panel of specialists: an annual diagnostic and 4 strategic sessions a year, for CHF 2,000 per month."
+
+hero:
+  eyebrow: "Advisory Board"
+  title: "A board of specialists at your side, without the cost of an extended management team"
+  lead: "The Advisory Board gives Swiss SMEs access to a panel of experts to step back, decide with clarity and reach a new stage: growth, a pivot or a personal project."
+
+problem:
+  eyebrow: "Who it is for"
+  title: "For leaders who carry the big decisions alone"
+  text: "Absorbed by operations, many business owners lack perspective and trusted counterparts to challenge their choices. The Advisory Board brings them an outside, structured and committed view."
+  criteria:
+    - "SME established in Switzerland"
+    - "Annual revenue of at least CHF 500,000"
+    - "A leader ready to reach a new stage"
+
+offer:
+  eyebrow: "The offer"
+  price: "CHF 2,000"
+  period: "per month"
+  note: "12-month commitment"
+  includes:
+    - "1 diagnostic session per year to assess needs and adjust the strategy"
+    - "4 Advisory Board sessions per year for strategic follow-up"
+    - "Sessions by video conference"
+    - "A panel of specialists tailored to your company"
+  exclusivity: "Limited to 7 companies — only one per industry."
+
+domains:
+  eyebrow: "Six areas of expertise"
+  items:
+    - title: "Strategic planning"
+      text: "Vision and strategy"
+    - title: "Market understanding"
+      text: "Analysis and competitiveness"
+    - title: "HR & mindset"
+      text: "Managing people and their performance"
+    - title: "Financial planning"
+      text: "Financial performance and cash flow"
+    - title: "Operational efficiency"
+      text: "Processes and operational performance"
+    - title: "Technology evolution"
+      text: "Technology upgrade"
+
+panel:
+  eyebrow: "The panel"
+  title: "Experts committed to your success"
+  text: "The programme is led by Patrick Grobéty and Eric Fankhauser, joined by a third expert chosen according to your company’s specific needs. More than 120 entrepreneurs have already been supported."
+  cta: "Visit advisoryboard.ch"
+
+booking:
+  title: "Is your company ready for an Advisory Board?"
+  text: "Book a conversation to discuss it and check whether a seat is available in your industry."

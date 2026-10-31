@@ -1,0 +1,18 @@
+---
+/** Photo avec emplacement de remplacement élégant tant que la photo n'est pas fournie */
+interface Props { src?: string; alt: string; ratio?: string; class?: string; position?: string; eager?: boolean }
+const { src, alt, ratio = '4 / 5', class: cls, position = '50% 22%', eager = false } = Astro.props;
+---
+{src ? (
+  <img class:list={['ph', cls]} src={src} alt={alt} style={`aspect-ratio:${ratio};object-position:${position}`} loading={eager ? 'eager' : 'lazy'} />
+) : (
+  <div class:list={['ph ph--empty', cls]} style={`aspect-ratio:${ratio}`} role="img" aria-label={alt}>
+    <img src="/images/sign-gold.svg" alt="" aria-hidden="true" />
+  </div>
+)}
+<style>
+  .ph { display: block; width: 100%; height: auto; object-fit: cover; border-radius: var(--radius); }
+  .ph--empty { position: relative; display: grid; place-items: center; background: var(--navy) url('/images/texture-navy.jpg') center / cover; overflow: hidden; }
+  .ph--empty::after { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(173, 142, 104, 0.4); }
+  .ph--empty img { width: 30%; max-width: 160px; opacity: 0.9; }
+</style>

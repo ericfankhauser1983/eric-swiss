@@ -1,0 +1,44 @@
+# Startseite — DE
+seo:
+  title: "Eric Fankhauser — Immobilien-Investment in Georgien, Strategieberatung & Advisory Board"
+  description: "Schweizer Unternehmer mit Sitz in Tiflis: Immobilien-Investments in Georgien mit FFI, Strategieberatung für KMU und Markteintritt in Georgien, Advisory Board für Schweizer KMU."
+
+hero:
+  eyebrow: "Schweiz · Europa · Vereinigte Arabische Emirate · Georgien"
+  title: "Eric Fankhauser"
+  subtitle: "Unternehmer, Investor und Strategieberater"
+  lead: "Gemeinsam mit meinen Partnern begleite ich Investoren und Unternehmer in drei unterschiedlichen Bereichen. Wählen Sie den, der Sie betrifft."
+
+pillars:
+  items:
+    - key: invest
+      kicker: "FFI · Real Estate Asset Management"
+      title: "Immobilien-Investment in Georgien"
+      text: "Mit FFI, meinem Unternehmen: kaufen, vermieten und verkaufen in Batumi und Tiflis – von A bis Z begleitet von unseren Partnern."
+      cta: "Immobilien-Investment entdecken"
+    - key: consulting
+      kicker: "Strategieberatung"
+      title: "Strategie, Entwicklung und Organisation von KMU"
+      text: "Ein externer Blick, um Ihr Unternehmen voranzubringen – und ein hochrangiger Zugang für die Ansiedlung in Georgien."
+      cta: "Strategieberatung entdecken"
+    - key: board
+      kicker: "Advisory Board"
+      title: "Ein Expertengremium für Ihr Schweizer KMU"
+      text: "Jährliche Standortbestimmung und vier Strategiesitzungen pro Jahr, für CHF 2’000 pro Monat."
+      cta: "Advisory Board entdecken"
+
+about:
+  eyebrow: "Mein Werdegang"
+  title: "Vom 15-jährigen Lehrling zum internationalen Unternehmer"
+  text: "Swissair, New York am 11. September 2001, der Aufbau eines Callcenters, die Sanierung eines Unternehmens, dann zehn Jahre, um Swiss Auto Glass zur Nummer drei der Schweiz zu machen. Heute lebe ich in Tiflis und stelle diese Erfahrung in den Dienst meiner Kunden."
+  cta: "Meine Geschichte lesen"
+
+team:
+  eyebrow: "Das Team"
+  title: "Sie arbeiten nie mit mir allein"
+  text: "Jede Tätigkeit stützt sich auf Partner und anerkannte Experten in der Schweiz, in Europa und in Georgien."
+  cta: "Das Team kennenlernen"
+
+final:
+  title: "Sprechen wir über Ihr Projekt"
+  text: "Ein erstes, unverbindliches Gespräch, um Ihre Ziele zu verstehen und zu sehen, wie wir Sie begleiten können."

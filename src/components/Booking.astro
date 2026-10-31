@@ -1,0 +1,21 @@
+---
+import Calendly from './Calendly.astro';
+import type { Lang } from '../config/site';
+interface Props { lang: Lang; url: string; title: string; text?: string; id?: string }
+const { lang, url, title, text, id = 'rendez-vous' } = Astro.props;
+---
+<section class="section section--sand book" id={id}>
+  <div class="wrap book__in">
+    <div class="book__txt reveal">
+      <hr class="rule" style="max-width:80px;margin-bottom:28px" />
+      <h2>{title}</h2>
+      {text && <p class="lead">{text}</p>}
+    </div>
+    <div class="reveal"><Calendly url={url} lang={lang} /></div>
+  </div>
+</section>
+<style>
+  .book__in { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+  .book__txt { position: sticky; top: 150px; }
+  @media (max-width: 900px) { .book__in { grid-template-columns: 1fr; } .book__txt { position: static; } }
+</style>

@@ -1,0 +1,65 @@
+# Parcours — FR
+seo:
+  title: "Mon histoire — Eric Fankhauser, entrepreneur suisse à Tbilissi"
+  description: "Apprenti chez Swissair à 15 ans, à New York le 11 septembre 2001, fondateur de Swiss Auto Glass puis associé de FFI : le parcours d’Eric Fankhauser."
+
+hero:
+  eyebrow: "Mon histoire"
+  title: "Avancer, toujours. Même quand le terrain est difficile."
+  lead: "Je n’ai jamais suivi de chemin tracé. J’ai appris sur le terrain, encaissé, construit — et je n’ai jamais cessé de chercher à faire mieux."
+
+story:
+  - title: "Deux langues, un caractère"
+    text: "Je suis né à Genève et je suis originaire des Alpes bernoises. J’ai grandi entre deux langues, le français et le suisse allemand, et entre deux cultures qui m’ont appris très tôt à m’adapter. Très jeune déjà, une évidence s’impose : je veux entreprendre. Un livre agit comme un déclic — Losing My Virginity, de Richard Branson. Plus qu’une biographie, j’y trouve une permission : celle d’oser, de sortir du cadre et de construire ma propre route."
+  - title: "Quitter l’école à 15 ans"
+    text: "À 15 ans, je choisis l’action plutôt que les bancs de l’école et j’entre en apprentissage chez Swissair. J’y découvre l’exigence d’une grande compagnie, le sens du service et la rigueur d’un monde où chaque détail compte."
+  - title: "New York, 2001"
+    text: "À 18 ans, Swissair m’envoie pour un an à New York. Le 11 septembre 2001, je suis là. Ce jour-là, je bascule d’un coup dans le monde adulte. Loin de chez moi, j’apprends à faire face seul à l’adversité, à garder la tête froide et à avancer quand tout vacille. Cette leçon ne m’a jamais quitté."
+  - title: "Bâtir"
+    text: "De retour en Suisse, je reste quelques années dans l’univers du voyage et de l’aviation, puis je rejoins l’automobile chez Carglass. On me confie la création du centre d’appel suisse : en 24 mois, je le fais passer de zéro à trente collaborateurs et contribue à une croissance de plus de 50 % par an. En parallèle, je prends la direction commerciale de l’entreprise. J’y apprends à recruter, à fédérer et à tenir des objectifs ambitieux."
+  - title: "Redresser"
+    text: "Je relève ensuite un autre défi : réorganiser Elixim, une société de services d’accueil en difficulté. En deux ans, elle retrouve son équilibre financier et devient la société la plus performante de son groupe. La preuve, pour moi, qu’une organisation claire et une équipe engagée peuvent tout changer."
+  - title: "Entreprendre"
+    text: "Puis vient le moment de bâtir pour moi. Je fonde Swiss Auto Glass, que je fais grandir pendant plus de dix ans, jusqu’à la hisser à la troisième place nationale. Dix ans de combat quotidien, de victoires et de remises en question, avant de revendre mes parts."
+  - title: "Transmettre et investir"
+    text: "Après cette revente, je lance mes activités de conseil pour mettre mon expérience au service d’autres dirigeants. En parallèle, je rejoins mon ami Adrien au sein de FFI et j’y prends des parts. Je l’avais d’abord connu comme client, il est devenu un ami, puis mon associé. Aujourd’hui, je vis à Tbilissi et j’accompagne investisseurs et entrepreneurs entre la Suisse, l’Europe, le Golfe et la Géorgie."
+
+timeline:
+  - year: "15 ans"
+    text: "Apprentissage chez Swissair"
+  - year: "2001"
+    text: "Une année à New York pour Swissair"
+  - year: "Carglass"
+    text: "Création du centre d’appel suisse (0 à 30 collaborateurs en 24 mois) et direction commerciale"
+  - year: "Elixim"
+    text: "Réorganisation, retour à l’équilibre et première performance du groupe"
+  - year: "Swiss Auto Glass"
+    text: "Fondation, plus de dix ans de croissance, troisième acteur national, puis revente"
+  - year: "FFI"
+    text: "Associé — investissement immobilier en Géorgie — et activités de conseil"
+  - year: "2026"
+    text: "Membre du staff de l’équipe nationale d’Iran"
+
+passions:
+  eyebrow: "Ce qui me tient debout"
+  items:
+    - key: rugby
+      title: "Le sport, le rugby d’abord"
+      text: "Le sport me donne une discipline au quotidien et me permet de me vider la tête. Le rugby, surtout : un sport de combat collectif, où l’on n’avance qu’ensemble. Depuis cette année, je fais partie du staff de l’équipe nationale d’Iran, avec laquelle nous avons notamment remporté récemment un match face à l’Arménie."
+    - key: travel
+      title: "Les voyages"
+      text: "Voyager m’ouvre au monde, dans ma vie professionnelle comme privée. C’est ma façon de me forger mon propre avis sur les cultures et les réalités de notre planète, loin des idées reçues."
+
+quote:
+  text: "Investir avec mes clients et les accompagner pendant toute la vie de leur investissement, avec un seul but : faire croître leur patrimoine au fil des années et des projets."
+  author: "Eric Fankhauser"
+
+values:
+  eyebrow: "Ce qui me guide"
+  items:
+    - title: "Combativité"
+      text: "Face à l’adversité, on ne recule pas : on s’adapte, on se relève et on avance."
+    - title: "Exigence"
+      text: "La recherche constante de la performance et de l’excellence, dans chaque projet et chaque détail."
+    - title: "Fidélité"
+      text: "Des relations qui durent : mes clients deviennent souvent des amis, parfois des associés."

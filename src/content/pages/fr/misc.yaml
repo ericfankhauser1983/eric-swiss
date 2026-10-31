@@ -1,0 +1,74 @@
+# Pages secondaires — FR : simulateur, rendez-vous, blog, mentions légales, confidentialité
+simulator:
+  seo:
+    title: "Simulateur d’investissement immobilier en Géorgie — cash, plan de paiement ou crédit"
+    description: "Calculez le capital à mobiliser, les loyers, la plus-value, le ROE et le TRI de votre investissement immobilier en Géorgie selon le mode de financement."
+  eyebrow: "Simulateur"
+  title: "Simulez votre investissement immobilier en Géorgie"
+  lead: "Choisissez votre mode de financement et votre stratégie, puis ajustez les curseurs : vous obtenez en un instant le capital à mobiliser, le gain net et le rendement de votre projet."
+
+contact:
+  seo:
+    title: "Prendre rendez-vous avec Eric Fankhauser"
+    description: "Réservez un échange avec Eric Fankhauser : investissement immobilier en Géorgie, conseil stratégique ou Advisory Board."
+  eyebrow: "Rendez-vous"
+  title: "Choisissez le sujet de notre échange"
+  lead: "Sélectionnez votre thématique puis le créneau qui vous convient. Vous pouvez aussi m’écrire directement par e-mail ou WhatsApp."
+  invest:
+    title: "Investissement immobilier"
+    text: "Batumi, Tbilissi, financement, stratégie patrimoniale."
+  advisory:
+    title: "Conseil stratégique & Advisory Board"
+    text: "Stratégie, développement, organisation, implantation en Géorgie."
+
+blog:
+  seo:
+    title: "Blog — Investissement immobilier, Géorgie et stratégie d’entreprise"
+    description: "Articles d’Eric Fankhauser sur l’investissement immobilier en Géorgie, la stratégie et le développement des PME."
+
+legal:
+  seo:
+    title: "Mentions légales"
+    description: "Mentions légales du site eric.swiss."
+  title: "Mentions légales"
+  body: |
+    ## Éditeur du site
+    Eric Fankhauser
+    E-mail : eric.fankhauser@francefinance.ae
+    Téléphone / WhatsApp : +971 58 536 2157
+
+    ## Hébergement
+    Le site est hébergé par Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.
+
+    ## Propriété intellectuelle
+    L’ensemble des contenus de ce site (textes, logos, éléments graphiques) est la propriété d’Eric Fankhauser, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.
+
+    ## Liens externes
+    Le site contient des liens vers des sites tiers (FFI, The Advisory Board, Calendly). Leur contenu relève de la responsabilité de leurs éditeurs respectifs.
+
+    ## Information
+    Les informations et simulations présentées sur ce site ont une vocation informative et ne constituent ni une offre, ni un conseil en investissement personnalisé.
+
+privacy:
+  seo:
+    title: "Politique de confidentialité"
+    description: "Politique de confidentialité et protection des données du site eric.swiss."
+  title: "Politique de confidentialité"
+  body: |
+    ## Responsable du traitement
+    Eric Fankhauser — eric.fankhauser@francefinance.ae
+
+    ## Données collectées
+    Lorsque vous utilisez le simulateur, nous collectons votre prénom, nom, adresse e-mail, numéro WhatsApp ainsi que les paramètres et résultats de votre simulation. Ces données sont utilisées exclusivement pour vous recontacter au sujet de votre projet.
+
+    ## Prise de rendez-vous
+    La réservation de rendez-vous est assurée par Calendly. Les données saisies sont traitées selon la politique de confidentialité de Calendly.
+
+    ## Durée de conservation
+    Vos données sont conservées le temps nécessaire au suivi de votre demande, puis au maximum trois ans après le dernier contact.
+
+    ## Cookies
+    Ce site n’utilise pas de cookies publicitaires. Seule votre préférence de langue est enregistrée dans votre navigateur.
+
+    ## Vos droits
+    Conformément à la loi fédérale suisse sur la protection des données (nLPD) et au RGPD, vous disposez d’un droit d’accès, de rectification et de suppression de vos données. Pour l’exercer, écrivez à eric.fankhauser@francefinance.ae.

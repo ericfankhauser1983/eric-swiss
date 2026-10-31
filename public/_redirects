@@ -1,0 +1,7 @@
+# La racine eric.swiss/ redirige déjà le visiteur vers sa langue (via la page index.html :
+# langue mémorisée > langue du navigateur > anglais).
+# Option serveur (Netlify) — décommenter pour une redirection côté serveur
+# (attention : elle ignore alors la langue choisie manuellement par le visiteur) :
+# /  /fr/  302!  Language=fr
+# /  /de/  302!  Language=de
+# /  /en/  302!

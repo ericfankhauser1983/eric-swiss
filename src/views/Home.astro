@@ -1,0 +1,87 @@
+---
+import Photo from '../components/Photo.astro';
+import HeroBg from '../components/HeroBg.astro';
+import Team from '../components/Team.astro';
+import CtaBand from '../components/CtaBand.astro';
+import VideoFeed from '../components/VideoFeed.astro';
+import { PHOTOS, HERO_VIDEOS, path, type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const ui = t(lang);
+const d = await page(lang, 'home');
+const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTOS.consulting, board: PHOTOS.board };
+---
+<section class="intro">
+  <HeroBg video={HERO_VIDEOS.home} />
+  <div class="wrap intro__in">
+    <div class="intro__txt">
+      <p class="eyebrow">{d.hero.eyebrow}</p>
+      <h1>{d.hero.title}</h1>
+      <p class="intro__sub">{d.hero.subtitle}</p>
+      <p class="lead">{d.hero.lead}</p>
+      <a class="btn btn--ghost" href={path('contact', lang)}>{ui.cta.book}</a>
+    </div>
+    <div class="intro__photo"><Photo src={PHOTOS.heroPortrait} alt="Eric Fankhauser" ratio="4 / 5" eager /></div>
+  </div>
+</section>
+
+<section class="section paths">
+  <div class="wrap paths__grid">
+    {d.pillars.items.map((p: any) => (
+      <a class="path reveal" href={path(p.key, lang)}>
+        <Photo src={photo[p.key]} alt={p.title} ratio="3 / 2" />
+        <div class="path__body">
+          <p class="eyebrow">{p.kicker}</p>
+          <h2>{p.title}</h2>
+          <p>{p.text}</p>
+          <span class="link">{p.cta} <span class="arrow">→</span></span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap story reveal">
+    <div>
+      <p class="eyebrow">{d.about.eyebrow}</p>
+      <h2>{d.about.title}</h2>
+    </div>
+    <div>
+      <p class="lead">{d.about.text}</p>
+      <a class="link" href={path('about', lang)}>{d.about.cta} <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<Team lang={lang} title={d.team.title} />
+
+<VideoFeed lang={lang} />
+
+<CtaBand title={d.final.title} text={d.final.text} href={path('contact', lang)} label={ui.cta.book} />
+
+<style>
+  .intro { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }
+  .intro__in { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 96px); align-items: center; padding-top: clamp(56px, 8vw, 110px); padding-bottom: clamp(56px, 8vw, 110px); }
+  .intro h1 { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 400; margin-bottom: 10px; }
+  .intro__sub { font-family: var(--f-title); font-size: clamp(1.1rem, 1.8vw, 1.45rem); color: var(--gold-light); margin-bottom: 28px; }
+  .intro .lead { color: var(--muted-light); margin-bottom: 36px; }
+  .intro__photo { max-width: 440px; justify-self: end; width: 100%; }
+  @media (max-width: 860px) { .intro__in { grid-template-columns: 1fr; } .intro__photo { justify-self: start; max-width: 360px; } }
+  .paths__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.5vw, 36px); }
+  .path { display: flex; flex-direction: column; text-decoration: none; background: var(--cream); }
+  .path__body { display: flex; flex-direction: column; flex: 1; padding: 28px 4px 0; }
+  .path .eyebrow { margin-bottom: 14px; }
+  .path h2 { font-size: clamp(1.35rem, 2vw, 1.7rem); margin-bottom: 14px; }
+  .path p { color: var(--muted); flex: 1; }
+  .path .link { align-self: flex-start; margin-top: 8px; }
+  .path:hover h2 { color: var(--gold-deep); }
+  .path :global(.ph) { transition: transform 0.6s var(--ease); }
+  .path:hover :global(.ph) { transform: translateY(-4px); }
+  @media (max-width: 900px) { .paths__grid { grid-template-columns: 1fr; } }
+  .story { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 6vw, 96px); align-items: start; }
+  .story h2 { margin: 0; }
+  @media (max-width: 860px) { .story { grid-template-columns: 1fr; } }
+</style>
