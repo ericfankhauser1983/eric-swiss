@@ -1,19 +1,19 @@
 # "Invest in Georgia" landing page (social media link) — EN
 # Address: eric.swiss/en/georgia/
 seo:
-  title: "Invest in Georgia — Book your call with Eric Fankhauser"
+  title: "Invest in Georgia with the market leader — Book your call"
   description: "Book a free call, simulate your real estate investment in Batumi or Tbilisi and discover why Georgia attracts European investors."
 
 hero:
   eyebrow: "FFI · Real estate in Georgia"
-  title: "Invest in Georgia with a <em>Swiss partner on the ground</em>"
-  lead: "Batumi, Tbilisi: we select, buy, manage and resell properties for our clients. Book a 30-minute call to discuss your project."
+  title: "Invest in Georgia with <em>the market leader</em>"
+  lead: "With FFI, we invest several million every month in the Georgian market on behalf of private investors, family offices and investment funds, with a strategy tailored to each client. Book a 30-minute call to discuss your project."
   person: "Eric Fankhauser"
   role: "FFI partner · based in Tbilisi"
   proofs:
-    - "15+ years of FFI experience"
-    - "1,200+ clients advised"
-    - "A team on the ground"
+    - "No. 1 in Georgian real estate investment"
+    - "1,000+ clients advised"
+    - "Several million invested every month"
 
 steps:
   - "Book your call"
@@ -47,7 +47,7 @@ why:
 team:
   eyebrow: "You are not alone"
   title: "A team by your side, before and after the purchase"
-  text: "I live in Tbilisi. With my partners Adrien Boucher and Léo Lawless, our rental management specialist, we support you from selecting the property to reselling it."
+  text: "I live in Tbilisi. With my partners Adrien Boucher and Léo Lawless, our rental management specialist, we build a strategy tailored to your needs and situation, then support you from selecting the property to reselling it."
 
 final:
   title: "Ready to discuss your project?"

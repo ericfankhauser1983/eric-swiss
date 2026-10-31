@@ -1,19 +1,19 @@
 # Landing page « Investir en Géorgie » (lien des réseaux sociaux) — FR
 # Adresse : eric.swiss/fr/georgie/
 seo:
-  title: "Investir en Géorgie — Réservez votre appel avec Eric Fankhauser"
+  title: "Investir en Géorgie avec le leader du marché — Réservez votre appel"
   description: "Réservez un appel gratuit, simulez votre investissement immobilier à Batumi ou Tbilissi et découvrez pourquoi la Géorgie attire les investisseurs européens."
 
 hero:
   eyebrow: "FFI · Immobilier en Géorgie"
-  title: "Investissez en Géorgie avec un <em>Suisse sur place</em>"
-  lead: "Batumi, Tbilissi : nous sélectionnons, achetons, gérons et revendons des biens pour nos clients. Réservez un appel de 30 minutes pour parler de votre projet."
+  title: "Investissez en Géorgie avec <em>le leader du marché</em>"
+  lead: "Avec FFI, nous investissons chaque mois plusieurs millions sur le marché géorgien pour le compte de privés, de family offices et de fonds d’investissement, avec une stratégie adaptée à chaque client. Réservez un appel de 30 minutes pour parler de votre projet."
   person: "Eric Fankhauser"
   role: "Associé FFI · basé à Tbilissi"
   proofs:
-    - "Plus de 15 ans d’expérience FFI"
-    - "Plus de 1 200 clients accompagnés"
-    - "Une équipe sur place"
+    - "N°1 de l’investissement immobilier en Géorgie"
+    - "Plus de 1 000 clients accompagnés"
+    - "Plusieurs millions investis chaque mois"
 
 steps:
   - "Réservez votre appel"
@@ -47,7 +47,7 @@ why:
 team:
   eyebrow: "Vous n’êtes pas seul"
   title: "Une équipe à vos côtés, avant et après l’achat"
-  text: "Je vis à Tbilissi. Avec mes associés Adrien Boucher et Léo Lawless, spécialiste de la gestion locative, nous vous accompagnons de la sélection du bien jusqu’à sa revente."
+  text: "Je vis à Tbilissi. Avec mes associés Adrien Boucher et Léo Lawless, spécialiste de la gestion locative, nous construisons une stratégie adaptée à vos besoins et à votre situation, puis nous vous accompagnons de la sélection du bien jusqu’à sa revente."
 
 final:
   title: "Prêt à parler de votre projet ?"
