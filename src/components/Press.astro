@@ -2,16 +2,18 @@
 /** Revue de presse (textes : src/content/pages/<lang>/press.yaml) */
 import type { Lang } from '../config/site';
 import { page } from '../lib/content';
-interface Props { lang: Lang; sand?: boolean }
-const { lang, sand = false } = Astro.props;
+interface Props { lang: Lang; sand?: boolean; bare?: boolean }
+const { lang, sand = false, bare = false } = Astro.props;
 const d = await page(lang, 'press');
 ---
 <section class:list={['section', { 'section--sand': sand }]} id="presse">
   <div class="wrap">
-    <div class="reveal" style="margin-bottom:clamp(32px,4vw,56px)">
-      <p class="eyebrow">{d.eyebrow}</p>
-      <h2>{d.title}</h2>
-    </div>
+    {!bare && (
+      <div class="reveal" style="margin-bottom:clamp(32px,4vw,56px)">
+        <p class="eyebrow">{d.eyebrow}</p>
+        <h2>{d.title}</h2>
+      </div>
+    )}
     {d.items.map((it: any) => (
       <article class="press reveal">
         <a class="press__cover" href={it.pdf} target="_blank" rel="noopener" aria-label={`${it.media} — ${d.read}`}>

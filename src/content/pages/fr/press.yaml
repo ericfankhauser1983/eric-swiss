@@ -1,4 +1,8 @@
 # Presse — FR (ajouter un article : copier un bloc dans items, la couverture dans public/images/presse/, le PDF dans public/presse/)
+seo:
+  title: "Presse et médias — Eric Fankhauser"
+  description: "Interviews et articles consacrés à Eric Fankhauser, entrepreneur suisse basé à Tbilissi : investissement immobilier en Géorgie, conseil d’entreprise et parcours."
+lead: "Interviews, articles et apparitions dans les médias."
 eyebrow: "Dans la presse"
 title: "Ils en parlent"
 read: "Lire l’interview (PDF)"

@@ -144,6 +144,7 @@ export const ROUTES = {
   board: { fr: 'advisory-board', en: 'advisory-board', de: 'advisory-board' },
   about: { fr: 'parcours', en: 'about', de: 'ueber-mich' },
   contact: { fr: 'rendez-vous', en: 'book-a-meeting', de: 'termin' },
+  press: { fr: 'presse', en: 'press', de: 'presse' },
   blog: { fr: 'blog', en: 'blog', de: 'blog' },
   legal: { fr: 'mentions-legales', en: 'legal-notice', de: 'impressum' },
   privacy: { fr: 'confidentialite', en: 'privacy', de: 'datenschutz' },

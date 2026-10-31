@@ -9,6 +9,7 @@ import SimulatorPage from '../../views/SimulatorPage.astro';
 import Contact from '../../views/Contact.astro';
 import BlogIndex from '../../views/BlogIndex.astro';
 import Prose from '../../views/Prose.astro';
+import PressPage from '../../views/PressPage.astro';
 import { LANGS, ROUTES, SITE, absolute, path, type Lang, type RouteKey } from '../../config/site';
 import { t } from '../../i18n/ui';
 import { page, alternates } from '../../lib/content';
@@ -36,6 +37,7 @@ const seoSource: Record<RouteKey, () => Promise<{ title: string; description: st
   simulator: async () => misc.simulator.seo,
   contact: async () => misc.contact.seo,
   blog: async () => misc.blog.seo,
+  press: async () => (await page(lang, 'press')).seo,
   legal: async () => misc.legal.seo,
   privacy: async () => misc.privacy.seo,
 };
@@ -80,6 +82,7 @@ if (key === 'simulator') schema.push({ '@type': 'WebApplication', name: seo.titl
   {key === 'simulator' && <SimulatorPage lang={lang} />}
   {key === 'contact' && <Contact lang={lang} />}
   {key === 'blog' && <BlogIndex lang={lang} />}
+  {key === 'press' && <PressPage lang={lang} />}
   {key === 'legal' && <Prose lang={lang} kind="legal" />}
   {key === 'privacy' && <Prose lang={lang} kind="privacy" />}
 </Base>

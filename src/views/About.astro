@@ -1,5 +1,4 @@
 ---
-import Press from '../components/Press.astro';
 import Photo from '../components/Photo.astro';
 import HeroBg from '../components/HeroBg.astro';
 import Team from '../components/Team.astro';
@@ -100,7 +99,7 @@ const q = { fr: `« ${d.quote.text} »`, en: `“${d.quote.text}”`, de: `«${d
   </div>
 </section>
 
-<Press lang={lang} />
+<section class="section section--tight" style="padding-top:0"><div class="wrap"><a class="link" href={path('press', lang)}>{ui.nav.press} <span class="arrow">→</span></a></div></section>
 
 <Team lang={lang} sand />
 

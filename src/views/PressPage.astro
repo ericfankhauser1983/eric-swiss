@@ -1,0 +1,11 @@
+---
+import PageHero from '../components/PageHero.astro';
+import Press from '../components/Press.astro';
+import { type Lang } from '../config/site';
+import { page } from '../lib/content';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = await page(lang, 'press');
+---
+<PageHero eyebrow={d.eyebrow} title={d.title} lead={d.lead} />
+<Press lang={lang} bare />
