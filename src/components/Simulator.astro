@@ -16,6 +16,7 @@ const ui = t(lang).sim;
 const D = {
   currency: 'USD',
   price: 120000,
+  budget: 100000,
   /** Frais de notaire et d'enregistrement (fixes, non modifiables par le visiteur, inclus dans les calculs et dans l'e-mail) */
   notary: { USD: 5750, EUR: 5000, CHF: 4700 } as Record<string, number>,
   delivery: { min: 0, max: 48, step: 1, value: 12 },
@@ -40,7 +41,28 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
 ---
 <div class="sim" data-sim data-cfg={cfg}>
   <form class="sim__form" data-params novalidate>
-    <fieldset class="st">
+    <div class="mode" role="radiogroup">
+      <label class="mode__c"><input type="radio" name="mode" value="budget" checked /><span><strong>{ui.modeBudget}</strong><em>{ui.modeBudgetDesc}</em></span></label>
+      <label class="mode__c"><input type="radio" name="mode" value="price" /><span><strong>{ui.modePrice}</strong><em>{ui.modePriceDesc}</em></span></label>
+    </div>
+
+    <fieldset class="st" data-mode="budget">
+      <legend class="st__h"><span>1</span>{ui.stepBudget}</legend>
+      <div class="grid3">
+        <div class="opt">
+          <span class="opt__l">{ui.currency}</span>
+          <div class="seg">
+            {['USD', 'EUR', 'CHF'].map((c) => <label><input type="radio" name="currencyB" value={c} checked={c === D.currency} /><span>{c}</span></label>)}
+          </div>
+        </div>
+        <label class="fld"><span class="opt__l">{ui.budget}</span><span class="fld__in fld__in--big"><input type="number" name="budget" min="10000" step="5000" value={D.budget} inputmode="numeric" /><em data-cur>{D.currency}</em></span></label>
+      </div>
+      <div class="chips" aria-hidden="true">
+        {[50000, 100000, 250000, 500000].map((v) => <button type="button" class="chip" data-budget={v}>{new Intl.NumberFormat('fr-CH').format(v)}</button>)}
+      </div>
+    </fieldset>
+
+    <fieldset class="st" data-mode="price">
       <legend class="st__h"><span>1</span>{ui.step1}</legend>
       <div class="fin">
         {fin.map((f, i) => (
@@ -75,8 +97,8 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
     </fieldset>
 
     <fieldset class="st">
-      <legend class="st__h"><span>3</span>{ui.step3}</legend>
-      <div class="grid3">
+      <legend class="st__h"><span>3</span><b data-mode="price">{ui.step3}</b><b data-mode="budget">{ui.stepHyp}</b></legend>
+      <div class="grid3" data-mode="price">
         <div class="opt">
           <span class="opt__l">{ui.currency}</span>
           <div class="seg">
@@ -107,26 +129,28 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
             <input type="range" name={s.name} min={s.min} max={s.max} step={s.step} value={s.value} data-fmt={s.fmt} />
           </div>
         ))}
+        <p class="terms" data-mode="budget">{ui.financingTerms}</p>
         {[slider('planDown', ui.planDown, 'pct'), slider('planMonths', ui.planMonths, 'count')].map((s) => (
           <div class="rg" data-fin="plan">
-            <div class="rg__top"><span class="opt__l">{s.label}</span><output data-out={s.name}></output></div>
+            <div class="rg__top"><span class="opt__l"><em class="rg__fin" data-mode="budget">{ui.plan} · </em>{s.label}</span><output data-out={s.name}></output></div>
             <input type="range" name={s.name} min={s.min} max={s.max} step={s.step} value={s.value} data-fmt={s.fmt} />
           </div>
         ))}
         {[slider('creditDown', ui.creditDown, 'pct'), slider('creditYears', ui.creditYears, 'years')].map((s) => (
           <div class="rg" data-fin="credit">
-            <div class="rg__top"><span class="opt__l">{s.label}</span><output data-out={s.name}></output></div>
+            <div class="rg__top"><span class="opt__l"><em class="rg__fin" data-mode="budget">{ui.credit} · </em>{s.label}</span><output data-out={s.name}></output></div>
             <input type="range" name={s.name} min={s.min} max={s.max} step={s.step} value={s.value} data-fmt={s.fmt} />
           </div>
         ))}
       </div>
     </fieldset>
 
-    <button class="btn sim__go" type="submit">{ui.compute} <span class="arrow">→</span></button>
+    <button class="btn sim__go" type="submit"><b data-mode="budget">{ui.computeBudget}</b><b data-mode="price">{ui.compute}</b> <span class="arrow">→</span></button>
   </form>
 
   <!-- Formulaire de contact : Netlify Forms détecte ce formulaire au déploiement -->
   <div class="sim__lead" data-lead hidden>
+    <p class="teaser" data-teaser></p>
     <h3>{ui.formTitle}</h3>
     <p>{ui.formLead}</p>
     <form name="simulation" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-leadform novalidate>
@@ -148,12 +172,13 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
 
   <div class="sim__res" data-res hidden>
     <div class="sim__res-head">
-      <div><p class="eyebrow" data-res-tag></p><h3>{ui.results}</h3></div>
+      <div><p class="eyebrow" data-res-tag></p><h3 data-res-title>{ui.results}</h3></div>
       <button type="button" class="link" data-edit>{ui.edit} ↑</button>
     </div>
     <p class="sim__status" data-status hidden></p>
     <div class="kpis" data-kpis></div>
     <div class="sim__table" data-table></div>
+    <div class="cmp" data-cmp hidden></div>
     <div class="sim__foot">
       <div>
         <p class="sim__hyp-t">{ui.hypotheses}</p>
@@ -166,6 +191,45 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
 </div>
 
 <style>
+  .mode { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: clamp(32px, 4vw, 48px); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
+  .mode__c { cursor: pointer; }
+  .mode__c input { position: absolute; opacity: 0; pointer-events: none; }
+  .mode__c span { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 20px 24px; transition: all 0.3s var(--ease); }
+  .mode__c + .mode__c span { border-left: 1px solid var(--line); }
+  .mode__c strong { font-family: var(--f-title); font-weight: 500; font-size: 1.12rem; color: var(--navy); }
+  .mode__c em { font-style: normal; font-size: 0.86rem; color: var(--muted); }
+  .mode__c input:checked + span { background: var(--gold); }
+  .mode__c input:checked + span strong { color: var(--cream); }
+  .mode__c input:checked + span em { color: rgba(255, 254, 251, 0.85); }
+  .mode__c input:focus-visible + span { outline: 2px solid var(--navy); outline-offset: -2px; }
+  @media (max-width: 560px) { .mode { grid-template-columns: 1fr; } .mode__c + .mode__c span { border-left: 0; border-top: 1px solid var(--line); } }
+  [data-mode][hidden] { display: none !important; }
+  .st__h b { font-weight: inherit; }
+  .fld__in--big input { height: 56px; font-size: 1.35rem; font-family: var(--f-title); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: -18px; }
+  .chip { font: 500 0.82rem var(--f-title); padding: 8px 14px; border: 1px solid var(--line); background: #fff; color: var(--navy); border-radius: 999px; cursor: pointer; transition: all 0.2s; }
+  .chip:hover, .chip.is-on { border-color: var(--gold); background: rgba(173, 142, 104, 0.12); }
+  .terms { grid-column: 1 / -1; margin: 6px 0 -14px; font-family: var(--f-title); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); }
+  .teaser { font-family: var(--f-title); font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.4; color: var(--navy); background: #fff; border-left: 3px solid var(--gold); padding: 18px 22px; margin: 0 0 28px; max-width: 760px; }
+  .rg__fin { font-style: normal; color: var(--gold-deep); }
+  .rg__fin[hidden] { display: none; }
+  .teaser:empty { display: none; }
+  .teaser :global(strong) { color: var(--gold-deep); font-weight: 500; }
+  .cmp :global(.cmp__lead) { color: var(--muted); margin: -8px 0 24px; max-width: 720px; }
+  .cmp :global(.cmp__grid) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .cmp :global(.cmp__card) { position: relative; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px 20px; background: #fff; display: flex; flex-direction: column; }
+  .cmp :global(.cmp__card.is-best) { border-color: var(--navy); box-shadow: inset 0 -3px 0 var(--gold), 0 20px 50px -30px rgba(17, 33, 80, 0.5); }
+  .cmp :global(.cmp__badge) { position: absolute; top: -12px; left: 18px; background: var(--gold); color: var(--cream); font: 600 0.68rem var(--f-title); letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 10px; border-radius: 2px; white-space: nowrap; }
+  .cmp :global(.cmp__card h4) { font-size: 1.12rem; margin: 0 0 18px; }
+  .cmp :global(.cmp__big span) { display: block; font-size: 0.76rem; color: var(--muted); margin-bottom: 4px; }
+  .cmp :global(.cmp__big strong) { display: block; font-family: var(--f-title); font-weight: 400; font-size: clamp(1.5rem, 2.4vw, 1.9rem); color: var(--navy); letter-spacing: -0.02em; margin-bottom: 16px; }
+  .cmp :global(.cmp__card.is-best .cmp__big strong) { color: var(--gold-deep); }
+  .cmp :global(.cmp__rows) { list-style: none; padding: 0; margin: auto 0 0; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+  .cmp :global(.cmp__rows li) { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+  .cmp :global(.cmp__rows li span) { color: var(--muted); }
+  .cmp :global(.cmp__rows li b) { font-weight: 500; color: var(--navy); text-align: right; }
+  .cmp :global(.cmp__rows .neg) { color: #a3442c; }
+  @media (max-width: 860px) { .cmp :global(.cmp__grid) { grid-template-columns: 1fr; } .cmp :global(.cmp__card + .cmp__card) { margin-top: 8px; } .cmp :global(.cmp__card.is-best) { order: -1; margin: 6px 0 14px; } }
   .sim { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 30px 80px -40px rgba(17, 33, 80, 0.35); }
   .sim__form { padding: clamp(24px, 4vw, 52px); }
   .st { border: 0; padding: 0; margin: 0 0 clamp(32px, 4vw, 48px); min-width: 0; }
@@ -316,33 +380,91 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
         root.querySelector('[data-badge]')!.textContent = badge;
       }
     }
+    const mode = () => radio('mode') as 'price' | 'budget';
+    const currency = () => (mode() === 'budget' ? radio('currencyB') : radio('currency'));
     function syncVisibility() {
       const f = radio('financing');
       const s = radio('strategy');
-      root.querySelectorAll<HTMLElement>('[data-fin]').forEach((el) => (el.hidden = el.dataset.fin !== f));
+      const md = mode();
+      root.querySelectorAll<HTMLElement>('[data-mode]').forEach((el) => (el.hidden = el.dataset.mode !== md));
+      root.querySelectorAll<HTMLElement>('[data-fin]').forEach((el) => (el.hidden = md === 'price' && el.dataset.fin !== f));
       root.querySelectorAll<HTMLElement>('[data-only]').forEach((el) => (el.hidden = el.dataset.only !== s));
+      root.querySelectorAll('[data-cur]').forEach((e) => (e.textContent = currency()));
     }
     params.querySelectorAll<HTMLInputElement>('input[type=range]').forEach((r) => { paintSlider(r); r.addEventListener('input', () => paintSlider(r)); });
-    params.querySelectorAll('input[name=financing], input[name=strategy]').forEach((r) => r.addEventListener('change', syncVisibility));
-    params.querySelectorAll('input[name=currency]').forEach((r) => r.addEventListener('change', () => root.querySelectorAll('[data-cur]').forEach((e) => (e.textContent = radio('currency')))));
+    params.querySelectorAll('input[name=financing], input[name=strategy], input[name=mode], input[name=currency], input[name=currencyB]').forEach((r) => r.addEventListener('change', () => { syncVisibility(); res.hidden = true; lead.hidden = true; }));
+    const budgetIn = params.elements.namedItem('budget') as HTMLInputElement;
+    const paintChips = () => root.querySelectorAll<HTMLElement>('[data-budget]').forEach((c) => c.classList.toggle('is-on', +c.dataset.budget! === +budgetIn.value));
+    root.querySelectorAll<HTMLElement>('[data-budget]').forEach((c) => c.addEventListener('click', () => { budgetIn.value = c.dataset.budget!; paintChips(); }));
+    budgetIn.addEventListener('input', paintChips); paintChips();
     syncVisibility();
 
     function read() {
       const x: SimInput = {
         financing: radio('financing') as SimInput['financing'],
         strategy: radio('strategy') as SimInput['strategy'],
-        price: num('price'), notary: cfg.notary[radio('currency')] ?? 0,
+        price: num('price'), notary: cfg.notary[currency()] ?? 0,
         delivery: num('delivery'), holding: num('holding'),
         yieldPct: num('yieldPct'), apprPct: num('apprPct'),
         planDown: num('planDown'), planMonths: num('planMonths'),
         creditDown: num('creditDown'), creditYears: num('creditYears'),
       };
-      return { x, cur: radio('currency'), finish: radio('finish') };
+      return { x, cur: currency(), finish: radio('finish'), budget: num('budget') };
     }
+
+    /** Mode « budget » : prix maximal finançable pour un capital mobilisé égal au budget, pour chaque financement */
+    type Opt = { f: SimInput['financing']; x: SimInput; r: Result };
+    function solveBudget(p: ReturnType<typeof read>): Opt[] {
+      return (['cash', 'plan', 'credit'] as const).map((f) => {
+        const base = { ...p.x, financing: f };
+        let lo = 0, hi = Math.max(p.budget, 1) * 25;
+        for (let i = 0; i < 60; i++) {
+          const mid = (lo + hi) / 2;
+          if (simulate({ ...base, price: mid }).capital <= p.budget) lo = mid; else hi = mid;
+        }
+        const price = Math.floor(lo / 1000) * 1000;
+        const x = { ...base, price };
+        return { f, x, r: simulate(x) };
+      }).filter((o) => o.x.price > 0);
+    }
+    const bestOf = (opts: Opt[]) => opts.reduce((a, b) => (b.r.roe > a.r.roe ? b : a), opts[0]);
+    const tpl = (s: string, v: Record<string, string>) => s.replace(/\{(\w+)\}/g, (_, k) => v[k] ?? '');
     const label = (group: string, v: string) => (params.querySelector(`input[name=${group}][value=${v}]`)?.nextElementSibling as HTMLElement)?.textContent?.trim() ?? v;
     const finLabel = (v: string) => (params.querySelector(`input[name=financing][value=${v}]`)?.nextElementSibling?.querySelector('strong') as HTMLElement)?.textContent ?? v;
 
+    const kpisEl = root.querySelector<HTMLElement>('[data-kpis]')!;
+    const tableEl = root.querySelector<HTMLElement>('[data-table]')!;
+    const cmpEl = root.querySelector<HTMLElement>('[data-cmp]')!;
+    const titleEl = root.querySelector<HTMLElement>('[data-res-title]')!;
+
+    function renderBudget(p: ReturnType<typeof read>, opts: Opt[]) {
+      const m = (v: number) => money(v, p.cur);
+      const best = bestOf(opts);
+      kpisEl.hidden = true; tableEl.hidden = true; cmpEl.hidden = false;
+      titleEl.textContent = tpl(ui.resultsBudget, { budget: m(p.budget) });
+      root.querySelector('[data-res-tag]')!.textContent = `${label('strategy', p.x.strategy)} · ${label('finish', p.finish)} · ${months(p.x.holding)}`;
+      cmpEl.innerHTML = `<p class="cmp__lead">${ui.cmpLead}</p><div class="cmp__grid">` + opts.map((o) => {
+        const rows: [string, string, string?][] = [];
+        rows.push([ui.netGain, m(o.r.gain)]);
+        rows.push([ui.irr, pct(o.r.irr)]);
+        rows.push([ui.multiple, `${nf(o.r.multiple, 2)}×`]);
+        if (o.f !== 'cash') rows.push([ui.cmpMonthly, m(o.r.monthly)]);
+        if (p.x.strategy === 'rent') rows.push([ui.cmpCashflow, m(o.r.cashflow), o.r.cashflow < 0 ? 'neg' : '']);
+        return `<article class="cmp__card${o === best ? ' is-best' : ''}">${o === best ? `<span class="cmp__badge">${ui.bestRoe}</span>` : ''}
+          <h4>${finLabel(o.f)}</h4>
+          <div class="cmp__big"><span>${ui.reachPrice}</span><strong>${m(o.x.price)}</strong></div>
+          <div class="cmp__big"><span>${ui.roe}</span><strong>${pct(o.r.roe)}</strong></div>
+          <div class="cmp__big"><span>${ui.capitalAfter}</span><strong>${m(o.r.capital + o.r.gain)}</strong></div>
+          <ul class="cmp__rows">${rows.map(([k, v, c]) => `<li><span>${k}</span><b class="${c || ''}">${v}</b></li>`).join('')}</ul>
+        </article>`;
+      }).join('') + '</div>';
+      const hyp = [p.x.strategy === 'rent' ? ui.hypRent : ui.hypResale, ui.hypPlan, ui.hypRate, ui.hypTax];
+      root.querySelector('[data-hyp]')!.innerHTML = hyp.map((h) => `<li>${h}</li>`).join('');
+    }
+
     function render(p: ReturnType<typeof read>, r: Result) {
+      kpisEl.hidden = false; tableEl.hidden = false; cmpEl.hidden = true;
+      titleEl.textContent = ui.results;
       const { x, cur } = p;
       const m = (v: number) => money(v, cur);
       root.querySelector('[data-res-tag]')!.textContent = `${finLabel(x.financing)} · ${label('strategy', x.strategy)} · ${label('finish', p.finish)}`;
@@ -397,6 +519,27 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       ].filter((l) => l !== '').join('\n');
     }
 
+    function summaryBudget(p: ReturnType<typeof read>, opts: Opt[], ident: Record<string, string>) {
+      const m = (v: number) => money(v, p.cur, 'fr-CH');
+      const finish = { brut: 'Brut', turnkey: 'Équipé et meublé' }[p.finish as 'brut'];
+      const best = bestOf(opts);
+      const names = { cash: 'Paiement à 100 %', plan: `Plan de paiement (apport ${p.x.planDown} %, ${p.x.planMonths} mensualités)`, credit: `Crédit bancaire (apport ${p.x.creditDown} %, ${p.x.creditYears} ans, taux ${CREDIT_RATE} %)` };
+      return [
+        'NOUVELLE SIMULATION (MODE BUDGET) — eric.swiss', '',
+        `Client : ${ident.prenom} ${ident.nom}`, `E-mail : ${ident.email}`, `WhatsApp : ${ident.whatsapp}`,
+        `Langue du visiteur : ${cfg.lang.toUpperCase()}`, cfg.source ? `Provenance : ${cfg.source}` : '', `Date : ${new Date().toLocaleString('fr-CH')}`, '',
+        'PROJET',
+        `Fonds propres disponibles : ${m(p.budget)}`,
+        `Livraison du logement : ${finish}`,
+        `Stratégie : ${p.x.strategy === 'rent' ? 'Location' : 'Achat / revente'}`,
+        `Livraison : ${p.x.delivery} mois | Détention : ${p.x.holding} mois`,
+        p.x.strategy === 'rent' ? `Rendement locatif net : ${p.x.yieldPct} %` : 'Rendement locatif : non applicable',
+        `Prise de valeur : ${p.x.apprPct} %/an | Frais de notaire et d’enregistrement : ${m(p.x.notary)} (inclus)`, '',
+        'OPTIONS COMPARÉES',
+        ...opts.map((o) => `${names[o.f]}${o === best ? ' — MEILLEUR ROE' : ''}\n  Bien accessible : ${m(o.x.price)} | Gain net : ${m(o.r.gain)} | ROE : ${pct(o.r.roe, 'fr-CH')} | TRI : ${pct(o.r.irr, 'fr-CH')} | Multiple : ${o.r.multiple.toFixed(2)}×${o.f !== 'cash' ? ` | Mensualité : ${m(o.r.monthly)}` : ''}${p.x.strategy === 'rent' ? ` | Cash-flow : ${m(o.r.cashflow)}/mois` : ''}`),
+      ].filter((l) => l !== '').join('\n');
+    }
+
     async function send(ident: Record<string, string>, text: string) {
       if (cfg.form.provider === 'web3forms' && cfg.form.key) {
         const r = await fetch('https://api.web3forms.com/submit', {
@@ -416,11 +559,28 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
 
     async function deliver(ident: Record<string, string>) {
       const p = read();
-      const r = simulate(p.x);
-      render(p, r);
+      let text: string;
+      if (mode() === 'budget') {
+        const opts = solveBudget(p);
+        renderBudget(p, opts);
+        text = summaryBudget(p, opts, ident);
+      } else {
+        const r = simulate(p.x);
+        render(p, r);
+        text = summary(p, r, ident);
+      }
       lead.hidden = true; res.hidden = false;
       res.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      try { await send(ident, summary(p, r, ident)); showStatus(true); } catch { showStatus(false); }
+      try { await send(ident, text); showStatus(true); } catch { showStatus(false); }
+    }
+    const teaserEl = root.querySelector<HTMLElement>('[data-teaser]')!;
+    function teaser() {
+      const p = read();
+      if (mode() === 'budget') {
+        const opts = solveBudget(p);
+        const max = Math.max(...opts.map((o) => o.x.price));
+        teaserEl.innerHTML = tpl(ui.teaserBudget, { budget: `<strong>${money(p.budget, p.cur)}</strong>`, price: `<strong>${money(max, p.cur)}</strong>` });
+      } else teaserEl.textContent = ui.teaserPrice;
     }
 
     params.addEventListener('submit', (e) => {
@@ -428,6 +588,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       const ident = getIdent();
       if (ident) { deliver(ident); return; }
       res.hidden = true; lead.hidden = false;
+      teaser();
       lead.scrollIntoView({ behavior: 'smooth', block: 'start' });
       (leadForm.elements.namedItem('prenom') as HTMLInputElement).focus({ preventScroll: true });
     });
