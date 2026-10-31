@@ -1,12 +1,12 @@
 # Strategieberatung — DE
 seo:
-  title: "Strategieberatung für KMU und Firmenansiedlung in Georgien"
-  description: "Beratung in Strategie, Entwicklung und Organisation für KMU. Spezialisiert auf die Ansiedlung und Entwicklung ausländischer Unternehmen in Georgien dank eines hochrangigen Netzwerks."
+  title: "Unternehmensberatung in Georgien: Ansiedlung, Firmengründung und Strategie"
+  description: "Firmengründung und Expansion in Georgien mit einem Schweizer Unternehmer in Tiflis: Strukturierung, Steuern, Banken, Unternehmensnetzwerk und Zugang zur Regierung."
 
 hero:
-  eyebrow: "Strategieberatung"
-  title: "Die Entwicklung Ihres Unternehmens klären, strukturieren, beschleunigen"
-  lead: "Ich begleite KMU-Unternehmer bei ihren Fragen zu Strategie, Entwicklung und Organisation – mit einer Spezialisierung: der Ansiedlung und Entwicklung ausländischer Unternehmen in Georgien."
+  eyebrow: "Strategieberatung · Georgien"
+  title: "Unternehmensberatung und Firmenansiedlung in Georgien"
+  lead: "Von Tiflis aus begleite ich Schweizer und europäische Unternehmen, die sich in Georgien ansiedeln und entwickeln wollen: Firmengründung, Strukturierung, Banken, Partner und Beziehungen zu den Behörden. Zudem unterstütze ich KMU-Unternehmer bei Fragen zu Strategie, Entwicklung und Organisation."
 
 challenges:
   eyebrow: "Themen, die ich behandle"
@@ -36,7 +36,7 @@ method:
 georgia:
   eyebrow: "Spezialisierung Georgien"
   title: "Sich in Georgien ansiedeln und entwickeln"
-  text: "Georgien bietet eines der günstigsten steuerlichen und administrativen Umfelder der Region, eine stark wachsende Wirtschaft und eine strategische Lage zwischen Europa und Asien. Für eine erfolgreiche Ansiedlung braucht es jedoch die richtigen Kontakte vor Ort."
+  text: "Georgien bietet eines der günstigsten steuerlichen und administrativen Umfelder der Region: Eine Firma wird in der Regel an einem Arbeitstag eingetragen, reinvestierte Gewinne sind steuerfrei, und das Land hat Freihandelsabkommen mit der Europäischen Union, der EFTA (inklusive Schweiz) und China. Für eine erfolgreiche Ansiedlung braucht es jedoch die richtigen Kontakte vor Ort."
   services:
     - "Marktstudie und Validierung der Chance"
     - "Rechtliche und steuerliche Strukturierung der Ansiedlung"
@@ -59,3 +59,20 @@ edge:
 booking:
   title: "Sprechen wir über Ihr Unternehmen"
   text: "Buchen Sie ein erstes Gespräch, um Ihre Situation und Ihre Ziele vorzustellen."
+
+faq:
+  eyebrow: "Häufige Fragen"
+  title: "Eine Firma in Georgien gründen und entwickeln"
+  items:
+    - q: "Kann ein Ausländer in Georgien eine Firma gründen?"
+      a: "Ja. Ein Ausländer kann 100 % einer georgischen Firma halten, ohne lokalen Partner. Die Eintragung erfolgt bei der Nationalen Agentur des öffentlichen Registers (Public Service Halls), in der Regel an einem Arbeitstag, und ist per Vollmacht auch aus der Ferne möglich."
+    - q: "Wie werden Unternehmen in Georgien besteuert?"
+      a: "Georgien wendet das estnische Modell an: Die Gewinnsteuer von 15 % fällt nur auf ausgeschüttete Gewinne an. Reinvestierte Gewinne sind steuerfrei, Dividenden werden mit 5 % besteuert. Je nach Tätigkeit gibt es Sonderregelungen: Kleinunternehmerstatus (1 % des Umsatzes für Einzelunternehmer, unter Bedingungen), Virtual-Zone-Status für IT-Firmen und Freie Industriezonen."
+    - q: "Wie lange dauert die Eröffnung eines Geschäftskontos?"
+      a: "Nach der Eintragung der Firma rechnen Sie mit einigen Tagen bis einigen Wochen, je nach Profil und Qualität der Unterlagen. Wir bereiten das Dossier mit Ihnen vor und stellen Sie den Banken direkt vor."
+    - q: "Warum Georgien für ein Schweizer oder europäisches KMU?"
+      a: "Wegen der Steuern, der schnellen Verfahren, der Arbeitskosten und der Lage zwischen Europa und Asien. Die Freihandelsabkommen mit der EU, der EFTA und China machen das Land zu einer regionalen Plattform für Produktion, Export oder Support-Funktionen."
+    - q: "Brauche ich eine Arbeitsbewilligung in Georgien?"
+      a: "Seit März 2026 kann das Gesetz über die Arbeitsmigration für bestimmte Ausländer, die in Georgien tätig sind, eine Arbeitsbewilligung verlangen. Wir prüfen Ihre Situation und begleiten Sie bei den Formalitäten."
+    - q: "Wie läuft Ihre Begleitung ab?"
+      a: "Wir beginnen mit einem Gespräch, um Ihr Projekt zu verstehen. Dann prüfen wir die Chance, wählen die Struktur, bereiten Eintragung und Bankbeziehung vor und öffnen Ihnen unser Netzwerk: Unternehmen, Banken, Institutionen und Regierung. Auch nach dem Start bleiben wir an Ihrer Seite."

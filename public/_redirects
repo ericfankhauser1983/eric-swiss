@@ -5,3 +5,8 @@
 # /  /fr/  302!  Language=fr
 # /  /de/  302!  Language=de
 # /  /en/  302!
+
+# Anciennes adresses de la page Conseil (déplacées pour le référencement « Géorgie »)
+/fr/conseil-strategique/*  /fr/conseil-entreprise-georgie/  301
+/en/strategic-consulting/*  /en/business-consulting-georgia/  301
+/de/strategieberatung/*  /de/unternehmensberatung-georgien/  301

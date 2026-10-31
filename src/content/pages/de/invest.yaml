@@ -102,3 +102,20 @@ simulator:
 booking:
   title: "Sprechen wir über Ihr Investitionsprojekt"
   text: "Wählen Sie einen Termin: Wir besprechen Ihre Ziele, Ihr Budget und die aktuellen Chancen."
+
+faq:
+  eyebrow: "Häufige Fragen"
+  title: "In georgische Immobilien investieren"
+  items:
+    - q: "Kann ein Ausländer in Georgien eine Immobilie kaufen?"
+      a: "Ja. Ausländer können Wohnungen, Häuser oder Gewerbeflächen zu vollem Eigentum erwerben, ohne Aufenthaltsbewilligung oder lokalen Partner. Einzige Einschränkung ist landwirtschaftliches Land. Der Kauf ist per Vollmacht auch aus der Ferne möglich."
+    - q: "Wie werden Mieteinnahmen und Wertzuwachs besteuert?"
+      a: "Für Privatpersonen können Mieteinnahmen aus Wohnimmobilien mit 5 % besteuert werden. Der Gewinn beim Verkauf einer Wohnimmobilie, die länger als zwei Jahre gehalten wurde, ist steuerfrei."
+    - q: "Batumi oder Tiflis: wo investieren?"
+      a: "Batumi, der Badeort am Schwarzen Meer, lebt vom Tourismus und von Kurzzeitvermietung. Tiflis, die Hauptstadt, bietet eine strukturelle Mietnachfrage dank Wirtschaft, Unternehmen und Expats. Wir stellen die Aufteilung nach Ihren Zielen zusammen: Rendite, Wertzuwachs oder Eigennutzung."
+    - q: "Kann ich den Kauf mit einem Kredit finanzieren?"
+      a: "Ja. Georgische Banken finanzieren auch Ausländer, in der Regel bei Übergabe der Immobilie. Bauträger bieten oft zinsfreie Zahlungspläne während der Bauphase an. Mit dem Rechner können Sie die drei Varianten vergleichen."
+    - q: "Wer übernimmt die Mietverwaltung?"
+      a: "Unser Partner Léo Lawless, Spezialist für Mietverwaltung, kümmert sich um Vermietung, Mieterbetreuung und Unterhalt. Sie erhalten Ihre Einnahmen, ohne sich um den Alltag zu kümmern."
+    - q: "Warum mit FFI investieren?"
+      a: "FFI ist Marktführer für Immobilien-Investments in Georgien: über 1’000 begleitete Kunden und jeden Monat mehrere Millionen investiert für Privatpersonen, Family Offices und Investmentfonds. Wir leben vor Ort und passen die Strategie jedem Kunden an."

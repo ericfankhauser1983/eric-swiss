@@ -3,6 +3,7 @@ import PageHero from '../components/PageHero.astro';
 import Booking from '../components/Booking.astro';
 import Simulator from '../components/Simulator.astro';
 import Team from '../components/Team.astro';
+import Faq from '../components/Faq.astro';
 import { SITE, CALENDLY, PHOTOS, HERO_VIDEOS, path, type Lang } from '../config/site';
 import { t } from '../i18n/ui';
 import { page } from '../lib/content';
@@ -127,6 +128,8 @@ const d = await page(lang, 'invest');
 
 
 <Team lang={lang} filter={['Eric Fankhauser', 'Adrien Boucher', 'Léo Lawless']} />
+
+<Faq eyebrow={d.faq.eyebrow} title={d.faq.title} items={d.faq.items} />
 
 <Booking lang={lang} url={CALENDLY.invest[lang]} title={d.booking.title} text={d.booking.text} />
 

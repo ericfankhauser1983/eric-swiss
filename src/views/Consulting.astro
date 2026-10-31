@@ -2,6 +2,7 @@
 import PageHero from '../components/PageHero.astro';
 import Booking from '../components/Booking.astro';
 import Team from '../components/Team.astro';
+import Faq from '../components/Faq.astro';
 import { CALENDLY, PHOTOS, HERO_VIDEOS, path, type Lang } from '../config/site';
 import { t } from '../i18n/ui';
 import { page } from '../lib/content';
@@ -13,6 +14,17 @@ const d = await page(lang, 'consulting');
 <PageHero eyebrow={d.hero.eyebrow} title={d.hero.title} lead={d.hero.lead} photo={PHOTOS.consulting} video={HERO_VIDEOS.consulting}>
   <a class="btn" href="#rendez-vous">{ui.cta.bookAdvisory} <span class="arrow">↓</span></a>
 </PageHero>
+
+<section class="section section--navy">
+  <div class="wrap geo">
+    <div class="reveal">
+      <p class="eyebrow">{d.georgia.eyebrow}</p>
+      <h2>{d.georgia.title}</h2>
+      <p class="lead">{d.georgia.text}</p>
+    </div>
+    <ul class="ticks reveal">{d.georgia.services.map((s: string) => <li>{s}</li>)}</ul>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
@@ -44,16 +56,7 @@ const d = await page(lang, 'consulting');
   </div>
 </section>
 
-<section class="section section--navy">
-  <div class="wrap geo">
-    <div class="reveal">
-      <p class="eyebrow">{d.georgia.eyebrow}</p>
-      <h2>{d.georgia.title}</h2>
-      <p class="lead">{d.georgia.text}</p>
-    </div>
-    <ul class="ticks reveal">{d.georgia.services.map((s: string) => <li>{s}</li>)}</ul>
-  </div>
-</section>
+
 
 <section class="section">
   <div class="wrap">
@@ -68,6 +71,8 @@ const d = await page(lang, 'consulting');
     <p class="reveal" style="margin-top:48px"><a class="link" href={path('board', lang)}>{ui.nav.board} <span class="arrow">→</span></a></p>
   </div>
 </section>
+
+<Faq eyebrow={d.faq.eyebrow} title={d.faq.title} items={d.faq.items} />
 
 <Team lang={lang} filter={['Eric Fankhauser']} sand />
 

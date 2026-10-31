@@ -15,6 +15,14 @@
 | `geopolitique` | Géopolitique | Un regard **qui se distancie de la vision mainstream européenne** : la lecture du Caucase, du Golfe, de l'Asie, de la Turquie ou du Sud global sur l'actualité, vue de Tbilissi. On questionne le consensus européen avec des faits sourcés. On ne donne jamais un fait inventé ou non vérifié comme acquis, pas de propagande, pas d'attaque personnelle. Le lien avec l'investisseur ou l'entrepreneur doit rester concret. |
 | `entrepreneuriat` | Entrepreneuriat | Le vécu d'entrepreneur d'Eric : création et revente de Swiss Auto Glass, Carglass, réorganisations, Advisory Board, implantation en Géorgie. Conseils concrets aux dirigeants de PME : stratégie, organisation, développement, performance, mental de compétiteur. |
 
+## Priorité SEO
+
+Le référencement du site vise deux thèmes : **l'investissement immobilier en Géorgie** et **le conseil d'entreprise et l'implantation en Géorgie**.
+- Rubrique immobilier : viser des recherches comme « investir en Géorgie », « immobilier Batumi », « acheter un appartement à Tbilissi », « rendement locatif Géorgie », « fiscalité immobilière Géorgie ».
+- Rubrique entrepreneuriat : une fois sur deux au moins, un sujet sur la création ou le développement d'une société en Géorgie (« créer une société en Géorgie », « fiscalité des entreprises en Géorgie », « ouvrir un compte bancaire en Géorgie », « s'implanter en Géorgie depuis la Suisse »).
+- Mettre l'expression visée dans le titre, la description, le premier paragraphe et un intertitre, de façon naturelle.
+- Ajouter au moins un lien interne vers la page Immobilier (`/fr/investissement-immobilier-georgie/`) ou Conseil (`/fr/conseil-entreprise-georgie/`), selon le sujet.
+
 ## Style
 
 - Écrit à la première personne (« je ») : Eric, entrepreneur suisse installé à Tbilissi.
@@ -46,7 +54,7 @@ draft: true               # true tant que la date de publication n'est pas arriv
 ---
 ```
 
-- Liens internes FR : `/fr/simulateur-investissement/`, `/fr/rendez-vous/`, `/fr/conseil-strategique/`, `/fr/advisory-board/`. Pour EN et DE, voir `ROUTES` dans `src/config/site.ts`.
+- Liens internes FR : `/fr/simulateur-investissement/`, `/fr/rendez-vous/`, `/fr/conseil-entreprise-georgie/`, `/fr/investissement-immobilier-georgie/`, `/fr/advisory-board/`. Pour EN et DE, voir `ROUTES` dans `src/config/site.ts`.
 
 ## Publication automatique
 

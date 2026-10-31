@@ -137,9 +137,9 @@ export const ROUTES = {
     de: 'investitionsrechner',
   },
   consulting: {
-    fr: 'conseil-strategique',
-    en: 'strategic-consulting',
-    de: 'strategieberatung',
+    fr: 'conseil-entreprise-georgie',
+    en: 'business-consulting-georgia',
+    de: 'unternehmensberatung-georgien',
   },
   board: { fr: 'advisory-board', en: 'advisory-board', de: 'advisory-board' },
   about: { fr: 'parcours', en: 'about', de: 'ueber-mich' },

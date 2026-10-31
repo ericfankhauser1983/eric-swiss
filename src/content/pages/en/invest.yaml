@@ -102,3 +102,20 @@ simulator:
 booking:
   title: "Let’s talk about your investment project"
   text: "Pick a slot: we will review your goals, your budget and current opportunities."
+
+faq:
+  eyebrow: "Frequently asked questions"
+  title: "Investing in real estate in Georgia"
+  items:
+    - q: "Can a foreigner buy property in Georgia?"
+      a: "Yes. Foreigners can buy an apartment, a house or commercial premises freehold, with no residence permit or local partner. The only restriction concerns agricultural land. The purchase can be completed remotely, by power of attorney."
+    - q: "How are rental income and capital gains taxed?"
+      a: "For an individual, rent from a residential property can be taxed at 5%. Capital gains on the sale of a residential property held for more than two years are tax-free."
+    - q: "Batumi or Tbilisi: where should I invest?"
+      a: "Batumi, the Black Sea resort, is driven by tourism and short-term rentals. Tbilisi, the capital, offers structural rental demand driven by the economy, businesses and expatriates. We build the allocation around your goals: yield, capital growth or personal use."
+    - q: "Can I finance my purchase with a loan?"
+      a: "Yes. Georgian banks also lend to foreigners, usually when the property is delivered. Developers often offer interest-free payment plans during construction. The simulator lets you compare all three options."
+    - q: "Who handles rental management?"
+      a: "Our partner Léo Lawless, a rental management specialist, handles letting, tenant follow-up and maintenance. You receive your income without managing day-to-day matters."
+    - q: "Why invest with FFI?"
+      a: "FFI is the leader in Georgian real estate investment: more than 1,000 clients supported and several million invested every month for private investors, family offices and investment funds. We live on the ground and tailor the strategy to each client."

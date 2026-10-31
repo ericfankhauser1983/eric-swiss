@@ -1,12 +1,12 @@
 # Conseil stratégique — FR
 seo:
-  title: "Conseil stratégique aux PME et implantation d’entreprises en Géorgie"
-  description: "Conseil en stratégie, développement et organisation pour PME. Spécialiste de l’implantation et du développement de sociétés étrangères en Géorgie grâce à un réseau de haut niveau."
+  title: "Conseil d’entreprise en Géorgie : implantation, création de société et stratégie"
+  description: "Créer sa société et s’implanter en Géorgie avec un entrepreneur suisse basé à Tbilissi : structuration, fiscalité, banques, réseau d’entreprises et accès au gouvernement."
 
 hero:
-  eyebrow: "Conseil stratégique"
-  title: "Clarifier, structurer, accélérer le développement de votre entreprise"
-  lead: "J’accompagne les dirigeants de PME face à leurs enjeux de stratégie, de développement et d’organisation — avec une spécialisation : l’implantation et le développement de sociétés étrangères en Géorgie."
+  eyebrow: "Conseil stratégique · Géorgie"
+  title: "Conseil d’entreprise et implantation en Géorgie"
+  lead: "Basé à Tbilissi, j’accompagne les entreprises suisses et européennes qui veulent s’implanter et se développer en Géorgie : création de société, structuration, banques, partenaires et relations avec les autorités. J’aide aussi les dirigeants de PME sur leurs enjeux de stratégie, de développement et d’organisation."
 
 challenges:
   eyebrow: "Les enjeux que je traite"
@@ -36,7 +36,7 @@ method:
 georgia:
   eyebrow: "Spécialisation Géorgie"
   title: "S’implanter et se développer en Géorgie"
-  text: "La Géorgie offre un environnement fiscal et administratif parmi les plus favorables de la région, une économie en forte croissance et une position stratégique entre l’Europe et l’Asie. Encore faut-il disposer des bons relais pour s’y implanter avec succès."
+  text: "La Géorgie offre un environnement fiscal et administratif parmi les plus favorables de la région : une société s’y enregistre en général en un jour ouvré, les bénéfices réinvestis ne sont pas imposés, et le pays a signé des accords de libre-échange avec l’Union européenne, l’AELE (dont la Suisse) et la Chine. Encore faut-il disposer des bons relais pour s’y implanter avec succès."
   services:
     - "Étude de marché et validation de l’opportunité"
     - "Structuration juridique et fiscale de l’implantation"
@@ -59,3 +59,20 @@ edge:
 booking:
   title: "Échangeons sur votre entreprise"
   text: "Réservez un premier échange pour présenter votre situation et vos objectifs."
+
+faq:
+  eyebrow: "Questions fréquentes"
+  title: "Créer et développer une société en Géorgie"
+  items:
+    - q: "Un étranger peut-il créer une société en Géorgie ?"
+      a: "Oui. Un étranger peut détenir 100 % d’une société géorgienne, sans associé local. L’enregistrement se fait auprès de l’Agence nationale du registre public (Maisons de justice), en général en un jour ouvré, et peut se faire à distance par procuration."
+    - q: "Quelle est la fiscalité d’une société en Géorgie ?"
+      a: "La Géorgie applique le modèle estonien : l’impôt sur les sociétés de 15 % ne s’applique qu’aux bénéfices distribués. Les bénéfices réinvestis ne sont pas imposés et les dividendes sont taxés à 5 %. Des régimes particuliers existent selon l’activité : statut de petite entreprise (1 % du chiffre d’affaires pour les entrepreneurs individuels, sous conditions), zone virtuelle pour les sociétés informatiques, zones franches industrielles."
+    - q: "Combien de temps faut-il pour ouvrir un compte bancaire professionnel ?"
+      a: "Après l’enregistrement de la société, comptez de quelques jours à quelques semaines selon votre profil et la qualité du dossier. Nous préparons le dossier avec vous et vous mettons en relation directe avec les banques."
+    - q: "Pourquoi la Géorgie pour une PME suisse ou européenne ?"
+      a: "Pour sa fiscalité, la rapidité de ses démarches, son coût du travail et sa position entre l’Europe et l’Asie. Ses accords de libre-échange avec l’Union européenne, l’AELE et la Chine en font une plateforme régionale pour produire, exporter ou installer des fonctions support."
+    - q: "Faut-il une autorisation pour travailler en Géorgie ?"
+      a: "Depuis mars 2026, la loi sur la migration de main-d’œuvre peut exiger une autorisation de travail pour certains étrangers qui exercent une activité en Géorgie. Nous vérifions votre situation et vous accompagnons dans les démarches."
+    - q: "Comment se déroule votre accompagnement ?"
+      a: "Nous commençons par un échange pour comprendre votre projet, puis nous validons l’opportunité, choisissons la structure, préparons l’enregistrement et la banque, et vous ouvrons notre réseau : entreprises, banques, institutions et gouvernement. Nous restons à vos côtés après le lancement."

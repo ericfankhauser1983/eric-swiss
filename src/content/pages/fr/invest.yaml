@@ -102,3 +102,20 @@ simulator:
 booking:
   title: "Parlons de votre projet d’investissement"
   text: "Choisissez un créneau : nous faisons le point sur vos objectifs, votre budget et les opportunités du moment."
+
+faq:
+  eyebrow: "Questions fréquentes"
+  title: "Investir dans l’immobilier en Géorgie"
+  items:
+    - q: "Un étranger peut-il acheter un bien immobilier en Géorgie ?"
+      a: "Oui. Les étrangers peuvent acheter en pleine propriété un appartement, une maison ou un local commercial, sans permis de séjour ni associé local. La seule restriction concerne les terres agricoles. L’achat peut se faire à distance, par procuration."
+    - q: "Comment sont imposés les revenus locatifs et la plus-value ?"
+      a: "Pour un particulier, les loyers d’un bien résidentiel peuvent être imposés à 5 %. La plus-value à la revente d’un bien résidentiel détenu plus de deux ans est exonérée d’impôt."
+    - q: "Batumi ou Tbilissi : où investir ?"
+      a: "Batumi, la station balnéaire de la mer Noire, est portée par le tourisme et la location courte durée. Tbilissi, la capitale, offre une demande locative structurelle portée par l’économie, les entreprises et les expatriés. Nous construisons la répartition selon vos objectifs : rendement, plus-value ou usage personnel."
+    - q: "Peut-on financer son achat à crédit ?"
+      a: "Oui. Les banques géorgiennes financent aussi les étrangers, en général à la livraison du bien. Les promoteurs proposent souvent des plans de paiement sans intérêts pendant la construction. Le simulateur vous permet de comparer les trois options."
+    - q: "Qui s’occupe de la gestion locative ?"
+      a: "Notre associé Léo Lawless, spécialiste de la gestion locative, organise la mise en location, le suivi des locataires et l’entretien. Vous percevez vos revenus sans gérer le quotidien."
+    - q: "Pourquoi investir avec FFI ?"
+      a: "FFI est le leader de l’investissement immobilier en Géorgie : plus de 1 000 clients accompagnés et plusieurs millions investis chaque mois pour des privés, des family offices et des fonds d’investissement. Nous vivons sur place et adaptons la stratégie à chaque client."

@@ -1,12 +1,12 @@
 # Strategic consulting — EN
 seo:
-  title: "Strategic consulting for SMEs and company market entry in Georgia"
-  description: "Strategy, growth and organisation consulting for SMEs. Specialist in establishing and developing foreign companies in Georgia thanks to a high-level network."
+  title: "Business consulting in Georgia: market entry, company formation and strategy"
+  description: "Set up your company and expand in Georgia with a Swiss entrepreneur based in Tbilisi: structuring, taxation, banking, business network and access to government."
 
 hero:
-  eyebrow: "Strategic consulting"
-  title: "Clarify, structure and accelerate your company’s growth"
-  lead: "I support SME leaders with their strategy, growth and organisational challenges — with one specialisation: establishing and developing foreign companies in Georgia."
+  eyebrow: "Strategic consulting · Georgia"
+  title: "Business consulting and market entry in Georgia"
+  lead: "Based in Tbilisi, I support Swiss and European companies that want to set up and grow in Georgia: company formation, structuring, banking, partners and relations with the authorities. I also help SME leaders with their strategy, growth and organisational challenges."
 
 challenges:
   eyebrow: "The challenges I address"
@@ -36,7 +36,7 @@ method:
 georgia:
   eyebrow: "Georgia specialisation"
   title: "Establishing and growing your business in Georgia"
-  text: "Georgia offers one of the most favourable tax and administrative environments in the region, a fast-growing economy and a strategic position between Europe and Asia. Success, however, requires the right connections on the ground."
+  text: "Georgia offers one of the most favourable tax and administrative environments in the region: a company is usually registered in one business day, reinvested profits are not taxed, and the country has free trade agreements with the European Union, EFTA (including Switzerland) and China. Success, however, requires the right connections on the ground."
   services:
     - "Market study and opportunity validation"
     - "Legal and tax structuring of the set-up"
@@ -59,3 +59,20 @@ edge:
 booking:
   title: "Let’s talk about your company"
   text: "Book a first conversation to present your situation and your goals."
+
+faq:
+  eyebrow: "Frequently asked questions"
+  title: "Setting up and growing a company in Georgia"
+  items:
+    - q: "Can a foreigner set up a company in Georgia?"
+      a: "Yes. A foreigner can own 100% of a Georgian company, with no local partner. Registration is handled by the National Agency of Public Registry (Public Service Halls), usually in one business day, and can be done remotely by power of attorney."
+    - q: "How are companies taxed in Georgia?"
+      a: "Georgia uses the Estonian model: the 15% corporate income tax only applies to distributed profits. Reinvested profits are not taxed and dividends are taxed at 5%. Special regimes exist depending on the activity: Small Business Status (1% of turnover for individual entrepreneurs, subject to conditions), Virtual Zone status for IT companies, and free industrial zones."
+    - q: "How long does it take to open a business bank account?"
+      a: "Once the company is registered, allow a few days to a few weeks depending on your profile and the quality of your file. We prepare the file with you and introduce you directly to the banks."
+    - q: "Why Georgia for a Swiss or European SME?"
+      a: "For its taxation, fast procedures, labour costs and position between Europe and Asia. Its free trade agreements with the European Union, EFTA and China make it a regional platform to produce, export or set up support functions."
+    - q: "Do I need a work permit in Georgia?"
+      a: "Since March 2026, the labour migration law may require a work authorisation for some foreigners doing business in Georgia. We check your situation and support you through the process."
+    - q: "How does your support work?"
+      a: "We start with a call to understand your project, then validate the opportunity, choose the structure, prepare the registration and banking, and open up our network: companies, banks, institutions and government. We stay by your side after the launch."
