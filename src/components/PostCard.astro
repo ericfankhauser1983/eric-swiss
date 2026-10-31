@@ -1,14 +1,15 @@
 ---
 import type { Lang } from '../config/site';
 import { t } from '../i18n/ui';
-interface Props { lang: Lang; href: string; title: string; description: string; date: Date; tags?: string[] }
-const { lang, href, title, description, date, tags = [] } = Astro.props;
+interface Props { lang: Lang; href: string; title: string; description: string; date: Date; tags?: string[]; category?: string }
+const { lang, href, title, description, date, tags = [], category } = Astro.props;
 const ui = t(lang);
+const cat = category ? (ui.blog.cats as Record<string, string>)[category] : tags[0];
 const d = date.toLocaleDateString({ fr: 'fr-CH', en: 'en-GB', de: 'de-CH' }[lang], { day: 'numeric', month: 'long', year: 'numeric' });
 ---
-<article class="post reveal">
+<article class="post reveal" data-cat={category}>
   <a href={href}>
-    <p class="post__meta"><time datetime={date.toISOString()}>{d}</time>{tags[0] && <span> · {tags[0]}</span>}</p>
+    <p class="post__meta"><time datetime={date.toISOString()}>{d}</time>{cat && <span> · {cat}</span>}</p>
     <h3>{title}</h3>
     <p class="post__desc">{description}</p>
     <span class="link">{ui.cta.readMore} <span class="arrow">→</span></span>

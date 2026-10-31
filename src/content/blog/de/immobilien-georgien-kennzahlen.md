@@ -3,6 +3,7 @@ title: "In Immobilien in Georgien investieren: die wichtigsten Kennzahlen"
 description: "Wachstum, Steuern, Mietrenditen, Wertsteigerung: die Indikatoren, die Georgien zu einem der attraktivsten Immobilienmärkte für europäische Investoren machen."
 date: 2026-10-31
 translationKey: georgia-key-figures
+category: immobilier
 tags: ["Georgien", "Immobilien", "Steuern"]
 ---
 

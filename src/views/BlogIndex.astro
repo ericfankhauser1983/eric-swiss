@@ -9,16 +9,36 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const ui = t(lang);
 const list = await posts(lang);
+const cats = ['immobilier', 'geopolitique', 'entrepreneuriat'].filter((c) => list.some((p) => p.data.category === c));
 ---
 <PageHero eyebrow={ui.blog.title} title={ui.blog.title} lead={ui.blog.lead} />
 <section class="section">
   <div class="wrap">
-    {list.length === 0 ? <p class="lead">{ui.blog.empty}</p> : (
-      <div class="grid grid-3">
-        {list.map((p) => <PostCard lang={lang} href={postHref(lang, p.id)} title={p.data.title} description={p.data.description} date={p.data.date} tags={p.data.tags} />)}
+    {list.length === 0 ? <p class="lead">{ui.blog.empty}</p> : (<>
+      {cats.length > 1 && (
+        <div class="bfilter" role="group" aria-label={ui.blog.title}>
+          <button type="button" data-f="" aria-pressed="true">{ui.blog.cats.all}</button>
+          {cats.map((c) => <button type="button" data-f={c} aria-pressed="false">{(ui.blog.cats as Record<string, string>)[c]}</button>)}
+        </div>
+      )}
+      <div class="grid grid-3" data-posts>
+        {list.map((p) => <PostCard lang={lang} href={postHref(lang, p.id)} title={p.data.title} description={p.data.description} date={p.data.date} tags={p.data.tags} category={p.data.category} />)}
       </div>
-    )}
+    </>)}
   </div>
 </section>
 
 <VideoFeed lang={lang} sand />
+
+<style>
+  .bfilter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
+  .bfilter button { font: 500 0.85rem var(--f-title); padding: 10px 18px; border: 1px solid var(--line); background: #fff; color: var(--navy); border-radius: 999px; cursor: pointer; transition: all 0.25s; }
+  .bfilter button[aria-pressed='true'] { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+</style>
+<script>
+  const btns = document.querySelectorAll<HTMLButtonElement>('.bfilter button');
+  btns.forEach((b) => b.addEventListener('click', () => {
+    btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    document.querySelectorAll<HTMLElement>('[data-posts] > .post').forEach((p) => { p.hidden = !!b.dataset.f && p.dataset.cat !== b.dataset.f; });
+  }));
+</script>

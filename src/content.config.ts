@@ -18,6 +18,10 @@ const blog = defineCollection({
     translationKey: z.string().optional(),
     tags: z.array(z.string()).default([]),
     cover: z.string().optional(),
+    /** rubrique : immobilier | geopolitique | entrepreneuriat */
+    category: z.enum(['immobilier', 'geopolitique', 'entrepreneuriat']).optional(),
+    /** source d'inspiration (ex. article du blog FFI), affichée en bas d'article */
+    source: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

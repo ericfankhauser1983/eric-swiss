@@ -23,6 +23,7 @@ const ui = t(lang);
 const { Content } = await render(post);
 const alts: Partial<Record<Lang, string>> = { ...Object.fromEntries(LANGS.map((l) => [l, path('blog', l)])), ...siblings };
 const url = absolute(Astro.url.pathname);
+const srcHost = post.data.source ? new URL(post.data.source).hostname.replace('www.', '') : '';
 const d = post.data.date.toLocaleDateString({ fr: 'fr-CH', en: 'en-GB', de: 'de-CH' }[lang], { day: 'numeric', month: 'long', year: 'numeric' });
 const schema = [{
   '@type': 'BlogPosting',
@@ -57,7 +58,7 @@ const schema = [{
     </header>
     {post.data.cover && <div class="wrap"><img class="cover" src={post.data.cover} alt="" /></div>}
     <div class="section" style="padding-top:clamp(40px,5vw,72px)">
-      <div class="wrap"><div class="prose"><Content /></div></div>
+      <div class="wrap"><div class="prose"><Content />{post.data.source && <p class="src">{ui.blog.source} : <a href={post.data.source} target="_blank" rel="noopener">{srcHost}</a></p>}</div></div>
     </div>
   </article>
   <CtaBand title={{ fr: 'Parlons de votre projet', en: 'Let’s talk about your project', de: 'Sprechen wir über Ihr Projekt' }[lang]} href={path('contact', lang)} label={ui.cta.book} href2={path('simulator', lang)} label2={ui.cta.simulate} />
@@ -67,4 +68,5 @@ const schema = [{
   .ph h1 { font-size: clamp(2rem, 4.2vw, 3.4rem); max-width: 900px; margin: 18px 0 20px; font-weight: 400; }
   .ph__meta { margin: 36px 0 0; font-size: 0.85rem; color: var(--gold-deep); }
   .cover { width: 100%; max-height: 520px; object-fit: cover; margin-top: -24px; }
+  .src { margin-top: 48px; font-size: 0.85rem; color: var(--muted); }
 </style>

@@ -40,12 +40,14 @@ export const UI = {
     },
     blog: {
       title: 'Blog',
-      lead: 'Analyses, marchés et stratégie : mes notes sur l’investissement immobilier, la Géorgie et le développement des PME.',
+      lead: 'Analyses, marchés et stratégie : mes notes sur l’investissement immobilier, la géopolitique vue du terrain et l’entrepreneuriat.',
       published: 'Publié le',
       minutes: 'min de lecture',
       back: '← Retour au blog',
       latest: 'Derniers articles',
       empty: 'Les premiers articles arrivent bientôt.',
+      cats: { all: 'Tous', immobilier: 'Immobilier', geopolitique: 'Géopolitique', entrepreneuriat: 'Entrepreneuriat' },
+      source: 'Source',
     },
     calendly: {
       title: 'Réserver un créneau',
@@ -171,12 +173,14 @@ export const UI = {
     },
     blog: {
       title: 'Blog',
-      lead: 'Analysis, markets and strategy: my notes on real estate investment, Georgia and SME growth.',
+      lead: 'Analysis, markets and strategy: my notes on real estate investment, geopolitics seen from the ground and entrepreneurship.',
       published: 'Published on',
       minutes: 'min read',
       back: '← Back to the blog',
       latest: 'Latest articles',
       empty: 'The first articles are coming soon.',
+      cats: { all: 'All', immobilier: 'Real estate', geopolitique: 'Geopolitics', entrepreneuriat: 'Entrepreneurship' },
+      source: 'Source',
     },
     calendly: {
       title: 'Book a slot',
@@ -302,12 +306,14 @@ export const UI = {
     },
     blog: {
       title: 'Blog',
-      lead: 'Analysen, Märkte und Strategie: meine Notizen zu Immobilien-Investments, Georgien und KMU-Entwicklung.',
+      lead: 'Analysen, Märkte und Strategie: meine Notizen zu Immobilien-Investments, Geopolitik aus erster Hand und Unternehmertum.',
       published: 'Veröffentlicht am',
       minutes: 'Min. Lesezeit',
       back: '← Zurück zum Blog',
       latest: 'Neueste Artikel',
       empty: 'Die ersten Artikel folgen in Kürze.',
+      cats: { all: 'Alle', immobilier: 'Immobilien', geopolitique: 'Geopolitik', entrepreneuriat: 'Unternehmertum' },
+      source: 'Quelle',
     },
     calendly: {
       title: 'Termin buchen',

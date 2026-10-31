@@ -3,6 +3,7 @@ title: "Investing in Georgian real estate: the key figures to know"
 description: "Growth, taxation, rental yields, capital gains: the indicators that make Georgia one of the most attractive real estate markets for European investors."
 date: 2026-10-31
 translationKey: georgia-key-figures
+category: immobilier
 tags: ["Georgia", "Real estate", "Taxation"]
 ---
 

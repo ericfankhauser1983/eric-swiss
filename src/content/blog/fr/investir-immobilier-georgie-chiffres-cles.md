@@ -3,6 +3,7 @@ title: "Investir dans l’immobilier en Géorgie : les chiffres clés à connaî
 description: "Croissance, fiscalité, rendements locatifs, plus-value : les indicateurs qui font de la Géorgie l’un des marchés immobiliers les plus attractifs pour les investisseurs européens."
 date: 2026-10-31
 translationKey: georgia-key-figures
+category: immobilier
 tags: ["Géorgie", "Immobilier", "Fiscalité"]
 ---
 
