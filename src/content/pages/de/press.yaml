@@ -1,0 +1,11 @@
+# Presse — DE
+eyebrow: "In der Presse"
+title: "Medienberichte"
+read: "Interview lesen (PDF, auf Französisch)"
+items:
+  - media: "Monde Économique"
+    meta: "Nr. 53 · 2023 · Titelgeschichte"
+    title: "«Den Kunden ins Zentrum von allem stellen, was wir tun»"
+    text: "Das Schweizer Magazin für Unternehmer und Entscheidungsträger widmete mir sein Titelblatt und sein Interview «L’Invité», als ich Swiss Auto Glass führte, einen der drei grossen Akteure der Autoverglasung in der Schweiz. Ich spreche über die Rolle des Teams, einen Kundendienst rund um die Uhr in allen Landessprachen und den strategischen Entscheid, mit dem wir uns gegenüber den Branchenriesen abgehoben haben."
+    cover: "/images/presse/monde-economique-53.jpg"
+    pdf: "/presse/monde-economique-53-interview-eric-fankhauser.pdf"

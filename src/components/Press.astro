@@ -1,0 +1,41 @@
+---
+/** Revue de presse (textes : src/content/pages/<lang>/press.yaml) */
+import type { Lang } from '../config/site';
+import { page } from '../lib/content';
+interface Props { lang: Lang; sand?: boolean }
+const { lang, sand = false } = Astro.props;
+const d = await page(lang, 'press');
+---
+<section class:list={['section', { 'section--sand': sand }]} id="presse">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:clamp(32px,4vw,56px)">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2>{d.title}</h2>
+    </div>
+    {d.items.map((it: any) => (
+      <article class="press reveal">
+        <a class="press__cover" href={it.pdf} target="_blank" rel="noopener" aria-label={`${it.media} — ${d.read}`}>
+          <img src={it.cover} alt={`${it.media} ${it.meta}`} width="900" height="1200" loading="lazy" />
+        </a>
+        <div class="press__txt">
+          <p class="press__media">{it.media}<span>{it.meta}</span></p>
+          <h3>{it.title}</h3>
+          <p>{it.text}</p>
+          <a class="btn btn--navy" href={it.pdf} target="_blank" rel="noopener">{d.read} <span class="arrow">↗</span></a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+<style>
+  .press { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+  .press + .press { margin-top: 64px; }
+  .press__cover { display: block; max-width: 340px; box-shadow: 0 24px 60px rgba(17, 33, 80, 0.22); transition: transform 0.5s var(--ease); }
+  .press__cover:hover { transform: translateY(-6px) rotate(-1deg); }
+  .press__cover img { display: block; width: 100%; height: auto; }
+  .press__media { font-family: var(--f-title); font-size: 1.05rem; color: var(--gold-deep); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin-bottom: 14px; }
+  .press__media span { font-family: var(--f-text); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .press h3 { font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; margin-bottom: 18px; }
+  .press__txt p:not(.press__media) { color: var(--muted); max-width: 620px; margin-bottom: 28px; }
+  @media (max-width: 760px) { .press { grid-template-columns: 1fr; } .press__cover { max-width: 240px; } }
+</style>

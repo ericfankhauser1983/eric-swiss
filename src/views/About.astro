@@ -1,4 +1,5 @@
 ---
+import Press from '../components/Press.astro';
 import Photo from '../components/Photo.astro';
 import HeroBg from '../components/HeroBg.astro';
 import Team from '../components/Team.astro';
@@ -98,6 +99,8 @@ const q = { fr: `« ${d.quote.text} »`, en: `“${d.quote.text}”`, de: `«${d
     </div>
   </div>
 </section>
+
+<Press lang={lang} />
 
 <Team lang={lang} sand />
 

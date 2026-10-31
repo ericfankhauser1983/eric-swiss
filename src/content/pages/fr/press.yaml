@@ -1,0 +1,11 @@
+# Presse — FR (ajouter un article : copier un bloc dans items, la couverture dans public/images/presse/, le PDF dans public/presse/)
+eyebrow: "Dans la presse"
+title: "Ils en parlent"
+read: "Lire l’interview (PDF)"
+items:
+  - media: "Monde Économique"
+    meta: "N° 53 · 2023 · En couverture"
+    title: "« Placer le client au centre de tout ce que nous faisons »"
+    text: "Le magazine suisse des chefs d’entreprise et décideurs m’a consacré sa couverture et son interview « L’Invité », alors que je dirigeais Swiss Auto Glass, l’un des trois acteurs majeurs du vitrage automobile en Suisse. J’y raconte le rôle de l’équipe, un service client joignable 24 h/24 dans toutes les langues nationales, et le choix stratégique qui nous a permis de nous démarquer face aux géants du secteur."
+    cover: "/images/presse/monde-economique-53.jpg"
+    pdf: "/presse/monde-economique-53-interview-eric-fankhauser.pdf"

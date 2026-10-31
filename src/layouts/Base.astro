@@ -47,6 +47,7 @@ const person = {
     { '@type': 'Organization', name: 'The Advisory Board', url: SITE.partners.advisoryBoard },
   ],
   sameAs: Object.values(SOCIAL).filter(Boolean),
+  subjectOf: [{ '@type': 'Article', headline: 'L’Invité : Eric Fankhauser, CEO de Swiss Auto Glass', inLanguage: 'fr', datePublished: '2023', publisher: { '@type': 'Organization', name: 'Monde Économique', url: 'https://www.monde-economique.ch' }, url: absolute('/presse/monde-economique-53-interview-eric-fankhauser.pdf') }],
 };
 const website = {
   '@type': 'WebSite',
