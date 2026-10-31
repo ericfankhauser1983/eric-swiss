@@ -1,5 +1,7 @@
 # eric.swiss — Guide du site
 
+Site en ligne : https://eric-swiss.netlify.app (projet Netlify « eric-swiss », déployé automatiquement à chaque modification de la branche main).
+
 Site statique (Astro), trilingue FR / EN / DE, prêt à être hébergé sur Netlify.
 
 ## 1. Mise en ligne (≈ 20 minutes)
