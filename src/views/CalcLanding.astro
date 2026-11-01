@@ -1,0 +1,59 @@
+---
+/**
+ * Page d'atterrissage « calculateur immobilier » (lien des stories Instagram).
+ * Uniquement le simulateur : FR → /fr/calculateur/, EN → /en/calculator/.
+ */
+import Simulator from '../components/Simulator.astro';
+import { path, type Lang } from '../config/site';
+interface Props { lang: 'fr' | 'en' }
+const { lang } = Astro.props;
+const T = {
+  fr: {
+    eyebrow: 'Calculateur immobilier · Géorgie',
+    title: 'Combien votre capital peut-il <em>rapporter</em> en Géorgie ?',
+    lead: 'Indiquez votre budget, choisissez votre stratégie : en une minute, vous voyez par combien votre capital peut être multiplié.',
+    note: 'Un membre de notre équipe vous contactera très prochainement pour vous présenter des exemples concrets d’investissements correspondant à votre simulation.',
+    source: 'Story Instagram — calculateur (FR)',
+    legal: 'Mentions légales', privacy: 'Confidentialité',
+  },
+  en: {
+    eyebrow: 'Property calculator · Georgia',
+    title: 'How much could your capital <em>earn</em> in Georgia?',
+    lead: 'Enter your budget, choose your strategy: in one minute, see how many times your capital could be multiplied.',
+    note: 'A member of our team will contact you very shortly to share concrete investment examples matching your simulation.',
+    source: 'Instagram story — calculator (EN)',
+    legal: 'Legal notice', privacy: 'Privacy',
+  },
+}[lang];
+const year = new Date().getFullYear();
+---
+<section class="chero">
+  <div class="wrap chero__in">
+    <p class="eyebrow">{T.eyebrow}</p>
+    <h1 set:html={T.title} />
+    <p class="lead">{T.lead}</p>
+  </div>
+</section>
+<section class="ccalc">
+  <div class="wrap">
+    <Simulator lang={lang} bookHref="#" source={T.source} note={T.note} noBook />
+  </div>
+</section>
+<footer class="cfoot">
+  <div class="wrap cfoot__in">
+    <span>© {year} Eric Fankhauser · <a href={path('home', lang)}>eric.swiss</a></span>
+    <span><a href={path('legal', lang)}>{T.legal}</a> · <a href={path('privacy', lang)}>{T.privacy}</a></span>
+  </div>
+</footer>
+<style>
+  .chero { background: var(--navy); color: var(--cream); }
+  .chero__in { padding-top: clamp(28px, 5vw, 64px); padding-bottom: clamp(64px, 9vw, 120px); max-width: 860px; }
+  .chero h1 { font-weight: 400; font-size: clamp(1.8rem, 4vw, 3.1rem); margin-bottom: 16px; }
+  .chero h1 :global(em) { font-style: normal; color: var(--gold-light); }
+  .chero .lead { color: var(--muted-light); margin: 0; }
+  .ccalc { margin-top: clamp(-90px, -6vw, -44px); padding-bottom: clamp(48px, 7vw, 96px); }
+  .cfoot { background: var(--navy-deep); color: var(--muted-light); font-size: 0.8rem; padding: 22px 0; }
+  .cfoot__in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .cfoot a { color: var(--muted-light); }
+  @media (max-width: 760px) { .ccalc .wrap { padding-left: 10px; padding-right: 10px; } }
+</style>

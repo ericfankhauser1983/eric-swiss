@@ -8,8 +8,8 @@
  */
 import { FORM, path, type Lang } from '../config/site';
 import { t } from '../i18n/ui';
-interface Props { lang: Lang; bookHref: string; source?: string }
-const { lang, bookHref, source = '' } = Astro.props;
+interface Props { lang: Lang; bookHref: string; source?: string; /** message affiché sous le résultat (ex. landing calculateur) */ note?: string; /** masque le bouton de rendez-vous du résultat */ noBook?: boolean }
+const { lang, bookHref, source = '', note = '', noBook = false } = Astro.props;
 const ui = t(lang).sim;
 
 /** Valeurs par défaut et bornes des curseurs */
@@ -176,6 +176,12 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       <button type="button" class="link" data-edit>{ui.edit} ↑</button>
     </div>
     <p class="sim__status" data-status hidden></p>
+    <div class="mx" data-mx>
+      <p class="mx__l" data-mx-label></p>
+      <p class="mx__v"><span class="mx__x">×</span><span data-mx-val></span></p>
+      <p class="mx__line" data-mx-line></p>
+    </div>
+    {note && <p class="sim__note"><span aria-hidden="true">✓</span>{note}</p>}
     <div class="kpis" data-kpis></div>
     <div class="sim__table" data-table></div>
     <div class="cmp" data-cmp hidden></div>
@@ -185,7 +191,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
         <ul class="sim__hyp" data-hyp></ul>
         <p class="sim__disc">{ui.disclaimer}</p>
       </div>
-      <a class="btn btn--navy" href={bookHref}>{ui.book} <span class="arrow">→</span></a>
+      {!noBook && <a class="btn btn--navy" href={bookHref}>{ui.book} <span class="arrow">→</span></a>}
     </div>
   </div>
 </div>
@@ -314,6 +320,21 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
   .sim__res-head .link { background: none; border-top: 0; border-left: 0; border-right: 0; cursor: pointer; }
   .sim__status { padding: 14px 18px; background: var(--sand); border-left: 2px solid var(--gold); font-size: 0.92rem; }
   .sim__status.is-err { border-left-color: #a3442c; }
+  .mx { position: relative; overflow: hidden; text-align: center; background: var(--navy) url('/images/texture-navy.jpg') center / cover; color: var(--cream); border-radius: var(--radius); padding: clamp(28px, 4vw, 48px) 20px clamp(26px, 3.5vw, 40px); margin-bottom: 20px; box-shadow: inset 0 -4px 0 var(--gold); }
+  .mx::before { content: ''; position: absolute; inset: 12px; border: 1px solid rgba(173, 142, 104, 0.35); pointer-events: none; }
+  .mx__l { position: relative; margin: 0 0 6px; font-family: var(--f-title); font-size: clamp(0.78rem, 1.3vw, 0.9rem); font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-light); }
+  .mx__v { position: relative; margin: 0; font-family: var(--f-title); font-weight: 500; font-size: clamp(4.5rem, 13vw, 8.5rem); line-height: 1; letter-spacing: -0.04em; color: var(--cream); font-variant-numeric: tabular-nums; }
+  .mx__x { color: var(--gold); font-weight: 400; margin-right: 0.04em; font-size: 0.7em; vertical-align: 0.08em; }
+  .mx__line { position: relative; margin: 14px auto 0; max-width: 560px; font-size: clamp(0.92rem, 1.5vw, 1.05rem); color: var(--muted-light); }
+  .mx__line :global(strong) { color: var(--cream); font-weight: 500; white-space: nowrap; }
+  .sim__note { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 24px; padding: 16px 20px; background: rgba(173, 142, 104, 0.14); border-left: 3px solid var(--gold); border-radius: 2px; font-size: 1rem; color: var(--navy); }
+  .sim__note span { display: inline-grid; place-items: center; flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--gold); color: var(--cream); font-size: 0.8rem; margin-top: 1px; }
+  .cmp :global(.cmp__mx) { margin: -4px 0 18px; padding: 14px 16px; background: var(--sand); border-radius: 2px; }
+  .cmp :global(.cmp__mx span) { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 2px; }
+  .cmp :global(.cmp__mx strong) { display: block; font-family: var(--f-title); font-weight: 500; font-size: clamp(2.4rem, 4vw, 3.1rem); line-height: 1.05; letter-spacing: -0.03em; color: var(--navy); }
+  .cmp :global(.cmp__card.is-best .cmp__mx) { background: var(--navy); }
+  .cmp :global(.cmp__card.is-best .cmp__mx span) { color: var(--gold-light); }
+  .cmp :global(.cmp__card.is-best .cmp__mx strong) { color: var(--cream); }
   .kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 32px; }
   .kpis :global(div) { background: var(--navy); color: var(--cream); padding: 22px 20px; border-radius: var(--radius); }
   .kpis :global(span) { display: block; font-size: 0.78rem; color: var(--muted-light); margin-bottom: 8px; }
@@ -437,22 +458,31 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
     const tableEl = root.querySelector<HTMLElement>('[data-table]')!;
     const cmpEl = root.querySelector<HTMLElement>('[data-cmp]')!;
     const titleEl = root.querySelector<HTMLElement>('[data-res-title]')!;
+    const mxLabel = root.querySelector<HTMLElement>('[data-mx-label]')!;
+    const mxVal = root.querySelector<HTMLElement>('[data-mx-val]')!;
+    const mxLine = root.querySelector<HTMLElement>('[data-mx-line]')!;
+    function paintMultiple(label: string, r: Result, cur: string, holding: number) {
+      mxLabel.textContent = label;
+      mxVal.textContent = nf(r.multiple, 2);
+      mxLine.innerHTML = tpl(ui.mxLine, { capital: `<strong>${money(r.capital, cur)}</strong>`, final: `<strong>${money(r.capital + r.gain, cur)}</strong>`, holding: months(holding) });
+    }
 
     function renderBudget(p: ReturnType<typeof read>, opts: Opt[]) {
       const m = (v: number) => money(v, p.cur);
       const best = bestOf(opts);
       kpisEl.hidden = true; tableEl.hidden = true; cmpEl.hidden = false;
       titleEl.textContent = tpl(ui.resultsBudget, { budget: m(p.budget) });
+      paintMultiple(tpl(ui.mxBest, { fin: finLabel(best.f) }), best.r, p.cur, p.x.holding);
       root.querySelector('[data-res-tag]')!.textContent = `${label('strategy', p.x.strategy)} · ${label('finish', p.finish)} · ${months(p.x.holding)}`;
       cmpEl.innerHTML = `<p class="cmp__lead">${ui.cmpLead}</p><div class="cmp__grid">` + opts.map((o) => {
         const rows: [string, string, string?][] = [];
         rows.push([ui.netGain, m(o.r.gain)]);
         rows.push([ui.irr, pct(o.r.irr)]);
-        rows.push([ui.multiple, `${nf(o.r.multiple, 2)}×`]);
         if (o.f !== 'cash') rows.push([ui.cmpMonthly, m(o.r.monthly)]);
         if (p.x.strategy === 'rent') rows.push([ui.cmpCashflow, m(o.r.cashflow), o.r.cashflow < 0 ? 'neg' : '']);
         return `<article class="cmp__card${o === best ? ' is-best' : ''}">${o === best ? `<span class="cmp__badge">${ui.bestRoe}</span>` : ''}
           <h4>${finLabel(o.f)}</h4>
+          <div class="cmp__mx"><span>${ui.mxCard}</span><strong>×${nf(o.r.multiple, 2)}</strong></div>
           <div class="cmp__big"><span>${ui.reachPrice}</span><strong>${m(o.x.price)}</strong></div>
           <div class="cmp__big"><span>${ui.roe}</span><strong>${pct(o.r.roe)}</strong></div>
           <div class="cmp__big"><span>${ui.capitalAfter}</span><strong>${m(o.r.capital + o.r.gain)}</strong></div>
@@ -467,6 +497,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       kpisEl.hidden = false; tableEl.hidden = false; cmpEl.hidden = true;
       titleEl.textContent = ui.results;
       const { x, cur } = p;
+      paintMultiple(ui.mxLabel, r, cur, x.holding);
       const m = (v: number) => money(v, cur);
       root.querySelector('[data-res-tag]')!.textContent = `${finLabel(x.financing)} · ${label('strategy', x.strategy)} · ${label('finish', p.finish)}`;
       root.querySelector('[data-kpis]')!.innerHTML = [
@@ -484,7 +515,6 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       rows.push([ui.saleValue, m(r.sale)]);
       rows.push([ui.tax, r.tax > 0 ? m(r.tax) : ui.none]);
       if (r.debtLeft > 0) rows.push([ui.debtLeft, m(r.debtLeft)]);
-      rows.push([ui.multiple, `${nf(r.multiple, 2)}×`]);
       root.querySelector('[data-table]')!.innerHTML = `<table><tbody>${rows.map(([k, v, c]) => `<tr class="${c === 'is-key' ? 'is-key' : ''}"><td>${k}</td><td class="${c === 'neg' ? 'neg' : ''}">${v}</td></tr>`).join('')}</tbody></table>`;
       const hyp = [x.strategy === 'rent' ? ui.hypRent : ui.hypResale, ui.hypTax];
       if (x.financing === 'credit') hyp.unshift(ui.hypRate);
@@ -558,7 +588,9 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
     /** Numéro au format international obligatoire : +<indicatif><numéro> (00 accepté et converti en +) */
     const intlPhone = (v: string): string | null => {
       let n = v.replace(/[\s().\-\/]/g, '');
+      n = n.replace(/^\++/, '+'); // « ++41… » (collé après le « + » ajouté au focus)
       if (n.startsWith('00')) n = '+' + n.slice(2);
+      if (n.startsWith('+00')) n = '+' + n.slice(3);
       return /^\+[1-9]\d{6,14}$/.test(n) ? n : null;
     };
     const getIdent = (): Record<string, string> | null => {
