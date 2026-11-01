@@ -2,7 +2,7 @@
  * Brevo — ajoute automatiquement à la newsletter les visiteurs du simulateur qui l'ont demandé.
  *
  * Netlify appelle cette fonction à chaque envoi du formulaire « simulation » (Netlify Forms).
- * Seuls les visiteurs qui ont coché « newsletter » sont envoyés à Brevo (prénom, nom, e-mail, WhatsApp).
+ * Seuls les visiteurs qui ont coché « newsletter » sont envoyés à Brevo (prénom, nom, e-mail, WhatsApp) — attributs PRENOM, NOM, SMS, WHATSAPP du compte Brevo.
  *
  * Réglages (Netlify > Site configuration > Environment variables) :
  *   BREVO_API_KEY     clé API Brevo (Brevo > SMTP & API > Clés API)          — obligatoire
@@ -29,7 +29,7 @@ export const handler = async (event) => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return ok('invalid email');
     const phone = String(d.whatsapp || '').replace(/[^\d+]/g, '');
 
-    const attributes = { FIRSTNAME: String(d.prenom || '').trim(), LASTNAME: String(d.nom || '').trim() };
+    const attributes = { PRENOM: String(d.prenom || '').trim(), NOM: String(d.nom || '').trim() };
     const withPhone = /^\+[1-9]\d{6,14}$/.test(phone) ? { ...attributes, SMS: phone, WHATSAPP: phone } : attributes;
 
     let r = await send(key, { email, attributes: withPhone, listIds: [listId], updateEnabled: true });
