@@ -165,6 +165,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
         <label class="fld"><span class="opt__l">{ui.whatsapp} <small class="fld__hint">· {ui.phoneHint}</small></span><span class="fld__in"><input name="whatsapp" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+41 79 000 00 00" pattern="\s*(\+|00)\s*[1-9][\d\s().\-]{6,}" title={ui.phoneIntl} /></span></label>
       </div>
       <label class="chk"><input type="checkbox" name="consentement" value="oui" required /> <span>{ui.consent} <a href={path('privacy', lang)} target="_blank">{ui.privacyLink}</a></span></label>
+      <label class="chk chk--nl"><input type="checkbox" name="newsletter" value="oui" /> <span>{ui.newsletter}</span></label>
       <p class="sim__err" data-err hidden>{ui.required}</p>
       <button class="btn" type="submit" data-submit>{ui.submit} <span class="arrow">→</span></button>
     </form>
@@ -310,6 +311,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
   .chk { display: flex; gap: 12px; align-items: flex-start; font-size: 0.85rem; color: var(--muted); margin: 16px 0 22px; cursor: pointer; max-width: 760px; }
   .chk input { margin-top: 4px; accent-color: var(--gold); width: 16px; height: 16px; flex: none; }
   .chk a { color: var(--gold-deep); }
+  .chk--nl { margin-top: -10px; }
   .fld__hint { font-size: 0.72rem; color: var(--muted); font-weight: 400; }
   .sim__err { color: #a3442c; font-size: 0.88rem; }
 
@@ -530,7 +532,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       const finish = { brut: 'Brut', turnkey: 'Équipé et meublé' }[p.finish as 'brut'];
       return [
         'NOUVELLE SIMULATION — eric.swiss', '',
-        `Client : ${ident.prenom} ${ident.nom}`, `E-mail : ${ident.email}`, `WhatsApp : ${ident.whatsapp}`,
+        `Client : ${ident.prenom} ${ident.nom}`, `E-mail : ${ident.email}`, `WhatsApp : ${ident.whatsapp}`, `Newsletter : ${ident.newsletter === 'oui' ? 'oui (ajouté à Brevo)' : 'non'}`,
         `Langue du visiteur : ${cfg.lang.toUpperCase()}`, cfg.source ? `Provenance : ${cfg.source}` : '', `Date : ${new Date().toLocaleString('fr-CH')}`, '',
         'PROJET',
         `Financement : ${fin}`,
@@ -557,7 +559,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       const names = { cash: 'Paiement à 100 %', plan: `Plan de paiement (apport ${p.x.planDown} %, ${p.x.planMonths} mensualités)`, credit: `Crédit bancaire (apport ${p.x.creditDown} %, ${p.x.creditYears} ans, taux ${CREDIT_RATE} %)` };
       return [
         'NOUVELLE SIMULATION (MODE BUDGET) — eric.swiss', '',
-        `Client : ${ident.prenom} ${ident.nom}`, `E-mail : ${ident.email}`, `WhatsApp : ${ident.whatsapp}`,
+        `Client : ${ident.prenom} ${ident.nom}`, `E-mail : ${ident.email}`, `WhatsApp : ${ident.whatsapp}`, `Newsletter : ${ident.newsletter === 'oui' ? 'oui (ajouté à Brevo)' : 'non'}`,
         `Langue du visiteur : ${cfg.lang.toUpperCase()}`, cfg.source ? `Provenance : ${cfg.source}` : '', `Date : ${new Date().toLocaleString('fr-CH')}`, '',
         'PROJET',
         `Fonds propres disponibles : ${m(p.budget)}`,
@@ -594,7 +596,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       return /^\+[1-9]\d{6,14}$/.test(n) ? n : null;
     };
     const getIdent = (): Record<string, string> | null => {
-      try { const i = JSON.parse(sessionStorage.getItem(IDENT_KEY) || 'null'); return i && intlPhone(i.whatsapp || '') ? i : null; } catch { return null; }
+      try { const i = JSON.parse(sessionStorage.getItem(IDENT_KEY) || 'null'); return i && intlPhone(i.whatsapp || '') ? { newsletter: 'non', ...i } : null; } catch { return null; }
     };
     function showStatus(ok: boolean) { statusEl.hidden = false; statusEl.textContent = ok ? ui.sent : ui.error; statusEl.classList.toggle('is-err', !ok); }
 
@@ -642,7 +644,7 @@ const slider = (name: keyof typeof D, label: string, fmt: string) => ({ name, la
       e.preventDefault();
       const fd = new FormData(leadForm);
       if ((fd.get('bot-field') as string)?.length) return;
-      const ident = { prenom: String(fd.get('prenom') || '').trim(), nom: String(fd.get('nom') || '').trim(), email: String(fd.get('email') || '').trim(), whatsapp: String(fd.get('whatsapp') || '').trim() };
+      const ident = { prenom: String(fd.get('prenom') || '').trim(), nom: String(fd.get('nom') || '').trim(), email: String(fd.get('email') || '').trim(), whatsapp: String(fd.get('whatsapp') || '').trim(), newsletter: fd.get('newsletter') ? 'oui' : 'non' };
       const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ident.email);
       if (!ident.prenom || !ident.nom || !emailOk || !ident.whatsapp || !fd.get('consentement')) { errEl.textContent = ui.required; errEl.hidden = false; return; }
       const phone = intlPhone(ident.whatsapp);
