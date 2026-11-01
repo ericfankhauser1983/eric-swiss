@@ -82,14 +82,16 @@ const nav = [
   .hdr__wa:hover { background: #25d366; border-color: #25d366; color: #fff; }
   .hdr__logo { display: flex; align-items: center; height: 100%; }
   .hdr__logo img { height: 46px; width: auto; display: block; }
-  .hdr__brand { display: flex; align-items: center; gap: 18px; height: 100%; min-width: 0; }
+  .hdr__brand { display: flex; align-items: center; gap: 18px; height: 100%; flex-shrink: 0; }
+  .hdr__logo { flex: none; }
+  .hdr__logo img { min-width: 66px; }
   .hdr__partner { display: flex; align-items: center; height: 46px; padding-left: 18px; border-left: 1px solid rgba(173, 142, 104, 0.6); }
-  .hdr__partner img { max-height: 38px; max-width: 150px; width: auto; height: auto; display: block; }
+  .hdr__partner img { max-height: 38px; max-width: 220px; width: auto; height: auto; display: block; }
   @media (max-width: 640px) {
     .hdr__brand { gap: 12px; }
     .hdr__logo img { height: 38px; }
     .hdr__partner { height: 36px; padding-left: 12px; }
-    .hdr__partner img { max-height: 28px; max-width: 110px; }
+    .hdr__partner img { max-height: 30px; max-width: 130px; }
   }
   .hdr__nav { display: flex; justify-content: center; align-items: center; }
   .hdr__nav ul { list-style: none; display: flex; gap: 34px; margin: 0; padding: 0; }
@@ -125,6 +127,13 @@ const nav = [
     .hdr__cta--m { display: inline-flex; }
   }
   @media (max-width: 640px) { .hdr__contact { display: none; } .hdr__top-in { justify-content: flex-end; } .hdr__right { width: 100%; justify-content: space-between; } }
+  @media (min-width: 1041px) and (max-width: 1240px) {
+    .hdr__main:has(.hdr__partner) { gap: 14px; }
+    .hdr__main:has(.hdr__partner) .hdr__nav ul { gap: 16px; }
+    .hdr__brand { gap: 12px; }
+    .hdr__partner { padding-left: 12px; }
+    .hdr__partner img { max-width: 110px; max-height: 30px; }
+  }
 </style>
 
 <script>

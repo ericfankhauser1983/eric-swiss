@@ -26,8 +26,8 @@ export const SITE = {
  * son chemin. Tant que le chemin est vide, rien ne s'affiche.
  */
 export const PARTNER_LOGOS = {
-  board: { src: '', alt: 'The Advisory Board', href: SITE.partners.advisoryBoard },
-  invest: { src: '', alt: 'FFI', href: SITE.partners.ffi },
+  board: { src: '/images/partners/advisory-board.png', alt: 'The Advisory Board', href: SITE.partners.advisoryBoard },
+  invest: { src: '/images/partners/ffi-light.png', alt: 'FFI', href: SITE.partners.ffi },
 } as const;
 
 /**
