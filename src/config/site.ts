@@ -20,6 +20,17 @@ export const SITE = {
 };
 
 /**
+ * LOGOS PARTENAIRES — affichés dans l'en-tête, à côté du logo EF, sur la page correspondante
+ * (Advisory Board → page Advisory Board, FFI → page Immobilier). Déposer le fichier (SVG ou PNG
+ * transparent, version claire pour fond bleu marine) dans public/images/partners/ puis indiquer
+ * son chemin. Tant que le chemin est vide, rien ne s'affiche.
+ */
+export const PARTNER_LOGOS = {
+  board: { src: '', alt: 'The Advisory Board', href: SITE.partners.advisoryBoard },
+  invest: { src: '', alt: 'FFI', href: SITE.partners.ffi },
+} as const;
+
+/**
  * PHOTOS — déposer les fichiers dans public/images/photos/ puis indiquer leur chemin.
  * Tant qu'un chemin est vide, un emplacement aux couleurs de la charte s'affiche.
  */
