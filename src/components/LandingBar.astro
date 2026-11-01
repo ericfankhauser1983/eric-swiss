@@ -1,15 +1,19 @@
 ---
-/** En-tête allégé des pages d'atterrissage : logo, langues FR/EN, WhatsApp */
-import { SITE, LOCALES, path, type Lang } from '../config/site';
+/** En-tête allégé des pages d'atterrissage (toutes immobilières) : logo EF + logo FFI, langues FR/EN, WhatsApp */
+import { SITE, LOCALES, PARTNER_LOGOS, path, type Lang } from '../config/site';
 interface Props { lang: Lang; alternates: Partial<Record<Lang, string>> }
 const { lang, alternates } = Astro.props;
 const langs = (Object.keys(alternates) as Lang[]);
+const ffi = PARTNER_LOGOS.invest;
 ---
 <header class="lbar">
   <div class="wrap lbar__in">
-    <a class="lbar__logo" href={path('home', lang)} aria-label="Eric Fankhauser">
-      <img src="/images/ef-foil.png" srcset="/images/ef-foil.png 1x, /images/ef-foil@2x.png 2x" alt="Eric Fankhauser" width="64" height="44" />
-    </a>
+    <div class="lbar__brand">
+      <a class="lbar__logo" href={path('home', lang)} aria-label="Eric Fankhauser">
+        <img src="/images/ef-foil.png" srcset="/images/ef-foil.png 1x, /images/ef-foil@2x.png 2x" alt="Eric Fankhauser" width="64" height="44" />
+      </a>
+      {ffi.src && <a class="lbar__partner" href={ffi.href} target="_blank" rel="noopener"><img src={ffi.src} alt={ffi.alt} /></a>}
+    </div>
     <div class="lbar__right">
       <nav class="lbar__langs" aria-label="Language">
         {langs.map((l) => (
@@ -28,6 +32,17 @@ const langs = (Object.keys(alternates) as Lang[]);
   .lbar { position: sticky; top: 0; z-index: 50; background: var(--navy); color: var(--cream); border-bottom: 1px solid rgba(173, 142, 104, 0.25); }
   .lbar__in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
   .lbar__logo img { height: 42px; width: auto; display: block; }
+  .lbar__brand { display: flex; align-items: center; gap: 16px; min-width: 0; }
+  .lbar__logo { flex: none; }
+  .lbar__partner { display: flex; align-items: center; height: 40px; padding-left: 16px; border-left: 1px solid rgba(173, 142, 104, 0.6); min-width: 0; }
+  .lbar__partner img { max-height: 34px; max-width: 220px; width: auto; height: auto; display: block; }
+  @media (max-width: 480px) {
+    .lbar__brand { gap: 10px; }
+    .lbar__logo img { height: 36px; }
+    .lbar__partner { height: 32px; padding-left: 10px; }
+    .lbar__partner img { max-width: 108px; max-height: 24px; }
+    .lbar__right { gap: 10px; }
+  }
   .lbar__right { display: flex; align-items: center; gap: 18px; }
   .lbar__langs { display: flex; gap: 4px; font-size: 0.8rem; letter-spacing: 0.12em; }
   .lbar__langs a { color: var(--muted-light); text-decoration: none; padding: 6px 8px; }
