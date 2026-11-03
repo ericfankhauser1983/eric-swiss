@@ -9,7 +9,7 @@
  *  - impôt sur la plus-value de CAPITAL_GAINS_TAX si la revente intervient avant 24 mois de détention.
  */
 
-export const CREDIT_RATE = 7.5; // % annuel — non affiché dans le formulaire
+export const CREDIT_RATE = 7; // % annuel — non affiché dans le formulaire
 export const CAPITAL_GAINS_TAX = 5; // % — revente avant 24 mois
 export const TAX_FREE_AFTER_MONTHS = 24;
 
