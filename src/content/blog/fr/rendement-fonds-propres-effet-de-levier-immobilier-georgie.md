@@ -1,81 +1,75 @@
 ---
-title: "Rendement sur fonds propres et effet de levier : l'investissement immobilier en Géorgie chiffré"
-description: "Loyers, plus-value, crédit : je calcule le rendement sur fonds propres d'un appartement à Tbilissi, avec et sans effet de levier bancaire. Exemples chiffrés."
+title: "Rendement sur fonds propres : le principe que la plupart des investisseurs ne comprennent pas"
+description: "Pourquoi un appartement qui rapporte 12 % peut rapporter 24 % à votre argent : le rendement sur fonds propres et l'effet de levier expliqués simplement."
 date: 2026-11-07
 translationKey: rendement-fonds-propres-effet-de-levier
 category: immobilier
-tags: ["Géorgie", "Tbilissi", "Rendement locatif", "Effet de levier", "Financement"]
+tags: ["Géorgie", "Tbilissi", "Rendement sur fonds propres", "Effet de levier", "Investir"]
 source: "https://www.francefinance.ae/articles-blog/comment-calculer-la-rentabilite-dun-investissement-immobilier"
 draft: true
 ---
 
-Quand on me demande « combien ça rapporte ? », je réponds presque toujours par une autre question : rapporter sur quoi ? Sur le prix du bien, ou sur l'argent que vous avez réellement sorti de votre poche ? La différence est énorme. Le premier chiffre, c'est le rendement du bien. Le second, c'est le **rendement sur fonds propres**. C'est lui qui mesure votre performance d'investisseur, et c'est lui qui change dès qu'une banque entre dans l'équation.
+Quand je parle d'investissement avec mes clients, une question revient presque toujours : « Combien ça rapporte ? » Et presque toujours, la personne pense au rendement du bien : le loyer divisé par le prix. C'est un bon début, mais ce n'est pas le chiffre qui compte vraiment.
 
-Je vous propose de faire le calcul ensemble, sur un cas concret d'**investissement immobilier en Géorgie**, avec et sans crédit.
+Le chiffre qui compte, c'est le **rendement sur fonds propres**. Autrement dit : combien rapporte l'argent que **vous** avez réellement sorti de votre poche ? Quand on a compris cette nuance, on ne regarde plus jamais l'**investissement immobilier en Géorgie** de la même façon.
 
-## Rendement du bien et rendement sur fonds propres
+## Le rendement du bien et le rendement de votre argent
 
-Le rendement du bien rapporte le revenu au prix total. Le rendement sur fonds propres rapporte le gain à votre seul apport. Si vous payez comptant, les deux sont identiques. Si vous empruntez, ils divergent, dans un sens ou dans l'autre.
+Le rendement du bien mesure la performance de l'appartement. Le rendement sur fonds propres mesure la performance de votre argent. Ce n'est pas la même chose.
 
-C'est tout le principe de l'effet de levier. La banque finance une partie du bien. Vous touchez pourtant 100 % des loyers et 100 % de la plus-value. En échange, vous lui payez des intérêts. Si le bien rapporte plus que ce que coûte la dette, la différence vient gonfler votre rendement. Sinon, elle le détruit.
+Une image que j'aime bien : quand une entreprise investit dans une nouvelle machine, son patron ne se demande pas seulement ce que rapporte la machine. Il se demande ce que rapporte chaque franc qu'il a mis de sa poche. Si la banque a financé une partie de la machine, la réponse change tout. Pendant mes années à la tête de Swiss Auto Glass, c'était toujours la bonne question : « combien me rapporte mon argent ? »
 
-Le blog de FFI a publié une bonne [méthode pour calculer la rentabilité](https://www.francefinance.ae/articles-blog/comment-calculer-la-rentabilite-dun-investissement-immobilier) : brute, nette de charges, puis après impôt, sans oublier la revente. Je reprends cette logique et j'y ajoute le crédit.
+En immobilier, c'est le même principe. Et l'outil qui fait la différence s'appelle l'**effet de levier**.
 
-## Mon cas d'école à Tbilissi
+## L'effet de levier, en une phrase
 
-Les hypothèses, toutes en dollars puisque le marché et les crédits se pratiquent dans cette monnaie :
+Vous achetez un bien de 100 000 $ en n'apportant que 30 000 $. La banque finance le reste. Mais c'est vous qui encaissez **100 % des loyers et 100 % de la plus-value**.
 
-- **Prix total, frais compris : 100 000 $.** À 1 341 $ le m², prix moyen à Tbilissi en mars 2026 selon [TBC Capital](https://tbccapital.ge/static/file/202604225003-tbilisi-residential-market-monthly-watch-march-2026-eng.pdf), cela correspond à environ 70 m².
-- **Loyer brut : 8 100 $ par an**, soit 8,1 %, le rendement moyen mesuré par TBC Capital.
-- **Charges, vacance locative et gestion : 20 % du loyer**, soit 1 620 $.
-- **Impôt : 5 % du loyer brut**, soit 405 $. C'est le taux préférentiel géorgien sur les loyers résidentiels, rappelé par [FFI](https://www.francefinance.ae/articles-blog/conference-paris-100-personnes-immobilier-georgie).
-- **Loyer net : 6 075 $ par an**, soit 6,1 % du prix.
-- **Valorisation : +4 % par an.** C'est la hausse sur un an mesurée en mars 2026, et Galt & Taggart prévoit une croissance [à un chiffre](https://www.gbc.ge/en/news/Economics-news/galttaggart-predicts-single-digit-growth-in-apartment-prices-in-tbilisi-in-2026) pour 2026.
-- **Durée : 5 ans**, puis revente. Au-delà de deux ans de détention, une personne physique ne paie pas d'impôt sur la plus-value en Géorgie. Je ne compte pas les frais de revente.
+Vous ne payez à la banque que des intérêts sur l'argent qu'elle vous prête. Tout le reste est pour vous, et il se rapporte à une mise trois fois plus petite.
 
-## Trois scénarios, du comptant au crédit
+## Un exemple concret à Tbilissi
 
-**Scénario 1, comptant.** Vous apportez 100 000 $. Vous touchez 6 075 $ net par an, soit 6,1 % sur vos fonds propres. Après cinq ans, le bien vaut environ 121 700 $. Gain total : 30 400 $ de loyers et 21 700 $ de plus-value, soit 52 000 $.
+Prenons un appartement de 100 000 $ à Tbilissi. Sur une année, il produit deux choses.
 
-**Scénario 2, crédit en dollars dans une banque géorgienne.** Les banques demandent en général 30 à 40 % d'apport aux étrangers. Pour un crédit en dollars, TBC affichait au premier trimestre 2025 un taux de 7,5 %, et un taux effectif de 9,4 % une fois les frais et l'assurance inclus, selon [PB Services](https://pbservices.ge/blog/getting-a-mortgage-in-georgia/). Je retiens 40 % d'apport, 60 000 $ empruntés à 9 % sur 10 ans. La mensualité est de 760 $, soit 9 120 $ par an.
+**Des loyers.** Le rendement locatif brut à Tbilissi atteint 8,6 % selon [Galt & Taggart](https://www.gbc.ge/en/news/Economics-news/galttaggart-predicts-single-digit-growth-in-apartment-prices-in-tbilisi-in-2026). Les loyers résidentiels ne sont imposés qu'à 5 %, comme le rappelle [FFI](https://www.francefinance.ae/articles-blog/conference-paris-100-personnes-immobilier-georgie). Je retiens donc 8 000 $ de loyers nets par an.
 
-**Scénario 3, crédit moins cher.** C'est une hypothèse d'école : le même montage, mais avec une dette à 5 % sur 20 ans. La mensualité tombe à 396 $.
+**De la plus-value.** Les prix au m² à Tbilissi ont progressé de 4 % sur un an selon [TBC Capital](https://tbccapital.ge/static/file/202604225003-tbilisi-residential-market-monthly-watch-march-2026-eng.pdf). Je retiens 4 %, soit 4 000 $ de prise de valeur.
 
-| | Comptant | Crédit à 9 % | Crédit à 5 % |
-|---|---|---|---|
-| Fonds propres de départ | 100 000 $ | 40 000 $ | 40 000 $ |
-| Intérêts payés la 1re année | 0 | 5 240 $ | 2 960 $ |
-| Rendement locatif sur fonds propres, 1re année | 6,1 % | 2,1 % | 7,8 % |
-| Trésorerie annuelle après mensualité | +6 075 $ | −3 045 $ | +1 325 $ |
-| Gain net sur 5 ans, revente incluse | 52 000 $ | 29 800 $ | 38 200 $ |
-| Rendement annuel moyen sur fonds propres (TRI) | 9,6 % | 10,6 % | 15,0 % |
+**Si vous payez comptant**, vous apportez 100 000 $. Vous gagnez 8 000 $ de loyers et 4 000 $ de plus-value, soit 12 000 $. Votre rendement sur fonds propres est de **12 %**. C'est déjà très bien.
 
-Ce que je retiens de ce tableau tient en trois points.
+**Si vous utilisez l'effet de levier**, vous apportez 30 000 $ et la banque prête 70 000 $. Avec un crédit à 7 % par an, l'hypothèse de notre simulateur, vous payez environ 4 740 $ d'intérêts la première année. Le bien vous rapporte toujours 8 000 $ de loyers et 4 000 $ de plus-value. Il vous reste donc 7 260 $.
 
-**Sur les seuls loyers, le crédit à 9 % est un mauvais levier.** Le bien rapporte 6,1 % net, la dette coûte 9 %. Le rendement locatif sur fonds propres tombe à 2,1 %. Et chaque année, il faut remettre environ 3 000 $ de sa poche pour couvrir la mensualité.
+7 260 $ sur 30 000 $ d'apport, c'est **24 % de rendement sur fonds propres**. Le même appartement, le même loyer, la même plus-value. Mais le rendement de votre argent a doublé.
 
-**C'est la plus-value qui sauve l'opération.** Avec 4 % de hausse par an, le rendement global sur fonds propres passe de 9,6 % à 10,6 %. Mais l'écart est mince, et vous avez dû remettre environ 15 000 $ en cinq ans.
+| | Comptant | Avec effet de levier |
+|---|---|---|
+| Votre apport | 100 000 $ | 30 000 $ |
+| Loyers nets | 8 000 $ | 8 000 $ |
+| Plus-value (+4 %) | 4 000 $ | 4 000 $ |
+| Intérêts du crédit | — | −4 740 $ |
+| **Votre gain** | **12 000 $** | **7 260 $** |
+| **Rendement sur fonds propres** | **12 %** | **24 %** |
 
-**Quand la dette coûte moins que le rendement net du bien, le levier fonctionne vraiment.** À 5 %, le loyer couvre la mensualité, et le rendement sur fonds propres monte à 15 % par an.
+## Pourquoi ça marche : la plus-value porte sur tout le bien
 
-## Le levier joue aussi dans l'autre sens
+Le secret est là. Quand le bien prend 4 % de valeur, il prend 4 % sur 100 000 $, pas sur votre apport. Ces 4 000 $ représentent 4 % pour l'acheteur au comptant, mais plus de 13 % pour celui qui n'a apporté que 30 000 $.
 
-On oublie souvent que l'effet de levier amplifie les deux côtés. J'ai refait le calcul du scénario 2 avec deux autres hypothèses de valorisation :
+Et chaque mois, une partie de votre mensualité rembourse le capital emprunté. C'est en grande partie le loyer de votre locataire qui la paie. Autrement dit, votre locataire vous aide à devenir propriétaire d'un bien de plus en plus libre de dette.
 
-- **Prix stables pendant cinq ans :** 6,1 % par an au comptant, mais 3,3 % seulement avec le crédit à 9 %.
-- **Prix en hausse de 8 % par an :** 13,3 % au comptant, 17,3 % avec le crédit.
+## Ce que ça change vraiment : vos 100 000 $ peuvent travailler trois fois
 
-Le levier ne crée pas de rendement. Il multiplie le résultat du pari que vous faites sur le marché. À Tbilissi, la hausse a été forte ces dernières années, mais elle ralentit : +20 % en 2023, +11,6 % en 2024 et +4 % en 2025 sur le neuf, selon Galt & Taggart. Je ne construis jamais un plan de financement qui ne tient que si les prix montent.
+Revenons à l'investisseur qui dispose de 100 000 $. Il peut acheter un seul appartement comptant et gagner 12 000 $ par an.
 
-## Mes règles avant d'emprunter
+Il peut aussi apporter 30 000 $ sur trois appartements, et garder 10 000 $ de réserve. Avec les mêmes hypothèses, il gagne environ **21 800 $ par an** au lieu de 12 000 $. Il possède trois biens au lieu d'un. Et il profite de la hausse des prix sur 300 000 $ de patrimoine, pas sur 100 000 $.
 
-1. **Comparer le coût réel de la dette, frais inclus, au rendement net du bien.** Pas au rendement brut affiché sur la plaquette.
-2. **Vérifier la trésorerie année par année.** Si le loyer ne couvre pas la mensualité, prévoyez la réserve dès le départ.
-3. **Emprunter dans la monnaie de vos revenus locatifs, ou connaître votre risque de change.** Un crédit en francs adossé à des loyers en dollars ajoute un pari sur les devises.
-4. **Tester le scénario sans hausse des prix.** S'il est inacceptable, le montage est trop tendu.
+C'est ainsi que se construit un patrimoine immobilier. Pas en attendant d'avoir tout l'argent, mais en faisant travailler celui qu'on a.
 
-Le crédit n'est ni bon ni mauvais en soi. C'est un outil qui se calcule, au cas par cas, selon votre situation et votre horizon.
+## La règle d'or
 
-Pour faire tourner vos propres chiffres, essayez le [simulateur d'investissement](/fr/simulateur-investissement/). Pour construire un plan de financement adapté à votre projet d'[investissement immobilier en Géorgie](/fr/investissement-immobilier-georgie/), [prenons rendez-vous](/fr/rendez-vous/).
+L'effet de levier fonctionne tant que le bien rapporte plus que ce que coûte le crédit. C'est pourquoi le choix de l'emplacement, du promoteur et du loyer réaliste est essentiel. Le levier amplifie le résultat d'un bon investissement. Il faut donc commencer par un bon investissement.
 
-*Exemples à titre illustratif, fondés sur des moyennes de marché. Ils ne constituent ni une promesse de rendement ni un conseil financier personnalisé.*
+En Géorgie, les ingrédients sont réunis : des loyers élevés, une fiscalité légère, aucun impôt sur la plus-value après deux ans de détention et une économie en croissance de 7,9 % au premier semestre 2026.
+
+Pour voir ce que donne l'effet de levier avec vos propres chiffres, essayez notre [simulateur d'investissement](/fr/simulateur-investissement/) : comparez comptant, plan de paiement promoteur et crédit bancaire en quelques clics. Pour construire votre stratégie d'[investissement immobilier en Géorgie](/fr/investissement-immobilier-georgie/), [prenons rendez-vous](/fr/rendez-vous/).
+
+*Exemple à titre illustratif, fondé sur des moyennes de marché. Les performances passées ne préjugent pas des performances futures.*
