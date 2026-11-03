@@ -5,7 +5,7 @@ date: 2026-11-03
 translationKey: corridor-median-georgie
 category: geopolitique
 tags: ["Georgia", "Middle Corridor", "Logistics", "Central Asia", "Türkiye"]
-draft: true
+draft: false
 ---
 
 Seen from Brussels, Georgia is above all a political file today. Relations are strained, and in 2026 the European Commission [suspended visa-free travel](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_564) for holders of Georgian diplomatic and official passports. From my office in Tbilisi, though, the last week of October told a different story, one of rails, quays and tonnes. If you want to **invest in Georgia**, that is the story to read closely: the Middle Corridor, the China–Europe route that bypasses Russia via the Caspian and the Caucasus, is changing scale.

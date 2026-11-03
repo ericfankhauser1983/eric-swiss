@@ -5,7 +5,7 @@ date: 2026-11-03
 translationKey: corridor-median-georgie
 category: geopolitique
 tags: ["Géorgie", "Corridor médian", "Logistique", "Asie centrale", "Turquie"]
-draft: true
+draft: false
 ---
 
 Vue de Bruxelles, la Géorgie est aujourd'hui d'abord un dossier politique. Les relations sont tendues, et la Commission européenne a [suspendu en 2026 l'exemption de visa](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_564) pour les passeports diplomatiques et officiels géorgiens. Depuis mon bureau de Tbilissi, la dernière semaine d'octobre a pourtant raconté une autre histoire, faite de rails, de quais et de tonnes. Pour qui veut **investir en Géorgie**, c'est elle qu'il faut lire en détail : le corridor médian, la route Chine–Europe qui contourne la Russie par la Caspienne et le Caucase, est en train de changer d'échelle.

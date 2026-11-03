@@ -5,7 +5,7 @@ date: 2026-11-03
 translationKey: corridor-median-georgie
 category: geopolitique
 tags: ["Georgien", "Mittlerer Korridor", "Logistik", "Zentralasien", "Türkei"]
-draft: true
+draft: false
 ---
 
 Von Brüssel aus gesehen ist Georgien heute vor allem ein politisches Dossier. Die Beziehungen sind angespannt, und die EU-Kommission hat 2026 [die Visafreiheit](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_564) für Inhaber georgischer Diplomaten- und Dienstpässe ausgesetzt. Von meinem Büro in Tiflis aus erzählte die letzte Oktoberwoche jedoch eine andere Geschichte, eine von Schienen, Kais und Tonnen. Wer **in Georgien investieren** will, sollte genau diese Geschichte lesen: Der Mittlere Korridor, die Route zwischen China und Europa, die Russland über das Kaspische Meer und den Kaukasus umgeht, wächst in eine neue Größenordnung.
