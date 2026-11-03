@@ -1,6 +1,6 @@
 ---
 title: "Unternehmenssteuer in Georgien: das estnische Modell aus Sicht eines Schweizer Unternehmers"
-description: "In Georgien zahlt eine Firma nur 15 % Steuer auf das, was sie ausschüttet. Was dieses estnische Modell für die Führung eines KMU ändert und wo Fallen lauern."
+description: "In Georgien zahlt eine Firma nur 15 % Steuer auf Ausschüttungen. Was dieses estnische Modell für die Führung eines KMU wirklich ändert und wo Fallen lauern."
 date: 2026-11-06
 translationKey: fiscalite-entreprises-georgie-modele-estonien
 category: entrepreneuriat
