@@ -227,6 +227,11 @@ h3 { font-size: clamp(1.2rem, 1.7vw, 1.45rem); letter-spacing: -0.005em; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin: 0.35em 0; }
 .prose li::marker { color: var(--gold); }
+.prose table { display: block; overflow-x: auto; max-width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.92rem; }
+.prose th, .prose td { padding: 0.6em 0.9em; border-bottom: 1px solid var(--line, rgba(0,0,0,0.12)); text-align: left; vertical-align: top; }
+.prose thead th { font-weight: 600; border-bottom: 2px solid var(--gold); }
+.prose td:not(:first-child), .prose th:not(:first-child) { text-align: right; white-space: nowrap; }
+@media (max-width: 600px) { .prose table { font-size: 0.8rem; } .prose th, .prose td { padding: 0.5em 0.45em; } .prose td:first-child { min-width: 9em; } }
 
 /* Révélation au scroll */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
