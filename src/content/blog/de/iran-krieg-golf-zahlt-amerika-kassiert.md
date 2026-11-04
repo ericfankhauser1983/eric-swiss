@@ -5,7 +5,7 @@ date: 2026-11-04
 translationKey: guerre-iran-golfe-amerique
 category: geopolitique
 tags: ["Iran", "Golfstaaten", "Öl", "LNG", "USA", "Georgien"]
-draft: true
+draft: false
 ---
 
 Seit dem 28. Februar erzählen die europäischen Medien den Iran-Krieg in militärischen Kategorien: Luftschläge, Raketen, die Straße von Hormus. Von Tiflis aus, wenige hundert Kilometer von der iranischen Grenze entfernt, schaue ich vor allem auf eine andere Karte: die des Geldes. Acht Monate später ist klar, wer die Rechnung bezahlt und wer kassiert. Die Golfstaaten, die als unantastbar galten, stehen als große Verlierer da. Die amerikanischen Öl- und Gasproduzenten dagegen erleben ein Rekordjahr.

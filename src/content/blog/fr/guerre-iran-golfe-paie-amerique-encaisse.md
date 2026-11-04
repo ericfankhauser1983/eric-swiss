@@ -5,7 +5,7 @@ date: 2026-11-04
 translationKey: guerre-iran-golfe-amerique
 category: geopolitique
 tags: ["Iran", "Golfe", "Pétrole", "GNL", "États-Unis", "Géorgie"]
-draft: true
+draft: false
 ---
 
 Depuis le 28 février, les médias européens racontent la guerre en Iran en termes militaires : frappes, missiles, détroit d'Ormuz. Vu de Tbilissi, à quelques centaines de kilomètres de la frontière iranienne, je regarde surtout une autre carte : celle de l'argent. Huit mois plus tard, on voit nettement qui paie la facture et qui encaisse. Les pays du Golfe, que l'on disait intouchables, en sortent comme les grands perdants. Les producteurs américains de pétrole et de gaz, eux, vivent une année record.

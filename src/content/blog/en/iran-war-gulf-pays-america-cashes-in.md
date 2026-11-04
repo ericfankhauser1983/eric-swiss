@@ -5,7 +5,7 @@ date: 2026-11-04
 translationKey: guerre-iran-golfe-amerique
 category: geopolitique
 tags: ["Iran", "Gulf", "Oil", "LNG", "United States", "Georgia"]
-draft: true
+draft: false
 ---
 
 Since 28 February, European media have told the story of the Iran war in military terms: strikes, missiles, the Strait of Hormuz. From Tbilisi, a few hundred kilometres from the Iranian border, I mostly watch a different map: the map of money. Eight months on, it is clear who is paying the bill and who is cashing in. The Gulf states, once thought untouchable, are coming out as the big losers. American oil and gas producers, meanwhile, are having a record year.
