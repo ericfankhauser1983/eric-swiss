@@ -5,7 +5,7 @@ date: 2026-11-05
 translationKey: crd6-compte-bancaire-georgie
 category: immobilier
 tags: ["Georgien", "Bank", "CRD6", "Vermögen", "EU-Regulierung"]
-draft: true
+draft: false
 ---
 
 Seit einigen Wochen taucht in den Nachrichten meiner Kunden immer wieder ein Datum auf: der 11. Januar 2027. An diesem Tag wird Artikel 21c der europäischen Richtlinie CRD6 anwendbar. Man liest, eine georgische, Schweizer oder Dubaier Bank dürfe Ihnen dann kein Konto mehr eröffnen, und Europa schließe die Tür für Ersparnisse, die abwandern wollen. Die Frage, die mir am häufigsten gestellt wird, ist daher einfach: **Kann man noch ein Bankkonto in Georgien eröffnen**, wenn man in der Europäischen Union lebt?

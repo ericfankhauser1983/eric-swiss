@@ -5,7 +5,7 @@ date: 2026-11-05
 translationKey: crd6-compte-bancaire-georgie
 category: immobilier
 tags: ["Georgia", "Banking", "CRD6", "Wealth", "EU regulation"]
-draft: true
+draft: false
 ---
 
 For a few weeks now, one date has kept coming up in my clients' messages: 11 January 2027. That is when Article 21c of the European CRD6 directive starts to apply. I keep reading that a Georgian, Swiss or Dubai bank will no longer be allowed to open an account for you, and that Europe is shutting the door on savings that want to leave. So the question I get most often is simple: **can you still open a bank account in Georgia** if you live in the European Union?

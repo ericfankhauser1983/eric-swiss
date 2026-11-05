@@ -5,7 +5,7 @@ date: 2026-11-05
 translationKey: crd6-compte-bancaire-georgie
 category: immobilier
 tags: ["Géorgie", "Banque", "CRD6", "Patrimoine", "Réglementation UE"]
-draft: true
+draft: false
 ---
 
 Depuis quelques semaines, une date circule dans les messages de mes clients : le 11 janvier 2027. Ce jour-là entre en application l'article 21 quater de la directive européenne CRD6. On lit qu'une banque géorgienne, suisse ou de Dubaï n'aura plus le droit de vous ouvrir un compte, et que l'Europe ferme la porte à l'épargne qui veut partir. La question que l'on me pose le plus souvent est donc simple : **peut-on encore ouvrir un compte bancaire en Géorgie** quand on vit dans l'Union européenne ?
