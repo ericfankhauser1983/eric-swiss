@@ -27,9 +27,9 @@ Archi publie l'évolution du prix au m² de ses projets, du prix de lancement co
 
 Pour savoir si ces chiffres sont exceptionnels, il faut les comparer au marché. Selon l'indice officiel des prix du logement de [Geostat](https://geostat.ge/media/81560/Residential-Property-Price-Index---II-quarter-of-2026.pdf), les prix ont progressé de **63,8 % depuis 2020**. Cela représente **près de 9 % par an**. C'est déjà une performance que la plupart des marchés européens envient.
 
-Mais les bons projets font beaucoup mieux. Archi Central Park dépasse cette moyenne, et Archi Universe fait plus du double. La raison est simple : un projet bien placé, porté par un promoteur solide, se vend d'abord à un **prix de lancement**. Puis son prix monte à chaque étape : gros œuvre, façade, livraison. L'investisseur qui entre tôt capte toute cette progression.
+Mais les bons projets font beaucoup mieux. Archi Central Park dépasse cette moyenne, et Archi Universe fait plus du double. La raison est simple : un projet bien placé, porté par un promoteur solide, se vend d'abord à un **prix de lancement**. Puis son prix monte à chaque étape : gros œuvre, façade, livraison. Et un bon projet continue de prendre de la valeur après la livraison, comme le montre Archi Central Park.
 
-C'est pour cela que je dis toujours à mes clients : en Géorgie, **le choix du projet et le moment d'entrée font la différence entre une bonne et une excellente plus-value**.
+C'est pour cela que je dis toujours à mes clients : en Géorgie, **c'est le choix du projet qui fait la différence entre une bonne et une excellente plus-value**.
 
 ## Un cas client parmi d'autres : +39,8 % en 13 mois
 
@@ -47,26 +47,25 @@ Ramené à l'année, le cas Grand Avenue représente **36,2 % par an**. C'est tr
 
 ![Rendement annualisé : les bons projets face à la moyenne du marché géorgien](/images/blog/plus-values-georgie/croissance-annuelle-fr.svg)
 
-## Avec 20 % d'apport, le rendement annuel atteint 62,8 %
+## Avec 20 % d'apport, le rendement annuel dépasse 170 %
 
 Un détail de cette histoire mérite qu'on s'y arrête : ce client a choisi de **payer 100 % à la signature**. Il a donc engagé 97 224 $ pour gagner 38 674 $.
 
-Or Archi propose des plans de paiement **sans intérêts** pendant la construction, avec un apport qui commence à **20 %**. Prenons une hypothèse simple : 20 % d'apport à la signature, soit 19 445 $, puis le solde en 28 mensualités d'environ 2 778 $.
+Or l'achat sur plan permet de ne verser qu'un **apport à partir de 20 %** à la signature. Pendant les travaux, il n'y a rien d'autre à payer. Le solde est financé par un **crédit qui ne démarre qu'à la livraison**.
 
-Après 13 mois, il aurait versé environ **55 557 $**. À la revente, l'acheteur reprend les mensualités restantes. La plus-value reste exactement la même, 38 674 $, mais elle est obtenue avec beaucoup moins d'argent. Son rendement sur fonds propres passe de 39,8 % à **69,6 % en 13 mois**, soit **62,8 % par an**. Et les 41 667 $ qu'il n'a pas engagés pouvaient travailler sur un deuxième projet.
+Avec 20 % d'apport, ce client n'aurait engagé que **19 445 $**. À la revente, l'acheteur reprend l'engagement sur le solde. La plus-value reste exactement la même, 38 674 $, mais elle est obtenue avec cinq fois moins d'argent. Son rendement sur fonds propres passe de 39,8 % à **198,9 % en 13 mois**, soit **environ 175 % par an**. Et les 77 779 $ qu'il n'a pas engagés pouvaient financer l'apport de quatre autres appartements du même prix.
 
-![Rendement annualisé sur fonds propres : paiement comptant comparé à un apport de 20 % avec mensualités](/images/blog/plus-values-georgie/fonds-propres-fr.svg)
+![Rendement annualisé sur fonds propres : paiement comptant comparé à un apport de 20 %](/images/blog/plus-values-georgie/fonds-propres-fr.svg)
 
-C'est exactement le principe que j'explique dans mon article sur le [rendement sur fonds propres](/fr/blog/rendement-fonds-propres-effet-de-levier-immobilier-georgie/). La plus-value se calcule sur tout l'appartement, alors que vous n'en avez financé qu'une partie. Et ici, ce levier ne coûte aucun intérêt.
+C'est exactement le principe que j'explique dans mon article sur le [rendement sur fonds propres](/fr/blog/rendement-fonds-propres-effet-de-levier-immobilier-georgie/). La plus-value se calcule sur tout l'appartement, alors que vous n'en avez financé qu'une partie. Et pendant toute la durée des travaux, ce levier ne coûte aucun intérêt, puisque le crédit ne démarre qu'à la livraison.
 
 ## Mes règles pour viser une plus-value supérieure à la moyenne
 
-- **Entrer tôt**, au lancement ou pendant le gros œuvre : c'est là que se crée l'essentiel de la plus-value.
 - **Choisir le promoteur avant l'appartement** : historique de livraisons, projets terminés, qualité réelle.
 - **Privilégier les emplacements recherchés** : Vake, Saburtalo, les grands projets urbains de Tbilissi.
-- **Utiliser le plan de paiement sans intérêts** pour démultiplier le rendement de vos fonds propres, en comparant le prix échelonné au prix comptant.
+- **Limiter l'apport à la signature** pour démultiplier le rendement de vos fonds propres, en comparant le prix avec apport au prix comptant.
 - **Raisonner en rendement annuel**, pas en pourcentage total.
 
 Alors, réalité ou marketing ? La réalité, c'est que le marché géorgien progresse déjà de près de 9 % par an, et que les bons projets font deux, trois, voire quatre fois mieux. Pour voir ce que donnent ces scénarios avec vos propres chiffres, essayez le [simulateur d'investissement](/fr/simulateur-investissement/). Et pour choisir le bon projet et construire votre stratégie d'[investissement immobilier en Géorgie](/fr/investissement-immobilier-georgie/), [prenons rendez-vous](/fr/rendez-vous/).
 
-*Prix communiqués par le promoteur Archi (2026) ; indice Geostat au deuxième trimestre 2026. Plus-values brutes, avant frais et impôts. Le scénario avec apport de 20 % est une hypothèse de calcul. Les performances passées ne préjugent pas des performances futures.*
+*Prix communiqués par le promoteur Archi (2026) ; indice Geostat au deuxième trimestre 2026. Plus-values brutes, avant frais et impôts. Le scénario avec apport de 20 % est une hypothèse de calcul, au même prix d'achat. Les performances passées ne préjugent pas des performances futures.*

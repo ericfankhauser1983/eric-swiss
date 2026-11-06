@@ -27,9 +27,9 @@ Archi publishes how the price per m² of its projects has moved, from the launch
 
 To know whether these figures are exceptional, you need to compare them with the market. According to [Geostat](https://geostat.ge/media/81560/Residential-Property-Price-Index---II-quarter-of-2026.pdf)'s official residential property price index, prices have risen by **63.8% since 2020**. That is **almost 9% a year**, a performance most European markets would envy.
 
-But the right projects do much better. Archi Central Park beats this average, and Archi Universe more than doubles it. The reason is simple: a well-located project, backed by a solid developer, is first sold at a **launch price**. Then its price rises at each stage: structure, façade, handover. The investor who gets in early captures all of that growth.
+But the right projects do much better. Archi Central Park beats this average, and Archi Universe more than doubles it. The reason is simple: a well-located project, backed by a solid developer, is first sold at a **launch price**. Then its price rises at each stage: structure, façade, handover. And a good project keeps gaining value after handover, as Archi Central Park shows.
 
-That is why I always tell my clients: in Georgia, **the choice of project and your entry point make the difference between a good and an excellent capital gain**.
+That is why I always tell my clients: in Georgia, **it is the choice of project that makes the difference between a good and an excellent capital gain**.
 
 ## One client case among many: +39.8% in 13 months
 
@@ -47,26 +47,25 @@ On an annual basis, the Grand Avenue case comes to **36.2% a year**. That is thr
 
 ![Annualised return: the right projects compared with the Georgian market average](/images/blog/plus-values-georgie/croissance-annuelle-en.svg)
 
-## With 20% down, the annual return reaches 62.8%
+## With 20% down, the annual return exceeds 170%
 
 One detail of this story deserves attention: this client chose to **pay 100% at signing**. He committed $97,224 to earn $38,674.
 
-Yet Archi offers **interest-free** payment plans during construction, with a down payment starting at **20%**. Let's take a simple assumption: 20% down at signing, i.e. $19,445, then the balance in 28 monthly instalments of about $2,778.
+Yet buying off-plan lets you pay only a **down payment from 20%** at signing. Nothing else is due during construction. The balance is financed by a **loan that only starts at handover**.
 
-After 13 months, he would have paid about **$55,557**. On resale, the buyer takes over the remaining instalments. The gain stays exactly the same, $38,674, but it is earned with much less money. His return on equity rises from 39.8% to **69.6% in 13 months**, or **62.8% a year**. And the $41,667 he did not commit could have been working on a second project.
+With 20% down, this client would have committed only **$19,445**. On resale, the buyer takes over the commitment on the balance. The gain stays exactly the same, $38,674, but it is earned with five times less money. His return on equity rises from 39.8% to **198.9% in 13 months**, or **about 175% a year**. And the $77,779 he did not commit could have funded the down payment on four more apartments at the same price.
 
-![Annualised return on equity: cash payment compared with 20% down and instalments](/images/blog/plus-values-georgie/fonds-propres-en.svg)
+![Annualised return on equity: cash payment compared with 20% down](/images/blog/plus-values-georgie/fonds-propres-en.svg)
 
-This is exactly the principle I explain in my article on [return on equity](/en/blog/return-on-equity-leverage-real-estate-georgia/). The gain is calculated on the whole apartment, while you have only financed part of it. And here, that leverage costs no interest at all.
+This is exactly the principle I explain in my article on [return on equity](/en/blog/return-on-equity-leverage-real-estate-georgia/). The gain is calculated on the whole apartment, while you have only financed part of it. And throughout construction, that leverage costs no interest at all, since the loan only starts at handover.
 
 ## My rules for aiming above the average
 
-- **Get in early**, at launch or during the structural works: that is where most of the gain is made.
 - **Choose the developer before the apartment**: delivery track record, completed projects, real quality.
 - **Favour sought-after locations**: Vake, Saburtalo, Tbilisi's major urban projects.
-- **Use the interest-free payment plan** to multiply the return on your equity, comparing the instalment price with the cash price.
+- **Keep the down payment at signing low** to multiply the return on your equity, comparing the price with a down payment to the cash price.
 - **Think in annual return**, not in total percentage.
 
 So, reality or sales pitch? The reality is that the Georgian market already grows by almost 9% a year, and the right projects do two, three or even four times better. To see how these scenarios play out with your own figures, try the [investment simulator](/en/investment-simulator/). And to choose the right project and build your [real estate investment strategy in Georgia](/en/real-estate-investment-georgia/), [let's book a meeting](/en/book-a-meeting/).
 
-*Prices provided by developer Archi (2026); Geostat index for the second quarter of 2026. Gross capital gains, before fees and taxes. The 20% down-payment scenario is a calculation assumption. Past performance is no guarantee of future results.*
+*Prices provided by developer Archi (2026); Geostat index for the second quarter of 2026. Gross capital gains, before fees and taxes. The 20% down-payment scenario is a calculation assumption, at the same purchase price. Past performance is no guarantee of future results.*
