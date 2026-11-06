@@ -5,7 +5,7 @@ date: 2026-11-06
 translationKey: fiscalite-entreprises-georgie-modele-estonien
 category: entrepreneuriat
 tags: ["Georgien", "Steuern", "Firmengründung", "KMU", "Unternehmensführung"]
-draft: true
+draft: false
 ---
 
 Während mehr als zehn Jahren an der Spitze von Swiss Auto Glass habe ich gedacht wie jeder Schweizer Unternehmer. Beim Jahresabschluss wird der Gewinn besteuert, ob man ihn im Unternehmen lässt oder ausschüttet. Die Steuer fällt auf das Jahresergebnis, nicht auf den Entscheid, den man danach trifft. In Georgien ist die Logik umgekehrt. **Die Unternehmenssteuer in Georgien** beruht auf dem sogenannten «estnischen Modell»: Die Gesellschaft zahlt nichts, solange sie ihren Gewinn behält und reinvestiert.

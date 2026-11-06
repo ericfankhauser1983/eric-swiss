@@ -5,7 +5,7 @@ date: 2026-11-06
 translationKey: fiscalite-entreprises-georgie-modele-estonien
 category: entrepreneuriat
 tags: ["Géorgie", "Fiscalité", "Créer une société", "PME", "Pilotage"]
-draft: true
+draft: false
 ---
 
 Pendant plus de dix ans à la tête de Swiss Auto Glass, j'ai raisonné comme tout patron suisse. À la clôture, le bénéfice est imposé, qu'on le laisse dans l'entreprise ou qu'on le distribue. L'impôt tombe sur le résultat de l'année, pas sur la décision que l'on prend ensuite. En Géorgie, la logique est inversée. **La fiscalité des entreprises en Géorgie** repose sur ce qu'on appelle le « modèle estonien » : la société ne paie rien tant qu'elle garde son bénéfice et le réinvestit.

@@ -5,7 +5,7 @@ date: 2026-11-06
 translationKey: fiscalite-entreprises-georgie-modele-estonien
 category: entrepreneuriat
 tags: ["Georgia", "Taxation", "Company formation", "SME", "Management"]
-draft: true
+draft: false
 ---
 
 For more than ten years at the head of Swiss Auto Glass, I thought like every Swiss business owner. At year-end, profit is taxed, whether you keep it in the company or pay it out. The tax falls on the year's result, not on the decision you make afterwards. In Georgia, the logic is reversed. **Business taxation in Georgia** rests on what is called the "Estonian model": the company pays nothing as long as it keeps its profit and reinvests it.
