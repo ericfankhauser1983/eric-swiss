@@ -47,15 +47,15 @@ On an annual basis, the Grand Avenue case comes to **36.2% a year**. That is thr
 
 ![Annualised return: the right projects compared with the Georgian market average](/images/blog/plus-values-georgie/croissance-annuelle-en.svg)
 
-## With 20% down, the annual return exceeds 170%
+## With a 20% down payment, the annual return exceeds 170%
 
 One detail of this story deserves attention: this client chose to **pay 100% at signing**. He committed $97,224 to earn $38,674.
 
 Yet buying off-plan lets you pay only a **down payment from 20%** at signing. Nothing else is due during construction. The balance is financed by a **loan that only starts at handover**.
 
-With 20% down, this client would have committed only **$19,445**. On resale, the buyer takes over the commitment on the balance. The gain stays exactly the same, $38,674, but it is earned with five times less money. His return on equity rises from 39.8% to **198.9% in 13 months**, or **about 175% a year**. And the $77,779 he did not commit could have funded the down payment on four more apartments at the same price.
+With a 20% down payment, this client would have committed only **$19,445**. On resale, the buyer takes over the commitment on the balance. The gain stays exactly the same, $38,674, but it is earned with five times less money. His return on equity rises from 39.8% to **198.9% in 13 months**, or **about 175% a year**. And the $77,779 he did not commit could have funded the down payment on four more apartments at the same price.
 
-![Annualised return on equity: cash payment compared with 20% down](/images/blog/plus-values-georgie/fonds-propres-en.svg)
+![Annualised return on equity: cash payment compared with a 20% down payment](/images/blog/plus-values-georgie/fonds-propres-en.svg)
 
 This is exactly the principle I explain in my article on [return on equity](/en/blog/return-on-equity-leverage-real-estate-georgia/). The gain is calculated on the whole apartment, while you have only financed part of it. And throughout construction, that leverage costs no interest at all, since the loan only starts at handover.
 
