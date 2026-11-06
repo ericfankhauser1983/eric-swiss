@@ -11,23 +11,25 @@ draft: true
 
 «+137 %», «+165 %», «+186 %». Wer sich mit einem **Immobilien-Investment in Georgien** beschäftigt, stösst schnell auf solche Zahlen. Und die Frage, die mir am häufigsten gestellt wird, ist einfach: Macht man in Georgien **wirklich Wertgewinne**, oder ist das ein Verkaufsargument, um Wohnungen ab Plan zu verkaufen?
 
-Meine Antwort ist klar: Die Wertgewinne sind sehr real. Und mit dem richtigen Projekt liegen sie deutlich über dem Marktdurchschnitt. Ich zeige es Ihnen an drei konkreten Fällen bei Archi, einem der grössten Bauträger in Tiflis: ein fertiggestelltes Projekt, ein Projekt im Bau und ein Weiterverkauf durch einen unserer Kunden.
+Meine Antwort ist klar: Die Wertgewinne sind sehr real. Und mit dem richtigen Projekt liegen sie deutlich über dem Marktdurchschnitt. Ich zeige es Ihnen an vier konkreten Fällen bei Archi, einem der grössten Bauträger in Tiflis: zwei Projekte, lanciert 2017 und 2019, ein Projekt im Bau und ein Weiterverkauf durch einen unserer Kunden.
 
-## Zwei Archi-Projekte, zwei beeindruckende Entwicklungen
+## Drei Archi-Projekte, drei beeindruckende Entwicklungen
 
 Archi veröffentlicht die Entwicklung des Quadratmeterpreises seiner Projekte, vom Lancierungspreis bis zum heutigen Verkaufspreis.
+
+**Archi Isani** wurde im November 2017 zu **640 $/m²** lanciert. Heute wird es zu rund **1'910 $/m²** verkauft. Das sind fast +200 %, also rund **12,9 % pro Jahr** über neun Jahre.
 
 **Archi Central Park**, ein 29-stöckiges Gebäude beim Zentralpark von Tiflis, ist **fertiggestellt**. Im Januar 2019 zu **1'180 $/m²** lanciert, wird es heute zu rund **2'800 $/m²** verkauft. Das sind +137 %, also rund **11,8 % pro Jahr** über fast acht Jahre.
 
 **Archi Universe** im Quartier Vake wird **2027 übergeben**. Im April 2024 zu **1'565 $/m²** lanciert, steht es heute bei **2'600 $/m²**. Das sind +66 % in zweieinhalb Jahren, also rund **22,5 % pro Jahr**, obwohl das Gebäude noch nicht einmal fertig ist.
 
-![Preis pro m² bei Lancierung und 2026: Archi Central Park, Archi Universe und der Kundenfall Grand Avenue](/images/blog/plus-values-georgie/prix-m2-de.svg)
+![Preis pro m² bei Lancierung und 2026: Archi Isani, Archi Central Park, Archi Universe und der Kundenfall Grand Avenue](/images/blog/plus-values-georgie/prix-m2-de.svg)
 
 ## Das richtige Projekt schlägt den Marktdurchschnitt
 
 Um zu wissen, ob diese Zahlen aussergewöhnlich sind, muss man sie mit dem Markt vergleichen. Laut dem offiziellen Wohnimmobilienpreisindex von [Geostat](https://geostat.ge/media/81560/Residential-Property-Price-Index---II-quarter-of-2026.pdf) sind die Preise **seit 2020 um 63,8 % gestiegen**. Das sind **fast 9 % pro Jahr**, eine Leistung, um die die meisten europäischen Märkte Georgien beneiden.
 
-Doch die richtigen Projekte schneiden noch viel besser ab. Archi Central Park übertrifft diesen Durchschnitt, Archi Universe mehr als verdoppelt ihn. Der Grund ist einfach: Ein gut gelegenes Projekt eines soliden Bauträgers wird zuerst zu einem **Lancierungspreis** verkauft. Danach steigt der Preis mit jeder Etappe: Rohbau, Fassade, Übergabe. Und ein gutes Projekt gewinnt auch nach der Übergabe weiter an Wert, wie Archi Central Park zeigt.
+Doch die richtigen Projekte schneiden noch viel besser ab. Archi Isani und Archi Central Park übertreffen diesen Durchschnitt seit Jahren, Archi Universe mehr als verdoppelt ihn. Der Grund ist einfach: Ein gut gelegenes Projekt eines soliden Bauträgers wird zuerst zu einem **Lancierungspreis** verkauft. Danach steigt der Preis mit jeder Etappe: Rohbau, Fassade, Übergabe. Und ein gutes Projekt gewinnt auch nach der Übergabe weiter an Wert, wie Archi Central Park zeigt.
 
 Deshalb sage ich meinen Kunden immer: In Georgien **macht die Wahl des Projekts den Unterschied zwischen einem guten und einem hervorragenden Wertgewinn**.
 
@@ -41,9 +43,9 @@ Dreizehn Monate später verkauft er sie für **135'898 $**, also rund 2'250 $/m�
 
 ## Die Zahl, die wirklich zählt: die Jahresrendite
 
-Auf den ersten Blick wirken +39,8 % neben den +137 % von Archi Central Park bescheiden. Das ist eine Täuschung. Die einzige Zahl, mit der man Investitionen unterschiedlicher Dauer vergleichen kann, ist die **Jahresrendite**.
+Auf den ersten Blick wirken +39,8 % neben den +137 % von Archi Central Park oder den +198 % von Archi Isani bescheiden. Das ist eine Täuschung. Die einzige Zahl, mit der man Investitionen unterschiedlicher Dauer vergleichen kann, ist die **Jahresrendite**.
 
-Aufs Jahr gerechnet ergibt der Fall Grand Avenue **36,2 % pro Jahr**. Das ist dreimal so viel wie Archi Central Park, anderthalbmal so viel wie Archi Universe und **viermal der georgische Marktdurchschnitt**. Mit anderen Worten: Der «kleinste» Prozentsatz ist in Wahrheit mit Abstand die beste Leistung.
+Aufs Jahr gerechnet ergibt der Fall Grand Avenue **36,2 % pro Jahr**. Das ist fast dreimal so viel wie Archi Isani und Archi Central Park, anderthalbmal so viel wie Archi Universe und **viermal der georgische Marktdurchschnitt**. Mit anderen Worten: Der «kleinste» Prozentsatz ist in Wahrheit mit Abstand die beste Leistung.
 
 ![Annualisierte Rendite: die richtigen Projekte gegenüber dem georgischen Marktdurchschnitt](/images/blog/plus-values-georgie/croissance-annuelle-de.svg)
 

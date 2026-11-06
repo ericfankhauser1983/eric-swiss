@@ -11,23 +11,25 @@ draft: true
 
 « +137 % », « +165 % », « +186 % ». Quand on s'intéresse à l'**investissement immobilier en Géorgie**, on tombe vite sur ce genre de chiffres. Et la question qu'on me pose le plus souvent est simple : est-ce qu'on fait **vraiment des plus-values en Géorgie**, ou est-ce un argument marketing pour vendre des appartements sur plan ?
 
-Ma réponse est claire : les plus-values sont bien réelles. Et avec le bon projet, elles dépassent largement la moyenne du marché. Je vous le montre avec trois cas concrets chez Archi, l'un des plus grands promoteurs de Tbilissi : un projet livré, un projet en construction et une revente réalisée par l'un de nos clients.
+Ma réponse est claire : les plus-values sont bien réelles. Et avec le bon projet, elles dépassent largement la moyenne du marché. Je vous le montre avec quatre cas concrets chez Archi, l'un des plus grands promoteurs de Tbilissi : deux projets lancés en 2017 et en 2019, un projet en construction et une revente réalisée par l'un de nos clients.
 
-## Deux projets Archi, deux trajectoires impressionnantes
+## Trois projets Archi, trois trajectoires impressionnantes
 
 Archi publie l'évolution du prix au m² de ses projets, du prix de lancement commercial jusqu'au prix de vente actuel.
+
+**Archi Isani** a été lancé en novembre 2017 à **640 $/m²**. Il se vend aujourd'hui autour de **1 910 $/m²**. C'est près de +200 %, soit environ **12,9 % par an** pendant neuf ans.
 
 **Archi Central Park**, un immeuble de 29 étages près du parc central de Tbilissi, est **livré**. Lancé en janvier 2019 à **1 180 $/m²**, il se vend aujourd'hui autour de **2 800 $/m²**. C'est +137 %, soit environ **11,8 % par an** pendant près de huit ans.
 
 **Archi Universe**, dans le quartier de Vake, sera **livré en 2027**. Lancé en avril 2024 à **1 565 $/m²**, il est affiché aujourd'hui à **2 600 $/m²**. C'est +66 % en deux ans et demi, soit environ **22,5 % par an**, alors que l'immeuble n'est même pas terminé.
 
-![Prix au m² au lancement et en 2026 : Archi Central Park, Archi Universe et le cas client Grand Avenue](/images/blog/plus-values-georgie/prix-m2-fr.svg)
+![Prix au m² au lancement et en 2026 : Archi Isani, Archi Central Park, Archi Universe et le cas client Grand Avenue](/images/blog/plus-values-georgie/prix-m2-fr.svg)
 
 ## Le bon projet bat la moyenne du marché
 
 Pour savoir si ces chiffres sont exceptionnels, il faut les comparer au marché. Selon l'indice officiel des prix du logement de [Geostat](https://geostat.ge/media/81560/Residential-Property-Price-Index---II-quarter-of-2026.pdf), les prix ont progressé de **63,8 % depuis 2020**. Cela représente **près de 9 % par an**. C'est déjà une performance que la plupart des marchés européens envient.
 
-Mais les bons projets font beaucoup mieux. Archi Central Park dépasse cette moyenne, et Archi Universe fait plus du double. La raison est simple : un projet bien placé, porté par un promoteur solide, se vend d'abord à un **prix de lancement**. Puis son prix monte à chaque étape : gros œuvre, façade, livraison. Et un bon projet continue de prendre de la valeur après la livraison, comme le montre Archi Central Park.
+Mais les bons projets font beaucoup mieux. Archi Isani et Archi Central Park dépassent cette moyenne depuis des années, et Archi Universe fait plus du double. La raison est simple : un projet bien placé, porté par un promoteur solide, se vend d'abord à un **prix de lancement**. Puis son prix monte à chaque étape : gros œuvre, façade, livraison. Et un bon projet continue de prendre de la valeur après la livraison, comme le montre Archi Central Park.
 
 C'est pour cela que je dis toujours à mes clients : en Géorgie, **c'est le choix du projet qui fait la différence entre une bonne et une excellente plus-value**.
 
@@ -41,9 +43,9 @@ Treize mois plus tard, il le revend **135 898 $**, soit environ 2 250 $/m². Sa 
 
 ## Le chiffre qui compte vraiment : le rendement annuel
 
-À première vue, +39,8 % paraît modeste à côté des +137 % d'Archi Central Park. C'est une illusion. Le seul chiffre qui permet de comparer des investissements de durées différentes, c'est le **rendement annuel**.
+À première vue, +39,8 % paraît modeste à côté des +137 % d'Archi Central Park ou des +198 % d'Archi Isani. C'est une illusion. Le seul chiffre qui permet de comparer des investissements de durées différentes, c'est le **rendement annuel**.
 
-Ramené à l'année, le cas Grand Avenue représente **36,2 % par an**. C'est trois fois Archi Central Park, une fois et demie Archi Universe, et **quatre fois la moyenne du marché géorgien**. En d'autres termes, le plus « petit » pourcentage est en réalité de loin la meilleure performance.
+Ramené à l'année, le cas Grand Avenue représente **36,2 % par an**. C'est près de trois fois Archi Isani et Archi Central Park, une fois et demie Archi Universe, et **quatre fois la moyenne du marché géorgien**. En d'autres termes, le plus « petit » pourcentage est en réalité de loin la meilleure performance.
 
 ![Rendement annualisé : les bons projets face à la moyenne du marché géorgien](/images/blog/plus-values-georgie/croissance-annuelle-fr.svg)
 
