@@ -6,7 +6,7 @@ translationKey: rendement-fonds-propres-effet-de-levier
 category: immobilier
 tags: ["Georgien", "Tiflis", "Eigenkapitalrendite", "Hebelwirkung", "Investieren"]
 source: "https://www.francefinance.ae/articles-blog/comment-calculer-la-rentabilite-dun-investissement-immobilier"
-draft: true
+draft: false
 ---
 
 Wenn ich mit meinen Kunden über Investitionen spreche, kommt fast immer dieselbe Frage: «Wie viel bringt das?» Und fast immer denkt die Person an die Rendite der Immobilie: die Miete geteilt durch den Preis. Das ist ein guter Anfang, aber nicht die Zahl, auf die es wirklich ankommt.

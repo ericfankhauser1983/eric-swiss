@@ -6,7 +6,7 @@ translationKey: rendement-fonds-propres-effet-de-levier
 category: immobilier
 tags: ["Géorgie", "Tbilissi", "Rendement sur fonds propres", "Effet de levier", "Investir"]
 source: "https://www.francefinance.ae/articles-blog/comment-calculer-la-rentabilite-dun-investissement-immobilier"
-draft: true
+draft: false
 ---
 
 Quand je parle d'investissement avec mes clients, une question revient presque toujours : « Combien ça rapporte ? » Et presque toujours, la personne pense au rendement du bien : le loyer divisé par le prix. C'est un bon début, mais ce n'est pas le chiffre qui compte vraiment.

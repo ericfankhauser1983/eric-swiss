@@ -6,7 +6,7 @@ translationKey: rendement-fonds-propres-effet-de-levier
 category: immobilier
 tags: ["Georgia", "Tbilisi", "Return on equity", "Leverage", "Investing"]
 source: "https://www.francefinance.ae/articles-blog/comment-calculer-la-rentabilite-dun-investissement-immobilier"
-draft: true
+draft: false
 ---
 
 When I talk about investing with my clients, one question almost always comes up: "How much does it return?" And almost always, the person is thinking of the property's yield: the rent divided by the price. It is a good start, but it is not the figure that really matters.
