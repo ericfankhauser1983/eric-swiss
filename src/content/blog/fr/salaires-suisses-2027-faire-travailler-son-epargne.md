@@ -5,7 +5,7 @@ date: 2026-11-08
 translationKey: salaires-suisses-2027-patrimoine
 category: immobilier
 tags: ["Suisse", "Salaires", "Pouvoir d'achat", "Épargne", "Investir en Géorgie"]
-draft: true
+draft: false
 ---
 
 Cette semaine, UBS a publié son enquête annuelle sur les salaires. Le verdict est clair : en 2027, les entreprises suisses prévoient d'augmenter les salaires de **1 % en moyenne**. Une fois l'inflation déduite, le gain réel tombe à **0,2 %**. J'ai dirigé une PME en Suisse pendant plus de dix ans. Je sais ce que représente une enveloppe d'augmentations, et je sais aussi ce qu'elle ne peut pas faire : vous enrichir.

@@ -5,7 +5,7 @@ date: 2026-11-08
 translationKey: salaires-suisses-2027-patrimoine
 category: immobilier
 tags: ["Switzerland", "Salaries", "Purchasing power", "Savings", "Investing in Georgia"]
-draft: true
+draft: false
 ---
 
 This week, UBS published its annual salary survey. The verdict is clear: in 2027, Swiss companies plan to raise salaries by **1% on average**. Once inflation is deducted, the real gain falls to **0.2%**. I ran an SME in Switzerland for more than ten years. I know what a pay-rise budget represents, and I also know what it cannot do: make you wealthy.

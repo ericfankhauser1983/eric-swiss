@@ -5,7 +5,7 @@ date: 2026-11-08
 translationKey: salaires-suisses-2027-patrimoine
 category: immobilier
 tags: ["Schweiz", "Löhne", "Kaufkraft", "Sparen", "In Georgien investieren"]
-draft: true
+draft: false
 ---
 
 Diese Woche hat die UBS ihre jährliche Lohnumfrage veröffentlicht. Das Urteil ist klar: 2027 planen die Schweizer Unternehmen, die Löhne um **durchschnittlich 1 %** zu erhöhen. Nach Abzug der Teuerung bleibt ein Reallohnplus von **0,2 %**. Ich habe während mehr als zehn Jahren ein KMU in der Schweiz geführt. Ich weiss, was ein Budget für Lohnerhöhungen bedeutet, und ich weiss auch, was es nicht kann: Sie vermögend machen.
