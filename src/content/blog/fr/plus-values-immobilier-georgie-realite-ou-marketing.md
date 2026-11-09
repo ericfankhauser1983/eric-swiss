@@ -6,7 +6,7 @@ translationKey: plus-values-immobilier-georgie-realite-ou-marketing
 category: immobilier
 tags: ["Géorgie", "Tbilissi", "Plus-value", "Investir en Géorgie", "Archi", "Rendement sur fonds propres"]
 source: "https://archiproperties.com"
-draft: true
+draft: false
 ---
 
 « +137 % », « +165 % », « +186 % ». Quand on s'intéresse à l'**investissement immobilier en Géorgie**, on tombe vite sur ce genre de chiffres. Et la question qu'on me pose le plus souvent est simple : est-ce qu'on fait **vraiment des plus-values en Géorgie**, ou est-ce un argument marketing pour vendre des appartements sur plan ?

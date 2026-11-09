@@ -6,7 +6,7 @@ translationKey: plus-values-immobilier-georgie-realite-ou-marketing
 category: immobilier
 tags: ["Georgia", "Tbilisi", "Capital gains", "Invest in Georgia", "Archi", "Return on equity"]
 source: "https://archiproperties.com"
-draft: true
+draft: false
 ---
 
 "+137%", "+165%", "+186%". When you look into **real estate investment in Georgia**, you quickly come across figures like these. And the question I am asked most often is simple: do you **really make capital gains in Georgia**, or is it a sales pitch to sell off-plan apartments?

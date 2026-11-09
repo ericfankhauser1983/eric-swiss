@@ -6,7 +6,7 @@ translationKey: plus-values-immobilier-georgie-realite-ou-marketing
 category: immobilier
 tags: ["Georgien", "Tiflis", "Wertsteigerung", "In Georgien investieren", "Archi", "Eigenkapitalrendite"]
 source: "https://archiproperties.com"
-draft: true
+draft: false
 ---
 
 «+137 %», «+165 %», «+186 %». Wer sich mit einem **Immobilien-Investment in Georgien** beschäftigt, stösst schnell auf solche Zahlen. Und die Frage, die mir am häufigsten gestellt wird, ist einfach: Macht man in Georgien **wirklich Wertgewinne**, oder ist das ein Verkaufsargument, um Wohnungen ab Plan zu verkaufen?
