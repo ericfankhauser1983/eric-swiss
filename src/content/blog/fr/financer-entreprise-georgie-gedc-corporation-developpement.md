@@ -6,7 +6,7 @@ translationKey: gedc-financer-entreprise-georgie
 category: entrepreneuriat
 tags: ["Géorgie", "Créer une société en Géorgie", "Financement", "GEDC", "PME"]
 source: "https://www.francefinance.ae/articles-blog/georgie-corporation-developpement-economique-40-milliards-lari"
-draft: true
+draft: false
 ---
 
 Le 20 octobre, le gouvernement géorgien a présenté la Georgia Economic Development Corporation, la GEDC. L'objectif annoncé est d'accompagner jusqu'à 40 milliards de lari d'investissements en dix ans, soit environ 15 milliards de dollars. Dans les jours qui ont suivi, j'ai reçu plusieurs messages qui posaient la même question : « Est-ce que ça va faire monter l'immobilier ? »

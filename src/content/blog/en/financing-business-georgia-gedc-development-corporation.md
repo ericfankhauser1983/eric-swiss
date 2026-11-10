@@ -6,7 +6,7 @@ translationKey: gedc-financer-entreprise-georgie
 category: entrepreneuriat
 tags: ["Georgia", "Company formation in Georgia", "Financing", "GEDC", "SMEs"]
 source: "https://www.francefinance.ae/articles-blog/georgie-corporation-developpement-economique-40-milliards-lari"
-draft: true
+draft: false
 ---
 
 On 20 October, the Georgian government presented the Georgia Economic Development Corporation, the GEDC. Its stated goal is to support up to 40 billion lari of investment over ten years, roughly 15 billion dollars. In the days that followed, I received several messages asking the same question: "Will this push property prices up?"
