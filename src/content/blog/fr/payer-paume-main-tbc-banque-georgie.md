@@ -6,7 +6,7 @@ translationKey: tbc-paiement-paume-main-georgie
 category: entrepreneuriat
 tags: ["Géorgie", "Banque en Géorgie", "TBC", "Fintech", "Innovation"]
 source: "https://www.francefinance.ae/articles-blog/georgie-tbc-paiement-paume-main-premiere"
-draft: true
+draft: false
 ---
 
 Le 5 novembre, TBC est devenue la première banque de Géorgie à proposer le paiement par la paume de la main. On ne sort ni carte, ni téléphone, ni code : on pose la main sur un lecteur et le compte est débité. L'annonce a été reprise par [Trend.az](https://www.trend.az/scaucasus/georgia/4243278.html), [The Paypers](https://thepaypers.com/payments/news/tbc-georgia-launches-palm-payments-for-in-store-purchases) et plusieurs médias spécialisés.

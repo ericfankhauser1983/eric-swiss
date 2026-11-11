@@ -6,7 +6,7 @@ translationKey: tbc-paiement-paume-main-georgie
 category: entrepreneuriat
 tags: ["Georgia", "Banking in Georgia", "TBC", "Fintech", "Innovation"]
 source: "https://www.francefinance.ae/articles-blog/georgie-tbc-paiement-paume-main-premiere"
-draft: true
+draft: false
 ---
 
 On 5 November, TBC became the first bank in Georgia to offer payment by the palm of the hand. No card, no phone, no PIN: you place your hand on a reader and your account is debited. The announcement was picked up by [Trend.az](https://www.trend.az/scaucasus/georgia/4243278.html), [The Paypers](https://thepaypers.com/payments/news/tbc-georgia-launches-palm-payments-for-in-store-purchases) and several specialist outlets.

@@ -6,7 +6,7 @@ translationKey: tbc-paiement-paume-main-georgie
 category: entrepreneuriat
 tags: ["Georgien", "Bank in Georgien", "TBC", "Fintech", "Innovation"]
 source: "https://www.francefinance.ae/articles-blog/georgie-tbc-paiement-paume-main-premiere"
-draft: true
+draft: false
 ---
 
 Am 5. November wurde TBC die erste Bank Georgiens, die das Bezahlen mit der Handfläche anbietet. Keine Karte, kein Telefon, kein PIN: Man legt die Hand auf ein Lesegerät, und das Konto wird belastet. Die Meldung wurde von [Trend.az](https://www.trend.az/scaucasus/georgia/4243278.html), [The Paypers](https://thepaypers.com/payments/news/tbc-georgia-launches-palm-payments-for-in-store-purchases) und mehreren Fachmedien aufgegriffen.
