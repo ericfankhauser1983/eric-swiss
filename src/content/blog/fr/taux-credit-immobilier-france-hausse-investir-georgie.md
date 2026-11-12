@@ -44,7 +44,7 @@ En clair, avec des taux autour de 4 %, beaucoup d'investissements locatifs class
 
 ## Comment je raisonne en Géorgie
 
-Soyons honnêtes : le crédit n'est pas bon marché en Géorgie non plus. La Banque nationale a relevé son taux directeur à 8,25 % en mai 2026 ([JAMnews](https://jam-news.net/georgias-national-bank-raises-refinancing-rate-to-8-25-making-loans-more-expensive/)). Mais le crédit existe, et il est plus accessible qu'on ne le croit : TBC Bank affiche sur [son site](https://www.tbcbank.ge/) des prêts immobiliers à partir de **6,3 %**. C'est plus cher qu'en France. La différence, c'est ce que le bien rapporte en face. Si le rendement net dépasse le taux, le levier reste positif. J'utilise donc le crédit géorgien au cas par cas, plutôt à la livraison du bien, et jamais comme point de départ du calcul.
+En Géorgie aussi, on peut emprunter : TBC Bank affiche sur [son site](https://www.tbcbank.ge/) des prêts immobiliers à partir de **6,3 %**. C'est plus cher qu'en France. La différence, c'est ce que le bien rapporte en face. Si le rendement net dépasse le taux, le levier reste positif. J'utilise donc le crédit géorgien au cas par cas, plutôt à la livraison du bien, et jamais comme point de départ du calcul.
 
 La différence est ailleurs :
 

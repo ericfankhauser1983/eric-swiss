@@ -44,7 +44,7 @@ Put simply, with rates around 4%, many classic buy-to-let investments in France 
 
 ## How I think about Georgia
 
-Let's be honest: credit is not cheap in Georgia either. The National Bank raised its key rate to 8.25% in May 2026 ([JAMnews](https://jam-news.net/georgias-national-bank-raises-refinancing-rate-to-8-25-making-loans-more-expensive/)). But credit is available, and more accessible than people think: TBC Bank shows mortgages from **6.3%** on [its website](https://www.tbcbank.ge/). That is more expensive than in France. The difference is what the property earns in return. If the net yield exceeds the rate, leverage stays positive. So I use Georgian credit case by case, preferably at delivery of the property, and never as the starting point of the calculation.
+In Georgia too, you can borrow: TBC Bank shows mortgages from **6.3%** on [its website](https://www.tbcbank.ge/). That is more expensive than in France. The difference is what the property earns in return. If the net yield exceeds the rate, leverage stays positive. So I use Georgian credit case by case, preferably at delivery of the property, and never as the starting point of the calculation.
 
 The difference lies elsewhere:
 
