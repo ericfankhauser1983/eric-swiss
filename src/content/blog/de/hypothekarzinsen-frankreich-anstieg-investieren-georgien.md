@@ -44,7 +44,7 @@ Kurz: Mit Zinsen um 4 % werden viele klassische Mietinvestitionen in Frankreich 
 
 ## Wie ich in Georgien rechne
 
-Seien wir ehrlich: Auch in Georgien ist Kredit nicht billig. Die Nationalbank hat ihren Leitzins im Mai 2026 auf 8,25 % angehoben ([JAMnews](https://jam-news.net/georgias-national-bank-raises-refinancing-rate-to-8-25-making-loans-more-expensive/)). Hypotheken in Dollar beginnen bei rund 8 %, solche in Lari liegen über 12 % ([GBC](https://www.gbc.ge/public/en/news/finanse/mortgage-issuances-to-non-residents-have-increased)). Ich rate deshalb davon ab, in Georgien mit lokalem Kredit zu kaufen, ausser in Einzelfällen.
+Seien wir ehrlich: Auch in Georgien ist Kredit nicht billig. Die Nationalbank hat ihren Leitzins im Mai 2026 auf 8,25 % angehoben ([JAMnews](https://jam-news.net/georgias-national-bank-raises-refinancing-rate-to-8-25-making-loans-more-expensive/)). Aber Kredit ist verfügbar, und zugänglicher als viele denken: Die TBC Bank weist auf [ihrer Website](https://www.tbcbank.ge/) Hypotheken ab **6,3 %** aus. Das ist teurer als in Frankreich. Der Unterschied liegt darin, was die Immobilie im Gegenzug einbringt. Liegt die Nettorendite über dem Zins, bleibt der Hebel positiv. Ich setze georgischen Kredit deshalb fallweise ein, am ehesten bei der Übergabe der Immobilie, und nie als Ausgangspunkt der Rechnung.
 
 Der Unterschied liegt anderswo:
 
