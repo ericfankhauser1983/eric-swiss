@@ -53,6 +53,10 @@ La différence est ailleurs :
 - **La fiscalité.** Les revenus locatifs des particuliers sont imposés à 5 %. La plus-value est exonérée après deux ans de détention.
 - **Le rendement se calcule sur l'argent réellement investi**, pas sur un montage où la banque prend la marge.
 
-Je ne dis pas qu'il faut vendre en France. Je dis qu'en 2027, un investisseur qui veut du rendement ne peut plus raisonner seulement en mensualités. Il doit regarder le taux, le rendement net et la fiscalité, côte à côte.
+## Ma recommandation : faites le tour de vos actifs français
 
-Vous voulez comparer votre projet français avec un achat comptant ou échelonné en Géorgie ? Faites le calcul avec le [simulateur d'investissement](/fr/simulateur-investissement/), découvrez [ma démarche d'investissement immobilier en Géorgie](/fr/investissement-immobilier-georgie/), ou [prenons rendez-vous](/fr/rendez-vous/).
+Je vais plus loin. Aujourd'hui, je recommande activement de faire un tour d'horizon complet de ses actifs en France. Bien par bien, posez-vous trois questions. Que rapporte-t-il vraiment, net de charges, d'impôts et de crédit ? Que vaudra-t-il si les taux restent à ce niveau et que les prix continuent à baisser ? Et que rapporterait le même capital ailleurs ?
+
+Si le rendement net d'un bien ne couvre plus le coût de l'argent, il faut sérieusement envisager de le vendre. Vendre pendant que le marché tient encore, c'est libérer des fonds propres, solder un crédit devenu cher et réinvestir là où le capital travaille mieux. La fiscalité de la cession (plus-value, durée de détention) se calcule avant de décider, au cas par cas. Mais ne rien faire est aussi une décision, et en 2027 elle risque de coûter cher.
+
+Vous voulez faire ce tour d'horizon et le comparer avec un réinvestissement en Géorgie ? Faites un premier calcul avec le [simulateur d'investissement](/fr/simulateur-investissement/), découvrez [ma démarche d'investissement immobilier en Géorgie](/fr/investissement-immobilier-georgie/), ou [prenons rendez-vous](/fr/rendez-vous/) pour passer vos actifs en revue ensemble.

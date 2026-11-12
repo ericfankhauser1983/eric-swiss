@@ -53,6 +53,10 @@ Der Unterschied liegt anderswo:
 - **Die Steuern.** Mieteinnahmen von Privatpersonen werden mit 5 % besteuert. Der Wertzuwachs ist nach zwei Jahren Haltedauer steuerfrei.
 - **Die Rendite wird auf das tatsächlich investierte Geld berechnet**, nicht auf eine Konstruktion, bei der die Bank die Marge abschöpft.
 
-Ich sage nicht, dass man in Frankreich verkaufen soll. Ich sage, dass ein Investor, der 2027 Rendite sucht, nicht mehr nur in Monatsraten denken kann. Zins, Nettorendite und Steuern gehören nebeneinander auf den Tisch.
+## Meine Empfehlung: Gehen Sie Ihre französischen Vermögenswerte durch
 
-Möchten Sie Ihr französisches Projekt mit einem Bar- oder Ratenkauf in Georgien vergleichen? Rechnen Sie es mit dem [Investitionsrechner](/de/investitionsrechner/) durch, entdecken Sie [meinen Ansatz für Immobilieninvestitionen in Georgien](/de/immobilien-investment-georgien/), oder [vereinbaren wir einen Termin](/de/termin/).
+Ich gehe weiter. Heute empfehle ich ausdrücklich, die eigenen Vermögenswerte in Frankreich vollständig zu überprüfen. Objekt für Objekt sollten Sie sich drei Fragen stellen. Was bringt es wirklich ein, nach Kosten, Steuern und Kredit? Was ist es wert, wenn die Zinsen auf diesem Niveau bleiben und die Preise weiter sinken? Und was würde dasselbe Kapital anderswo einbringen?
+
+Deckt die Nettorendite einer Immobilie die Kosten des Geldes nicht mehr, sollten Sie einen Verkauf ernsthaft in Betracht ziehen. Verkaufen, solange der Markt noch hält, heisst: Eigenkapital freisetzen, einen teuer gewordenen Kredit ablösen und dort reinvestieren, wo das Kapital besser arbeitet. Die Besteuerung des Verkaufs (Grundstückgewinn, Haltedauer) wird vor der Entscheidung berechnet, Fall für Fall. Aber nichts zu tun ist auch eine Entscheidung, und 2027 kann sie teuer werden.
+
+Möchten Sie diese Bestandsaufnahme machen und mit einer Reinvestition in Georgien vergleichen? Machen Sie eine erste Rechnung mit dem [Investitionsrechner](/de/investitionsrechner/), entdecken Sie [meinen Ansatz für Immobilieninvestitionen in Georgien](/de/immobilien-investment-georgien/), oder [vereinbaren wir einen Termin](/de/termin/), um Ihre Vermögenswerte gemeinsam durchzugehen.

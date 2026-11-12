@@ -53,6 +53,10 @@ The difference lies elsewhere:
 - **Taxation.** Rental income for individuals is taxed at 5%. Capital gains are exempt after two years of ownership.
 - **Yield is calculated on the money actually invested**, not on a structure where the bank takes the margin.
 
-I am not saying you should sell in France. I am saying that in 2027, an investor looking for yield can no longer think only in monthly payments. You have to look at the rate, the net yield and the taxation, side by side.
+## My recommendation: review your French assets
 
-Want to compare your French project with a cash or instalment purchase in Georgia? Run the numbers with the [investment simulator](/en/investment-simulator/), discover [my approach to real estate investment in Georgia](/en/real-estate-investment-georgia/), or [book a meeting](/en/book-a-meeting/).
+I will go further. Today, I actively recommend a complete review of your assets in France. Property by property, ask yourself three questions. What does it really earn, net of costs, taxes and credit? What will it be worth if rates stay at this level and prices keep falling? And what would the same capital earn elsewhere?
+
+If a property's net yield no longer covers the cost of money, you should seriously consider selling it. Selling while the market still holds means freeing up equity, paying off a loan that has become expensive, and reinvesting where capital works harder. The tax on the sale (capital gains, holding period) must be calculated before deciding, case by case. But doing nothing is also a decision, and in 2027 it may prove costly.
+
+Want to carry out this review and compare it with a reinvestment in Georgia? Run a first calculation with the [investment simulator](/en/investment-simulator/), discover [my approach to real estate investment in Georgia](/en/real-estate-investment-georgia/), or [book a meeting](/en/book-a-meeting/) to review your assets together.
