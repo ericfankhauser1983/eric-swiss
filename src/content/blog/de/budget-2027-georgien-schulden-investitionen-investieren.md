@@ -6,7 +6,7 @@ translationKey: budget-2027-georgie-investir
 category: immobilier
 tags: ["Georgien", "In Georgien investieren", "Budget 2027", "Staatsverschuldung", "Infrastruktur"]
 source: "https://www.francefinance.ae/articles-blog/georgie-budget-2027-dette-31-pour-cent-investissements"
-draft: true
+draft: false
 ---
 
 Wenn mich jemand fragt, ob es vernünftig ist, **in Georgien zu investieren**, geht es meist um Rendite, Quadratmeterpreise oder Meerblick. Selten um den Staatshaushalt. Dabei kauft man mit einer Wohnung in einem Land auch dessen Entwicklung mit: seine Schulden, seine Währung, seine Strassen, seine Fähigkeit, über die Jahre stabil zu bleiben.

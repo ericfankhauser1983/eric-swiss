@@ -6,7 +6,7 @@ translationKey: budget-2027-georgie-investir
 category: immobilier
 tags: ["Georgia", "Investing in Georgia", "Budget 2027", "Public debt", "Infrastructure"]
 source: "https://www.francefinance.ae/articles-blog/georgie-budget-2027-dette-31-pour-cent-investissements"
-draft: true
+draft: false
 ---
 
 When people ask me whether it makes sense to **invest in Georgia**, they usually talk about yields, price per square metre or sea views. Rarely about the state budget. Yet when you buy an apartment in a country, you also buy its trajectory: its debt, its currency, its roads, its ability to hold up over time.

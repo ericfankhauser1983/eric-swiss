@@ -6,7 +6,7 @@ translationKey: budget-2027-georgie-investir
 category: immobilier
 tags: ["Géorgie", "Investir en Géorgie", "Budget 2027", "Dette publique", "Infrastructures"]
 source: "https://www.francefinance.ae/articles-blog/georgie-budget-2027-dette-31-pour-cent-investissements"
-draft: true
+draft: false
 ---
 
 Quand on me demande s'il est raisonnable d'**investir en Géorgie**, on me parle souvent de rendement, de prix au mètre carré ou de vue sur la mer. Rarement de budget de l'État. Pourtant, quand on achète un appartement dans un pays, on achète aussi sa trajectoire : sa dette, sa monnaie, ses routes, sa capacité à tenir dans la durée.
