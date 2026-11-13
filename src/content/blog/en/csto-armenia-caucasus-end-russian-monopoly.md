@@ -5,7 +5,7 @@ date: 2026-11-13
 translationKey: otsc-armenie-caucase
 category: geopolitique
 tags: ["Georgia", "Armenia", "CSTO", "Caucasus", "Central Asia", "Russia"]
-draft: true
+draft: false
 ---
 
 On 11 November in Moscow, the Collective Security Treaty Organization (CSTO) stripped Armenia of its voting rights and of its right to nominate candidates for senior posts. In Europe the story is quickly summed up: Yerevan is turning its back on Moscow and moving closer to Brussels. From Tbilisi, I read it differently. This is not a country switching sides. It is the **Caucasus** and Central Asia stepping out of a one-on-one with Russia and multiplying their partners. For anyone looking to **invest in Georgia** or set up a business here, that nuance changes how you read the risk.

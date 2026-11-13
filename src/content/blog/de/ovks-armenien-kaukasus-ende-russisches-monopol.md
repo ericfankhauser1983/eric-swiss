@@ -5,7 +5,7 @@ date: 2026-11-13
 translationKey: otsc-armenie-caucase
 category: geopolitique
 tags: ["Georgien", "Armenien", "OVKS", "Kaukasus", "Zentralasien", "Russland"]
-draft: true
+draft: false
 ---
 
 Am 11. November hat die Organisation des Vertrags über kollektive Sicherheit (OVKS) in Moskau Armenien das Stimmrecht und das Recht entzogen, Kandidaten für Führungsposten vorzuschlagen. In Europa ist die Nachricht schnell zusammengefasst: Eriwan kehrt Moskau den Rücken und nähert sich Brüssel. Von Tiflis aus lese ich sie anders. Hier wechselt kein Land das Lager. Der **Kaukasus** und Zentralasien verlassen das Zwiegespräch mit Russland und vervielfachen ihre Partner. Wer **in Georgien investieren** oder sich hier niederlassen will, sollte diese Nuance kennen: Sie verändert die Einschätzung des Risikos.

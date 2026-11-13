@@ -5,7 +5,7 @@ date: 2026-11-13
 translationKey: otsc-armenie-caucase
 category: geopolitique
 tags: ["Géorgie", "Arménie", "OTSC", "Caucase", "Asie centrale", "Russie"]
-draft: true
+draft: false
 ---
 
 Le 11 novembre, à Moscou, l'Organisation du traité de sécurité collective (OTSC) a retiré à l'Arménie son droit de vote et son droit de proposer des candidats aux postes de direction. En Europe, la nouvelle se résume vite : Erevan tourne le dos à Moscou et se rapproche de Bruxelles. Depuis Tbilissi, je la lis autrement. Ce n'est pas un pays qui change de camp. C'est le **Caucase** et l'Asie centrale qui sortent d'un tête-à-tête avec la Russie pour multiplier leurs partenaires. Pour qui veut **investir en Géorgie** ou s'y implanter, cette nuance change la lecture du risque.
