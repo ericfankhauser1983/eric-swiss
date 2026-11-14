@@ -5,7 +5,7 @@ date: 2026-11-14
 translationKey: taux-credit-immobilier-france-hausse
 category: immobilier
 tags: ["France", "Taux immobilier", "Crédit", "Effet de levier", "Géorgie"]
-draft: true
+draft: false
 ---
 
 En un mois, les **taux de crédit immobilier en France** ont pris entre 10 et 25 centièmes. Sur 20 ans, la moyenne tourne autour de 3,7 %, et plusieurs banques prêtent déjà au-delà de 4 %. Ce n'est pas une catastrophe. Mais pour un investisseur, c'est un signal clair : l'effet de levier, qui a fait la fortune des propriétaires bailleurs français pendant quinze ans, fonctionne de moins en moins. Je vous explique pourquoi, et comment je raisonne pour **investir en Géorgie** sans dépendre du crédit.

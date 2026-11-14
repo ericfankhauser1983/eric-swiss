@@ -5,7 +5,7 @@ date: 2026-11-14
 translationKey: taux-credit-immobilier-france-hausse
 category: immobilier
 tags: ["Frankreich", "Hypothekarzinsen", "Kredit", "Hebelwirkung", "Georgien"]
-draft: true
+draft: false
 ---
 
 Innerhalb eines Monats sind die **Hypothekarzinsen in Frankreich** um 10 bis 25 Basispunkte gestiegen. Auf 20 Jahre liegt der Durchschnitt bei rund 3,7 %, und mehrere Banken verleihen bereits über 4 %. Das ist keine Katastrophe. Für Investoren ist es aber ein klares Signal: Die Hebelwirkung, die französische Vermieter fünfzehn Jahre lang reich gemacht hat, funktioniert immer weniger. Ich erkläre, warum, und wie ich überlege, **in Georgien zu investieren**, ohne vom Kredit abhängig zu sein.

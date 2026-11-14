@@ -5,7 +5,7 @@ date: 2026-11-14
 translationKey: taux-credit-immobilier-france-hausse
 category: immobilier
 tags: ["France", "Mortgage rates", "Credit", "Leverage", "Georgia"]
-draft: true
+draft: false
 ---
 
 In one month, **French mortgage rates** have risen by 10 to 25 basis points. Over 20 years, the average is around 3.7%, and several banks are already lending above 4%. This is not a disaster. But for an investor it is a clear signal: leverage, which made French buy-to-let landlords rich for fifteen years, works less and less. Let me explain why, and how I think about how to **invest in Georgia** without depending on credit.
