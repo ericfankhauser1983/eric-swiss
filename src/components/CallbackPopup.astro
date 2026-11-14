@@ -2,8 +2,8 @@
 /**
  * Popup « On vous rappelle ? » : s'ouvre quand le visiteur arrive en bas de la page
  * ou après 2 minutes sur la même page. Un seul champ : le numéro WhatsApp (indicatif obligatoire).
- * Envoi via Netlify Forms (formulaire « rappel »). Ne se réaffiche pas pendant 7 jours après fermeture,
- * plus jamais après envoi.
+ * Envoi via Netlify Forms (formulaire « rappel »). Après fermeture : plus affiché pendant la visite en cours
+ * (réaffiché à la visite suivante). Après envoi : plus jamais. Forcer l'affichage pour tester : ajouter ?popup à l'URL.
  */
 import { path, type Lang } from '../config/site';
 import { t } from '../i18n/ui';
@@ -41,22 +41,29 @@ const ui = t(lang).callback;
     const root = document.querySelector('[data-cb]');
     if (!root) return;
     const KEY = 'ef-cb';
-    const store = { get() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch { return null; } }, set(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch {} } };
-    const st = store.get();
-    if (st && (st.sent || (st.closed && Date.now() - st.closed < 7 * 864e5))) return;
+    const get = (st) => { try { return st.getItem(KEY); } catch { return null; } };
+    const put = (st, v) => { try { st.setItem(KEY, v); } catch {} };
+    const force = /[?&]popup\b/.test(location.search);
+    if (!force && (get(localStorage) === 'sent' || get(sessionStorage) === 'closed')) return;
     let shown = false;
+    const busy = () => { const a = document.activeElement; return !!(a && a.closest && a.closest('form') && !root.contains(a)); };
     const open = () => {
       if (shown) return;
-      // pas pendant qu'un formulaire de simulation est en cours de saisie
-      if (document.activeElement && document.activeElement.closest('form') && !root.contains(document.activeElement)) return;
-      shown = true; root.hidden = false; requestAnimationFrame(() => root.classList.add('is-on'));
+      if (busy()) { setTimeout(open, 15000); return; } // le visiteur remplit un formulaire : on réessaie plus tard
+      shown = true; root.hidden = false; requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('is-on')));
       cleanup();
     };
-    const onScroll = () => { if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 160) open(); };
-    const timer = setTimeout(open, 120000);
-    const cleanup = () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll); };
+    const atBottom = () => {
+      const el = document.scrollingElement || document.documentElement;
+      const y = window.scrollY || el.scrollTop || 0;
+      return el.scrollHeight > window.innerHeight + 200 && window.innerHeight + y >= el.scrollHeight - 240;
+    };
+    const onScroll = () => { if (atBottom()) open(); };
+    const timer = setTimeout(open, force ? 600 : 120000);
+    const cleanup = () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll); document.removeEventListener('scroll', onScroll, true); };
     window.addEventListener('scroll', onScroll, { passive: true });
-    const close = () => { root.classList.remove('is-on'); setTimeout(() => (root.hidden = true), 300); const s = store.get() || {}; if (!s.sent) store.set({ closed: Date.now() }); };
+    document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+    const close = () => { root.classList.remove('is-on'); setTimeout(() => (root.hidden = true), 300); if (get(localStorage) !== 'sent') put(sessionStorage, 'closed'); };
     root.querySelector('[data-cb-close]').addEventListener('click', close);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && shown && !root.hidden) close(); });
     const form = root.querySelector('[data-cb-form]');
@@ -80,7 +87,7 @@ const ui = t(lang).callback;
         if (!r.ok) throw new Error(String(r.status));
         root.querySelector('[data-cb-body]').hidden = true;
         root.querySelector('[data-cb-ok]').hidden = false;
-        store.set({ sent: Date.now() });
+        put(localStorage, 'sent');
         setTimeout(close, 4000);
       } catch { err.textContent = ui.sendError; err.hidden = false; btn.disabled = false; }
     });
