@@ -7,25 +7,40 @@ hero:
   eyebrow: "Switzerland · Europe · United Arab Emirates · Georgia"
   title: "Eric Fankhauser"
   subtitle: "Entrepreneur, investor and strategic advisor"
-  lead: "Together with my partners, I support investors and business leaders in three distinct fields. Choose the one that concerns you."
+  lead: "Twenty-five years of career, from Swissair to founding Swiss Auto Glass by way of restructuring companies, taught me one thing: capital, like a business, grows through method, hands-on work and time. From Tbilisi, with my partners, I put that conviction to work for investors and business leaders."
+  stats:
+    - value: "1,000+"
+      label: "clients supported in Georgia with FFI"
+    - value: "Millions"
+      label: "invested every month for our clients"
+    - value: "25 years"
+      label: "of career, from Swissair to international entrepreneurship"
+
+paths:
+  eyebrow: "How I can help"
+  title: "It all starts with where you stand"
+  lead: "Whether you want your capital to work harder, your company to grow or simply to make better decisions day to day, the approach is the same: understand where you are, then build with you the strategy that moves you forward."
 
 pillars:
   items:
     - key: invest
+      question: "Is your capital idle or earning too little?"
       kicker: "FFI · Real Estate Asset Management"
       title: "Real estate investment in Georgia"
       text: "With FFI, my company and the market leader: 1,000+ clients supported and several million invested every month in Batumi and Tbilisi, for private investors, family offices and funds."
-      cta: "Explore real estate investment"
+      cta: "Invest in Georgia"
     - key: consulting
+      question: "Does your company need to reach the next level, or set up in Georgia?"
       kicker: "Strategic consulting"
       title: "Strategy, growth and organisation for SMEs"
       text: "An outside perspective to accelerate your business — and a high-level gateway to set up in Georgia."
-      cta: "Explore strategic consulting"
+      cta: "Strategic consulting"
     - key: board
+      question: "Do you run a Swiss SME and often decide alone?"
       kicker: "Advisory Board"
       title: "A panel of specialists for your Swiss SME"
-      text: "An annual diagnostic and four strategic sessions a year, for CHF 2,000 per month."
-      cta: "Explore the Advisory Board"
+      text: "An annual diagnostic and four strategic sessions a year, for CHF 2,500 per month."
+      cta: "The Advisory Board"
 
 about:
   eyebrow: "My story"

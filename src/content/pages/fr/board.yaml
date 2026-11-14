@@ -1,7 +1,7 @@
 # Advisory Board — FR
 seo:
-  title: "Advisory Board pour PME suisses — un panel de spécialistes pour CHF 2’000 par mois"
-  description: "The Advisory Board donne aux dirigeants de PME suisses accès à un panel de spécialistes : diagnostic annuel et 4 sessions stratégiques par an, pour CHF 2’000 par mois."
+  title: "Advisory Board pour PME suisses — un panel de spécialistes pour CHF 2’500 par mois"
+  description: "The Advisory Board donne aux dirigeants de PME suisses accès à un panel de spécialistes : diagnostic annuel et 4 sessions stratégiques par an, pour CHF 2’500 par mois."
 
 hero:
   eyebrow: "Advisory Board"
@@ -19,7 +19,7 @@ problem:
 
 offer:
   eyebrow: "L’offre"
-  price: "CHF 2’000"
+  price: "CHF 2’500"
   period: "par mois"
   note: "Engagement de 12 mois"
   includes:

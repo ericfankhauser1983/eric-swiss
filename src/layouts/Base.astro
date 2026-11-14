@@ -9,6 +9,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LandingBar from '../components/LandingBar.astro';
+import CallbackPopup from '../components/CallbackPopup.astro';
 import { SITE, SOCIAL, LANGS, LOCALES, absolute, path, type Lang } from '../config/site';
 
 interface Props {
@@ -106,6 +107,7 @@ const jsonld = { '@context': 'https://schema.org', '@graph': [person, website, .
       <slot />
     </main>
     {!landing && <Footer lang={lang} alternates={alternates} />}
+    <CallbackPopup lang={lang} source={landing ? 'Landing réseaux sociaux' : 'Site'} />
     <script>
       const io = new IntersectionObserver(
         (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }),

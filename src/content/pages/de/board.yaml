@@ -1,7 +1,7 @@
 # Advisory Board — DE
 seo:
-  title: "Advisory Board für Schweizer KMU — ein Expertengremium für CHF 2’000 pro Monat"
-  description: "The Advisory Board gibt Schweizer KMU-Unternehmern Zugang zu einem Expertengremium: jährliche Standortbestimmung und 4 Strategiesitzungen pro Jahr, für CHF 2’000 pro Monat."
+  title: "Advisory Board für Schweizer KMU — ein Expertengremium für CHF 2’500 pro Monat"
+  description: "The Advisory Board gibt Schweizer KMU-Unternehmern Zugang zu einem Expertengremium: jährliche Standortbestimmung und 4 Strategiesitzungen pro Jahr, für CHF 2’500 pro Monat."
 
 hero:
   eyebrow: "Advisory Board"
@@ -19,7 +19,7 @@ problem:
 
 offer:
   eyebrow: "Das Angebot"
-  price: "CHF 2’000"
+  price: "CHF 2’500"
   period: "pro Monat"
   note: "Laufzeit 12 Monate"
   includes:

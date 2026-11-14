@@ -7,25 +7,40 @@ hero:
   eyebrow: "Suisse · Europe · Émirats arabes unis · Géorgie"
   title: "Eric Fankhauser"
   subtitle: "Entrepreneur, investisseur et conseiller stratégique"
-  lead: "Avec mes associés, j’accompagne investisseurs et dirigeants d’entreprise dans trois domaines distincts. Choisissez celui qui vous concerne."
+  lead: "Vingt-cinq ans de carrière, de Swissair à la création de Swiss Auto Glass, en passant par la restructuration d’entreprises, m’ont appris une chose : un capital, comme une société, se fait grandir avec méthode, sur le terrain et dans la durée. Depuis Tbilissi, avec mes associés, je mets cette conviction au service d’investisseurs et de dirigeants."
+  stats:
+    - value: "1 000+"
+      label: "clients accompagnés en Géorgie avec FFI"
+    - value: "Des millions"
+      label: "investis chaque mois pour nos clients"
+    - value: "25 ans"
+      label: "de carrière, de Swissair à l’entrepreneuriat international"
+
+paths:
+  eyebrow: "Comment je peux vous aider"
+  title: "Tout commence par votre situation"
+  lead: "Que vous cherchiez à faire travailler votre capital, à faire grandir votre entreprise ou à mieux décider au quotidien, la démarche est la même : comprendre où vous en êtes, puis bâtir avec vous la stratégie qui vous fera avancer."
 
 pillars:
   items:
     - key: invest
+      question: "Votre capital dort ou rapporte trop peu ?"
       kicker: "FFI · Real Estate Asset Management"
       title: "Investissement immobilier en Géorgie"
       text: "Avec FFI, ma société et leader du marché : plus de 1 000 clients accompagnés et plusieurs millions investis chaque mois à Batumi et Tbilissi, pour des privés, des family offices et des fonds."
-      cta: "Découvrir l’investissement"
+      cta: "Investir en Géorgie"
     - key: consulting
+      question: "Votre entreprise doit franchir un cap, ou s’implanter en Géorgie ?"
       kicker: "Conseil stratégique"
       title: "Stratégie, développement et organisation des PME"
       text: "Un regard extérieur pour accélérer votre entreprise — et une porte d’entrée de haut niveau pour vous implanter en Géorgie."
-      cta: "Découvrir le conseil stratégique"
+      cta: "Le conseil stratégique"
     - key: board
+      question: "Vous dirigez une PME suisse et décidez souvent seul ?"
       kicker: "Advisory Board"
       title: "Un panel de spécialistes pour votre PME suisse"
-      text: "Diagnostic annuel et quatre sessions stratégiques par an, pour CHF 2’000 par mois."
-      cta: "Découvrir l’Advisory Board"
+      text: "Diagnostic annuel et quatre sessions stratégiques par an, pour CHF 2’500 par mois."
+      cta: "L’Advisory Board"
 
 about:
   eyebrow: "Mon parcours"

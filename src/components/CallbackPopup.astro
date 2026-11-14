@@ -1,0 +1,109 @@
+---
+/**
+ * Popup « On vous rappelle ? » : s'ouvre quand le visiteur arrive en bas de la page
+ * ou après 2 minutes sur la même page. Un seul champ : le numéro WhatsApp (indicatif obligatoire).
+ * Envoi via Netlify Forms (formulaire « rappel »). Ne se réaffiche pas pendant 7 jours après fermeture,
+ * plus jamais après envoi.
+ */
+import { path, type Lang } from '../config/site';
+import { t } from '../i18n/ui';
+interface Props { lang: Lang; source?: string }
+const { lang, source = '' } = Astro.props;
+const ui = t(lang).callback;
+---
+<div class="cb" data-cb hidden data-lang={lang} data-source={source}>
+  <div class="cb__card" role="dialog" aria-modal="false" aria-labelledby="cb-title">
+    <button class="cb__x" type="button" data-cb-close aria-label={ui.close}>×</button>
+    <div data-cb-body>
+      <p class="cb__t" id="cb-title">{ui.title}</p>
+      <p class="cb__p">{ui.text}</p>
+      <form name="rappel" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate data-cb-form>
+        <input type="hidden" name="form-name" value="rappel" />
+        <input type="hidden" name="page" />
+        <input type="hidden" name="langue" value={lang.toUpperCase()} />
+        <input type="hidden" name="provenance" value={source} />
+        <p hidden><label>Ne pas remplir <input name="bot-field" /></label></p>
+        <label class="cb__l" for="cb-tel">{ui.label}</label>
+        <div class="cb__row">
+          <input id="cb-tel" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+41 79 000 00 00" required />
+          <button class="btn cb__go" type="submit">{ui.submit}</button>
+        </div>
+        <p class="cb__err" data-cb-err hidden></p>
+        <p class="cb__s">{ui.privacy} <a href={path('privacy', lang)}>{ui.privacyLink}</a></p>
+      </form>
+    </div>
+    <p class="cb__ok" data-cb-ok hidden>{ui.thanks}</p>
+  </div>
+</div>
+
+<script define:vars={{ ui }}>
+  (() => {
+    const root = document.querySelector('[data-cb]');
+    if (!root) return;
+    const KEY = 'ef-cb';
+    const store = { get() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch { return null; } }, set(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch {} } };
+    const st = store.get();
+    if (st && (st.sent || (st.closed && Date.now() - st.closed < 7 * 864e5))) return;
+    let shown = false;
+    const open = () => {
+      if (shown) return;
+      // pas pendant qu'un formulaire de simulation est en cours de saisie
+      if (document.activeElement && document.activeElement.closest('form') && !root.contains(document.activeElement)) return;
+      shown = true; root.hidden = false; requestAnimationFrame(() => root.classList.add('is-on'));
+      cleanup();
+    };
+    const onScroll = () => { if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 160) open(); };
+    const timer = setTimeout(open, 120000);
+    const cleanup = () => { clearTimeout(timer); window.removeEventListener('scroll', onScroll); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const close = () => { root.classList.remove('is-on'); setTimeout(() => (root.hidden = true), 300); const s = store.get() || {}; if (!s.sent) store.set({ closed: Date.now() }); };
+    root.querySelector('[data-cb-close]').addEventListener('click', close);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && shown && !root.hidden) close(); });
+    const form = root.querySelector('[data-cb-form]');
+    const err = root.querySelector('[data-cb-err]');
+    const intl = (v) => { let n = v.replace(/[\s().\-\/]/g, ''); if (n.startsWith('00')) n = '+' + n.slice(2); return /^\+[1-9]\d{6,14}$/.test(n) ? n : null; };
+    const tel = form.elements.namedItem('whatsapp');
+    tel.addEventListener('focus', () => { if (!tel.value) tel.value = '+'; });
+    tel.addEventListener('blur', () => { if (tel.value.trim() === '+') tel.value = ''; });
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const n = intl(tel.value);
+      if (!n) { err.textContent = ui.error; err.hidden = false; tel.focus(); return; }
+      err.hidden = true;
+      const fd = new FormData(form);
+      if (fd.get('bot-field')) return;
+      fd.set('whatsapp', n);
+      fd.set('page', location.pathname);
+      const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+      try {
+        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() });
+        if (!r.ok) throw new Error(String(r.status));
+        root.querySelector('[data-cb-body]').hidden = true;
+        root.querySelector('[data-cb-ok]').hidden = false;
+        store.set({ sent: Date.now() });
+        setTimeout(close, 4000);
+      } catch { err.textContent = ui.sendError; err.hidden = false; btn.disabled = false; }
+    });
+  })();
+</script>
+
+<style>
+  .cb { position: fixed; right: clamp(12px, 3vw, 28px); bottom: clamp(12px, 3vw, 28px); z-index: 90; width: min(400px, calc(100vw - 24px)); opacity: 0; transform: translateY(16px); transition: opacity 0.3s ease, transform 0.3s ease; }
+  .cb.is-on { opacity: 1; transform: none; }
+  .cb[hidden] { display: none; }
+  .cb__card { position: relative; background: var(--navy); color: var(--cream); border-radius: var(--radius); padding: 26px 24px 20px; box-shadow: 0 30px 70px -20px rgba(10, 20, 50, 0.55); border-top: 3px solid var(--gold); }
+  .cb__x { position: absolute; top: 8px; right: 10px; background: none; border: 0; color: var(--muted-light); font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 4px 8px; }
+  .cb__x:hover { color: var(--cream); }
+  .cb__t { font-family: var(--f-title); font-size: 1.35rem; margin: 0 28px 8px 0; color: var(--cream); }
+  .cb__p { font-size: 0.92rem; color: var(--muted-light); margin: 0 0 16px; line-height: 1.55; }
+  .cb__l { display: block; font-size: 0.76rem; color: var(--gold-light); margin-bottom: 6px; letter-spacing: 0.04em; }
+  .cb__row { display: flex; gap: 8px; }
+  .cb__row input { flex: 1; min-width: 0; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px; color: var(--cream); padding: 12px 12px; font: inherit; font-size: 1rem; }
+  .cb__row input:focus { outline: none; border-color: var(--gold); }
+  .cb__go { white-space: nowrap; padding-left: 16px; padding-right: 16px; }
+  .cb__err { color: #f0a58f; font-size: 0.82rem; margin: 10px 0 0; }
+  .cb__s { font-size: 0.72rem; color: var(--muted-light); margin: 12px 0 0; }
+  .cb__s a { color: var(--muted-light); }
+  .cb__ok { font-family: var(--f-title); font-size: 1.15rem; margin: 6px 28px 6px 0; }
+  @media (max-width: 480px) { .cb__row { flex-direction: column; } .cb { right: 12px; left: 12px; width: auto; bottom: 12px; } }
+</style>

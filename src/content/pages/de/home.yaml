@@ -7,25 +7,40 @@ hero:
   eyebrow: "Schweiz · Europa · Vereinigte Arabische Emirate · Georgien"
   title: "Eric Fankhauser"
   subtitle: "Unternehmer, Investor und Strategieberater"
-  lead: "Gemeinsam mit meinen Partnern begleite ich Investoren und Unternehmer in drei unterschiedlichen Bereichen. Wählen Sie den, der Sie betrifft."
+  lead: "Fünfundzwanzig Jahre Karriere – von Swissair über Restrukturierungen bis zur Gründung von Swiss Auto Glass – haben mich eines gelehrt: Kapital wächst wie ein Unternehmen, mit Methode, vor Ort und über die Zeit. Von Tiflis aus stelle ich diese Überzeugung gemeinsam mit meinen Partnern in den Dienst von Investoren und Unternehmern."
+  stats:
+    - value: "1’000+"
+      label: "begleitete Kunden in Georgien mit FFI"
+    - value: "Millionen"
+      label: "jeden Monat für unsere Kunden investiert"
+    - value: "25 Jahre"
+      label: "Karriere, von Swissair bis zum internationalen Unternehmertum"
+
+paths:
+  eyebrow: "Wie ich Ihnen helfen kann"
+  title: "Alles beginnt bei Ihrer Situation"
+  lead: "Ob Ihr Kapital mehr leisten, Ihr Unternehmen wachsen oder Sie im Alltag besser entscheiden sollen – der Ansatz ist derselbe: verstehen, wo Sie stehen, und mit Ihnen die Strategie entwickeln, die Sie weiterbringt."
 
 pillars:
   items:
     - key: invest
+      question: "Ihr Kapital liegt brach oder bringt zu wenig?"
       kicker: "FFI · Real Estate Asset Management"
       title: "Immobilien-Investment in Georgien"
       text: "Mit FFI, meinem Unternehmen und Marktführer: über 1’000 begleitete Kunden und jeden Monat mehrere Millionen investiert in Batumi und Tiflis – für Privatpersonen, Family Offices und Fonds."
-      cta: "Immobilien-Investment entdecken"
+      cta: "In Georgien investieren"
     - key: consulting
+      question: "Ihr Unternehmen muss den nächsten Schritt machen oder sich in Georgien ansiedeln?"
       kicker: "Strategieberatung"
       title: "Strategie, Entwicklung und Organisation von KMU"
       text: "Ein externer Blick, um Ihr Unternehmen voranzubringen – und ein hochrangiger Zugang für die Ansiedlung in Georgien."
-      cta: "Strategieberatung entdecken"
+      cta: "Strategieberatung"
     - key: board
+      question: "Sie führen ein Schweizer KMU und entscheiden oft allein?"
       kicker: "Advisory Board"
       title: "Ein Expertengremium für Ihr Schweizer KMU"
-      text: "Jährliche Standortbestimmung und vier Strategiesitzungen pro Jahr, für CHF 2’000 pro Monat."
-      cta: "Advisory Board entdecken"
+      text: "Jährliche Standortbestimmung und vier Strategiesitzungen pro Jahr, für CHF 2’500 pro Monat."
+      cta: "Das Advisory Board"
 
 about:
   eyebrow: "Mein Werdegang"

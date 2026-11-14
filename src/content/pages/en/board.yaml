@@ -1,7 +1,7 @@
 # Advisory Board — EN
 seo:
-  title: "Advisory Board for Swiss SMEs — a panel of specialists for CHF 2,000 per month"
-  description: "The Advisory Board gives Swiss SME leaders access to a panel of specialists: an annual diagnostic and 4 strategic sessions a year, for CHF 2,000 per month."
+  title: "Advisory Board for Swiss SMEs — a panel of specialists for CHF 2,500 per month"
+  description: "The Advisory Board gives Swiss SME leaders access to a panel of specialists: an annual diagnostic and 4 strategic sessions a year, for CHF 2,500 per month."
 
 hero:
   eyebrow: "Advisory Board"
@@ -19,7 +19,7 @@ problem:
 
 offer:
   eyebrow: "The offer"
-  price: "CHF 2,000"
+  price: "CHF 2,500"
   period: "per month"
   note: "12-month commitment"
   includes:

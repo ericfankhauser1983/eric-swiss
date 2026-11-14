@@ -64,7 +64,7 @@ const service = (name: string, description: string, extra: Record<string, unknow
 const schema: Record<string, unknown>[] = [...crumbs];
 if (key === 'invest') schema.push(service(seo.title, seo.description, { serviceType: 'Real Estate Asset Management', areaServed: [{ '@type': 'City', name: 'Batumi' }, { '@type': 'City', name: 'Tbilisi' }, { '@type': 'Country', name: 'Georgia' }] }));
 if (key === 'consulting') schema.push(service(seo.title, seo.description, { serviceType: 'Business consulting and company formation in Georgia', areaServed: [{ '@type': 'Country', name: 'Georgia' }, 'CH', 'FR', 'BE'] }));
-if (key === 'board') schema.push(service(seo.title, seo.description, { serviceType: 'Advisory Board', areaServed: 'CH', offers: { '@type': 'Offer', price: '2000', priceCurrency: 'CHF', description: '12 months' } }));
+if (key === 'board') schema.push(service(seo.title, seo.description, { serviceType: 'Advisory Board', areaServed: 'CH', offers: { '@type': 'Offer', price: '2500', priceCurrency: 'CHF', description: '12 months' } }));
 const faqOf = async (name: string) => {
   const f = (await page(lang, name)).faq;
   return f ? { '@type': 'FAQPage', mainEntity: f.items.map((it: any) => ({ '@type': 'Question', name: it.q, acceptedAnswer: { '@type': 'Answer', text: it.a } })) } : null;
