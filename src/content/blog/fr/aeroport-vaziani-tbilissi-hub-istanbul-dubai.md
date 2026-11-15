@@ -37,7 +37,7 @@ Dubaï a suivi la même stratégie, avec Emirates. Sur l'exercice 2025-26, la co
 
 Et Dubaï voit déjà plus loin. Le nouvel aéroport Al Maktoum, à 35 milliards de dollars, doit à terme accueillir 260 millions de passagers par an. Une deuxième piste est prévue pour 2027, et la première phase doit ouvrir en 2032 ([Khaleej Times](https://www.khaleejtimes.com/business-technology-review/al-maktoum-international-accelerates-toward-worlds-biggest-airport-status)). Dubaï n'a pas attendu d'être saturé pour construire. Elle construit avant.
 
-## La Géorgie a l'emplacement, il lui manque la compagnie
+## La Géorgie a l'emplacement, sa compagnie reste à construire
 
 La Géorgie a un atout que beaucoup lui envient : sa position. Tbilissi est sur le chemin le plus court entre l'Europe et l'Asie centrale, à quelques heures de vol de Londres, Dubaï, Delhi ou Almaty.
 
@@ -45,7 +45,7 @@ Elle a un deuxième atout, souvent oublié : son régime de visas. Les citoyens 
 
 Ce qui manque, c'est une grande compagnie basée sur place. Sur les neuf premiers mois de 2025, le premier transporteur des aéroports géorgiens était Wizz Air, avec environ 1,07 million de passagers. Georgian Airways en comptait environ 509 000, et Turkish Airlines 458 000 ([Georgia Today](https://georgiatoday.ge/passenger-traffic-at-georgian-airports-reaches-record-6-5-million-in-2025/)). On est très loin d'un modèle Istanbul ou Dubaï.
 
-Chez Swissair, j'ai appris qu'un hub repose sur trois piliers : un aéroport, une compagnie et un réseau. Vaziani peut apporter le premier. L'arrivée éventuelle de Changi apporterait un savoir-faire de classe mondiale. Le reste dépendra de la capacité de la Géorgie à attirer une compagnie qui fasse de Tbilissi une vraie plateforme de correspondance.
+Chez Swissair, j'ai appris qu'un hub repose sur trois piliers : un aéroport, une compagnie et un réseau. Vaziani peut apporter le premier, et l'arrivée éventuelle de Changi un savoir-faire de classe mondiale. Surtout, un aéroport de 20 millions de passagers donne à la Géorgie l'opportunité de développer, à terme, une belle compagnie aérienne. C'est le chemin qu'ont suivi Istanbul avec Turkish Airlines et Dubaï avec Emirates : l'aéroport et la compagnie ont grandi ensemble. Si la Géorgie saisit cette chance, Tbilissi peut devenir une vraie plateforme de correspondance entre l'Europe et l'Asie.
 
 ## Ce que ça change pour un investisseur
 

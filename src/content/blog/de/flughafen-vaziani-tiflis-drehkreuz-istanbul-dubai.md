@@ -37,7 +37,7 @@ Dubai hat dieselbe Strategie verfolgt, mit Emirates. Im Geschäftsjahr 2025-26 b
 
 Und Dubai denkt bereits weiter. Der neue Flughafen Al Maktoum, für 35 Milliarden Dollar, soll langfristig 260 Millionen Passagiere pro Jahr abfertigen. Eine zweite Piste ist für 2027 geplant, die erste Phase soll 2032 eröffnen ([Khaleej Times](https://www.khaleejtimes.com/business-technology-review/al-maktoum-international-accelerates-toward-worlds-biggest-airport-status)). Dubai hat nicht gewartet, bis es überlastet war, um zu bauen. Es baut vorher.
 
-## Georgien hat die Lage, es fehlt die Fluggesellschaft
+## Georgien hat die Lage, seine Fluggesellschaft muss erst entstehen
 
 Georgien hat einen Trumpf, um den es viele beneiden: seine Lage. Tiflis liegt auf dem kürzesten Weg zwischen Europa und Zentralasien, wenige Flugstunden von London, Dubai, Delhi oder Almaty entfernt.
 
@@ -45,7 +45,7 @@ Es hat einen zweiten, oft vergessenen Trumpf: sein Visaregime. Bürger aus 94 L�
 
 Was fehlt, ist eine grosse Fluggesellschaft mit Basis vor Ort. In den ersten neun Monaten 2025 war Wizz Air die grösste Fluggesellschaft an den georgischen Flughäfen, mit rund 1,07 Millionen Passagieren. Georgian Airways kam auf rund 509 000, Turkish Airlines auf 458 000 ([Georgia Today](https://georgiatoday.ge/passenger-traffic-at-georgian-airports-reaches-record-6-5-million-in-2025/)). Von einem Modell Istanbul oder Dubai ist man weit entfernt.
 
-Bei der Swissair habe ich gelernt, dass ein Drehkreuz auf drei Säulen ruht: einem Flughafen, einer Fluggesellschaft und einem Netz. Vaziani kann die erste liefern. Ein allfälliger Einstieg von Changi brächte Know-how von Weltklasse. Der Rest hängt davon ab, ob Georgien eine Fluggesellschaft gewinnen kann, die Tiflis zu einer echten Umsteigeplattform macht.
+Bei der Swissair habe ich gelernt, dass ein Drehkreuz auf drei Säulen ruht: einem Flughafen, einer Fluggesellschaft und einem Netz. Vaziani kann die erste liefern, ein allfälliger Einstieg von Changi Know-how von Weltklasse. Vor allem gibt ein Flughafen für 20 Millionen Passagiere Georgien die Chance, mittelfristig eine starke eigene Fluggesellschaft aufzubauen. Diesen Weg gingen Istanbul mit Turkish Airlines und Dubai mit Emirates: Flughafen und Airline sind gemeinsam gewachsen. Nutzt Georgien diese Chance, kann Tiflis zu einer echten Umsteigeplattform zwischen Europa und Asien werden.
 
 ## Was das fürs Investieren in Georgien ändert
 

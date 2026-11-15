@@ -37,7 +37,7 @@ Dubai followed the same strategy, with Emirates. In the 2025-26 financial year, 
 
 And Dubai is already looking further ahead. The new Al Maktoum airport, at $35 billion, is eventually meant to handle 260 million passengers a year. A second runway is planned for 2027, and the first phase is due to open in 2032 ([Khaleej Times](https://www.khaleejtimes.com/business-technology-review/al-maktoum-international-accelerates-toward-worlds-biggest-airport-status)). Dubai did not wait to be saturated before building. It builds ahead.
 
-## Georgia has the location, it lacks the airline
+## Georgia has the location, its airline is still to be built
 
 Georgia has an asset many envy: its position. Tbilisi lies on the shortest route between Europe and Central Asia, a few hours' flight from London, Dubai, Delhi or Almaty.
 
@@ -45,7 +45,7 @@ It has a second, often forgotten asset: its visa regime. Citizens of 94 countrie
 
 What is missing is a major airline based there. Over the first nine months of 2025, the leading carrier at Georgian airports was Wizz Air, with about 1.07 million passengers. Georgian Airways had about 509,000, and Turkish Airlines 458,000 ([Georgia Today](https://georgiatoday.ge/passenger-traffic-at-georgian-airports-reaches-record-6-5-million-in-2025/)). We are a very long way from the Istanbul or Dubai model.
 
-At Swissair, I learned that a hub rests on three pillars: an airport, an airline and a network. Vaziani can provide the first. Changi's possible arrival would bring world-class expertise. The rest will depend on Georgia's ability to attract an airline that turns Tbilisi into a real connecting platform.
+At Swissair, I learned that a hub rests on three pillars: an airport, an airline and a network. Vaziani can provide the first, and Changi's possible arrival world-class expertise. Above all, a 20-million-passenger airport gives Georgia the opportunity to build, over time, a strong airline of its own. That is the path Istanbul took with Turkish Airlines and Dubai with Emirates: the airport and the airline grew together. If Georgia seizes this chance, Tbilisi can become a real connecting platform between Europe and Asia.
 
 ## What it changes to invest in Georgia
 
