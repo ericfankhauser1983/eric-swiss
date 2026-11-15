@@ -1,9 +1,9 @@
 ---
 /**
- * Landing « comparatif » des carrousels et stories : 200 000 investis 5 ans en location longue durée.
+ * Landing éducative « comparatif » (carrousels, stories) : comprendre ce que rapporte vraiment un bien locatif.
  * FR : France contre Géorgie → /fr/france-ou-georgie/ — EN : Royaume-Uni contre Géorgie → /en/uk-or-georgia/
- * Formulaire Netlify « bilan » (bilan patrimonial gratuit avec Hugo Viard).
- * Tous les chiffres sont ici : modifier l'objet T ci-dessous.
+ * Chapitres : contexte, brut/net, levier, revente, calcul 5 ans, calculateur, checklist, Géorgie, FAQ, bilan (formulaire Netlify « bilan »).
+ * Tous les textes et chiffres sont dans l'objet T ci-dessous.
  */
 import { SITE, path } from '../config/site';
 interface Props { lang: 'fr' | 'en' }
@@ -16,29 +16,92 @@ const FLAG_GE = `<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width
 
 const T = {
   fr: {
-    flag: FLAG_FR, home: 'France', ge: 'Géorgie', win: 'Gagne', round: 'Manche',
+    flag: FLAG_FR, home: 'France', ge: 'Géorgie', cur: '€',
     hero: {
-      eyebrow: 'Comparatif · location longue durée',
-      title: '200 000 € investis pendant 5 ans : la Géorgie rapporte <em>6,7× plus</em> que la France',
-      lead: 'Un appartement payé comptant, loué en bail classique, tous impôts déduits. Mêmes 200 000 €, même durée. Voici le calcul complet, manche par manche.',
-      gainHome: '+19 300 €', gainGe: '+128 400 €', gainLabel: 'de gain en 5 ans',
-      cta: 'Mon bilan patrimonial gratuit', more: 'Voir le détail',
+      eyebrow: 'Guide · location longue durée',
+      title: 'France ou Géorgie : ce que rapporte <em>vraiment</em> votre immobilier',
+      lead: 'Rendement brut, impôts, effet de levier, plus-value : je vous explique pas à pas comment comparer deux investissements. Avec un exemple chiffré, un calculateur pour votre propre bien et un bilan gratuit si vous voulez aller plus loin.',
+      by: 'Eric Fankhauser · entrepreneur suisse installé à Tbilissi', time: '8 minutes de lecture',
+      gainHome: '+19 300 €', gainGe: '+128 400 €', gainLabel: 'de gain en 5 ans pour 200 000 € investis',
+      toc: 'Au sommaire',
     },
-    rounds: [
-      { t: 'Les loyers', q: 'Ce que le bien rapporte chaque année', home: ['9 560 €', 'Rendement brut moyen 4,78 %'], ge: ['17 200 €', 'Rendement brut 8,6 % à Tbilissi'], bar: [55.6, 100] },
-      { t: 'Les impôts', q: 'La part des loyers qui part en impôts', home: ['45 %', '4 276 €/an : taxe foncière (1 117 €) + impôt sur le revenu et prélèvements sociaux (3 159 €)'], ge: ['5 %', '860 €/an : impôt de 5 % sur les loyers, et c’est tout'], donut: [45, 5] },
-      { t: 'Le net', q: 'Ce qu’il vous reste chaque année', home: ['3 850 €', '1,9 % net par an'], ge: ['14 620 €', '7,3 % net par an'], bar: [26.3, 100] },
-      { t: 'La revente', q: 'Le prix de revente net d’impôts après 5 ans', home: ['200 000 €', 'Prix stables, donc pas de plus-value. Avant 6 ans de détention, toute plus-value serait taxée à 36,2 %.'], ge: ['255 300 €', '+5 %/an retenu (prudent). Plus-value exonérée d’impôt après 2 ans de détention.'], line: true },
-    ],
-    verdict: {
-      t: 'Le verdict', h: 'Votre patrimoine après 5 ans', home: '219 300 €', ge: '328 400 €', homeStack: [200000, 19300], legend: ['Capital', 'Loyers nets', 'Plus-value'],
-      ratio: '6,7×', ratioTxt: 'plus de gain en Géorgie', homeGain: 'France : +19 300 € (≈ 1,9 % par an)', geGain: 'Géorgie : +128 400 € (≈ 12,8 % par an)',
+    toc: ['Pourquoi la question se pose maintenant', 'Du loyer brut au loyer net', 'L’effet de levier', 'La revente et la plus-value', 'Le calcul complet sur 5 ans', 'Calculez votre propre bien', 'Les 5 questions à vous poser', 'Investir en Géorgie : ce qu’il faut maîtriser', 'Questions fréquentes'],
+    c1: {
+      h: 'Pourquoi la question se pose maintenant',
+      lead: 'Pendant quinze ans, l’immobilier locatif français a fonctionné presque tout seul : des taux bas, des prix qui montent, un crédit qui faisait le travail. En 2026, ces trois moteurs se sont arrêtés en même temps. Pendant ce temps, la Géorgie suit la trajectoire inverse.',
+      home: [['5,13 %', 'Taux de l’État français à 10 ans le 22 octobre, plus haut depuis 2002'], ['3,70 %', 'Crédit immobilier moyen sur 20 ans en novembre (Meilleurtaux)'], ['−1,0 %', 'Prix des logements anciens au 2e trimestre 2026 (INSEE)'], ['458 – 0', 'Rejet de la partie recettes du budget 2027 à l’Assemblée ; Fitch passe la France en perspective négative']],
+      ge: [['7,2 %', 'Croissance prévue en 2026 par le FMI'], ['BB ↑', 'Fitch relève la perspective de la Géorgie à « positive » le 30 octobre'], ['31,6 %', 'Dette publique prévue en 2027, en % du PIB'], ['8,2 Md$', 'Réserves de change record en septembre 2026']],
+      lesson: 'Quand l’argent coûte plus cher et que les prix ne montent plus, seul le rendement net compte. C’est lui qu’il faut savoir calculer.',
     },
-    credit: {
-      t: 'Et à crédit ?',
-      home: ['France', 'Emprunter à 3,70 % sur 20 ans pour un bien qui rapporte 1,9 % net : chaque euro emprunté coûte plus qu’il ne rapporte. Le levier est négatif.'],
-      ge: ['Géorgie', 'Crédit dès 6,3 % pour un bien qui rapporte 7,3 % net : le loyer couvre le coût de l’argent. Le levier reste positif.'],
-      link: 'Lire l’article complet sur les taux de crédit', href: '/fr/blog/taux-credit-immobilier-france-hausse-investir-georgie/',
+    c2: {
+      h: 'Du loyer brut au loyer net',
+      lead: 'Le rendement affiché dans une annonce est presque toujours un rendement brut : le loyer annuel divisé par le prix. Ce qui compte, c’est ce qui reste dans votre poche une fois tout payé. Prenons le même appartement de 200 000 €, payé comptant, loué en bail classique.',
+      steps: ['Loyer brut', 'Charges, gestion, assurance, vacance', 'Taxe foncière', 'Impôts sur les loyers', 'Loyer net'],
+      home: { rent: '9 560 €', rows: [['Loyer brut (4,78 %, moyenne nationale)', '9 560 €'], ['Charges, gestion, assurance, vacance (15 %)', '− 1 434 €'], ['Taxe foncière (moyenne 2025)', '− 1 117 €'], ['Impôt sur le revenu 30 % + prélèvements sociaux 17,2 % (micro-foncier)', '− 3 159 €']], net: '3 850 €', y: '1,9 %', seg: [15, 11.7, 33, 40.3] },
+      ge: { rent: '17 200 €', rows: [['Loyer brut (8,6 % à Tbilissi)', '17 200 €'], ['Charges, gestion, vacance (10 %)', '− 1 720 €'], ['Taxe foncière', '0 €'], ['Impôt de 5 % sur les loyers', '− 860 €']], net: '14 620 €', y: '7,3 %', seg: [10, 0, 5, 85] },
+      legend: ['Charges', 'Taxe foncière', 'Impôts', 'Ce qui vous reste'],
+      lesson: 'En France, les impôts et taxes prennent 45 % du loyer. En Géorgie, 5 %. À rendement brut égal, l’écart serait déjà énorme ; ici, il se cumule avec un rendement brut presque deux fois plus élevé.',
+    },
+    c3: {
+      h: 'L’effet de levier : quand le crédit enrichit, et quand il appauvrit',
+      lead: 'Emprunter permet d’acheter plus grand avec moins d’apport. Mais la règle est simple : le crédit ne crée de la richesse que si le bien rapporte plus que ce que coûte l’argent emprunté.',
+      rule: 'Levier positif si rendement net > taux du crédit',
+      home: ['Pour 100 000 € empruntés', '3 700 € d’intérêts par an (3,70 %)', '1 900 € de loyer net (1,9 %)', '− 1 800 € par an', 'Le levier est négatif : chaque euro emprunté vous coûte de l’argent. Vous ne comptez plus que sur la hausse des prix.'],
+      ge: ['Pour 100 000 € empruntés', '6 300 € d’intérêts par an (dès 6,3 %)', '7 300 € de loyer net (7,3 %)', '+ 1 000 € par an', 'Le levier reste positif : le loyer paie le crédit et il reste un surplus, même avec un taux plus élevé qu’en France.'],
+      lesson: 'Un taux bas ne fait pas un bon crédit. Ce qui compte, c’est l’écart entre ce que rapporte le bien et ce que coûte l’argent. Calcul simplifié, avant impôts et hors remboursement du capital.',
+      link: 'Lire mon article sur la hausse des taux en France', href: '/fr/blog/taux-credit-immobilier-france-hausse-investir-georgie/',
+    },
+    c4: {
+      h: 'La revente : ce que l’État prend sur votre plus-value',
+      lead: 'Le jour où vous vendez, la plus-value est imposée. Les règles changent tout, surtout si vous revendez dans les premières années.',
+      home: ['36,2 %', 'd’impôt sur la plus-value avant 6 ans de détention (19 % + 17,2 % de prélèvements sociaux). Exonération totale seulement après 22 ans pour l’impôt sur le revenu et 30 ans pour les prélèvements sociaux.', 'Exemple : 20 000 € de plus-value après 5 ans → environ 7 240 € d’impôt.'],
+      ge: ['0 %', 'd’impôt sur la plus-value d’un logement détenu depuis plus de 2 ans par un particulier.', 'Exemple : 55 300 € de plus-value après 5 ans → 0 € d’impôt.'],
+      lesson: 'En France, la fiscalité vous pousse à garder longtemps, même un bien qui rapporte peu. En Géorgie, vous restez libre d’arbitrer dès la troisième année.',
+    },
+    c5: {
+      h: 'Le calcul complet sur 5 ans',
+      lead: 'Mettons tout bout à bout : 200 000 € payés comptant, 5 ans de loyers nets, puis revente nette d’impôts. Hypothèses : prix stables en France, +5 % par an en Géorgie (contre +63,8 % depuis 2020 selon Geostat).',
+      rows: [['Loyers nets sur 5 ans', '19 300 €', '73 100 €'], ['Prix de revente net d’impôts', '200 000 €', '255 300 €'], ['Patrimoine après 5 ans', '219 300 €', '328 400 €'], ['Gain', '+19 300 €', '+128 400 €'], ['Rendement annuel moyen', '≈ 1,9 %', '≈ 12,8 %']],
+      homeStack: [200000, 19300], legend: ['Capital', 'Loyers nets', 'Plus-value'], ratio: '6,7×', ratioTxt: 'plus de gain en Géorgie',
+    },
+    c6: {
+      h: 'Calculez votre propre bien',
+      lead: 'Entrez les chiffres d’un de vos biens. Le calculateur estime son rendement net et ce que le même capital rapporterait en Géorgie, avec les hypothèses de cette page.',
+      f: { price: 'Valeur actuelle du bien (€)', rent: 'Loyer mensuel hors charges (€)', costs: 'Charges, gestion, assurance par an (€)', tf: 'Taxe foncière par an (€)', tmi: 'Votre tranche d’imposition', growth: 'Évolution des prix en France par an (%)' },
+      tmis: [['0', '0 %'], ['0.11', '11 %'], ['0.30', '30 %'], ['0.41', '41 %'], ['0.45', '45 %']],
+      out: { netHome: 'Votre loyer net par an', yHome: 'Rendement net', netGe: 'Même capital en Géorgie', g5: 'Gain sur 5 ans', ratio: 'fois plus en Géorgie' },
+      note: 'Calcul indicatif : micro-foncier (loyers jusqu’à 15 000 € par an), prélèvements sociaux 17,2 %, plus-value imposée à 36,2 % avant 6 ans. Géorgie : rendement brut 8,6 %, charges 10 %, impôt 5 %, +5 % par an. Hors crédit, frais d’acquisition et effet de change.',
+      d: { price: 200000, rent: 797, costs: 1434, tf: 1117, tmi: '0.30', growth: 0 },
+    },
+    c7: {
+      h: 'Les 5 questions à vous poser sur chacun de vos biens',
+      items: [
+        ['Que rapporte-t-il vraiment, net de tout ?', 'Loyer moins charges, taxe foncière, impôts et prélèvements sociaux. Pas le rendement de l’annonce.'],
+        ['Couvre-t-il le coût de son crédit ?', 'Si le rendement net est inférieur à votre taux, le levier joue contre vous.'],
+        ['Que vaut-il aujourd’hui, et combien me coûterait sa vente ?', 'Valeur de marché, plus-value imposable, durée de détention.'],
+        ['Quels risques pèsent sur lui ?', 'Travaux, diagnostic énergétique (les logements classés G sont interdits à la location depuis 2025), vacance, encadrement des loyers.'],
+        ['Que rapporterait le même capital ailleurs ?', 'C’est la seule façon de savoir si votre argent travaille bien.'],
+      ],
+    },
+    c8: {
+      h: 'Investir en Géorgie : ce qu’il faut maîtriser',
+      lead: 'Un rendement élevé se mérite. Voici les points que nous traitons avec chaque client, et comment.',
+      items: [
+        ['La monnaie', 'Les prix sont fixés en dollars et les loyers souvent aussi. Nous en tenons compte dans chaque calcul et dans la stratégie de sortie.'],
+        ['Le choix du promoteur', 'Sur le neuf, tout se joue là. Nous sélectionnons des promoteurs qui ont déjà livré, et nous suivons les chantiers.'],
+        ['La gestion locative', 'Un bien loué à distance doit être géré sur place : mise en location, état des lieux, encaissement, entretien.'],
+        ['La revente', 'Le bon emplacement et la bonne typologie font un bien facile à revendre. C’est un critère dès l’achat.'],
+      ],
+    },
+    faq: {
+      h: 'Questions fréquentes',
+      items: [
+        ['Un étranger peut-il acheter un appartement en Géorgie ?', 'Oui. Un particulier étranger peut acheter un logement en pleine propriété, à son nom. L’enregistrement se fait en quelques jours.'],
+        ['Faut-il vendre ses biens en France ?', 'Pas forcément. Il faut d’abord savoir ce que chacun rapporte net. Certains méritent d’être gardés, d’autres libèrent un capital qui travaillerait mieux ailleurs. C’est l’objet du bilan.'],
+        ['Les loyers sont-ils vraiment imposés à 5 % ?', 'Oui, pour un particulier qui loue un logement en Géorgie, l’impôt sur les loyers est de 5 %. Votre situation fiscale dans votre pays de résidence doit aussi être vérifiée.'],
+        ['Peut-on financer l’achat à crédit ?', 'Oui, les banques géorgiennes prêtent à partir d’environ 6,3 %. Sur le neuf, beaucoup de promoteurs proposent aussi un plan de paiement sans intérêts jusqu’à la livraison.'],
+        ['Les chiffres de cette page sont-ils garantis ?', 'Non. C’est un calcul illustratif, avec des hypothèses prudentes et des sources publiques. Les performances passées ne préjugent pas des performances futures.'],
+      ],
     },
     bilan: {
       eyebrow: 'Bilan patrimonial gratuit',
@@ -50,44 +113,106 @@ const T = {
       err: 'Merci de remplir votre prénom, votre e-mail et votre numéro WhatsApp avec l’indicatif (ex. +33 6 12 34 56 78).',
       sendErr: 'L’envoi n’a pas fonctionné. Réessayez ou écrivez-nous sur WhatsApp.',
       ok: 'Merci ! Hugo vous contacte très rapidement pour fixer votre bilan.',
-      wa: 'Ou écrivez-nous sur WhatsApp', source: 'Landing comparatif France / Géorgie (FR)',
+      wa: 'Ou écrivez-nous sur WhatsApp', source: 'Guide France / Géorgie (FR)',
     },
     hyp: {
       t: 'Hypothèses et sources',
       items: [
-        'Appartement de 200 000 € payé comptant, location longue durée (bail classique), loyers constants sur 5 ans. Calcul illustratif, non contractuel.',
-        'France : rendement brut moyen national 4,78 % en 2025 (Meilleurtaux). Taxe foncière moyenne payée par les particuliers en 2025 : 1 117 € (DGFiP). Charges, gestion, assurance et vacance : 15 % des loyers (hypothèse). Impôt : micro-foncier (abattement de 30 %), tranche marginale de 30 % + 17,2 % de prélèvements sociaux, soit 3 159 €.',
-        'France : prix des logements anciens en recul de 1,0 % au 2e trimestre 2026 (INSEE), hypothèse de prix stables. Plus-value imposée à 19 % + 17,2 %, abattements pour durée de détention à partir de la 6e année. Taux de crédit : 3,70 % sur 20 ans (Meilleurtaux, novembre 2026).',
-        'Géorgie : rendement brut 8,6 % à Tbilissi (Galt & Taggart). Charges, gestion et vacance : 10 % des loyers (hypothèse). Impôt de 5 % sur les loyers des particuliers, pas d’impôt foncier retenu. Prix : +63,8 % depuis 2020 selon Geostat, hypothèse prudente de +5 %/an. Plus-value exonérée après 2 ans de détention. Crédit : TBC Bank, à partir de 6,3 %.',
+        'Exemple : appartement de 200 000 € payé comptant, location longue durée (bail classique), loyers constants sur 5 ans. Calcul illustratif, non contractuel.',
+        'France : rendement brut moyen national 4,78 % en 2025 (Meilleurtaux) ; taxe foncière moyenne des particuliers 1 117 € en 2025 (DGFiP) ; charges 15 % des loyers (hypothèse) ; micro-foncier, tranche de 30 % + 17,2 %. Prix des logements anciens −1,0 % au 2e trimestre 2026 (INSEE). Crédit 3,70 % sur 20 ans (Meilleurtaux, novembre 2026). Taux à 10 ans de l’État : 5,13 % le 22 octobre 2026. Plus-value : 19 % + 17,2 %, abattements à partir de la 6e année.',
+        'Géorgie : rendement brut 8,6 % à Tbilissi (Galt & Taggart) ; charges 10 % (hypothèse) ; impôt de 5 % sur les loyers des particuliers. Prix +63,8 % depuis 2020 (Geostat), hypothèse de +5 % par an. Plus-value exonérée après 2 ans. Crédit TBC Bank dès 6,3 %. Croissance 7,2 % (FMI, octobre 2026) ; perspective positive (Fitch, 30 octobre 2026) ; réserves 8,2 Md$ ; dette 31,6 % du PIB (budget 2027).',
         'Non inclus : frais d’acquisition (frais de notaire de 7 à 8 % dans l’ancien en France), frais de revente et effet de change. Les performances passées ne préjugent pas des performances futures.',
       ],
     },
-    sticky: 'Mon bilan gratuit', legal: 'Mentions légales', privacy: 'Confidentialité',
+    sticky: 'Mon bilan gratuit', legal: 'Mentions légales', privacy: 'Confidentialité', lessonLabel: 'À retenir', back: 'Revenir au sommaire',
   },
   en: {
-    flag: FLAG_UK, home: 'UK', ge: 'Georgia', win: 'Wins', round: 'Round',
+    flag: FLAG_UK, home: 'UK', ge: 'Georgia', cur: '£',
     hero: {
-      eyebrow: 'Comparison · long-term rental',
-      title: '£200,000 invested for 5 years: Georgia earns <em>4.6× more</em> than the UK',
-      lead: 'A property paid in cash, let on a standard tenancy, after all taxes. Same £200,000, same period. Here is the full calculation, round by round.',
-      gainHome: '+£27,600', gainGe: '+£128,400', gainLabel: 'gain over 5 years',
-      cta: 'My free wealth review', more: 'See the details',
+      eyebrow: 'Guide · long-term rental',
+      title: 'UK or Georgia: what your property <em>really</em> earns',
+      lead: 'Gross yield, tax, leverage, capital gains: I explain step by step how to compare two investments. With a worked example, a calculator for your own property and a free review if you want to go further.',
+      by: 'Eric Fankhauser · Swiss entrepreneur based in Tbilisi', time: '8-minute read',
+      gainHome: '+£27,600', gainGe: '+£128,400', gainLabel: 'gain over 5 years on £200,000 invested',
+      toc: 'Contents',
     },
-    rounds: [
-      { t: 'Rent', q: 'What the property earns each year', home: ['£11,600', 'Average UK gross yield 5.8%'], ge: ['£17,200', 'Gross yield 8.6% in Tbilisi'], bar: [67.4, 100] },
-      { t: 'Taxes', q: 'The share of rent that goes to tax', home: ['37%', '£4,338/yr: property income tax at 44% (higher rate, from April 2027) on rent after costs'], ge: ['5%', '£860/yr: 5% tax on rent, and that’s it'], donut: [37, 5] },
-      { t: 'Net income', q: 'What you keep each year', home: ['£5,522', '2.8% net per year'], ge: ['£14,620', '7.3% net per year'], bar: [37.8, 100] },
-      { t: 'Resale', q: 'Resale price after tax after 5 years', home: ['£200,000', 'Flat prices (−1.2% over a year in October 2026), so no gain. Any gain would face CGT at up to 24%.'], ge: ['£255,300', '+5%/yr assumed (cautious). Capital gain tax-free after 2 years of ownership.'], line: true },
-    ],
-    verdict: {
-      t: 'The verdict', h: 'Your wealth after 5 years', home: '£227,600', ge: '£328,400', homeStack: [200000, 27600], legend: ['Capital', 'Net rent', 'Capital gain'],
-      ratio: '4.6×', ratioTxt: 'more gain in Georgia', homeGain: 'UK: +£27,600 (≈ 2.8% per year)', geGain: 'Georgia: +£128,400 (≈ 12.8% per year)',
+    toc: ['Why the question matters now', 'From gross rent to net rent', 'Leverage', 'Resale and capital gains', 'The full 5-year calculation', 'Calculate your own property', 'The 5 questions to ask', 'Investing in Georgia: what to get right', 'FAQ'],
+    c1: {
+      h: 'Why the question matters now',
+      lead: 'For years, buy-to-let in the UK more or less worked by itself: cheap money, rising prices, leverage doing the heavy lifting. In 2026, all three engines stalled at once, while Georgia is moving the other way.',
+      home: [['4.00%', 'Bank Rate after the Bank of England’s hike on 5 November 2026'], ['6.00%', 'Average 5-year fixed mortgage rate (Moneyfacts, 5 November)'], ['−1.2%', 'House prices over a year in October 2026 (Lloyds)'], ['44%', 'Higher-rate tax on property income from April 2027 (Budget, 28 October)']],
+      ge: [['7.2%', 'Growth forecast for 2026 by the IMF'], ['BB ↑', 'Fitch raised Georgia’s outlook to “positive” on 30 October'], ['31.6%', 'Public debt planned for 2027, as % of GDP'], ['$8.2bn', 'Record foreign-exchange reserves in September 2026']],
+      lesson: 'When money costs more and prices stop rising, only net yield matters. That is what you need to know how to calculate.',
     },
-    credit: {
-      t: 'What about a mortgage?',
-      home: ['UK', '5-year fixes average 6.00% for a property yielding 2.8% net, and mortgage interest relief is capped at 24%. Leverage is negative.'],
-      ge: ['Georgia', 'Loans from 6.3% for a property yielding 7.3% net: the rent covers the cost of money. Leverage stays positive.'],
+    c2: {
+      h: 'From gross rent to net rent',
+      lead: 'The yield in a listing is almost always gross: annual rent divided by price. What matters is what stays in your pocket once everything is paid. Take the same £200,000 property, paid in cash, let on a standard tenancy.',
+      steps: [],
+      home: { rent: '£11,600', rows: [['Gross rent (5.8%, UK average)', '£11,600'], ['Costs, management, insurance, voids (15%)', '− £1,740'], ['Council tax (paid by the tenant)', '£0'], ['Property income tax at 44% on rent after costs (from April 2027)', '− £4,338']], net: '£5,522', y: '2.8%', seg: [15, 0, 37.4, 47.6] },
+      ge: { rent: '£17,200', rows: [['Gross rent (8.6% in Tbilisi)', '£17,200'], ['Costs, management, voids (10%)', '− £1,720'], ['Property tax', '£0'], ['5% tax on rent', '− £860']], net: '£14,620', y: '7.3%', seg: [10, 0, 5, 85] },
+      legend: ['Costs', 'Property tax', 'Tax', 'What you keep'],
+      lesson: 'In the UK, tax takes 37% of the rent for a higher-rate taxpayer. In Georgia, 5%. Combined with a gross yield half as high again, the gap becomes huge.',
+    },
+    c3: {
+      h: 'Leverage: when borrowing makes you richer, and when it makes you poorer',
+      lead: 'Borrowing lets you buy more with less deposit. But the rule is simple: debt only creates wealth if the property earns more than the money costs.',
+      rule: 'Leverage is positive if net yield > mortgage rate',
+      home: ['For £100,000 borrowed', '£6,000 interest a year (6.00%)', '£2,800 net rent (2.8%)', '− £3,200 a year', 'Leverage is negative: every pound borrowed costs you money, and mortgage interest relief is capped at a 24% tax credit.'],
+      ge: ['For £100,000 borrowed', '£6,300 interest a year (from 6.3%)', '£7,300 net rent (7.3%)', '+ £1,000 a year', 'Leverage stays positive: the rent pays the loan and leaves a surplus.'],
+      lesson: 'A cheap rate doesn’t make a good loan. What matters is the gap between what the property earns and what the money costs. Simplified calculation, before tax and excluding capital repayment.',
       link: '', href: '',
+    },
+    c4: {
+      h: 'Resale: what the taxman takes from your gain',
+      lead: 'When you sell, the gain is taxed. The rules change everything.',
+      home: ['24%', 'capital gains tax on residential property for higher-rate taxpayers (18% basic rate), with only a £3,000 annual allowance. Reported and paid within 60 days of completion.', 'Example: a £20,000 gain after 5 years → about £4,100 of tax.'],
+      ge: ['0%', 'capital gains tax on a home held by an individual for more than 2 years.', 'Example: a £55,300 gain after 5 years → £0 of tax.'],
+      lesson: 'In Georgia, you stay free to reallocate your capital from the third year without a tax bill.',
+    },
+    c5: {
+      h: 'The full 5-year calculation',
+      lead: 'Putting it all together: £200,000 paid in cash, 5 years of net rent, then resale after tax. Assumptions: flat prices in the UK, +5% a year in Georgia (vs +63.8% since 2020 according to Geostat).',
+      rows: [['Net rent over 5 years', '£27,600', '£73,100'], ['Resale price after tax', '£200,000', '£255,300'], ['Wealth after 5 years', '£227,600', '£328,400'], ['Gain', '+£27,600', '+£128,400'], ['Average annual return', '≈ 2.8%', '≈ 12.8%']],
+      homeStack: [200000, 27600], legend: ['Capital', 'Net rent', 'Capital gain'], ratio: '4.6×', ratioTxt: 'more gain in Georgia',
+    },
+    c6: {
+      h: 'Calculate your own property',
+      lead: 'Enter the figures for one of your properties. The calculator estimates its net yield and what the same capital would earn in Georgia, using the assumptions on this page.',
+      f: { price: 'Current value of the property (£)', rent: 'Monthly rent (£)', costs: 'Costs, management, insurance per year (£)', tf: '', tmi: 'Your income tax band', growth: 'UK price change per year (%)' },
+      tmis: [['0.24', 'Basic (24% from 2027)'], ['0.44', 'Higher (44% from 2027)'], ['0.49', 'Additional (49% from 2027)']],
+      out: { netHome: 'Your net rent per year', yHome: 'Net yield', netGe: 'Same capital in Georgia', g5: 'Gain over 5 years', ratio: 'times more in Georgia' },
+      note: 'Indicative calculation: property income tax rates from April 2027 on rent after costs; CGT 24% (18% for basic rate) above the £3,000 allowance. Georgia: 8.6% gross yield, 10% costs, 5% tax, +5% a year. Excluding mortgage, purchase costs and currency effects.',
+      d: { price: 200000, rent: 967, costs: 1740, tf: 0, tmi: '0.44', growth: 0 },
+    },
+    c7: {
+      h: 'The 5 questions to ask about each of your properties',
+      items: [
+        ['What does it really earn, net of everything?', 'Rent minus costs, voids and income tax. Not the yield in the listing.'],
+        ['Does it cover the cost of its mortgage?', 'If the net yield is below your rate, leverage works against you.'],
+        ['What is it worth today, and what would selling cost?', 'Market value, taxable gain, stamp duty already paid.'],
+        ['What risks does it carry?', 'Works, energy efficiency rules (EPC), voids, new tenancy regulations.'],
+        ['What would the same capital earn elsewhere?', 'It’s the only way to know whether your money is working hard enough.'],
+      ],
+    },
+    c8: {
+      h: 'Investing in Georgia: what to get right',
+      lead: 'A high yield has to be earned. Here are the points we handle with every client, and how.',
+      items: [
+        ['Currency', 'Prices are set in dollars, and rents often are too. We factor this into every calculation and into the exit strategy.'],
+        ['Choosing the developer', 'With new builds, this is where it all happens. We select developers with a delivery track record and follow the construction.'],
+        ['Rental management', 'A property let from abroad needs local management: letting, inventory, rent collection, maintenance.'],
+        ['Resale', 'The right location and layout make a property easy to sell. It’s a criterion from day one.'],
+      ],
+    },
+    faq: {
+      h: 'FAQ',
+      items: [
+        ['Can a foreigner buy an apartment in Georgia?', 'Yes. A foreign individual can buy a home freehold, in their own name. Registration takes a few days.'],
+        ['Should I sell my UK properties?', 'Not necessarily. First you need to know what each one earns net. Some are worth keeping; others free up capital that would work harder elsewhere. That’s what the review is for.'],
+        ['Is rental income really taxed at 5%?', 'Yes, for an individual letting a home in Georgia, the tax on rent is 5%. Your tax position in your country of residence also needs checking.'],
+        ['Can I finance the purchase with a loan?', 'Yes, Georgian banks lend from around 6.3%. For new builds, many developers also offer interest-free payment plans until completion.'],
+        ['Are the figures on this page guaranteed?', 'No. It’s an illustrative calculation with cautious assumptions and public sources. Past performance is no guarantee of future results.'],
+      ],
     },
     bilan: {
       eyebrow: 'Free wealth review',
@@ -99,112 +224,221 @@ const T = {
       err: 'Please enter your first name, email and WhatsApp number with country code (e.g. +44 7700 900000).',
       sendErr: 'Sending failed. Please try again or message us on WhatsApp.',
       ok: 'Thank you! Hugo will contact you shortly to set up your review.',
-      wa: 'Or message us on WhatsApp', source: 'Comparison landing UK / Georgia (EN)',
+      wa: 'Or message us on WhatsApp', source: 'Guide UK / Georgia (EN)',
     },
     hyp: {
       t: 'Assumptions and sources',
       items: [
-        '£200,000 property paid in cash, long-term rental (assured shorthold tenancy), constant rents over 5 years. Illustrative, non-contractual calculation.',
-        'UK: average gross yield 5.8% (Zoopla, March 2026). Costs, management, insurance and voids: 15% of rent (assumption). Property income tax at 44% for higher-rate taxpayers from April 2027 (Budget of 28 October 2026, subject to the Finance Bill), on rent after costs. Council tax paid by the tenant.',
-        'UK: house prices −1.2% year on year in October 2026 (Lloyds), flat prices assumed. Residential CGT 18%/24%, £3,000 annual allowance (GOV.UK). Mortgage rates: 5-year fix average 6.00% (Moneyfacts, 5 November 2026).',
-        'Georgia: gross yield 8.6% in Tbilisi (Galt & Taggart). Costs, management and voids: 10% of rent (assumption). 5% tax on individuals’ rental income, no property tax assumed. Prices: +63.8% since 2020 (Geostat), cautious assumption of +5%/yr. Capital gain tax-free after 2 years of ownership. Loans: TBC Bank, from 6.3%.',
+        'Example: £200,000 property paid in cash, long-term rental (assured shorthold tenancy), constant rents over 5 years. Illustrative, non-contractual calculation.',
+        'UK: average gross yield 5.8% (Zoopla, March 2026); costs 15% of rent (assumption); property income tax at 44% for higher-rate taxpayers from April 2027 (Budget of 28 October 2026, subject to the Finance Bill), on rent after costs; council tax paid by the tenant. House prices −1.2% year on year in October 2026 (Lloyds). Bank Rate 4% (5 November 2026); 5-year fix average 6.00% (Moneyfacts). CGT 18%/24%, £3,000 allowance (GOV.UK).',
+        'Georgia: gross yield 8.6% in Tbilisi (Galt & Taggart); costs 10% (assumption); 5% tax on individuals’ rental income. Prices +63.8% since 2020 (Geostat), assumption of +5% a year. Capital gain tax-free after 2 years. TBC Bank loans from 6.3%. Growth 7.2% (IMF, October 2026); positive outlook (Fitch, 30 October 2026); reserves $8.2bn; debt 31.6% of GDP (2027 budget).',
         'Not included: purchase costs (stamp duty incl. 5% second-home surcharge), selling costs and currency effects. Past performance is no guarantee of future results.',
       ],
     },
-    sticky: 'My free review', legal: 'Legal notice', privacy: 'Privacy',
+    sticky: 'My free review', legal: 'Legal notice', privacy: 'Privacy', lessonLabel: 'Key takeaway', back: 'Back to contents',
   },
 }[lang];
+
 // Typographie française : espaces insécables dans les nombres et avant € % : ? ;
 if (lang === 'fr') {
-  const nb = (v: any): any => typeof v === 'string' && !v.startsWith('<svg') ? v.replace(/(\d) (\d{3})/g, '$1\u00a0$2').replace(/ ([€%:?;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0')
+  const nb = (v: any): any => typeof v === 'string' && !v.startsWith('<svg') ? v.replace(/(\d) (\d{3})/g, '$1 $2').replace(/ ([€%:?;»])/g, ' $1').replace(/« /g, '« ')
     : Array.isArray(v) ? v.map(nb) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, nb(x)])) : v;
   Object.assign(T, nb(T));
 }
 
 const year = new Date().getFullYear();
 const wa = `https://wa.me/${SITE.whatsapp}`;
-const H = 320 / 328400;
+const H = 300 / 328400;
+const segCol = ['#9aa6bd', '#c9a35c', '#e07a66', ''];
+const calc = { lang, cur: T.cur, d: T.c6.d, out: T.c6.out };
+const ch = (i: number) => String(i).padStart(2, '0');
 ---
-<section class="chero">
-  <div class="wrap chero__in">
-    <p class="eyebrow">{T.hero.eyebrow}</p>
-    <h1 set:html={T.hero.title} />
-    <p class="lead">{T.hero.lead}</p>
-    <div class="duo">
-      <div class="duo__c duo__c--h"><span class="flag" set:html={T.flag} /><span class="duo__l">{T.home}</span><strong>{T.hero.gainHome}</strong><small>{T.hero.gainLabel}</small></div>
-      <span class="vs">VS</span>
-      <div class="duo__c duo__c--g"><span class="flag" set:html={FLAG_GE} /><span class="duo__l">{T.ge}</span><strong>{T.hero.gainGe}</strong><small>{T.hero.gainLabel}</small></div>
-    </div>
-    <div class="chero__btns">
-      <a class="btn" href="#bilan">{T.hero.cta} <span class="arrow">↓</span></a>
-      <a class="btn btn--ghost" href="#duel">{T.hero.more}</a>
-    </div>
-  </div>
-</section>
-
-<section class="section cduel" id="duel">
-  <div class="wrap">
-    {T.rounds.map((r, i) => (
-      <article class="rnd reveal">
-        <header class="rnd__h">
-          <p class="eyebrow">{T.round} {i + 1} · {r.t}</p>
-          <span class="score"><span class="flag" set:html={T.flag} /><b>0</b>–<b>{i + 1}</b><span class="flag" set:html={FLAG_GE} /></span>
-        </header>
-        <h2>{r.q}</h2>
-        <div class="rnd__grid">
-          {[['h', T.home, T.flag, r.home], ['g', T.ge, FLAG_GE, r.ge]].map(([k, name, flag, v]: any, j) => (
-            <div class={`pan pan--${k}`}>
-              <div class="pan__hd"><span class="flag" set:html={flag} />{name}{k === 'g' && <span class="crown">{T.win}</span>}</div>
-              {r.donut ? (
-                <div class="pan__row">
-                  <span class="donut" style={`--p:${r.donut[j]};--c:${k === 'h' ? '#e07a66' : '#3fa56b'}`}><span>{v[0]}</span></span>
-                  <p class="pan__cap">{v[1]}</p>
-                </div>
-              ) : (
-                <>
-                  <p class="pan__num">{v[0]}</p>
-                  {r.bar && <div class="bar"><i style={`width:${r.bar[j]}%`} /></div>}
-                  {r.line && <svg class="line" viewBox="0 0 800 120" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke-width="8" stroke-linecap="round" points={k === 'g' ? '10,110 200,92 400,72 600,48 790,14' : '10,62 200,64 400,60 600,63 790,62'} /></svg>}
-                  <p class="pan__cap">{v[1]}</p>
-                </>
-              )}
-            </div>
-          ))}
-        </div>
-      </article>
-    ))}
-  </div>
-</section>
-
-<section class="section section--navy cverdict">
-  <div class="wrap cverdict__in">
-    <div class="reveal">
-      <p class="eyebrow">{T.verdict.t}</p>
-      <h2>{T.verdict.h}</h2>
-      <p class="ratio"><strong>{T.verdict.ratio}</strong><span>{T.verdict.ratioTxt}</span></p>
-      <ul class="gains"><li>{T.verdict.homeGain}</li><li>{T.verdict.geGain}</li></ul>
-    </div>
-    <div class="cols reveal" aria-hidden="true">
-      <div class="col"><b class="col__t col__t--h">{T.verdict.home}</b><div class="stack"><i style={`height:${T.verdict.homeStack[0] * H}px;background:#5f7bb0`} /><i style={`height:${T.verdict.homeStack[1] * H}px;background:#8fb4f0`} /></div><span class="col__l"><span class="flag" set:html={T.flag} />{T.home}</span></div>
-      <div class="col"><b class="col__t">{T.verdict.ge}</b><div class="stack"><i style={`height:${200000 * H}px;background:#7d6c48`} /><i style={`height:${73100 * H}px;background:#b8a070`} /><i style={`height:${55300 * H}px;background:#e2cc9c`} /></div><span class="col__l"><span class="flag" set:html={FLAG_GE} />{T.ge}</span></div>
-      <p class="legend"><span><i style="background:#7d6c48" />{T.verdict.legend[0]}</span><span><i style="background:#b8a070" />{T.verdict.legend[1]}</span><span><i style="background:#e2cc9c" />{T.verdict.legend[2]}</span></p>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="credit reveal">
-      <p class="credit__t">{T.credit.t}</p>
-      <div class="credit__g">
-        <p><span class="flag" set:html={T.flag} /><b>{T.credit.home[0]}</b> {T.credit.home[1]}</p>
-        <p><span class="flag" set:html={FLAG_GE} /><b>{T.credit.ge[0]}</b> {T.credit.ge[1]}</p>
+<section class="ghero">
+  <div class="wrap ghero__in">
+    <div>
+      <p class="eyebrow">{T.hero.eyebrow}</p>
+      <h1 set:html={T.hero.title} />
+      <p class="lead">{T.hero.lead}</p>
+      <p class="ghero__by">{T.hero.by} · {T.hero.time}</p>
+      <div class="duo">
+        <div class="duo__c duo__c--h"><span class="flag" set:html={T.flag} /><span class="duo__l">{T.home}</span><strong>{T.hero.gainHome}</strong></div>
+        <span class="vs">VS</span>
+        <div class="duo__c duo__c--g"><span class="flag" set:html={FLAG_GE} /><span class="duo__l">{T.ge}</span><strong>{T.hero.gainGe}</strong></div>
       </div>
-      {T.credit.link && <a class="link" href={T.credit.href}>{T.credit.link} <span class="arrow">→</span></a>}
+      <p class="duo__cap">{T.hero.gainLabel}</p>
+    </div>
+    <nav class="toc" id="sommaire" aria-label={T.hero.toc}>
+      <p class="toc__t">{T.hero.toc}</p>
+      <ol>{T.toc.map((x, i) => <li><a href={`#c${i + 1}`}><span>{ch(i + 1)}</span>{x}</a></li>)}</ol>
+      <a class="btn toc__btn" href="#bilan">{T.sticky} <span class="arrow">↓</span></a>
+    </nav>
+  </div>
+</section>
+
+<!-- 1. Contexte -->
+<section class="section chap" id="c1">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(1)}</p>
+    <h2>{T.c1.h}</h2>
+    <p class="lead">{T.c1.lead}</p>
+    <div class="ctx">
+      {[['h', T.home, T.flag, T.c1.home], ['g', T.ge, FLAG_GE, T.c1.ge]].map(([k, name, flag, items]: any) => (
+        <div class={`ctx__col ctx__col--${k}`}>
+          <p class="ctx__hd"><span class="flag" set:html={flag} />{name}</p>
+          <dl>{items.map(([v, l]: any) => <div><dt>{v}</dt><dd>{l}</dd></div>)}</dl>
+        </div>
+      ))}
+    </div>
+    <p class="lesson"><b>{T.lessonLabel}</b>{T.c1.lesson}</p>
+  </div>
+</section>
+
+<!-- 2. Brut → net -->
+<section class="section section--sand chap" id="c2">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(2)}</p>
+    <h2>{T.c2.h}</h2>
+    <p class="lead">{T.c2.lead}</p>
+    <div class="wf">
+      {[['h', T.home, T.flag, T.c2.home, (parseFloat(T.c2.home.rent.replace(/[^\d]/g, '')) / 17200) * 100], ['g', T.ge, FLAG_GE, T.c2.ge, 100]].map(([k, name, flag, d, w]: any) => (
+        <div class={`wf__c wf__c--${k}`}>
+          <div class="wf__hd"><span class="flag" set:html={flag} /><b>{name}</b><span class="wf__y">{d.y} <small>net</small></span></div>
+          <div class="wf__bar" style={`width:${w}%`}>
+            {d.seg.map((s: number, j: number) => s > 0 && <i style={`width:${s}%;background:${segCol[j] || (k === 'g' ? 'linear-gradient(90deg,#9c8550,#d9c49a)' : 'linear-gradient(90deg,#2f6fd6,#8fb4f0)')}`} />)}
+          </div>
+          <table>
+            {d.rows.map(([l, v]: any) => <tr><td>{l}</td><td>{v}</td></tr>)}
+            <tr class="tot"><td>{T.c2.legend[3]}</td><td>{d.net}</td></tr>
+          </table>
+        </div>
+      ))}
+      <p class="wf__lg">{T.c2.legend.map((l, j) => <span><i style={`background:${segCol[j] || 'linear-gradient(90deg,#9c8550,#d9c49a)'}`} />{l}</span>)}</p>
+    </div>
+    <p class="lesson"><b>{T.lessonLabel}</b>{T.c2.lesson}</p>
+  </div>
+</section>
+
+<!-- 3. Levier -->
+<section class="section chap" id="c3">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(3)}</p>
+    <h2>{T.c3.h}</h2>
+    <p class="lead">{T.c3.lead}</p>
+    <p class="grule">{T.c3.rule}</p>
+    <div class="lev">
+      {[['h', T.home, T.flag, T.c3.home], ['g', T.ge, FLAG_GE, T.c3.ge]].map(([k, name, flag, d]: any) => (
+        <div class={`lev__c lev__c--${k}`}>
+          <p class="lev__hd"><span class="flag" set:html={flag} />{name} · {d[0]}</p>
+          <ul><li><span>−</span>{d[1]}</li><li><span>+</span>{d[2]}</li></ul>
+          <p class={`lev__res ${k === 'h' ? 'neg' : 'pos'}`}>{d[3]}</p>
+          <p class="lev__txt">{d[4]}</p>
+        </div>
+      ))}
+    </div>
+    <p class="lesson"><b>{T.lessonLabel}</b>{T.c3.lesson}</p>
+    {T.c3.link && <a class="link" href={T.c3.href}>{T.c3.link} <span class="arrow">→</span></a>}
+  </div>
+</section>
+
+<!-- 4. Revente -->
+<section class="section section--sand chap" id="c4">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(4)}</p>
+    <h2>{T.c4.h}</h2>
+    <p class="lead">{T.c4.lead}</p>
+    <div class="pv">
+      {[['h', T.home, T.flag, T.c4.home], ['g', T.ge, FLAG_GE, T.c4.ge]].map(([k, name, flag, d]: any) => (
+        <div class={`pv__c pv__c--${k}`}>
+          <p class="pv__hd"><span class="flag" set:html={flag} />{name}</p>
+          <p class="pv__big">{d[0]}</p>
+          <p>{d[1]}</p>
+          <p class="pv__ex">{d[2]}</p>
+        </div>
+      ))}
+    </div>
+    <p class="lesson"><b>{T.lessonLabel}</b>{T.c4.lesson}</p>
+  </div>
+</section>
+
+<!-- 5. Calcul complet -->
+<section class="section section--navy chap" id="c5">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(5)}</p>
+    <h2>{T.c5.h}</h2>
+    <p class="lead">{T.c5.lead}</p>
+    <div class="full">
+      <table class="full__t">
+        <thead><tr><th></th><th><span class="flag" set:html={T.flag} /> {T.home}</th><th><span class="flag" set:html={FLAG_GE} /> {T.ge}</th></tr></thead>
+        <tbody>{T.c5.rows.map(([l, a, b], i) => <tr class={i >= 3 ? 'hi' : ''}><td>{l}</td><td>{a}</td><td>{b}</td></tr>)}</tbody>
+      </table>
+      <div class="cols" aria-hidden="true">
+        <div class="col"><div class="stack"><i style={`height:${T.c5.homeStack[0] * H}px;background:#5f7bb0`} /><i style={`height:${T.c5.homeStack[1] * H}px;background:#8fb4f0`} /></div><span class="col__l"><span class="flag" set:html={T.flag} />{T.home}</span></div>
+        <div class="col"><div class="stack"><i style={`height:${200000 * H}px;background:#7d6c48`} /><i style={`height:${73100 * H}px;background:#b8a070`} /><i style={`height:${55300 * H}px;background:#e2cc9c`} /></div><span class="col__l"><span class="flag" set:html={FLAG_GE} />{T.ge}</span></div>
+        <p class="legend"><span><i style="background:#7d6c48" />{T.c5.legend[0]}</span><span><i style="background:#b8a070" />{T.c5.legend[1]}</span><span><i style="background:#e2cc9c" />{T.c5.legend[2]}</span></p>
+      </div>
+    </div>
+    <p class="ratio"><strong>{T.c5.ratio}</strong><span>{T.c5.ratioTxt}</span></p>
+  </div>
+</section>
+
+<!-- 6. Calculateur -->
+<section class="section chap" id="c6">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(6)}</p>
+    <h2>{T.c6.h}</h2>
+    <p class="lead">{T.c6.lead}</p>
+    <div class="calc" data-calc>
+      <form class="calc__in" onsubmit="return false">
+        <label>{T.c6.f.price}<input type="number" name="price" min="0" step="1000" value={T.c6.d.price} /></label>
+        <label>{T.c6.f.rent}<input type="number" name="rent" min="0" step="10" value={T.c6.d.rent} /></label>
+        <label>{T.c6.f.costs}<input type="number" name="costs" min="0" step="50" value={T.c6.d.costs} /></label>
+        {T.c6.f.tf && <label>{T.c6.f.tf}<input type="number" name="tf" min="0" step="50" value={T.c6.d.tf} /></label>}
+        <label>{T.c6.f.tmi}<select name="tmi">{T.c6.tmis.map(([v, l]) => <option value={v} selected={v === T.c6.d.tmi}>{l}</option>)}</select></label>
+        <label>{T.c6.f.growth}<input type="number" name="growth" step="0.5" value={T.c6.d.growth} /></label>
+      </form>
+      <div class="calc__out">
+        <div class="calc__o calc__o--h"><span class="flag" set:html={T.flag} /><p>{T.c6.out.netHome}</p><strong data-o="netH">–</strong><p><span data-o="yH">–</span> · {T.c6.out.g5} <b data-o="g5H">–</b></p></div>
+        <div class="calc__o calc__o--g"><span class="flag" set:html={FLAG_GE} /><p>{T.c6.out.netGe}</p><strong data-o="netG">–</strong><p>{lang === 'fr' ? '7,3\u00a0%' : '7.3%'} · {T.c6.out.g5} <b data-o="g5G">–</b></p></div>
+        <p class="calc__r"><strong data-o="ratio">–</strong> {T.c6.out.ratio}</p>
+      </div>
+      <p class="calc__note">{T.c6.note}</p>
     </div>
   </div>
 </section>
 
-<section class="section section--sand cbilan" id="bilan">
+<!-- 7. Checklist -->
+<section class="section section--sand chap" id="c7">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(7)}</p>
+    <h2>{T.c7.h}</h2>
+    <ol class="qs">{T.c7.items.map(([q, a]) => <li><b>{q}</b><span>{a}</span></li>)}</ol>
+    <a class="btn" href="#bilan">{T.sticky} <span class="arrow">↓</span></a>
+  </div>
+</section>
+
+<!-- 8. Géorgie -->
+<section class="section chap" id="c8">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(8)}</p>
+    <h2>{T.c8.h}</h2>
+    <p class="lead">{T.c8.lead}</p>
+    <div class="ge4">{T.c8.items.map(([t, x]) => <article><h3>{t}</h3><p>{x}</p></article>)}</div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="section section--sand chap" id="c9">
+  <div class="wrap gwrap">
+    <p class="chap__n">{ch(9)}</p>
+    <h2>{T.faq.h}</h2>
+    <div class="faq">{T.faq.items.map(([q, a]) => <details><summary>{q}</summary><p>{a}</p></details>)}</div>
+  </div>
+</section>
+
+<!-- Bilan -->
+<section class="section section--navy cbilan" id="bilan">
   <div class="wrap cbilan__in">
-    <div class="reveal">
+    <div>
       <p class="eyebrow">{T.bilan.eyebrow}</p>
       <h2>{T.bilan.h}</h2>
       <div class="hugo">
@@ -214,7 +448,7 @@ const H = 320 / 328400;
       <p class="lead">{T.bilan.text}</p>
       <ul class="ticks">{T.bilan.points.map((p) => <li>{p}</li>)}</ul>
     </div>
-    <div class="fcard reveal">
+    <div class="fcard">
       <form name="bilan" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate data-bilan>
         <input type="hidden" name="form-name" value="bilan" />
         <input type="hidden" name="langue" value={lang.toUpperCase()} />
@@ -240,7 +474,7 @@ const H = 320 / 328400;
 </section>
 
 <section class="section chyp">
-  <div class="wrap">
+  <div class="wrap gwrap">
     <details>
       <summary>{T.hyp.t}</summary>
       <ul>{T.hyp.items.map((x) => <li>{x}</li>)}</ul>
@@ -257,33 +491,70 @@ const H = 320 / 328400;
   </div>
 </footer>
 
-<script define:vars={{ msg: { err: T.bilan.err, sendErr: T.bilan.sendErr } }}>
+<script define:vars={{ msg: { err: T.bilan.err, sendErr: T.bilan.sendErr }, calc }}>
   (() => {
+    // Calculateur
+    const box = document.querySelector('[data-calc]');
+    if (box) {
+      const loc = calc.lang === 'fr' ? 'fr-CH' : 'en-GB';
+      const money = (v) => (calc.lang === 'fr' ? '' : calc.cur) + Math.round(v).toLocaleString(loc).replace(/[  ,]/g, calc.lang === 'fr' ? ' ' : ',') + (calc.lang === 'fr' ? ' ' + calc.cur : '');
+      const pct = (v) => (v * 100).toFixed(1).replace('.', calc.lang === 'fr' ? ',' : '.') + (calc.lang === 'fr' ? ' %' : '%');
+      const signed = (v) => (v >= 0 ? '+' : '−') + money(Math.abs(v));
+      const o = (k) => box.querySelector(`[data-o="${k}"]`);
+      const num = (n) => { const el = box.querySelector(`[name="${n}"]`); return el ? parseFloat(el.value) || 0 : 0; };
+      const run = () => {
+        const P = Math.max(num('price'), 0), rent = num('rent') * 12, costs = num('costs'), tf = num('tf'), t = parseFloat(box.querySelector('[name="tmi"]').value) || 0, g = num('growth') / 100;
+        let tax, cgt;
+        if (calc.lang === 'fr') {
+          tax = 0.7 * rent * (t + 0.172);
+          const pv = P * (Math.pow(1 + g, 5) - 1); cgt = pv > 0 ? pv * 0.362 : 0;
+          var gainPrice = pv - cgt;
+        } else {
+          tax = Math.max(rent - costs, 0) * t;
+          const pv = P * (Math.pow(1 + g, 5) - 1); cgt = pv > 3000 ? (pv - 3000) * (t >= 0.44 ? 0.24 : 0.18) : 0;
+          var gainPrice = pv - cgt;
+        }
+        const netH = rent - costs - tf - tax;
+        const netG = P * 0.086 * 0.85;
+        const g5H = 5 * netH + gainPrice;
+        const g5G = 5 * netG + P * (Math.pow(1.05, 5) - 1);
+        o('netH').textContent = money(netH) + (calc.lang === 'fr' ? '/an' : '/yr');
+        o('yH').textContent = P ? pct(netH / P) : '–';
+        o('g5H').textContent = signed(g5H);
+        o('netG').textContent = money(netG) + (calc.lang === 'fr' ? '/an' : '/yr');
+        o('g5G').textContent = signed(g5G);
+        o('ratio').textContent = g5H > 0 ? (g5G / g5H).toFixed(1).replace('.', calc.lang === 'fr' ? ',' : '.') + '×' : '∞';
+      };
+      box.addEventListener('input', run); run();
+    }
+    // Formulaire bilan
     const form = document.querySelector('[data-bilan]');
-    if (!form) return;
-    const err = form.querySelector('[data-err]');
-    const intl = (v) => { let n = v.replace(/[\s().\-\/]/g, ''); if (n.startsWith('00')) n = '+' + n.slice(2); return /^\+[1-9]\d{6,14}$/.test(n) ? n : null; };
-    const tel = form.elements.namedItem('whatsapp');
-    tel.addEventListener('focus', () => { if (!tel.value) tel.value = '+'; });
-    tel.addEventListener('blur', () => { if (tel.value.trim() === '+') tel.value = ''; });
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const fd = new FormData(form);
-      if (fd.get('bot-field')) return;
-      const n = intl(String(fd.get('whatsapp') || ''));
-      const email = String(fd.get('email') || '').trim();
-      if (!String(fd.get('prenom') || '').trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !n) { err.textContent = msg.err; err.hidden = false; return; }
-      err.hidden = true;
-      fd.set('whatsapp', n); fd.set('page', location.pathname + location.search);
-      const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
-      try {
-        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() });
-        if (!r.ok) throw new Error(String(r.status));
-        form.hidden = true; document.querySelector('[data-ok]').hidden = false;
-      } catch { err.textContent = msg.sendErr; err.hidden = false; btn.disabled = false; }
-    });
+    if (form) {
+      const err = form.querySelector('[data-err]');
+      const intl = (v) => { let n = v.replace(/[\s().\-\/]/g, ''); if (n.startsWith('00')) n = '+' + n.slice(2); return /^\+[1-9]\d{6,14}$/.test(n) ? n : null; };
+      const tel = form.elements.namedItem('whatsapp');
+      tel.addEventListener('focus', () => { if (!tel.value) tel.value = '+'; });
+      tel.addEventListener('blur', () => { if (tel.value.trim() === '+') tel.value = ''; });
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        if (fd.get('bot-field')) return;
+        const n = intl(String(fd.get('whatsapp') || ''));
+        const email = String(fd.get('email') || '').trim();
+        if (!String(fd.get('prenom') || '').trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !n) { err.textContent = msg.err; err.hidden = false; return; }
+        err.hidden = true;
+        fd.set('whatsapp', n); fd.set('page', location.pathname + location.search);
+        const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+        try {
+          const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() });
+          if (!r.ok) throw new Error(String(r.status));
+          form.hidden = true; document.querySelector('[data-ok]').hidden = false;
+        } catch { err.textContent = msg.sendErr; err.hidden = false; btn.disabled = false; }
+      });
+    }
+    // Barre fixe mobile
     const bar = document.querySelector('[data-sticky]');
-    const watch = [document.querySelector('.chero'), document.getElementById('bilan')].filter(Boolean);
+    const watch = [document.querySelector('.ghero'), document.getElementById('bilan')].filter(Boolean);
     if (bar && 'IntersectionObserver' in window) {
       const seen = new Set(); bar.classList.add('is-hidden');
       const io = new IntersectionObserver((es) => { es.forEach((x) => (x.isIntersecting ? seen.add(x.target) : seen.delete(x.target))); bar.classList.toggle('is-hidden', seen.size > 0); }, { threshold: 0.05 });
@@ -293,75 +564,153 @@ const H = 320 / 328400;
 </script>
 
 <style>
-  .flag { display: inline-block; width: 36px; height: 24px; border-radius: 3px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.25); flex: none; vertical-align: middle; }
+  .flag { display: inline-block; width: 30px; height: 20px; border-radius: 3px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.2); flex: none; vertical-align: middle; }
   .flag :global(svg) { display: block; width: 100%; height: 100%; }
-  .chero { background: radial-gradient(900px 600px at 90% 0%, #1c3a7a 0%, transparent 60%), var(--navy); color: var(--cream); }
-  .chero__in { padding-top: clamp(32px, 5vw, 72px); padding-bottom: clamp(48px, 7vw, 96px); max-width: 980px; }
-  .chero h1 { font-weight: 400; font-size: clamp(1.9rem, 4.2vw, 3.3rem); margin-bottom: 18px; }
-  .chero h1 :global(em) { font-style: normal; color: var(--gold-light); }
-  .chero .lead { color: var(--muted-light); max-width: 760px; }
-  .duo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 36px 0 32px; }
-  .duo__c { border-radius: 14px; padding: clamp(18px, 3vw, 30px); display: flex; flex-direction: column; gap: 6px; }
+  .gwrap { max-width: 980px; }
+  /* hero */
+  .ghero { background: radial-gradient(900px 600px at 90% 0%, #1c3a7a 0%, transparent 60%), var(--navy); color: var(--cream); }
+  .ghero__in { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(28px, 5vw, 64px); padding-top: clamp(32px, 5vw, 72px); padding-bottom: clamp(48px, 6vw, 88px); align-items: start; }
+  .ghero h1 { font-weight: 400; font-size: clamp(1.9rem, 4.2vw, 3.3rem); margin-bottom: 18px; }
+  .ghero h1 :global(em) { font-style: normal; color: var(--gold-light); }
+  .ghero .lead { color: var(--muted-light); }
+  .ghero__by { font-size: .82rem; color: var(--gold-light); margin: 16px 0 0; }
+  .duo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0 8px; }
+  .duo__c { border-radius: 14px; padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
   .duo__c--h { background: linear-gradient(150deg, rgba(47,111,214,.32), rgba(47,111,214,.08)); border: 1px solid rgba(110,150,230,.55); }
   .duo__c--g { background: linear-gradient(150deg, rgba(255,255,255,.14), rgba(232,52,59,.10)); border: 2px solid var(--gold); }
-  .duo__c .flag { width: 54px; height: 36px; }
-  .duo__l { font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; margin-top: 8px; }
-  .duo__c strong { font-family: var(--f-title); font-size: clamp(1.35rem, 5vw, 3.2rem); line-height: 1.05; white-space: nowrap; }
+  .duo__c .flag { width: 42px; height: 28px; }
+  .duo__l { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; margin-top: 6px; }
+  .duo__c strong { font-family: var(--f-title); font-size: clamp(1.3rem, 4.4vw, 2.5rem); line-height: 1.05; white-space: nowrap; }
   .duo__c--h strong { color: #cfe0ff; } .duo__c--g strong { color: var(--gold-light); }
-  .duo__c small { color: var(--muted-light); }
-  .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: var(--gold); color: var(--navy); display: grid; place-items: center; font-weight: 700; border: 4px solid var(--navy); }
-  .chero__btns { display: flex; flex-wrap: wrap; gap: 12px; }
-  .cduel .wrap { display: grid; gap: clamp(40px, 6vw, 72px); max-width: 1000px; }
-  .rnd__h { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-  .rnd__h .eyebrow { margin: 0; }
-  .score { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: .9rem; }
-  .score .flag { width: 24px; height: 16px; } .score b { font-family: var(--f-title); color: var(--gold-deep); }
-  .rnd h2 { font-size: clamp(1.4rem, 2.8vw, 2.1rem); margin: 10px 0 20px; }
-  .rnd__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .pan { border-radius: 14px; padding: clamp(18px, 2.6vw, 28px); background: #fff; border: 1px solid var(--line); }
-  .pan--h { background: linear-gradient(150deg, #eef3fc, #fff); border-color: #c9d7f2; }
-  .pan--g { border: 2px solid var(--gold); box-shadow: 0 18px 40px -22px rgba(17,33,80,.35); }
-  .pan__hd { display: flex; align-items: center; gap: 10px; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
-  .crown { margin-left: auto; background: var(--gold); color: #fff; font-size: .68rem; padding: 4px 10px; border-radius: 999px; letter-spacing: .1em; }
-  .pan__num { font-family: var(--f-title); font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 12px 0 4px; line-height: 1.1; }
-  .pan--h .pan__num { color: #2a4f9a; } .pan--g .pan__num { color: var(--gold-deep); }
-  .pan__cap { color: var(--muted); font-size: .92rem; margin: 8px 0 0; }
-  .bar { height: 14px; border-radius: 999px; background: rgba(17,33,80,.08); overflow: hidden; margin-top: 10px; }
-  .bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #2f6fd6, #8fb4f0); }
-  .pan--g .bar i { background: linear-gradient(90deg, #9c8550, #d9c49a); }
-  .line { width: 100%; height: 44px; margin-top: 6px; }
-  .pan--h .line polyline { stroke: #7fa3e6; } .pan--g .line polyline { stroke: var(--gold); }
-  .pan__row { display: flex; align-items: center; gap: 18px; margin-top: 14px; }
-  .donut { --p: 50; --c: #e07a66; flex: none; width: 110px; height: 110px; border-radius: 50%; background: conic-gradient(var(--c) 0 calc(var(--p) * 1%), rgba(17,33,80,.1) 0 100%); display: grid; place-items: center; }
-  .donut span { width: 78px; height: 78px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-family: var(--f-title); font-size: 1.35rem; font-weight: 700; }
-  .cverdict__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); align-items: end; }
-  .ratio { display: flex; align-items: baseline; gap: 14px; margin: 18px 0 10px; }
-  .ratio strong { font-family: var(--f-title); font-size: clamp(3.5rem, 9vw, 6rem); color: var(--gold-light); line-height: 1; }
-  .ratio span { color: var(--muted-light); }
-  .gains { list-style: none; padding: 0; margin: 0; color: var(--muted-light); display: grid; gap: 6px; }
-  .cols { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: 28px; }
-  .col { width: min(200px, 40%); display: flex; flex-direction: column; align-items: center; }
-  .col__t { font-family: var(--f-title); font-size: clamp(1.2rem, 2.6vw, 1.8rem); color: var(--gold-light); margin-bottom: 8px; }
-  .col__t--h { color: #cfe0ff; }
+  .duo__cap { font-size: .8rem; color: var(--muted-light); margin: 0; }
+  .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: var(--gold); color: var(--navy); display: grid; place-items: center; font-weight: 700; font-size: .85rem; border: 4px solid var(--navy); }
+  .toc { background: rgba(255,255,255,.05); border: 1px solid rgba(173,142,104,.4); border-radius: 14px; padding: 22px; }
+  .toc__t { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-light); margin: 0 0 10px; }
+  .toc ol { list-style: none; padding: 0; margin: 0 0 18px; }
+  .toc a { display: flex; gap: 12px; padding: 8px 0; color: var(--cream); text-decoration: none; font-size: .9rem; border-bottom: 1px solid var(--line-light); }
+  .toc a:hover { color: var(--gold-light); }
+  .toc a span { color: var(--gold); font-family: var(--f-title); }
+  .toc__btn { width: 100%; justify-content: center; }
+  /* chapitres */
+  .chap { scroll-margin-top: 72px; }
+  .chap.section { padding: clamp(56px, 8vw, 104px) 0; }
+  .chap__n { font-family: var(--f-title); font-size: 3.2rem; line-height: 1; color: var(--gold); opacity: .55; margin: 0 0 6px; }
+  .chap h2 { font-size: clamp(1.6rem, 3.4vw, 2.5rem); margin-bottom: 14px; }
+  .chap .lead { max-width: 820px; }
+  .section--navy .lead { color: var(--muted-light); }
+  .lesson { margin: 32px 0 0; padding: 18px 22px; border-left: 3px solid var(--gold); background: rgba(173,142,104,.1); border-radius: 0 10px 10px 0; }
+  .lesson b { display: block; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px; }
+  .chap .link { display: inline-block; margin-top: 20px; }
+  /* 1 contexte */
+  .ctx { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
+  .ctx__col { border-radius: 14px; padding: 22px; border: 1px solid var(--line); }
+  .ctx__col--h { background: linear-gradient(150deg, #eef3fc, #fff); border-color: #c9d7f2; }
+  .ctx__col--g { border: 2px solid var(--gold); }
+  .ctx__hd { display: flex; align-items: center; gap: 10px; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; margin: 0 0 8px; }
+  .ctx dl { margin: 0; }
+  .ctx dl div { padding: 12px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: baseline; }
+  .ctx dt { font-family: var(--f-title); font-size: 1.5rem; color: var(--navy); white-space: nowrap; }
+  .ctx__col--h dt { color: #2a4f9a; } .ctx__col--g dt { color: var(--gold-deep); }
+  .ctx dd { margin: 0; font-size: .88rem; color: var(--muted); }
+  /* 2 waterfall */
+  .wf { display: grid; gap: 22px; margin-top: 28px; }
+  .wf__c { background: #fff; border-radius: 14px; padding: 22px; border: 1px solid var(--line); }
+  .wf__c--g { border: 2px solid var(--gold); }
+  .wf__hd { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .wf__hd b { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; }
+  .wf__y { margin-left: auto; font-family: var(--f-title); font-size: 1.6rem; color: var(--gold-deep); }
+  .wf__c--h .wf__y { color: #2a4f9a; }
+  .wf__y small { font-size: .8rem; color: var(--muted); font-family: var(--f-text); }
+  .wf__bar { display: flex; height: 34px; border-radius: 8px; overflow: hidden; margin-bottom: 14px; }
+  .wf__bar i { display: block; height: 100%; }
+  .wf table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .wf td { padding: 7px 0; border-top: 1px solid var(--line); color: var(--muted); }
+  .wf td:last-child { text-align: right; white-space: nowrap; color: var(--navy); font-weight: 600; padding-left: 12px; }
+  .wf tr.tot td { color: var(--navy); font-weight: 700; border-top: 2px solid var(--gold); }
+  .wf__lg { display: flex; flex-wrap: wrap; gap: 16px; font-size: .8rem; color: var(--muted); margin: 0; }
+  .wf__lg i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  /* 3 levier */
+  .grule { display: inline-block; margin: 20px 0 0; padding: 10px 18px; border-radius: 999px; background: var(--navy); color: var(--gold-light); font-weight: 600; font-size: .95rem; }
+  .lev { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+  .lev__c { border-radius: 14px; padding: 22px; border: 1px solid var(--line); }
+  .lev__c--h { background: linear-gradient(150deg, #eef3fc, #fff); border-color: #c9d7f2; }
+  .lev__c--g { border: 2px solid var(--gold); }
+  .lev__hd { display: flex; align-items: center; gap: 10px; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; margin: 0 0 12px; }
+  .lev ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: .92rem; color: var(--muted); }
+  .lev li span { display: inline-block; width: 18px; font-weight: 700; color: var(--navy); }
+  .lev__res { font-family: var(--f-title); font-size: 2rem; margin: 14px 0 6px; }
+  .lev__res.neg { color: #c0492f; } .lev__res.pos { color: #1f8a4c; }
+  .lev__txt { font-size: .9rem; color: var(--muted); margin: 0; }
+  /* 4 plus-value */
+  .pv { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
+  .pv__c { background: #fff; border-radius: 14px; padding: 22px; border: 1px solid var(--line); }
+  .pv__c--g { border: 2px solid var(--gold); }
+  .pv__hd { display: flex; align-items: center; gap: 10px; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; margin: 0; }
+  .pv__c .pv__big { font-family: var(--f-title); font-size: 3.4rem; line-height: 1; margin: 14px 0 8px; color: #c0492f; }
+  .pv__c--g .pv__big { color: #1f8a4c; }
+  .pv__c p { font-size: .92rem; color: var(--muted); }
+  .pv__ex { color: var(--navy) !important; font-weight: 600; margin-bottom: 0; }
+  /* 5 complet */
+  .full { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 56px); align-items: end; margin-top: 28px; }
+  .full__t { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .full__t th { text-align: right; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); padding: 0 0 10px; white-space: nowrap; }
+  .full__t th .flag { width: 24px; height: 16px; }
+  .full__t td { padding: 11px 0; border-top: 1px solid var(--line-light); color: var(--muted-light); }
+  .full__t td:not(:first-child) { text-align: right; color: var(--cream); white-space: nowrap; padding-left: 14px; }
+  .full__t tr.hi td { color: var(--cream); font-weight: 600; } .full__t tr.hi td:last-child { color: var(--gold-light); }
+  .cols { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: 24px; }
+  .col { width: min(150px, 40%); display: flex; flex-direction: column; align-items: center; }
   .stack { width: 100%; display: flex; flex-direction: column-reverse; border-radius: 10px 10px 0 0; overflow: hidden; }
   .stack i { display: block; }
-  .col__l { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
-  .legend { flex-basis: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; font-size: .8rem; color: var(--muted-light); margin: 8px 0 0; }
-  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
-  .credit { margin-top: clamp(40px, 6vw, 64px); border: 1px dashed rgba(173,142,104,.6); border-radius: 14px; padding: clamp(20px, 3vw, 32px); }
-  .credit__t { font-family: var(--f-title); font-size: 1.3rem; margin: 0 0 14px; color: var(--gold-light); }
-  .credit__g { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .credit__g p { margin: 0; color: var(--muted-light); }
-  .credit__g .flag { margin-right: 8px; } .credit__g b { color: var(--cream); }
-  .credit .link { display: inline-block; margin-top: 18px; color: var(--gold-light); }
+  .col__l { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+  .legend { flex-basis: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; font-size: .76rem; color: var(--muted-light); margin: 6px 0 0; }
+  .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .ratio { display: flex; align-items: baseline; gap: 14px; margin: 28px 0 0; }
+  .ratio strong { font-family: var(--f-title); font-size: clamp(3rem, 8vw, 5rem); color: var(--gold-light); line-height: 1; }
+  .ratio span { color: var(--muted-light); }
+  /* 6 calculateur */
+  .calc { margin-top: 28px; border-radius: 16px; border: 1px solid var(--line); background: #fff; box-shadow: 0 24px 60px -30px rgba(17,33,80,.35); overflow: hidden; }
+  .calc__in { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px; }
+  .calc__in label { display: grid; gap: 6px; font-size: .8rem; color: var(--muted); }
+  .calc__in input, .calc__in select { width: 100%; min-width: 0; box-sizing: border-box; font: inherit; font-size: 1rem; color: var(--navy); padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--cream); }
+  .calc__in input:focus, .calc__in select:focus { outline: none; border-color: var(--gold); }
+  .calc__out { display: grid; grid-template-columns: 1fr 1fr auto; gap: 16px; align-items: center; padding: 22px 24px; background: var(--navy); color: var(--cream); }
+  .calc__o { border-radius: 12px; padding: 16px 18px; }
+  .calc__o--h { background: rgba(47,111,214,.2); border: 1px solid rgba(110,150,230,.5); }
+  .calc__o--g { background: rgba(255,255,255,.06); border: 2px solid var(--gold); }
+  .calc__o p { margin: 6px 0 0; font-size: .82rem; color: var(--muted-light); }
+  .calc__o strong { display: block; font-family: var(--f-title); font-size: 1.7rem; margin-top: 4px; }
+  .calc__o--g strong { color: var(--gold-light); }
+  .calc__o b { color: var(--cream); }
+  .calc__r { margin: 0; text-align: center; font-size: .85rem; color: var(--muted-light); max-width: 140px; }
+  .calc__r strong { display: block; font-family: var(--f-title); font-size: 2.6rem; color: var(--gold-light); line-height: 1; }
+  .calc__note { margin: 0; padding: 14px 24px; font-size: .76rem; color: var(--muted); }
+  /* 7 checklist */
+  .qs { list-style: none; counter-reset: q; padding: 0; margin: 26px 0 30px; display: grid; gap: 12px; }
+  .qs li { counter-increment: q; display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; background: #fff; border-radius: 12px; padding: 16px 18px; border: 1px solid var(--line); }
+  .qs li::before { content: counter(q); grid-row: span 2; width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; font-family: var(--f-title); font-weight: 700; }
+  .qs b { font-size: 1rem; } .qs span { color: var(--muted); font-size: .9rem; }
+  /* 8 Géorgie */
+  .ge4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 26px; }
+  .ge4 article { border-top: 2px solid var(--gold); padding-top: 16px; }
+  .ge4 h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .ge4 p { color: var(--muted); margin: 0; font-size: .93rem; }
+  /* 9 FAQ */
+  .faq { margin-top: 22px; display: grid; gap: 10px; }
+  .faq details { background: #fff; border-radius: 12px; border: 1px solid var(--line); padding: 16px 20px; }
+  .faq summary { cursor: pointer; font-weight: 600; }
+  .faq details p { margin: 10px 0 0; color: var(--muted); font-size: .93rem; }
+  /* bilan */
+  .cbilan { scroll-margin-top: 72px; }
   .cbilan__in { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .cbilan .lead { color: var(--muted-light); }
   .hugo { display: flex; align-items: center; gap: 16px; margin: 20px 0; }
   .hugo img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
-  .hugo p { margin: 0; display: flex; flex-direction: column; } .hugo strong { font-family: var(--f-title); font-size: 1.3rem; } .hugo span { color: var(--muted); font-size: .9rem; }
+  .hugo p { margin: 0; display: flex; flex-direction: column; } .hugo strong { font-family: var(--f-title); font-size: 1.3rem; } .hugo span { color: var(--muted-light); font-size: .9rem; }
   .ticks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
   .ticks li { padding-left: 30px; position: relative; }
   .ticks li::before { content: '✓'; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); color: #fff; font-size: .75rem; display: grid; place-items: center; }
-  .fcard { background: #fff; border-radius: 14px; padding: clamp(20px, 3vw, 34px); box-shadow: 0 24px 60px -24px rgba(17,33,80,.35); border-top: 3px solid var(--gold); }
+  .fcard { background: #fff; color: var(--navy); border-radius: 14px; padding: clamp(20px, 3vw, 34px); box-shadow: 0 24px 60px -24px rgba(0,0,0,.45); border-top: 3px solid var(--gold); }
   .fcard form { display: grid; gap: 14px; }
   .fcard label { display: grid; gap: 6px; font-size: .8rem; color: var(--muted); }
   .fcard input, .fcard select, .fcard textarea { width: 100%; min-width: 0; box-sizing: border-box; font: inherit; font-size: 1rem; color: var(--navy); padding: 11px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--cream); }
@@ -373,17 +722,22 @@ const H = 320 / 328400;
   .fok { font-family: var(--f-title); font-size: 1.2rem; margin: 0; }
   .fwa { display: inline-block; margin-top: 16px; font-size: .9rem; color: #1e9e54; }
   .chyp { padding: clamp(32px, 5vw, 56px) 0; }
-  .chyp details { max-width: 1000px; margin: 0 auto; border-top: 1px solid var(--line); padding-top: 16px; }
+  .chyp details { border-top: 1px solid var(--line); padding-top: 16px; }
   .chyp summary { cursor: pointer; font-family: var(--f-title); font-size: 1.05rem; }
-  .chyp ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); font-size: .88rem; display: grid; gap: 8px; }
+  .chyp ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); font-size: .86rem; display: grid; gap: 8px; }
   .cfoot { background: var(--navy-deep); color: var(--muted-light); font-size: .8rem; padding: 22px 0 90px; }
   .cfoot__in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; } .cfoot a { color: var(--muted-light); }
   .csticky { display: none; }
-  #bilan, #duel { scroll-margin-top: 72px; }
-  @media (max-width: 760px) {
-    .duo { gap: 10px; } .vs { width: 44px; height: 44px; font-size: .8rem; }
-    .rnd__grid, .credit__g, .cverdict__in, .cbilan__in, .f2 { grid-template-columns: minmax(0, 1fr); }
-    .rnd__grid { gap: 12px; }
+  @media (max-width: 860px) {
+    .ghero__in, .full, .cbilan__in { grid-template-columns: minmax(0, 1fr); }
+    .calc__in { grid-template-columns: 1fr 1fr; }
+    .calc__out { grid-template-columns: 1fr 1fr; } .calc__r { grid-column: 1 / -1; max-width: none; }
+  }
+  @media (max-width: 640px) {
+    .ctx, .lev, .pv, .ge4, .f2, .calc__in, .calc__out { grid-template-columns: minmax(0, 1fr); }
+    .ctx dl div { grid-template-columns: 96px 1fr; }
+    .duo { gap: 10px; }
+    .chap__n { font-size: 2.4rem; }
     .csticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(11,22,56,.96); border-top: 1px solid rgba(173,142,104,.3); transition: transform .35s var(--ease); }
     .csticky .btn { flex: 1; justify-content: center; }
     .csticky__wa { display: grid; place-items: center; padding: 0 16px; border-radius: 999px; background: #25d366; color: #fff; text-decoration: none; font-size: .85rem; }
