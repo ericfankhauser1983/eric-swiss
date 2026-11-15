@@ -6,7 +6,7 @@ translationKey: fitch-georgie-perspective-positive
 category: immobilier
 tags: ["Géorgie", "Fitch", "Notation", "France", "Investir en Géorgie"]
 source: "https://www.francefinance.ae/articles-blog/georgie-fitch-perspective-positive-note-bb"
-draft: true
+draft: false
 ---
 
 Le 30 octobre, l'agence Fitch a rendu deux décisions le même jour. Elle a confirmé la note de la Géorgie à BB et relevé sa perspective de « stable » à « positive ». Elle a confirmé celle de la France à A+, mais abaissé sa perspective de « stable » à « négative ». Deux pays, deux trajectoires opposées. Pour qui veut **investir en Géorgie**, cette coïncidence dit quelque chose d'important sur le sens du mouvement.

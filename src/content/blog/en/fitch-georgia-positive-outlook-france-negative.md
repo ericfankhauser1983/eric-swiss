@@ -6,7 +6,7 @@ translationKey: fitch-georgie-perspective-positive
 category: immobilier
 tags: ["Georgia", "Fitch", "Credit rating", "France", "Invest in Georgia"]
 source: "https://www.francefinance.ae/articles-blog/georgie-fitch-perspective-positive-note-bb"
-draft: true
+draft: false
 ---
 
 On 30 October, Fitch issued two decisions on the same day. It affirmed Georgia's rating at BB and raised its outlook from "stable" to "positive". It affirmed France at A+, but cut its outlook from "stable" to "negative". Two countries, two opposite trajectories. For anyone looking to **invest in Georgia**, this coincidence says something important about the direction of travel.

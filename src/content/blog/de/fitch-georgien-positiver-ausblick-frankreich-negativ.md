@@ -6,7 +6,7 @@ translationKey: fitch-georgie-perspective-positive
 category: immobilier
 tags: ["Georgien", "Fitch", "Rating", "Frankreich", "In Georgien investieren"]
 source: "https://www.francefinance.ae/articles-blog/georgie-fitch-perspective-positive-note-bb"
-draft: true
+draft: false
 ---
 
 Am 30. Oktober hat die Ratingagentur Fitch am selben Tag zwei Entscheidungen veröffentlicht. Sie bestätigte Georgiens Rating bei BB und hob den Ausblick von «stabil» auf «positiv» an. Frankreichs Rating bestätigte sie bei A+, senkte aber den Ausblick von «stabil» auf «negativ». Zwei Länder, zwei entgegengesetzte Richtungen. Wer **in Georgien investieren** will, sollte diesen Zufall genau lesen: Er sagt viel darüber, wohin die Reise geht.
