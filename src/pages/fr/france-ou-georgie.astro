@@ -1,0 +1,9 @@
+---
+/** Landing des carrousels et stories « France contre Géorgie » — eric.swiss/fr/france-ou-georgie/ (contenu : src/views/Comparatif.astro) */
+import Base from '../../layouts/Base.astro';
+import Comparatif from '../../views/Comparatif.astro';
+const alternates = { fr: '/fr/france-ou-georgie/', en: '/en/uk-or-georgia/' };
+---
+<Base lang="fr" title="France ou Géorgie : 200 000 € investis pendant 5 ans — Eric Fankhauser" description="Location longue durée, tous impôts déduits : 200 000 € rapportent +19 300 € en France et +128 400 € en Géorgie en 5 ans. Le calcul complet et un bilan patrimonial gratuit." alternates={alternates} landing noindex>
+  <Comparatif lang="fr" />
+</Base>

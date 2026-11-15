@@ -1,0 +1,392 @@
+---
+/**
+ * Landing « comparatif » des carrousels et stories : 200 000 investis 5 ans en location longue durée.
+ * FR : France contre Géorgie → /fr/france-ou-georgie/ — EN : Royaume-Uni contre Géorgie → /en/uk-or-georgia/
+ * Formulaire Netlify « bilan » (bilan patrimonial gratuit avec Hugo Viard).
+ * Tous les chiffres sont ici : modifier l'objet T ci-dessous.
+ */
+import { SITE, path } from '../config/site';
+interface Props { lang: 'fr' | 'en' }
+const { lang } = Astro.props;
+
+const FLAG_FR = '<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="1" height="2" fill="#0055A4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg>';
+const FLAG_UK = '<svg viewBox="0 0 60 40" preserveAspectRatio="none"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L30,20 M60,0 L30,20 M0,40 L30,20 M60,40 L30,20" stroke="#C8102E" stroke-width="3"/><path d="M30,0 v40 M0,20 h60" stroke="#fff" stroke-width="12"/><path d="M30,0 v40 M0,20 h60" stroke="#C8102E" stroke-width="7"/></svg>';
+const sc = (x: number, y: number) => `<rect x="${x - 0.6}" y="${y - 2.2}" width="1.2" height="4.4" fill="#E8112D"/><rect x="${x - 2.2}" y="${y - 0.6}" width="4.4" height="1.2" fill="#E8112D"/>`;
+const FLAG_GE = `<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#fff"/><rect x="13" width="4" height="20" fill="#E8112D"/><rect y="8" width="30" height="4" fill="#E8112D"/>${sc(6.5, 4)}${sc(23.5, 4)}${sc(6.5, 16)}${sc(23.5, 16)}</svg>`;
+
+const T = {
+  fr: {
+    flag: FLAG_FR, home: 'France', ge: 'Géorgie', win: 'Gagne', round: 'Manche',
+    hero: {
+      eyebrow: 'Comparatif · location longue durée',
+      title: '200 000 € investis pendant 5 ans : la Géorgie rapporte <em>6,7× plus</em> que la France',
+      lead: 'Un appartement payé comptant, loué en bail classique, tous impôts déduits. Mêmes 200 000 €, même durée. Voici le calcul complet, manche par manche.',
+      gainHome: '+19 300 €', gainGe: '+128 400 €', gainLabel: 'de gain en 5 ans',
+      cta: 'Mon bilan patrimonial gratuit', more: 'Voir le détail',
+    },
+    rounds: [
+      { t: 'Les loyers', q: 'Ce que le bien rapporte chaque année', home: ['9 560 €', 'Rendement brut moyen 4,78 %'], ge: ['17 200 €', 'Rendement brut 8,6 % à Tbilissi'], bar: [55.6, 100] },
+      { t: 'Les impôts', q: 'La part des loyers qui part en impôts', home: ['45 %', '4 276 €/an : taxe foncière (1 117 €) + impôt sur le revenu et prélèvements sociaux (3 159 €)'], ge: ['5 %', '860 €/an : impôt de 5 % sur les loyers, et c’est tout'], donut: [45, 5] },
+      { t: 'Le net', q: 'Ce qu’il vous reste chaque année', home: ['3 850 €', '1,9 % net par an'], ge: ['14 620 €', '7,3 % net par an'], bar: [26.3, 100] },
+      { t: 'La revente', q: 'Le prix de revente net d’impôts après 5 ans', home: ['200 000 €', 'Prix stables, donc pas de plus-value. Avant 6 ans de détention, toute plus-value serait taxée à 36,2 %.'], ge: ['255 300 €', '+5 %/an retenu (prudent). Plus-value exonérée d’impôt après 2 ans de détention.'], line: true },
+    ],
+    verdict: {
+      t: 'Le verdict', h: 'Votre patrimoine après 5 ans', home: '219 300 €', ge: '328 400 €', homeStack: [200000, 19300], legend: ['Capital', 'Loyers nets', 'Plus-value'],
+      ratio: '6,7×', ratioTxt: 'plus de gain en Géorgie', homeGain: 'France : +19 300 € (≈ 1,9 % par an)', geGain: 'Géorgie : +128 400 € (≈ 12,8 % par an)',
+    },
+    credit: {
+      t: 'Et à crédit ?',
+      home: ['France', 'Emprunter à 3,70 % sur 20 ans pour un bien qui rapporte 1,9 % net : chaque euro emprunté coûte plus qu’il ne rapporte. Le levier est négatif.'],
+      ge: ['Géorgie', 'Crédit dès 6,3 % pour un bien qui rapporte 7,3 % net : le loyer couvre le coût de l’argent. Le levier reste positif.'],
+      link: 'Lire l’article complet sur les taux de crédit', href: '/fr/blog/taux-credit-immobilier-france-hausse-investir-georgie/',
+    },
+    bilan: {
+      eyebrow: 'Bilan patrimonial gratuit',
+      h: 'Et vos biens en France, que rapportent-ils vraiment ?',
+      text: 'Hugo Viard, mon collaborateur, fait le bilan de votre patrimoine, bien par bien : rendement net réel, fiscalité, valeur actuelle. Puis il le compare avec un réinvestissement en Géorgie. C’est gratuit.',
+      role: 'Mon collaborateur',
+      points: ['Rendement net réel de chaque bien', 'Impact de la fiscalité et du crédit', 'Comparaison chiffrée avec la Géorgie'],
+      f: { prenom: 'Prénom', nom: 'Nom', email: 'E-mail', whatsapp: 'WhatsApp (avec indicatif)', biens: 'Vos biens immobiliers en France', biensOpts: ['Aucun pour l’instant', '1 bien', '2 à 3 biens', '4 biens ou plus'], message: 'Votre situation en quelques mots (facultatif)', submit: 'Demander mon bilan gratuit', privacy: 'Vos données servent uniquement à vous recontacter.', privacyLink: 'Confidentialité' },
+      err: 'Merci de remplir votre prénom, votre e-mail et votre numéro WhatsApp avec l’indicatif (ex. +33 6 12 34 56 78).',
+      sendErr: 'L’envoi n’a pas fonctionné. Réessayez ou écrivez-nous sur WhatsApp.',
+      ok: 'Merci ! Hugo vous contacte très rapidement pour fixer votre bilan.',
+      wa: 'Ou écrivez-nous sur WhatsApp', source: 'Landing comparatif France / Géorgie (FR)',
+    },
+    hyp: {
+      t: 'Hypothèses et sources',
+      items: [
+        'Appartement de 200 000 € payé comptant, location longue durée (bail classique), loyers constants sur 5 ans. Calcul illustratif, non contractuel.',
+        'France : rendement brut moyen national 4,78 % en 2025 (Meilleurtaux). Taxe foncière moyenne payée par les particuliers en 2025 : 1 117 € (DGFiP). Charges, gestion, assurance et vacance : 15 % des loyers (hypothèse). Impôt : micro-foncier (abattement de 30 %), tranche marginale de 30 % + 17,2 % de prélèvements sociaux, soit 3 159 €.',
+        'France : prix des logements anciens en recul de 1,0 % au 2e trimestre 2026 (INSEE), hypothèse de prix stables. Plus-value imposée à 19 % + 17,2 %, abattements pour durée de détention à partir de la 6e année. Taux de crédit : 3,70 % sur 20 ans (Meilleurtaux, novembre 2026).',
+        'Géorgie : rendement brut 8,6 % à Tbilissi (Galt & Taggart). Charges, gestion et vacance : 10 % des loyers (hypothèse). Impôt de 5 % sur les loyers des particuliers, pas d’impôt foncier retenu. Prix : +63,8 % depuis 2020 selon Geostat, hypothèse prudente de +5 %/an. Plus-value exonérée après 2 ans de détention. Crédit : TBC Bank, à partir de 6,3 %.',
+        'Non inclus : frais d’acquisition (frais de notaire de 7 à 8 % dans l’ancien en France), frais de revente et effet de change. Les performances passées ne préjugent pas des performances futures.',
+      ],
+    },
+    sticky: 'Mon bilan gratuit', legal: 'Mentions légales', privacy: 'Confidentialité',
+  },
+  en: {
+    flag: FLAG_UK, home: 'UK', ge: 'Georgia', win: 'Wins', round: 'Round',
+    hero: {
+      eyebrow: 'Comparison · long-term rental',
+      title: '£200,000 invested for 5 years: Georgia earns <em>4.6× more</em> than the UK',
+      lead: 'A property paid in cash, let on a standard tenancy, after all taxes. Same £200,000, same period. Here is the full calculation, round by round.',
+      gainHome: '+£27,600', gainGe: '+£128,400', gainLabel: 'gain over 5 years',
+      cta: 'My free wealth review', more: 'See the details',
+    },
+    rounds: [
+      { t: 'Rent', q: 'What the property earns each year', home: ['£11,600', 'Average UK gross yield 5.8%'], ge: ['£17,200', 'Gross yield 8.6% in Tbilisi'], bar: [67.4, 100] },
+      { t: 'Taxes', q: 'The share of rent that goes to tax', home: ['37%', '£4,338/yr: property income tax at 44% (higher rate, from April 2027) on rent after costs'], ge: ['5%', '£860/yr: 5% tax on rent, and that’s it'], donut: [37, 5] },
+      { t: 'Net income', q: 'What you keep each year', home: ['£5,522', '2.8% net per year'], ge: ['£14,620', '7.3% net per year'], bar: [37.8, 100] },
+      { t: 'Resale', q: 'Resale price after tax after 5 years', home: ['£200,000', 'Flat prices (−1.2% over a year in October 2026), so no gain. Any gain would face CGT at up to 24%.'], ge: ['£255,300', '+5%/yr assumed (cautious). Capital gain tax-free after 2 years of ownership.'], line: true },
+    ],
+    verdict: {
+      t: 'The verdict', h: 'Your wealth after 5 years', home: '£227,600', ge: '£328,400', homeStack: [200000, 27600], legend: ['Capital', 'Net rent', 'Capital gain'],
+      ratio: '4.6×', ratioTxt: 'more gain in Georgia', homeGain: 'UK: +£27,600 (≈ 2.8% per year)', geGain: 'Georgia: +£128,400 (≈ 12.8% per year)',
+    },
+    credit: {
+      t: 'What about a mortgage?',
+      home: ['UK', '5-year fixes average 6.00% for a property yielding 2.8% net, and mortgage interest relief is capped at 24%. Leverage is negative.'],
+      ge: ['Georgia', 'Loans from 6.3% for a property yielding 7.3% net: the rent covers the cost of money. Leverage stays positive.'],
+      link: '', href: '',
+    },
+    bilan: {
+      eyebrow: 'Free wealth review',
+      h: 'And your property at home, what does it really earn?',
+      text: 'Hugo Viard, my associate, reviews your wealth property by property: real net yield, tax, current value. He then compares it with reinvesting in Georgia. It’s free.',
+      role: 'My associate',
+      points: ['Real net yield of each property', 'Impact of tax and borrowing', 'Side-by-side comparison with Georgia'],
+      f: { prenom: 'First name', nom: 'Last name', email: 'Email', whatsapp: 'WhatsApp (with country code)', biens: 'Your properties', biensOpts: ['None yet', '1 property', '2 to 3 properties', '4 or more'], message: 'Your situation in a few words (optional)', submit: 'Request my free review', privacy: 'Your details are only used to contact you.', privacyLink: 'Privacy' },
+      err: 'Please enter your first name, email and WhatsApp number with country code (e.g. +44 7700 900000).',
+      sendErr: 'Sending failed. Please try again or message us on WhatsApp.',
+      ok: 'Thank you! Hugo will contact you shortly to set up your review.',
+      wa: 'Or message us on WhatsApp', source: 'Comparison landing UK / Georgia (EN)',
+    },
+    hyp: {
+      t: 'Assumptions and sources',
+      items: [
+        '£200,000 property paid in cash, long-term rental (assured shorthold tenancy), constant rents over 5 years. Illustrative, non-contractual calculation.',
+        'UK: average gross yield 5.8% (Zoopla, March 2026). Costs, management, insurance and voids: 15% of rent (assumption). Property income tax at 44% for higher-rate taxpayers from April 2027 (Budget of 28 October 2026, subject to the Finance Bill), on rent after costs. Council tax paid by the tenant.',
+        'UK: house prices −1.2% year on year in October 2026 (Lloyds), flat prices assumed. Residential CGT 18%/24%, £3,000 annual allowance (GOV.UK). Mortgage rates: 5-year fix average 6.00% (Moneyfacts, 5 November 2026).',
+        'Georgia: gross yield 8.6% in Tbilisi (Galt & Taggart). Costs, management and voids: 10% of rent (assumption). 5% tax on individuals’ rental income, no property tax assumed. Prices: +63.8% since 2020 (Geostat), cautious assumption of +5%/yr. Capital gain tax-free after 2 years of ownership. Loans: TBC Bank, from 6.3%.',
+        'Not included: purchase costs (stamp duty incl. 5% second-home surcharge), selling costs and currency effects. Past performance is no guarantee of future results.',
+      ],
+    },
+    sticky: 'My free review', legal: 'Legal notice', privacy: 'Privacy',
+  },
+}[lang];
+// Typographie française : espaces insécables dans les nombres et avant € % : ? ;
+if (lang === 'fr') {
+  const nb = (v: any): any => typeof v === 'string' && !v.startsWith('<svg') ? v.replace(/(\d) (\d{3})/g, '$1\u00a0$2').replace(/ ([€%:?;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0')
+    : Array.isArray(v) ? v.map(nb) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, nb(x)])) : v;
+  Object.assign(T, nb(T));
+}
+
+const year = new Date().getFullYear();
+const wa = `https://wa.me/${SITE.whatsapp}`;
+const H = 320 / 328400;
+---
+<section class="chero">
+  <div class="wrap chero__in">
+    <p class="eyebrow">{T.hero.eyebrow}</p>
+    <h1 set:html={T.hero.title} />
+    <p class="lead">{T.hero.lead}</p>
+    <div class="duo">
+      <div class="duo__c duo__c--h"><span class="flag" set:html={T.flag} /><span class="duo__l">{T.home}</span><strong>{T.hero.gainHome}</strong><small>{T.hero.gainLabel}</small></div>
+      <span class="vs">VS</span>
+      <div class="duo__c duo__c--g"><span class="flag" set:html={FLAG_GE} /><span class="duo__l">{T.ge}</span><strong>{T.hero.gainGe}</strong><small>{T.hero.gainLabel}</small></div>
+    </div>
+    <div class="chero__btns">
+      <a class="btn" href="#bilan">{T.hero.cta} <span class="arrow">↓</span></a>
+      <a class="btn btn--ghost" href="#duel">{T.hero.more}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cduel" id="duel">
+  <div class="wrap">
+    {T.rounds.map((r, i) => (
+      <article class="rnd reveal">
+        <header class="rnd__h">
+          <p class="eyebrow">{T.round} {i + 1} · {r.t}</p>
+          <span class="score"><span class="flag" set:html={T.flag} /><b>0</b>–<b>{i + 1}</b><span class="flag" set:html={FLAG_GE} /></span>
+        </header>
+        <h2>{r.q}</h2>
+        <div class="rnd__grid">
+          {[['h', T.home, T.flag, r.home], ['g', T.ge, FLAG_GE, r.ge]].map(([k, name, flag, v]: any, j) => (
+            <div class={`pan pan--${k}`}>
+              <div class="pan__hd"><span class="flag" set:html={flag} />{name}{k === 'g' && <span class="crown">{T.win}</span>}</div>
+              {r.donut ? (
+                <div class="pan__row">
+                  <span class="donut" style={`--p:${r.donut[j]};--c:${k === 'h' ? '#e07a66' : '#3fa56b'}`}><span>{v[0]}</span></span>
+                  <p class="pan__cap">{v[1]}</p>
+                </div>
+              ) : (
+                <>
+                  <p class="pan__num">{v[0]}</p>
+                  {r.bar && <div class="bar"><i style={`width:${r.bar[j]}%`} /></div>}
+                  {r.line && <svg class="line" viewBox="0 0 800 120" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke-width="8" stroke-linecap="round" points={k === 'g' ? '10,110 200,92 400,72 600,48 790,14' : '10,62 200,64 400,60 600,63 790,62'} /></svg>}
+                  <p class="pan__cap">{v[1]}</p>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="section section--navy cverdict">
+  <div class="wrap cverdict__in">
+    <div class="reveal">
+      <p class="eyebrow">{T.verdict.t}</p>
+      <h2>{T.verdict.h}</h2>
+      <p class="ratio"><strong>{T.verdict.ratio}</strong><span>{T.verdict.ratioTxt}</span></p>
+      <ul class="gains"><li>{T.verdict.homeGain}</li><li>{T.verdict.geGain}</li></ul>
+    </div>
+    <div class="cols reveal" aria-hidden="true">
+      <div class="col"><b class="col__t col__t--h">{T.verdict.home}</b><div class="stack"><i style={`height:${T.verdict.homeStack[0] * H}px;background:#5f7bb0`} /><i style={`height:${T.verdict.homeStack[1] * H}px;background:#8fb4f0`} /></div><span class="col__l"><span class="flag" set:html={T.flag} />{T.home}</span></div>
+      <div class="col"><b class="col__t">{T.verdict.ge}</b><div class="stack"><i style={`height:${200000 * H}px;background:#7d6c48`} /><i style={`height:${73100 * H}px;background:#b8a070`} /><i style={`height:${55300 * H}px;background:#e2cc9c`} /></div><span class="col__l"><span class="flag" set:html={FLAG_GE} />{T.ge}</span></div>
+      <p class="legend"><span><i style="background:#7d6c48" />{T.verdict.legend[0]}</span><span><i style="background:#b8a070" />{T.verdict.legend[1]}</span><span><i style="background:#e2cc9c" />{T.verdict.legend[2]}</span></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="credit reveal">
+      <p class="credit__t">{T.credit.t}</p>
+      <div class="credit__g">
+        <p><span class="flag" set:html={T.flag} /><b>{T.credit.home[0]}</b> {T.credit.home[1]}</p>
+        <p><span class="flag" set:html={FLAG_GE} /><b>{T.credit.ge[0]}</b> {T.credit.ge[1]}</p>
+      </div>
+      {T.credit.link && <a class="link" href={T.credit.href}>{T.credit.link} <span class="arrow">→</span></a>}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand cbilan" id="bilan">
+  <div class="wrap cbilan__in">
+    <div class="reveal">
+      <p class="eyebrow">{T.bilan.eyebrow}</p>
+      <h2>{T.bilan.h}</h2>
+      <div class="hugo">
+        <img src="/images/photos/hugo-viard.jpg" alt="Hugo Viard" width="120" height="120" />
+        <p><strong>Hugo Viard</strong><span>{T.bilan.role}</span></p>
+      </div>
+      <p class="lead">{T.bilan.text}</p>
+      <ul class="ticks">{T.bilan.points.map((p) => <li>{p}</li>)}</ul>
+    </div>
+    <div class="fcard reveal">
+      <form name="bilan" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate data-bilan>
+        <input type="hidden" name="form-name" value="bilan" />
+        <input type="hidden" name="langue" value={lang.toUpperCase()} />
+        <input type="hidden" name="provenance" value={T.bilan.source} />
+        <input type="hidden" name="page" />
+        <p hidden><label>Ne pas remplir <input name="bot-field" /></label></p>
+        <div class="f2">
+          <label>{T.bilan.f.prenom}<input name="prenom" autocomplete="given-name" required /></label>
+          <label>{T.bilan.f.nom}<input name="nom" autocomplete="family-name" /></label>
+        </div>
+        <label>{T.bilan.f.email}<input name="email" type="email" autocomplete="email" required /></label>
+        <label>{T.bilan.f.whatsapp}<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder={lang === 'fr' ? '+33 6 12 34 56 78' : '+44 7700 900000'} required /></label>
+        <label>{T.bilan.f.biens}<select name="biens">{T.bilan.f.biensOpts.map((o) => <option>{o}</option>)}</select></label>
+        <label>{T.bilan.f.message}<textarea name="message" rows="3"></textarea></label>
+        <p class="ferr" data-err hidden></p>
+        <button class="btn fbtn" type="submit">{T.bilan.f.submit} <span class="arrow">→</span></button>
+        <p class="fpriv">{T.bilan.f.privacy} <a href={path('privacy', lang)}>{T.bilan.f.privacyLink}</a></p>
+      </form>
+      <p class="fok" data-ok hidden>{T.bilan.ok}</p>
+      <a class="fwa" href={wa} target="_blank" rel="noopener">{T.bilan.wa} →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section chyp">
+  <div class="wrap">
+    <details>
+      <summary>{T.hyp.t}</summary>
+      <ul>{T.hyp.items.map((x) => <li>{x}</li>)}</ul>
+    </details>
+  </div>
+</section>
+
+<div class="csticky" data-sticky><a class="btn" href="#bilan">{T.sticky}</a><a class="csticky__wa" href={wa} target="_blank" rel="noopener">WhatsApp</a></div>
+
+<footer class="cfoot">
+  <div class="wrap cfoot__in">
+    <span>© {year} Eric Fankhauser · <a href={path('home', lang)}>eric.swiss</a></span>
+    <span><a href={path('legal', lang)}>{T.legal}</a> · <a href={path('privacy', lang)}>{T.privacy}</a></span>
+  </div>
+</footer>
+
+<script define:vars={{ msg: { err: T.bilan.err, sendErr: T.bilan.sendErr } }}>
+  (() => {
+    const form = document.querySelector('[data-bilan]');
+    if (!form) return;
+    const err = form.querySelector('[data-err]');
+    const intl = (v) => { let n = v.replace(/[\s().\-\/]/g, ''); if (n.startsWith('00')) n = '+' + n.slice(2); return /^\+[1-9]\d{6,14}$/.test(n) ? n : null; };
+    const tel = form.elements.namedItem('whatsapp');
+    tel.addEventListener('focus', () => { if (!tel.value) tel.value = '+'; });
+    tel.addEventListener('blur', () => { if (tel.value.trim() === '+') tel.value = ''; });
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      if (fd.get('bot-field')) return;
+      const n = intl(String(fd.get('whatsapp') || ''));
+      const email = String(fd.get('email') || '').trim();
+      if (!String(fd.get('prenom') || '').trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !n) { err.textContent = msg.err; err.hidden = false; return; }
+      err.hidden = true;
+      fd.set('whatsapp', n); fd.set('page', location.pathname + location.search);
+      const btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+      try {
+        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() });
+        if (!r.ok) throw new Error(String(r.status));
+        form.hidden = true; document.querySelector('[data-ok]').hidden = false;
+      } catch { err.textContent = msg.sendErr; err.hidden = false; btn.disabled = false; }
+    });
+    const bar = document.querySelector('[data-sticky]');
+    const watch = [document.querySelector('.chero'), document.getElementById('bilan')].filter(Boolean);
+    if (bar && 'IntersectionObserver' in window) {
+      const seen = new Set(); bar.classList.add('is-hidden');
+      const io = new IntersectionObserver((es) => { es.forEach((x) => (x.isIntersecting ? seen.add(x.target) : seen.delete(x.target))); bar.classList.toggle('is-hidden', seen.size > 0); }, { threshold: 0.05 });
+      watch.forEach((w) => io.observe(w));
+    }
+  })();
+</script>
+
+<style>
+  .flag { display: inline-block; width: 36px; height: 24px; border-radius: 3px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.25); flex: none; vertical-align: middle; }
+  .flag :global(svg) { display: block; width: 100%; height: 100%; }
+  .chero { background: radial-gradient(900px 600px at 90% 0%, #1c3a7a 0%, transparent 60%), var(--navy); color: var(--cream); }
+  .chero__in { padding-top: clamp(32px, 5vw, 72px); padding-bottom: clamp(48px, 7vw, 96px); max-width: 980px; }
+  .chero h1 { font-weight: 400; font-size: clamp(1.9rem, 4.2vw, 3.3rem); margin-bottom: 18px; }
+  .chero h1 :global(em) { font-style: normal; color: var(--gold-light); }
+  .chero .lead { color: var(--muted-light); max-width: 760px; }
+  .duo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 36px 0 32px; }
+  .duo__c { border-radius: 14px; padding: clamp(18px, 3vw, 30px); display: flex; flex-direction: column; gap: 6px; }
+  .duo__c--h { background: linear-gradient(150deg, rgba(47,111,214,.32), rgba(47,111,214,.08)); border: 1px solid rgba(110,150,230,.55); }
+  .duo__c--g { background: linear-gradient(150deg, rgba(255,255,255,.14), rgba(232,52,59,.10)); border: 2px solid var(--gold); }
+  .duo__c .flag { width: 54px; height: 36px; }
+  .duo__l { font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; margin-top: 8px; }
+  .duo__c strong { font-family: var(--f-title); font-size: clamp(1.35rem, 5vw, 3.2rem); line-height: 1.05; white-space: nowrap; }
+  .duo__c--h strong { color: #cfe0ff; } .duo__c--g strong { color: var(--gold-light); }
+  .duo__c small { color: var(--muted-light); }
+  .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: var(--gold); color: var(--navy); display: grid; place-items: center; font-weight: 700; border: 4px solid var(--navy); }
+  .chero__btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .cduel .wrap { display: grid; gap: clamp(40px, 6vw, 72px); max-width: 1000px; }
+  .rnd__h { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .rnd__h .eyebrow { margin: 0; }
+  .score { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: .9rem; }
+  .score .flag { width: 24px; height: 16px; } .score b { font-family: var(--f-title); color: var(--gold-deep); }
+  .rnd h2 { font-size: clamp(1.4rem, 2.8vw, 2.1rem); margin: 10px 0 20px; }
+  .rnd__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .pan { border-radius: 14px; padding: clamp(18px, 2.6vw, 28px); background: #fff; border: 1px solid var(--line); }
+  .pan--h { background: linear-gradient(150deg, #eef3fc, #fff); border-color: #c9d7f2; }
+  .pan--g { border: 2px solid var(--gold); box-shadow: 0 18px 40px -22px rgba(17,33,80,.35); }
+  .pan__hd { display: flex; align-items: center; gap: 10px; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+  .crown { margin-left: auto; background: var(--gold); color: #fff; font-size: .68rem; padding: 4px 10px; border-radius: 999px; letter-spacing: .1em; }
+  .pan__num { font-family: var(--f-title); font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 12px 0 4px; line-height: 1.1; }
+  .pan--h .pan__num { color: #2a4f9a; } .pan--g .pan__num { color: var(--gold-deep); }
+  .pan__cap { color: var(--muted); font-size: .92rem; margin: 8px 0 0; }
+  .bar { height: 14px; border-radius: 999px; background: rgba(17,33,80,.08); overflow: hidden; margin-top: 10px; }
+  .bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #2f6fd6, #8fb4f0); }
+  .pan--g .bar i { background: linear-gradient(90deg, #9c8550, #d9c49a); }
+  .line { width: 100%; height: 44px; margin-top: 6px; }
+  .pan--h .line polyline { stroke: #7fa3e6; } .pan--g .line polyline { stroke: var(--gold); }
+  .pan__row { display: flex; align-items: center; gap: 18px; margin-top: 14px; }
+  .donut { --p: 50; --c: #e07a66; flex: none; width: 110px; height: 110px; border-radius: 50%; background: conic-gradient(var(--c) 0 calc(var(--p) * 1%), rgba(17,33,80,.1) 0 100%); display: grid; place-items: center; }
+  .donut span { width: 78px; height: 78px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-family: var(--f-title); font-size: 1.35rem; font-weight: 700; }
+  .cverdict__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); align-items: end; }
+  .ratio { display: flex; align-items: baseline; gap: 14px; margin: 18px 0 10px; }
+  .ratio strong { font-family: var(--f-title); font-size: clamp(3.5rem, 9vw, 6rem); color: var(--gold-light); line-height: 1; }
+  .ratio span { color: var(--muted-light); }
+  .gains { list-style: none; padding: 0; margin: 0; color: var(--muted-light); display: grid; gap: 6px; }
+  .cols { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: 28px; }
+  .col { width: min(200px, 40%); display: flex; flex-direction: column; align-items: center; }
+  .col__t { font-family: var(--f-title); font-size: clamp(1.2rem, 2.6vw, 1.8rem); color: var(--gold-light); margin-bottom: 8px; }
+  .col__t--h { color: #cfe0ff; }
+  .stack { width: 100%; display: flex; flex-direction: column-reverse; border-radius: 10px 10px 0 0; overflow: hidden; }
+  .stack i { display: block; }
+  .col__l { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+  .legend { flex-basis: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; font-size: .8rem; color: var(--muted-light); margin: 8px 0 0; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .credit { margin-top: clamp(40px, 6vw, 64px); border: 1px dashed rgba(173,142,104,.6); border-radius: 14px; padding: clamp(20px, 3vw, 32px); }
+  .credit__t { font-family: var(--f-title); font-size: 1.3rem; margin: 0 0 14px; color: var(--gold-light); }
+  .credit__g { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .credit__g p { margin: 0; color: var(--muted-light); }
+  .credit__g .flag { margin-right: 8px; } .credit__g b { color: var(--cream); }
+  .credit .link { display: inline-block; margin-top: 18px; color: var(--gold-light); }
+  .cbilan__in { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .hugo { display: flex; align-items: center; gap: 16px; margin: 20px 0; }
+  .hugo img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
+  .hugo p { margin: 0; display: flex; flex-direction: column; } .hugo strong { font-family: var(--f-title); font-size: 1.3rem; } .hugo span { color: var(--muted); font-size: .9rem; }
+  .ticks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+  .ticks li { padding-left: 30px; position: relative; }
+  .ticks li::before { content: '✓'; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); color: #fff; font-size: .75rem; display: grid; place-items: center; }
+  .fcard { background: #fff; border-radius: 14px; padding: clamp(20px, 3vw, 34px); box-shadow: 0 24px 60px -24px rgba(17,33,80,.35); border-top: 3px solid var(--gold); }
+  .fcard form { display: grid; gap: 14px; }
+  .fcard label { display: grid; gap: 6px; font-size: .8rem; color: var(--muted); }
+  .fcard input, .fcard select, .fcard textarea { width: 100%; min-width: 0; box-sizing: border-box; font: inherit; font-size: 1rem; color: var(--navy); padding: 11px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--cream); }
+  .fcard input:focus, .fcard select:focus, .fcard textarea:focus { outline: none; border-color: var(--gold); }
+  .f2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .fbtn { justify-content: center; width: 100%; }
+  .ferr { color: #b4432d; font-size: .85rem; margin: 0; }
+  .fpriv { font-size: .75rem; color: var(--muted); margin: 0; } .fpriv a { color: var(--muted); }
+  .fok { font-family: var(--f-title); font-size: 1.2rem; margin: 0; }
+  .fwa { display: inline-block; margin-top: 16px; font-size: .9rem; color: #1e9e54; }
+  .chyp { padding: clamp(32px, 5vw, 56px) 0; }
+  .chyp details { max-width: 1000px; margin: 0 auto; border-top: 1px solid var(--line); padding-top: 16px; }
+  .chyp summary { cursor: pointer; font-family: var(--f-title); font-size: 1.05rem; }
+  .chyp ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); font-size: .88rem; display: grid; gap: 8px; }
+  .cfoot { background: var(--navy-deep); color: var(--muted-light); font-size: .8rem; padding: 22px 0 90px; }
+  .cfoot__in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; } .cfoot a { color: var(--muted-light); }
+  .csticky { display: none; }
+  #bilan, #duel { scroll-margin-top: 72px; }
+  @media (max-width: 760px) {
+    .duo { gap: 10px; } .vs { width: 44px; height: 44px; font-size: .8rem; }
+    .rnd__grid, .credit__g, .cverdict__in, .cbilan__in, .f2 { grid-template-columns: minmax(0, 1fr); }
+    .rnd__grid { gap: 12px; }
+    .csticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(11,22,56,.96); border-top: 1px solid rgba(173,142,104,.3); transition: transform .35s var(--ease); }
+    .csticky .btn { flex: 1; justify-content: center; }
+    .csticky__wa { display: grid; place-items: center; padding: 0 16px; border-radius: 999px; background: #25d366; color: #fff; text-decoration: none; font-size: .85rem; }
+    .csticky.is-hidden { transform: translateY(110%); }
+  }
+</style>
