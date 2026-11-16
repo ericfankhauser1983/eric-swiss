@@ -5,7 +5,7 @@ date: 2026-11-16
 translationKey: ormuz-asie-petrole-passage
 category: geopolitique
 tags: ["Hormus", "Iran", "Asien", "Golf", "Mittlerer Korridor", "Georgien"]
-draft: true
+draft: false
 ---
 
 Der Krieg im Iran geht in den neunten Monat, und die Strasse von Hormus ist weiterhin gesperrt. Die Aussenminister der G7 haben sich in Paris getroffen. Gleichzeitig stellt man sich in Islamabad, Tokio, Seoul und Neu-Delhi eine andere Frage: nicht «Wer hat recht?», sondern «Wie bringen wir die Tanker wieder in Fahrt?». Von Tiflis aus finde ich diesen Tonwechsel nützlicher als die europäischen Erklärungen. Er sagt auch allen etwas Konkretes, die **in Georgien investieren** oder hier ein Geschäft aufbauen wollen.

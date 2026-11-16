@@ -5,7 +5,7 @@ date: 2026-11-16
 translationKey: ormuz-asie-petrole-passage
 category: geopolitique
 tags: ["Hormuz", "Iran", "Asia", "Gulf", "Middle Corridor", "Georgia"]
-draft: true
+draft: false
 ---
 
 The war in Iran is entering its ninth month and the Strait of Hormuz is still closed. G7 foreign ministers met in Paris. Meanwhile, in Islamabad, Tokyo, Seoul and New Delhi, people are asking a different question: not "who is right?" but "how do we get the tankers moving again?". From Tbilisi, I find that shift in tone more useful than European statements. It also says something concrete to anyone who wants to **invest in Georgia** or set up a business here.

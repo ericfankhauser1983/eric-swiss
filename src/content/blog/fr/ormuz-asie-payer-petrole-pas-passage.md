@@ -5,7 +5,7 @@ date: 2026-11-16
 translationKey: ormuz-asie-petrole-passage
 category: geopolitique
 tags: ["Ormuz", "Iran", "Asie", "Golfe", "Corridor médian", "Géorgie"]
-draft: true
+draft: false
 ---
 
 La guerre en Iran entre dans son neuvième mois et le détroit d'Ormuz est toujours fermé. Les ministres des Affaires étrangères du G7 se sont réunis à Paris. Pendant ce temps, à Islamabad, à Tokyo, à Séoul et à New Delhi, on se pose une autre question : pas « qui a raison ? », mais « comment fait-on repasser les pétroliers ? ». Depuis Tbilissi, je trouve ce changement de ton plus utile que les déclarations européennes. Il dit aussi quelque chose de concret à ceux qui veulent **investir en Géorgie** ou y installer une activité.
