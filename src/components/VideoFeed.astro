@@ -1,6 +1,8 @@
 ---
 /**
- * Dernières vidéos YouTube (et Instagram via Behold si configuré), mises à jour automatiquement.
+ * Dernières vidéos YouTube (et Instagram via Behold si configuré), mises à jour automatiquement :
+ * liste récupérée à la construction du site, puis actualisée en direct dans le navigateur
+ * via la fonction Netlify /.netlify/functions/videos (aucune reconstruction nécessaire).
  * Configuration : VIDEOS et SOCIAL dans src/config/site.ts.
  */
 import { VIDEOS, SOCIAL, type Lang } from '../config/site';
@@ -25,9 +27,9 @@ const show = videos.length > 0 || SOCIAL.youtube || VIDEOS.beholdFeedId;
         <div class="vids__follow"><span>{T.follow}</span><Social /></div>
       </div>
       {videos.length > 0 ? (
-        <div class="vids__grid vids__grid--3">
+        <div class="vids__grid vids__grid--3" data-live-videos={VIDEOS.count}>
           {videos.map((v) => (
-            <div class="vid reveal">
+            <div class="vid reveal" data-vid={v.id}>
               <iframe src={`https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1&playsinline=1`} title={v.title || 'YouTube'} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
             </div>
           ))}
@@ -63,6 +65,23 @@ const show = videos.length > 0 || SOCIAL.youtube || VIDEOS.beholdFeedId;
   @media (max-width: 860px) { .vids__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .vids__grid--3 { grid-template-columns: 1fr; max-width: 360px; } }
 </style>
 <script>
+  // Actualisation en direct : si une nouvelle vidéo a été publiée depuis la dernière construction du site
+  document.querySelectorAll<HTMLElement>('[data-live-videos]').forEach(async (grid) => {
+    try {
+      const r = await fetch(`/.netlify/functions/videos?count=${grid.dataset.liveVideos}`);
+      if (!r.ok) return;
+      const { videos } = (await r.json()) as { videos: { id: string; title: string }[] };
+      const cells = [...grid.querySelectorAll<HTMLElement>('[data-vid]')];
+      if (!videos?.length || videos.map((v) => v.id).join() === cells.map((c) => c.dataset.vid).join()) return;
+      videos.slice(0, cells.length).forEach((v, i) => {
+        const c = cells[i];
+        if (c.dataset.vid === v.id) return;
+        c.dataset.vid = v.id;
+        const f = c.querySelector('iframe');
+        if (f) { f.src = `https://www.youtube-nocookie.com/embed/${v.id}?rel=0&modestbranding=1&playsinline=1`; f.title = v.title || 'YouTube'; }
+      });
+    } catch {}
+  });
   document.querySelectorAll<HTMLImageElement>('.vid img[data-fallback]').forEach((img) => {
     const fix = () => { if (img.naturalWidth && img.naturalWidth <= 120) img.src = img.dataset.fallback!; };
     img.addEventListener('error', () => (img.src = img.dataset.fallback!), { once: true });

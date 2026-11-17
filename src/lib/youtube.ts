@@ -1,7 +1,7 @@
 /**
  * Récupère les dernières vidéos d'une chaîne YouTube au moment de la construction du site.
- * Le site se reconstruit chaque jour (voir .github/workflows/rebuild.yml) : les nouvelles vidéos
- * apparaissent donc automatiquement, sans clé d'API.
+ * Les nouvelles vidéos s'affichent ensuite en direct grâce à la fonction netlify/functions/videos.mjs,
+ * sans reconstruire le site ni clé d'API.
  */
 export interface YtVideo { id: string; title: string; published: string; short: boolean }
 
