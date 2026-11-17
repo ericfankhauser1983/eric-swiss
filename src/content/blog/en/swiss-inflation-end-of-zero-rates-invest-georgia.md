@@ -6,7 +6,7 @@ translationKey: inflation-suisse-taux-zero-georgie
 category: immobilier
 tags: ["Switzerland", "SNB", "Mortgages", "Invest in Georgia", "Rental yield"]
 source: "https://www.francefinance.ae/articles-blog/suisse-inflation-bns-fin-taux-zero-hypotheques"
-draft: true
+draft: false
 ---
 
 For years, money cost almost nothing in Switzerland. That era may be coming to an end. In October, inflation jumped to 1.5% year on year, and several economists are now considering a rise in the SNB's policy rate. For anyone wondering whether to start **investing in Georgia from Switzerland**, the question is no longer just about yield. It is also about the cost of the money you leave idle, or borrow, at home.

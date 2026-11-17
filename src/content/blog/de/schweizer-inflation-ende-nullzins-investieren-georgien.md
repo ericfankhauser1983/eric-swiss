@@ -6,7 +6,7 @@ translationKey: inflation-suisse-taux-zero-georgie
 category: immobilier
 tags: ["Schweiz", "SNB", "Hypotheken", "In Georgien investieren", "Mietrendite"]
 source: "https://www.francefinance.ae/articles-blog/suisse-inflation-bns-fin-taux-zero-hypotheques"
-draft: true
+draft: false
 ---
 
 Jahrelang kostete Geld in der Schweiz fast nichts. Diese Zeit geht vielleicht zu Ende. Im Oktober sprang die Inflation auf 1,5 % gegenüber dem Vorjahr, und mehrere Ökonomen rechnen inzwischen mit einer Erhöhung des SNB-Leitzinses. Wer sich fragt, ob es sich lohnt, **von der Schweiz aus in Georgien zu investieren**, stellt sich nicht mehr nur die Frage der Rendite. Es geht auch um die Kosten des Geldes, das man zu Hause liegen lässt oder sich leiht.

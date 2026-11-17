@@ -6,7 +6,7 @@ translationKey: inflation-suisse-taux-zero-georgie
 category: immobilier
 tags: ["Suisse", "BNS", "Hypothèques", "Investir en Géorgie", "Rendement locatif"]
 source: "https://www.francefinance.ae/articles-blog/suisse-inflation-bns-fin-taux-zero-hypotheques"
-draft: true
+draft: false
 ---
 
 Pendant des années, l'argent ne coûtait presque rien en Suisse. Ce temps touche peut-être à sa fin. En octobre, l'inflation a bondi à 1,5 % sur un an, et plusieurs économistes envisagent désormais une hausse du taux directeur de la BNS. Pour qui se demande s'il faut **investir en Géorgie depuis la Suisse**, la question n'est plus seulement celle du rendement. C'est aussi celle du coût de l'argent qu'on laisse dormir, ou qu'on emprunte, chez soi.
