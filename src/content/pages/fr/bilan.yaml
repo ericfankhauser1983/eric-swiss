@@ -1,0 +1,102 @@
+# Landing page « Bilan immobilier » pour les propriétaires en France — FR
+# Adresse : eric.swiss/fr/bilan-immobilier/ (non indexée, lien à partager)
+seo:
+  title: "Bilan immobilier offert — Faites le point sur vos biens en France"
+  description: "Valeur réelle, rendement net, dette, fiscalité : en un rendez-vous, faites le point sur votre immobilier en France et repartez avec des scénarios chiffrés. Gratuit et sans engagement."
+
+hero:
+  eyebrow: "Bilan immobilier offert · Propriétaires en France"
+  title: "Votre immobilier en France vaut-il encore <em>ce que vous croyez</em> ?"
+  lead: "Taux en hausse, prix qui reculent, fiscalité qui change chaque année : le contexte a basculé. En un rendez-vous, nous faisons le point sur vos biens et vous repartez avec des scénarios chiffrés : garder, optimiser ou arbitrer."
+  proofs:
+    - "Gratuit et sans engagement"
+    - "Valeur, rendement, dette, fiscalité"
+    - "Scénarios chiffrés"
+
+steps:
+  - "Réservez votre bilan"
+  - "Pourquoi faire le point maintenant"
+  - "Ce que comprend votre bilan"
+
+booking:
+  title: "Réservez votre bilan immobilier"
+
+context:
+  title: "Pourquoi faire le point maintenant"
+  text: "Le marché immobilier français entre dans une nouvelle phase. Ces quatre repères montrent pourquoi la stratégie d’hier n’est peut-être plus la bonne aujourd’hui."
+  stats:
+    - value: "+55 %"
+      label: "Écart entre le prix des logements et sa tendance longue face aux revenus des ménages (courbe de Friggit, 2026)"
+    - value: "≈ 5 %"
+      label: "Rendement de l’OAT à 10 ans : la dette française tire les taux de crédit vers le haut (novembre 2026)"
+    - value: "−0,8 %"
+      label: "Évolution sur un an du prix des logements anciens au 2e trimestre 2026 (Notaires de France)"
+    - value: "−46 %"
+      label: "Baisse des prix réels à Paris entre 1991 et 1997, lors de la dernière grande correction (CEPII)"
+  questionsTitle: "Les questions que tout propriétaire devrait se poser"
+  questions:
+    - title: "Mon bien vaut-il encore son prix ?"
+      text: "Les prix affichés ne sont pas les prix signés. Nous estimons une valeur réaliste, au regard des ventes récentes et des conditions de crédit des acheteurs."
+    - title: "Que me rapporte-t-il vraiment ?"
+      text: "Après taxe foncière, charges, vacance, travaux et impôts, le rendement net est souvent bien inférieur au rendement affiché."
+    - title: "Mon prêt à taux bas me protège-t-il ?"
+      text: "Un crédit à 1 % rassure, mais il ne protège pas la valeur du bien. Et il peut immobiliser un capital qui travaillerait mieux ailleurs."
+    - title: "Garder, vendre ou arbitrer ?"
+      text: "Selon votre situation, la bonne réponse peut être de tout garder, de céder un bien, ou de réinvestir une partie du capital."
+
+bilan:
+  title: "Ce que comprend votre bilan"
+  text: "Un rendez-vous en visioconférence avec notre équipe, puis une restitution claire de la situation de chacun de vos biens."
+  items:
+    - title: "Valeur actuelle"
+      text: "Une estimation réaliste de chaque bien, au prix du marché d’aujourd’hui."
+    - title: "Rendement net réel"
+      text: "Loyers, charges, taxe foncière, vacance et fiscalité (location nue ou meublée) : ce que le bien vous rapporte vraiment."
+    - title: "Dette et capital"
+      text: "Capital restant dû, coût réel du crédit et capital que vous pourriez réellement mobiliser."
+    - title: "Fiscalité à la revente"
+      text: "Plus-value, abattements selon la durée de détention et prélèvements sociaux : ce qu’il vous resterait en cas de vente."
+    - title: "Scénarios chiffrés"
+      text: "Garder et optimiser, vendre et réinvestir, notamment en Géorgie avec FFI : chaque option comparée sur plusieurs années."
+  prepareTitle: "À préparer si possible"
+  prepare:
+    - "Adresse et surface de vos biens"
+    - "Loyers perçus et charges"
+    - "Dernier avis de taxe foncière"
+    - "Tableau d’amortissement de vos crédits"
+
+how:
+  title: "Comment se déroule votre bilan"
+  steps:
+    - title: "Rendez-vous"
+      text: "Vous réservez un créneau. Nous échangeons sur vos biens, vos objectifs et votre horizon."
+    - title: "Analyse"
+      text: "Nous analysons chaque bien : valeur, rendement net, dette et fiscalité."
+    - title: "Restitution"
+      text: "Nous vous présentons les scénarios chiffrés et nos recommandations. Vous décidez, sans aucune obligation."
+
+team:
+  eyebrow: "Qui sommes-nous"
+  title: "Un regard indépendant de votre banque et de votre agence"
+  text: "Avec FFI, leader de l’investissement immobilier en Géorgie, nous accompagnons plus de 1 000 clients et investissons chaque mois plusieurs millions pour des privés, des family offices et des fonds. Notre métier : faire grandir votre patrimoine dans la durée, en adaptant la stratégie à chaque client."
+
+faq:
+  eyebrow: "Questions fréquentes"
+  title: "Avant de réserver"
+  items:
+    - q: "Le bilan est-il vraiment gratuit ?"
+      a: "Oui. Le bilan est offert et sans engagement : vous repartez avec une vision claire de votre situation, que vous décidiez d’agir ou non."
+    - q: "Faut-il forcément vendre ?"
+      a: "Non. Le bilan peut aussi conclure qu’il vaut mieux garder vos biens, renégocier, changer de régime de location ou faire des travaux. Nous comparons toutes les options."
+    - q: "Je réside en France : comment seraient imposés des revenus en Géorgie ?"
+      a: "Un résident fiscal français reste imposé en France sur ses revenus mondiaux. La convention fiscale entre la France et la Géorgie évite la double imposition. Nous intégrons ce point dans les scénarios et pouvons vous orienter vers un fiscaliste."
+    - q: "Mes informations restent-elles confidentielles ?"
+      a: "Oui. Les informations que vous nous transmettez servent uniquement à réaliser votre bilan et ne sont jamais partagées."
+
+final:
+  title: "Faites le point sur votre immobilier"
+  text: "Un rendez-vous suffit pour savoir où vous en êtes, et quelles options s’offrent à vous."
+  book: "Réserver mon bilan"
+  whatsapp: "Écrire sur WhatsApp"
+
+sources: "Sources : IGEDD / J. Friggit via MeilleureSCPI (juin 2026), Optimhome (novembre 2026), Notaires de France (octobre 2026), CEPII (2014)."

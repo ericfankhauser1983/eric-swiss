@@ -109,6 +109,8 @@ export const LOCALES: Record<Lang, { label: string; short: string; og: string }>
 
 /** Liens de prise de rendez-vous Calendly */
 export const CALENDLY = {
+  /** Bilan immobilier des biens en France (landing /fr/bilan-immobilier/) */
+  bilan: 'https://calendly.com/eric_fankh/bilan-immobilier',
   /** Investissement immobilier : FR → /rdv, EN & DE → /meet */
   invest: {
     fr: 'https://calendly.com/eric_fankh/rdv',

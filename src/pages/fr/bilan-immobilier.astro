@@ -1,0 +1,10 @@
+---
+/** Landing « Bilan immobilier » pour les propriétaires en France — eric.swiss/fr/bilan-immobilier/ (textes : src/content/pages/fr/bilan.yaml) */
+import Base from '../../layouts/Base.astro';
+import Bilan from '../../views/Bilan.astro';
+import { page } from '../../lib/content';
+const d = await page('fr', 'bilan');
+---
+<Base lang="fr" title={d.seo.title} description={d.seo.description} alternates={{ fr: '/fr/bilan-immobilier/' }} landing noindex>
+  <Bilan />
+</Base>
