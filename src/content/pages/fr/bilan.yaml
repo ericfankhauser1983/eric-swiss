@@ -16,10 +16,17 @@ hero:
 steps:
   - "Réservez votre bilan"
   - "Pourquoi faire le point maintenant"
+  - "Calculez ce que rapporte votre capital"
   - "Ce que comprend votre bilan"
 
 booking:
   title: "Réservez votre bilan immobilier"
+  with: "Avec Hugo Viard, qui réalise nos bilans"
+
+hugo:
+  name: "Hugo Viard"
+  role: "Collaborateur d’Eric Fankhauser · réalise les bilans immobiliers"
+  text: "C’est Hugo qui réalise votre bilan : il analyse vos biens un par un, chiffre chaque scénario et vous présente les résultats. Gratuitement et sans engagement."
 
 context:
   title: "Pourquoi faire le point maintenant"
@@ -27,8 +34,8 @@ context:
   stats:
     - value: "+55 %"
       label: "Écart entre le prix des logements et sa tendance longue face aux revenus des ménages (courbe de Friggit, 2026)"
-    - value: "≈ 5 %"
-      label: "Rendement de l’OAT à 10 ans : la dette française tire les taux de crédit vers le haut (novembre 2026)"
+    - value: "5,13 %"
+      label: "Taux d’emprunt de l’État à 10 ans le 22 octobre 2026, plus haut depuis 2002 : la dette française tire les taux de crédit vers le haut"
     - value: "−0,8 %"
       label: "Évolution sur un an du prix des logements anciens au 2e trimestre 2026 (Notaires de France)"
     - value: "−46 %"
@@ -44,16 +51,51 @@ context:
     - title: "Garder, vendre ou arbitrer ?"
       text: "Selon votre situation, la bonne réponse peut être de tout garder, de céder un bien, ou de réinvestir une partie du capital."
 
+capital:
+  title: "Calculez ce que rapporte votre capital"
+  text: "Le rendement affiché ou le taux de votre crédit ne disent pas l’essentiel. La vraie question est : combien d’argent est immobilisé dans votre bien, et combien vous rapporte-t-il chaque année ?"
+  points:
+    - title: "Votre capital immobilisé"
+      text: "C’est ce que vous récupéreriez en vendant : la valeur du bien moins le capital restant dû. Plus vous avez remboursé, plus il est important."
+    - title: "Ce qu’il vous rapporte"
+      text: "Loyers moins charges, taxe foncière, impôts et intérêts du crédit. Rapporté au capital immobilisé, c’est le seul rendement qui compte."
+    - title: "Le levier joue dans les deux sens"
+      text: "Un bien de 200 000 € avec 150 000 € de crédit, c’est 50 000 € de capital. Si le marché baisse de 10 %, vous perdez 20 000 €, soit 40 % de ce capital."
+  calc:
+    title: "Faites le calcul pour un de vos biens"
+    value: "Valeur actuelle du bien (€)"
+    debt: "Capital restant dû (€)"
+    gain: "Gain net par an (€)"
+    gainHint: "Loyers moins charges, taxe foncière, impôts et intérêts"
+    out:
+      capital: "Capital immobilisé"
+      yield: "Rendement de votre capital"
+      drop: "Si le marché baisse de 5 %"
+      ltv: "Part financée par le crédit"
+    note: "Calcul indicatif, avant impôt sur la plus-value et frais de vente. Votre bilan les intègre précisément."
+    verdictLow: "Votre capital travaille peu : c’est exactement ce que le bilan permet d’examiner."
+    verdictMid: "Un rendement correct, mais sensible à une baisse du marché : à mettre en perspective lors du bilan."
+    verdictHigh: "Votre capital travaille bien : le bilan vous aidera à le confirmer et à sécuriser la suite."
+  pitfalls:
+    title: "Trois réflexes qui coûtent cher"
+    items:
+      - title: "« Mon crédit à 1 % est trop intéressant pour vendre »"
+        text: "Un taux bas réduit le coût de la dette, pas le capital immobilisé ni le risque de baisse. C’est le rendement de ce capital qui compte."
+      - title: "« Mon bien vaut ce qu’il valait en 2021 »"
+        text: "Les prix signés ont reculé, et davantage encore une fois l’inflation déduite. Partir d’un prix d’hier fausse toute décision."
+      - title: "« J’ai déjà mis tellement dans ce bien »"
+        text: "Ce que vous avez investi est passé. La seule question : que rapportera ce capital à partir d’aujourd’hui, ici ou ailleurs ?"
+
 bilan:
   title: "Ce que comprend votre bilan"
-  text: "Un rendez-vous en visioconférence avec notre équipe, puis une restitution claire de la situation de chacun de vos biens."
+  text: "Un rendez-vous en visioconférence avec Hugo Viard, puis une restitution claire de la situation de chacun de vos biens."
   items:
     - title: "Valeur actuelle"
       text: "Une estimation réaliste de chaque bien, au prix du marché d’aujourd’hui."
     - title: "Rendement net réel"
       text: "Loyers, charges, taxe foncière, vacance et fiscalité (location nue ou meublée) : ce que le bien vous rapporte vraiment."
-    - title: "Dette et capital"
-      text: "Capital restant dû, coût réel du crédit et capital que vous pourriez réellement mobiliser."
+    - title: "Capital immobilisé et rendement"
+      text: "Capital restant dû, coût réel du crédit, capital net récupérable et ce qu’il vous rapporte vraiment chaque année."
     - title: "Fiscalité à la revente"
       text: "Plus-value, abattements selon la durée de détention et prélèvements sociaux : ce qu’il vous resterait en cas de vente."
     - title: "Scénarios chiffrés"
@@ -69,11 +111,11 @@ how:
   title: "Comment se déroule votre bilan"
   steps:
     - title: "Rendez-vous"
-      text: "Vous réservez un créneau. Nous échangeons sur vos biens, vos objectifs et votre horizon."
+      text: "Vous réservez un créneau. Hugo échange avec vous sur vos biens, vos objectifs et votre horizon."
     - title: "Analyse"
       text: "Nous analysons chaque bien : valeur, rendement net, dette et fiscalité."
     - title: "Restitution"
-      text: "Nous vous présentons les scénarios chiffrés et nos recommandations. Vous décidez, sans aucune obligation."
+      text: "Hugo vous présente les scénarios chiffrés et nos recommandations. Vous décidez, sans aucune obligation."
 
 team:
   eyebrow: "Qui sommes-nous"
@@ -99,4 +141,5 @@ final:
   book: "Réserver mon bilan"
   whatsapp: "Écrire sur WhatsApp"
 
-sources: "Sources : IGEDD / J. Friggit via MeilleureSCPI (juin 2026), Optimhome (novembre 2026), Notaires de France (octobre 2026), CEPII (2014)."
+sources: "Sources : IGEDD / J. Friggit via MeilleureSCPI (juin 2026), Agence France Trésor (OAT 10 ans, 22 octobre 2026), Notaires de France (octobre 2026), CEPII (2014)."
+guide: "Lire le guide complet : France ou Géorgie, ce que rapporte vraiment votre immobilier"

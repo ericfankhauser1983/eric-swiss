@@ -12,7 +12,8 @@ import { page } from '../lib/content';
 const lang = 'fr';
 const d = await page(lang, 'bilan');
 const l = await page(lang, 'landing');
-const anchors = ['rdv', 'contexte', 'bilan'];
+const anchors = ['rdv', 'contexte', 'capital', 'bilan'];
+const HUGO = '/images/photos/hugo-viard.jpg';
 const year = new Date().getFullYear();
 const wa = `https://wa.me/${SITE.whatsapp}`;
 ---
@@ -34,6 +35,7 @@ const wa = `https://wa.me/${SITE.whatsapp}`;
     </div>
     <div class="lhero__cal lsec" id="rdv">
       <p class="lhero__calt"><span class="lnum">1</span>{d.booking.title}</p>
+      <p class="lhero__with"><img src={HUGO} alt={d.hugo.name} width="40" height="40" />{d.booking.with}</p>
       <Calendly url={CALENDLY.bilan} lang={lang} height={600} />
     </div>
   </div>
@@ -60,14 +62,56 @@ const wa = `https://wa.me/${SITE.whatsapp}`;
       ))}
     </div>
     <p class="lsrc">{d.sources}</p>
+    <a class="link lguide" href="/fr/france-ou-georgie/">{d.guide} <span class="arrow">→</span></a>
   </div>
 </section>
 
-<section class="section lsec" id="bilan">
+<section class="section lsec" id="capital">
   <div class="wrap">
     <div class="lhead reveal">
       <span class="lnum">3</span>
+      <div><h2>{d.capital.title}</h2><p class="lead">{d.capital.text}</p></div>
+    </div>
+    <div class="cap">
+      <div class="cap__pts">
+        {d.capital.points.map((pt: any, i: number) => (
+          <article class="reveal" style={`transition-delay:${i * 70}ms`}><h3>{pt.title}</h3><p>{pt.text}</p></article>
+        ))}
+      </div>
+      <form class="calc reveal" data-calc onsubmit="return false">
+        <p class="calc__t">{d.capital.calc.title}</p>
+        <label><span>{d.capital.calc.value}</span><input type="text" inputmode="numeric" name="v" value="250 000" /></label>
+        <label><span>{d.capital.calc.debt}</span><input type="text" inputmode="numeric" name="d" value="70 000" /></label>
+        <label><span>{d.capital.calc.gain}</span><input type="text" inputmode="numeric" name="g" value="7 000" /><small>{d.capital.calc.gainHint}</small></label>
+        <dl class="calc__out">
+          <div><dt>{d.capital.calc.out.capital}</dt><dd data-o="cap">—</dd></div>
+          <div class="is-key"><dt>{d.capital.calc.out.yield}</dt><dd data-o="y">—</dd></div>
+          <div><dt>{d.capital.calc.out.drop}</dt><dd data-o="drop">—</dd></div>
+          <div><dt>{d.capital.calc.out.ltv}</dt><dd data-o="ltv">—</dd></div>
+        </dl>
+        <p class="calc__v" data-o="verdict"></p>
+        <a class="btn" href="#rdv">{d.final.book} <span class="arrow">↑</span></a>
+        <p class="calc__n">{d.capital.calc.note}</p>
+      </form>
+    </div>
+    <p class="lsub reveal">{d.capital.pitfalls.title}</p>
+    <div class="pits">
+      {d.capital.pitfalls.items.map((it: any, i: number) => (
+        <article class="reveal" style={`transition-delay:${i * 70}ms`}><h3>{it.title}</h3><p>{it.text}</p></article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand lsec" id="bilan">
+  <div class="wrap">
+    <div class="lhead reveal">
+      <span class="lnum">4</span>
       <div><h2>{d.bilan.title}</h2><p class="lead">{d.bilan.text}</p></div>
+    </div>
+    <div class="hugo reveal">
+      <img src={HUGO} alt={d.hugo.name} width="120" height="120" loading="lazy" />
+      <div><p class="hugo__n"><strong>{d.hugo.name}</strong><span>{d.hugo.role}</span></p><p>{d.hugo.text}</p></div>
     </div>
     <div class="bitems">
       {d.bilan.items.map((it: any, i: number) => (
@@ -86,7 +130,7 @@ const wa = `https://wa.me/${SITE.whatsapp}`;
   </div>
 </section>
 
-<section class="section section--sand lsec">
+<section class="section lsec">
   <div class="wrap">
     <h2 class="bhow__t reveal">{d.how.title}</h2>
     <ol class="bhow">
@@ -204,6 +248,41 @@ const wa = `https://wa.me/${SITE.whatsapp}`;
   .bhow p { color: var(--muted); margin: 0; }
   @media (max-width: 960px) { .lstats--4 { grid-template-columns: 1fr 1fr; } .bitems { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 760px) { .bitems, .bhow { grid-template-columns: 1fr; } }
+  .lhero__with { display: flex; align-items: center; gap: 10px; margin: 2px 0 8px; font-size: 0.82rem; color: var(--muted); }
+  .lhero__with img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
+  .lguide { display: inline-flex; margin-top: 18px; color: var(--gold-light); }
+  .cap { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+  .cap__pts article { padding: 0 0 22px 22px; border-left: 2px solid var(--gold); margin-bottom: 22px; }
+  .cap__pts h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .cap__pts p { color: var(--muted); margin: 0; }
+  .calc { background: var(--navy); color: var(--cream); border-radius: var(--radius); padding: clamp(22px, 3vw, 32px); display: flex; flex-direction: column; gap: 12px; box-shadow: 0 30px 70px -35px rgba(17, 33, 80, 0.6); }
+  .calc__t { font-family: var(--f-title); font-size: 1.2rem; margin: 0 0 4px; }
+  .calc label { display: flex; flex-direction: column; gap: 5px; font-size: 0.8rem; color: var(--gold-light); }
+  .calc input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px; color: var(--cream); padding: 11px 12px; font: inherit; font-size: 1rem; font-variant-numeric: tabular-nums; }
+  .calc input:focus { outline: none; border-color: var(--gold); }
+  .calc small { color: var(--muted-light); font-size: 0.72rem; }
+  .calc__out { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.12); margin: 8px 0 0; border: 1px solid rgba(255,255,255,0.12); }
+  .calc__out div { background: var(--navy); padding: 12px 14px; }
+  .calc__out dt { font-size: 0.72rem; color: var(--muted-light); margin-bottom: 4px; }
+  .calc__out dd { margin: 0; font-family: var(--f-title); font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+  .calc__out .is-key dd { color: var(--gold-light); }
+  .calc__out dd.neg { color: #f0a58f; }
+  .calc__v { font-size: 0.88rem; color: var(--muted-light); margin: 2px 0; min-height: 2.6em; }
+  .calc .btn { align-self: flex-start; }
+  .calc__n { font-size: 0.72rem; color: var(--muted-light); margin: 0; }
+  #capital .lsub { color: var(--gold-deep); }
+  .pits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+  .pits article { border-top: 2px solid var(--gold); padding-top: 18px; }
+  .pits h3 { font-size: 1.08rem; margin-bottom: 8px; }
+  .pits p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+  .hugo { display: flex; gap: 22px; align-items: center; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 24px; margin-bottom: clamp(24px, 3vw, 36px); }
+  .hugo img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); flex: none; }
+  .hugo__n { display: flex; flex-direction: column; margin: 0 0 6px; }
+  .hugo__n strong { font-family: var(--f-title); font-size: 1.25rem; color: var(--navy); }
+  .hugo__n span { font-size: 0.82rem; color: var(--gold-deep); }
+  .hugo p:last-child { margin: 0; color: var(--muted); }
+  @media (max-width: 860px) { .cap, .pits { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .hugo { flex-direction: column; align-items: flex-start; } }
   .lsticky { display: none; }
   @media (max-width: 960px) { .lreasons { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 760px) {
@@ -225,6 +304,7 @@ const wa = `https://wa.me/${SITE.whatsapp}`;
   }
 </style>
 
+
 <script>
   // barre fixe (mobile) : visible seulement hors de l'en-tête et hors de l'agenda
   const bar = document.querySelector<HTMLElement>('[data-sticky]');
@@ -238,4 +318,30 @@ const wa = `https://wa.me/${SITE.whatsapp}`;
     }, { threshold: 0.05 });
     watch.forEach((w) => io.observe(w));
   }
+</script>
+
+<script define:vars={{ v: d.capital.calc }}>
+  (() => {
+    const f = document.querySelector('[data-calc]');
+    if (!f) return;
+    const nf = new Intl.NumberFormat('fr-CH', { maximumFractionDigits: 0 });
+    const pf = new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 1 });
+    const num = (n) => +String(f.elements.namedItem(n).value).replace(/[^\d.-]/g, '') || 0;
+    const o = (k) => f.querySelector(`[data-o="${k}"]`);
+    const run = () => {
+      const val = num('v'), debt = num('d'), gain = num('g');
+      const cap = val - debt;
+      if (val <= 0 || cap <= 0) { ['cap', 'y', 'drop', 'ltv'].forEach((k) => (o(k).textContent = '—')); o('verdict').textContent = ''; return; }
+      const y = gain / cap, drop = (gain - 0.05 * val) / cap;
+      o('cap').textContent = nf.format(cap) + ' €';
+      o('y').textContent = pf.format(y);
+      o('drop').textContent = pf.format(drop);
+      o('drop').classList.toggle('neg', drop < 0);
+      o('ltv').textContent = pf.format(debt / val);
+      o('verdict').textContent = y < 0.05 ? v.verdictLow : y < 0.12 ? v.verdictMid : v.verdictHigh;
+    };
+    f.addEventListener('input', run);
+    f.querySelectorAll('input').forEach((i) => i.addEventListener('blur', () => { const n = +i.value.replace(/[^\d]/g, ''); if (n) i.value = nf.format(n); run(); }));
+    run();
+  })();
 </script>
