@@ -5,7 +5,7 @@ date: 2026-11-18
 translationKey: fmi-caucase-axe-golfe-asie-centrale
 category: geopolitique
 tags: ["Georgia", "IMF", "Caucasus", "Gulf", "Central Asia", "Invest in Georgia"]
-draft: true
+draft: false
 ---
 
 On 4 November, EU foreign policy chief Kaja Kallas announced that "everything is on the table" for new measures against Georgia, to be discussed in January ([Euronews](https://www.euronews.com/2026/11/04/everything-is-on-the-table-eu-to-discuss-new-measures-against-georgia-in-january-kallas-sa)). Nine days later, the IMF presented its outlook for the Caucasus and Central Asia. The tone could not have been more different. Seen from Brussels, Georgia is drifting. Seen from the numbers, it is accelerating. And the IMF recommends opening the region even further towards the Gulf.

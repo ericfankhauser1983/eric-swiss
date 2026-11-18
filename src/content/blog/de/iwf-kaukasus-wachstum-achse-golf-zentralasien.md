@@ -5,7 +5,7 @@ date: 2026-11-18
 translationKey: fmi-caucase-axe-golfe-asie-centrale
 category: geopolitique
 tags: ["Georgien", "IWF", "Kaukasus", "Golf", "Zentralasien", "In Georgien investieren"]
-draft: true
+draft: false
 ---
 
 Am 4. November erklärte die EU-Aussenbeauftragte Kaja Kallas, «alles liegt auf dem Tisch», wenn es um neue Massnahmen gegen Georgien geht, die im Januar besprochen werden sollen ([Euronews](https://www.euronews.com/2026/11/04/everything-is-on-the-table-eu-to-discuss-new-measures-against-georgia-in-january-kallas-sa)). Neun Tage später stellte der IWF seinen Ausblick für den Kaukasus und Zentralasien vor. Der Ton war ein ganz anderer. Aus Brüsseler Sicht driftet Georgien ab. Den Zahlen nach beschleunigt es. Und der IWF empfiehlt, die Region noch stärker zum Golf hin zu öffnen.

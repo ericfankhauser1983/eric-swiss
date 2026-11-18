@@ -5,7 +5,7 @@ date: 2026-11-18
 translationKey: fmi-caucase-axe-golfe-asie-centrale
 category: geopolitique
 tags: ["Géorgie", "FMI", "Caucase", "Golfe", "Asie centrale", "Investir en Géorgie"]
-draft: true
+draft: false
 ---
 
 Le 4 novembre, la cheffe de la diplomatie européenne Kaja Kallas annonçait que « tout est sur la table » pour de nouvelles mesures contre la Géorgie, à discuter en janvier ([Euronews](https://www.euronews.com/2026/11/04/everything-is-on-the-table-eu-to-discuss-new-measures-against-georgia-in-january-kallas-sa)). Neuf jours plus tard, le FMI présentait ses perspectives pour le Caucase et l'Asie centrale. Le ton n'était pas du tout le même. Vu de Bruxelles, la Géorgie dérive. Vu des chiffres, elle accélère. Et le FMI recommande d'ouvrir encore davantage la région vers le Golfe.
