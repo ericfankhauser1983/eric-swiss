@@ -10,7 +10,7 @@ hero:
 
 what:
   eyebrow: "Was wir tun"
-  title: "Ein Immobilien-Asset-Manager, nicht bloss ein Verkäufer"
+  title: "Wir verkaufen keine Immobilie, wir verwalten Ihr Kapital"
   text: "Eine erfolgreiche Investition entscheidet sich entlang der ganzen Kette: gut kaufen, gut verwalten, gut verkaufen. Wir beherrschen jeden Schritt und bleiben auch nach der Unterzeichnung an Ihrer Seite – für Umschichtungen, Verkäufe und Reinvestitionen."
   steps:
     - title: "Erwerb"
@@ -22,12 +22,12 @@ what:
 
 why:
   eyebrow: "Warum wir es tun"
-  title: "Mit unseren Kunden investieren und sie während der gesamten Investition begleiten"
+  title: "Wir bleiben auch lange nach dem Kauf an Ihrer Seite"
   text: "Unsere Mission ist einfach: mit unseren Kunden investieren und sie während der gesamten Lebensdauer ihrer Investition begleiten – Umschichtungen, Verkäufe, Reinvestitionen – mit dem einzigen Ziel, ihr Vermögen über die Jahre und Projekte hinweg zu vermehren."
 
 georgia:
   eyebrow: "Der Markt"
-  title: "Georgien in Zahlen"
+  title: "Die Zahlen, die Georgien zu einem Markt mit Zukunft machen"
   stats:
     - value: "7–10 %"
       label: "jährliches BIP-Wachstum"
@@ -57,7 +57,7 @@ cities:
 
 criteria:
   eyebrow: "Unsere Auswahlkriterien"
-  title: "Drei Filter vor jeder Empfehlung"
+  title: "Was wir ablehnen, zählt so viel wie das, was wir anbieten"
   items:
     - title: "Der Bauträger"
       text: "Finanzielle Solidität, Erfahrung bei der Fertigstellung, Bauqualität und Verlässlichkeit."
@@ -68,7 +68,7 @@ criteria:
 
 financing:
   eyebrow: "Finanzierung"
-  title: "Drei Arten zu kaufen"
+  title: "Bar, Zahlungsplan oder Kredit: Wählen Sie Ihren Hebel"
   items:
     - title: "Zahlung zu 100 %"
       text: "Die vollständige Zahlung bei Unterzeichnung ermöglicht den besten Rabatt auf den Preis."
@@ -79,7 +79,7 @@ financing:
 
 payment:
   eyebrow: "Zahlungsarten"
-  title: "Einfach bezahlen, wo immer Sie sind"
+  title: "Aus der Schweiz oder Frankreich investieren, ganz unkompliziert"
   items:
     - title: "Banküberweisung"
       text: "Internationale Überweisung in USD, EUR oder CHF, direkt an den Bauträger."
@@ -90,22 +90,22 @@ payment:
 
 partner:
   eyebrow: "Mein Unternehmen"
-  title: "FFI, massgeschneiderte internationale Investments"
+  title: "Warum über 1’000 Investoren uns vertraut haben"
   text: "FFI ist die internationale Beratungsfirma für Investitionen und Vermögensverwaltung, an der ich als Partner beteiligt bin. Über 15 Jahre Erfahrung, mehr als 1’000 begleitete Kunden und 13 erkundete Länder: Immobilien im Ausland, Holdingstrukturen, grenzüberschreitende Steuern und Bankbegleitung."
   cta: "FFI entdecken"
 
 simulator:
   eyebrow: "Rechner"
-  title: "Simulieren Sie Ihre Investition"
+  title: "Wie viel kann Ihr Kapital abwerfen? Rechnen Sie nach"
   text: "Zahlung zu 100 %, Zahlungsplan oder Bankkredit, Vermietung oder Wiederverkauf: Schätzen Sie das benötigte Eigenkapital und die Rendite Ihres Projekts."
 
 booking:
-  title: "Sprechen wir über Ihr Investitionsprojekt"
+  title: "Ein Gespräch genügt, um klar zu sehen"
   text: "Wählen Sie einen Termin: Wir besprechen Ihre Ziele, Ihr Budget und die aktuellen Chancen."
 
 faq:
   eyebrow: "Häufige Fragen"
-  title: "In georgische Immobilien investieren"
+  title: "Die Fragen, die sich jeder Investor vor dem Einstieg stellt"
   items:
     - q: "Kann ein Ausländer in Georgien eine Immobilie kaufen?"
       a: "Ja. Ausländer können Wohnungen, Häuser oder Gewerbeflächen zu vollem Eigentum erwerben, ohne Aufenthaltsbewilligung oder lokalen Partner. Einzige Einschränkung ist landwirtschaftliches Land. Der Kauf ist per Vollmacht auch aus der Ferne möglich."
@@ -119,3 +119,5 @@ faq:
       a: "Unser Partner Léo Lawless, Spezialist für Mietverwaltung, kümmert sich um Vermietung, Mieterbetreuung und Unterhalt. Sie erhalten Ihre Einnahmen, ohne sich um den Alltag zu kümmern."
     - q: "Warum mit FFI investieren?"
       a: "FFI ist Marktführer für Immobilien-Investments in Georgien: über 1’000 begleitete Kunden und jeden Monat mehrere Millionen investiert für Privatpersonen, Family Offices und Investmentfonds. Wir leben vor Ort und passen die Strategie jedem Kunden an."
+
+teamTitle: "Ein Team vor Ort, in Tiflis und Batumi"

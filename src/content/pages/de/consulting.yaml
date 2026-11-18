@@ -10,7 +10,7 @@ hero:
 
 challenges:
   eyebrow: "Themen, die ich behandle"
-  title: "Wenn das Tagesgeschäft keinen Raum für Weitblick lässt"
+  title: "Sie kümmern sich um das Dringende. Wer denkt an die Strategie?"
   items:
     - title: "Strategie"
       text: "Die Vision klären, die Positionierung definieren, Prioritäten setzen und eine Ambition in eine konkrete Roadmap verwandeln."
@@ -24,7 +24,7 @@ challenges:
 
 method:
   eyebrow: "Meine Methode"
-  title: "Von der Analyse bis zur Umsetzung"
+  title: "Kein Bericht für die Schublade: Wir setzen mit Ihnen um"
   steps:
     - title: "Analyse"
       text: "Lagebeurteilung, Gespräche mit der Geschäftsleitung und Identifikation der wichtigsten Hebel."
@@ -35,7 +35,7 @@ method:
 
 georgia:
   eyebrow: "Spezialisierung Georgien"
-  title: "Sich in Georgien ansiedeln und entwickeln"
+  title: "Ein Standbein in Georgien, Zugang zur EU, zur EFTA und zu China"
   text: "Georgien bietet eines der günstigsten steuerlichen und administrativen Umfelder der Region: Eine Firma wird in der Regel an einem Arbeitstag eingetragen, reinvestierte Gewinne sind steuerfrei, und das Land hat Freihandelsabkommen mit der Europäischen Union, der EFTA (inklusive Schweiz) und China. Für eine erfolgreiche Ansiedlung braucht es jedoch die richtigen Kontakte vor Ort."
   services:
     - "Marktstudie und Validierung der Chance"
@@ -47,7 +47,7 @@ georgia:
 
 edge:
   eyebrow: "Was den Unterschied macht"
-  title: "Die Brücke zwischen Europa und Georgien"
+  title: "Die richtigen Türen, geöffnet von den richtigen Leuten"
   items:
     - title: "Ein Netzwerk auf höchster Ebene"
       text: "Etablierte Beziehungen zu den Schlüsselakteuren des georgischen Marktes: Unternehmen, Banken und Regierung."
@@ -57,12 +57,12 @@ edge:
       text: "Verständnis für die Standards und Erwartungen von Schweizer und europäischen Unternehmen – die perfekte Brücke zwischen beiden Kulturen."
 
 booking:
-  title: "Sprechen wir über Ihr Unternehmen"
+  title: "Sprechen wir darüber: Sie gehen mit konkreten Ansätzen"
   text: "Buchen Sie ein erstes Gespräch, um Ihre Situation und Ihre Ziele vorzustellen."
 
 faq:
   eyebrow: "Häufige Fragen"
-  title: "Eine Firma in Georgien gründen und entwickeln"
+  title: "Ihr Unternehmen in Georgien, von der Idee bis zu den ersten Kunden"
   items:
     - q: "Kann ein Ausländer in Georgien eine Firma gründen?"
       a: "Ja. Ein Ausländer kann 100 % einer georgischen Firma halten, ohne lokalen Partner. Die Eintragung erfolgt bei der Nationalen Agentur des öffentlichen Registers (Public Service Halls), in der Regel an einem Arbeitstag, und ist per Vollmacht auch aus der Ferne möglich."
@@ -76,3 +76,5 @@ faq:
       a: "Seit März 2026 kann das Gesetz über die Arbeitsmigration für bestimmte Ausländer, die in Georgien tätig sind, eine Arbeitsbewilligung verlangen. Wir prüfen Ihre Situation und begleiten Sie bei den Formalitäten."
     - q: "Wie läuft Ihre Begleitung ab?"
       a: "Wir beginnen mit einem Gespräch, um Ihr Projekt zu verstehen. Dann prüfen wir die Chance, wählen die Struktur, bereiten Eintragung und Bankbeziehung vor und öffnen Ihnen unser Netzwerk: Unternehmen, Banken, Institutionen und Regierung. Auch nach dem Start bleiben wir an Ihrer Seite."
+
+teamTitle: "Experten, die beide Seiten kennen: Europa und Georgien"

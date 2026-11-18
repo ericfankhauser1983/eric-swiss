@@ -4,10 +4,10 @@ seo:
   description: "Swiss entrepreneur based in Tbilisi: real estate investment in Georgia with FFI, the market leader, and business consulting to set up in Georgia. Advisory Board for Swiss SMEs."
 
 hero:
-  eyebrow: "Switzerland · Europe · United Arab Emirates · Georgia"
+  eyebrow: "Entrepreneur · Investor · Strategic advisor"
   title: "Eric Fankhauser"
-  subtitle: "Entrepreneur, investor and strategic advisor"
-  lead: "Growing wealth and growing a business take the same things: a clear strategy, a strong network and someone who stays by your side over time. That is what my partners and I bring from Tbilisi: to investors who want their capital to work harder, and to business leaders who want to grow their company."
+  subtitle: "Growing your wealth and your business where the opportunities really are"
+  lead: "It takes three things: a clear strategy, a strong network and someone who stays by your side over time. That is what my partners and I bring from Tbilisi: to investors who want their capital to work harder, and to business leaders who want to grow their company."
   stats:
     - value: "1,000+"
       label: "clients supported in Georgia with FFI"
@@ -18,7 +18,7 @@ hero:
 
 paths:
   eyebrow: "How I can help"
-  title: "It all starts with where you stand"
+  title: "Tell us where you stand, we’ll show you where to go"
   lead: "Whether you want your capital to work harder, your company to grow or simply to make better decisions day to day, the approach is the same: understand where you are, then build with you the strategy that moves you forward."
 
 pillars:
@@ -44,16 +44,16 @@ pillars:
 
 about:
   eyebrow: "My story"
-  title: "From 15-year-old apprentice to international entrepreneur"
+  title: "What hands-on experience changes for you"
   text: "Swissair, New York on 11 September 2001, building a call centre from scratch, restructuring a company, then ten years growing Swiss Auto Glass into the country’s number three. Now based in Tbilisi, I put this experience to work for my clients."
   cta: "Read my story"
 
 team:
   eyebrow: "The team"
-  title: "You never work with me alone"
+  title: "Behind every piece of advice, a team that has walked the path"
   text: "Each activity relies on partners and recognised experts in Switzerland, Europe and Georgia."
   cta: "Meet the team"
 
 final:
-  title: "Let’s talk about your project"
+  title: "One first conversation, and you’ll know where you stand"
   text: "A first, no-obligation conversation to understand your goals and see how we can support you."

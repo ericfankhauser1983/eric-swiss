@@ -4,10 +4,10 @@ seo:
   description: "Entrepreneur suisse basé à Tbilissi : investissement immobilier en Géorgie avec FFI, leader du marché, et conseil d’entreprise pour s’implanter en Géorgie. Advisory Board pour PME suisses."
 
 hero:
-  eyebrow: "Suisse · Europe · Émirats arabes unis · Géorgie"
+  eyebrow: "Entrepreneur · Investisseur · Conseiller stratégique"
   title: "Eric Fankhauser"
-  subtitle: "Entrepreneur, investisseur et conseiller stratégique"
-  lead: "Faire grandir un patrimoine ou une entreprise demande la même chose : une stratégie claire, un réseau solide et quelqu’un qui reste à vos côtés dans la durée. C’est ce que j’apporte, avec mes associés, depuis Tbilissi : aux investisseurs qui veulent faire travailler leur capital, et aux dirigeants qui veulent développer leur entreprise."
+  subtitle: "Faire grandir votre patrimoine et votre entreprise, là où les opportunités existent vraiment"
+  lead: "Cela demande trois choses : une stratégie claire, un réseau solide et quelqu’un qui reste à vos côtés dans la durée. C’est ce que j’apporte, avec mes associés, depuis Tbilissi : aux investisseurs qui veulent faire travailler leur capital, et aux dirigeants qui veulent développer leur entreprise."
   stats:
     - value: "1 000+"
       label: "clients accompagnés en Géorgie avec FFI"
@@ -18,7 +18,7 @@ hero:
 
 paths:
   eyebrow: "Comment je peux vous aider"
-  title: "Tout commence par votre situation"
+  title: "Dites-nous où vous en êtes, nous vous montrons où aller"
   lead: "Que vous cherchiez à faire travailler votre capital, à faire grandir votre entreprise ou à mieux décider au quotidien, la démarche est la même : comprendre où vous en êtes, puis bâtir avec vous la stratégie qui vous fera avancer."
 
 pillars:
@@ -44,16 +44,16 @@ pillars:
 
 about:
   eyebrow: "Mon parcours"
-  title: "De l’apprenti de 15 ans à l’entrepreneur international"
+  title: "Ce que l’expérience du terrain change pour vous"
   text: "Swissair, New York le 11 septembre 2001, la création d’un centre d’appel, la restructuration d’une entreprise, puis dix ans à bâtir Swiss Auto Glass jusqu’à la troisième place nationale. Aujourd’hui à Tbilissi, je mets cette expérience au service de mes clients."
   cta: "Lire mon histoire"
 
 team:
   eyebrow: "L’équipe"
-  title: "Vous ne travaillez jamais avec moi seul"
+  title: "Derrière chaque conseil, une équipe qui a déjà fait le chemin"
   text: "Chaque activité s’appuie sur des associés et des experts reconnus, en Suisse, en Europe et en Géorgie."
   cta: "Rencontrer l’équipe"
 
 final:
-  title: "Parlons de votre projet"
+  title: "Un premier échange, et vous saurez où vous en êtes"
   text: "Un premier échange sans engagement pour comprendre vos objectifs et voir comment nous pouvons vous accompagner."

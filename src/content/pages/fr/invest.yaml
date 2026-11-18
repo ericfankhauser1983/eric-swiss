@@ -10,7 +10,7 @@ hero:
 
 what:
   eyebrow: "Ce que nous faisons"
-  title: "Un gestionnaire d’actifs immobiliers, pas un simple vendeur"
+  title: "Nous ne vendons pas un bien, nous gérons votre capital"
   text: "Un investissement réussi se joue sur toute la chaîne : bien acheter, bien gérer, bien revendre. Nous maîtrisons chacune de ces étapes et restons à vos côtés après la signature — pour les arbitrages, les ventes et les réinvestissements."
   steps:
     - title: "Acquisition"
@@ -22,12 +22,12 @@ what:
 
 why:
   eyebrow: "Pourquoi nous le faisons"
-  title: "Investir avec nos clients et les accompagner toute la vie de leur investissement"
+  title: "Nous restons à vos côtés bien après l’achat"
   text: "Notre mission est simple : investir avec nos clients et les accompagner pendant toute la durée de leur investissement — arbitrages, ventes, réinvestissements — avec pour seul but de faire croître leur patrimoine au fil des années et des projets."
 
 georgia:
   eyebrow: "Le marché"
-  title: "La Géorgie en chiffres"
+  title: "Les chiffres qui font de la Géorgie un marché à suivre"
   stats:
     - value: "7–10 %"
       label: "croissance annuelle du PIB"
@@ -57,7 +57,7 @@ cities:
 
 criteria:
   eyebrow: "Nos critères de sélection"
-  title: "Trois filtres avant toute recommandation"
+  title: "Ce que nous refusons compte autant que ce que nous proposons"
   items:
     - title: "Le promoteur"
       text: "Solidité financière, historique de livraison, qualité de construction et respect des engagements."
@@ -68,7 +68,7 @@ criteria:
 
 financing:
   eyebrow: "Financement"
-  title: "Trois façons d’acheter"
+  title: "Comptant, en plan de paiement ou à crédit : choisissez votre levier"
   items:
     - title: "Paiement à 100 %"
       text: "Le règlement intégral à la signature permet de négocier la meilleure remise sur le prix."
@@ -79,7 +79,7 @@ financing:
 
 payment:
   eyebrow: "Modes de paiement"
-  title: "Payer simplement, où que vous soyez"
+  title: "Investir depuis la Suisse ou la France, sans complications"
   items:
     - title: "Virement bancaire"
       text: "Virement international en USD, EUR ou CHF, directement au promoteur."
@@ -90,22 +90,22 @@ payment:
 
 partner:
   eyebrow: "Ma société"
-  title: "FFI, l’investissement international sur mesure"
+  title: "Pourquoi plus de 1 000 investisseurs nous ont fait confiance"
   text: "FFI est la société de conseil en investissement et en gestion de patrimoine international dont je suis associé. Plus de 15 ans d’expérience, plus de 1 000 clients accompagnés et 13 pays explorés : immobilier à l’étranger, structuration de holdings, fiscalité transfrontalière et accompagnement bancaire."
   cta: "Découvrir FFI"
 
 simulator:
   eyebrow: "Simulateur"
-  title: "Simulez votre investissement"
+  title: "Combien votre capital peut-il rapporter ? Faites le calcul"
   text: "Paiement à 100 %, plan de paiement ou crédit bancaire, location ou achat-revente : estimez le capital à mobiliser et le rendement de votre projet."
 
 booking:
-  title: "Parlons de votre projet d’investissement"
+  title: "Un appel suffit pour y voir clair"
   text: "Choisissez un créneau : nous faisons le point sur vos objectifs, votre budget et les opportunités du moment."
 
 faq:
   eyebrow: "Questions fréquentes"
-  title: "Investir dans l’immobilier en Géorgie"
+  title: "Les questions que tout investisseur se pose avant de se lancer"
   items:
     - q: "Un étranger peut-il acheter un bien immobilier en Géorgie ?"
       a: "Oui. Les étrangers peuvent acheter en pleine propriété un appartement, une maison ou un local commercial, sans permis de séjour ni associé local. La seule restriction concerne les terres agricoles. L’achat peut se faire à distance, par procuration."
@@ -119,3 +119,5 @@ faq:
       a: "Notre associé Léo Lawless, spécialiste de la gestion locative, organise la mise en location, le suivi des locataires et l’entretien. Vous percevez vos revenus sans gérer le quotidien."
     - q: "Pourquoi investir avec FFI ?"
       a: "FFI est le leader de l’investissement immobilier en Géorgie : plus de 1 000 clients accompagnés et plusieurs millions investis chaque mois pour des privés, des family offices et des fonds d’investissement. Nous vivons sur place et adaptons la stratégie à chaque client."
+
+teamTitle: "Une équipe sur place, à Tbilissi et à Batumi"

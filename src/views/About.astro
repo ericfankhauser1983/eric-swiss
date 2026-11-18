@@ -101,9 +101,9 @@ const q = { fr: `« ${d.quote.text} »`, en: `“${d.quote.text}”`, de: `«${d
 
 <section class="section section--tight" style="padding-top:0"><div class="wrap"><a class="link" href={path('press', lang)}>{ui.nav.press} <span class="arrow">→</span></a></div></section>
 
-<Team lang={lang} sand />
+<Team lang={lang} sand title={d.teamTitle} />
 
-<CtaBand title={home.final.title} text={home.final.text} href={path('contact', lang)} label={ui.cta.book} />
+<CtaBand title={d.finalTitle ?? home.final.title} text={home.final.text} href={path('contact', lang)} label={ui.cta.book} />
 
 <style>
   .ahero { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }

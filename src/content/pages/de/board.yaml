@@ -10,7 +10,7 @@ hero:
 
 problem:
   eyebrow: "Für wen"
-  title: "Für Unternehmer, die die grossen Entscheide allein tragen"
+  title: "Allein führen heisst entscheiden, ohne dass Ihnen jemand widerspricht"
   text: "Vom operativen Geschäft vereinnahmt, fehlt vielen Unternehmern der Abstand und ein vertrauenswürdiges Gegenüber, das ihre Entscheide hinterfragt. Das Advisory Board bringt eine externe, strukturierte und engagierte Sicht."
   criteria:
     - "In der Schweiz ansässiges KMU"
@@ -47,10 +47,12 @@ domains:
 
 panel:
   eyebrow: "Das Panel"
-  title: "Experten, die sich für Ihren Erfolg engagieren"
+  title: "Spezialisten, die Ihre Probleme anderswo schon gelöst haben"
   text: "Die Begleitung wird von Patrick Grobéty und Eric Fankhauser geleitet, ergänzt durch einen dritten Experten, der nach den spezifischen Bedürfnissen Ihres Unternehmens ausgewählt wird. Über 120 Unternehmer wurden bereits begleitet."
   cta: "advisoryboard.ch besuchen"
 
 booking:
-  title: "Ist Ihr Unternehmen bereit für ein Advisory Board?"
+  title: "Ist Ihr Unternehmen bereit? Sprechen wir darüber"
   text: "Buchen Sie ein Gespräch, um es zu besprechen und zu prüfen, ob in Ihrer Branche noch ein Platz frei ist."
+
+teamTitle: "Der Verwaltungsrat, den Ihr KMU noch nicht hat"

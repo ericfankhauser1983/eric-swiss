@@ -74,7 +74,7 @@ const d = await page(lang, 'consulting');
 
 <Faq eyebrow={d.faq.eyebrow} title={d.faq.title} items={d.faq.items} />
 
-<Team lang={lang} filter={['Eric Fankhauser']} sand />
+<Team lang={lang} filter={['Eric Fankhauser']} sand title={d.teamTitle} />
 
 <Booking lang={lang} url={CALENDLY.advisory} title={d.booking.title} text={d.booking.text} />
 

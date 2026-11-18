@@ -10,7 +10,7 @@ hero:
 
 challenges:
   eyebrow: "Les enjeux que je traite"
-  title: "Quand le quotidien empêche de prendre de la hauteur"
+  title: "Vous gérez l’urgence. Qui pense à la stratégie ?"
   items:
     - title: "Stratégie"
       text: "Clarifier la vision, définir le positionnement, arbitrer les priorités et transformer une ambition en feuille de route concrète."
@@ -24,7 +24,7 @@ challenges:
 
 method:
   eyebrow: "Ma méthode"
-  title: "Du diagnostic à la mise en œuvre"
+  title: "Pas de rapport qui dort dans un tiroir : nous mettons en œuvre avec vous"
   steps:
     - title: "Diagnostic"
       text: "Analyse de la situation, entretiens avec la direction et identification des leviers prioritaires."
@@ -35,7 +35,7 @@ method:
 
 georgia:
   eyebrow: "Spécialisation Géorgie"
-  title: "S’implanter et se développer en Géorgie"
+  title: "Un pied en Géorgie, un accès à l’Europe, à l’AELE et à la Chine"
   text: "La Géorgie offre un environnement fiscal et administratif parmi les plus favorables de la région : une société s’y enregistre en général en un jour ouvré, les bénéfices réinvestis ne sont pas imposés, et le pays a signé des accords de libre-échange avec l’Union européenne, l’AELE (dont la Suisse) et la Chine. Encore faut-il disposer des bons relais pour s’y implanter avec succès."
   services:
     - "Étude de marché et validation de l’opportunité"
@@ -47,7 +47,7 @@ georgia:
 
 edge:
   eyebrow: "Ce qui fait la différence"
-  title: "Le lien entre l’Europe et la Géorgie"
+  title: "Les bonnes portes, ouvertes par les bonnes personnes"
   items:
     - title: "Un réseau au plus haut niveau"
       text: "Des relations établies avec les acteurs clés du marché géorgien : entreprises, banques et gouvernement."
@@ -57,12 +57,12 @@ edge:
       text: "La compréhension des standards et des attentes des entreprises suisses et européennes, pour faire le lien parfait entre les deux cultures."
 
 booking:
-  title: "Échangeons sur votre entreprise"
+  title: "Échangeons, vous repartirez avec des pistes concrètes"
   text: "Réservez un premier échange pour présenter votre situation et vos objectifs."
 
 faq:
   eyebrow: "Questions fréquentes"
-  title: "Créer et développer une société en Géorgie"
+  title: "Votre société en Géorgie, de l’idée aux premiers clients"
   items:
     - q: "Un étranger peut-il créer une société en Géorgie ?"
       a: "Oui. Un étranger peut détenir 100 % d’une société géorgienne, sans associé local. L’enregistrement se fait auprès de l’Agence nationale du registre public (Maisons de justice), en général en un jour ouvré, et peut se faire à distance par procuration."
@@ -76,3 +76,5 @@ faq:
       a: "Depuis mars 2026, la loi sur la migration de main-d’œuvre peut exiger une autorisation de travail pour certains étrangers qui exercent une activité en Géorgie. Nous vérifions votre situation et vous accompagnons dans les démarches."
     - q: "Comment se déroule votre accompagnement ?"
       a: "Nous commençons par un échange pour comprendre votre projet, puis nous validons l’opportunité, choisissons la structure, préparons l’enregistrement et la banque, et vous ouvrons notre réseau : entreprises, banques, institutions et gouvernement. Nous restons à vos côtés après le lancement."
+
+teamTitle: "Des experts qui connaissent les deux côtés, Europe et Géorgie"

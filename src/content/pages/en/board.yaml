@@ -10,7 +10,7 @@ hero:
 
 problem:
   eyebrow: "Who it is for"
-  title: "For leaders who carry the big decisions alone"
+  title: "Leading alone means deciding with no one to challenge you"
   text: "Absorbed by operations, many business owners lack perspective and trusted counterparts to challenge their choices. The Advisory Board brings them an outside, structured and committed view."
   criteria:
     - "SME established in Switzerland"
@@ -47,10 +47,12 @@ domains:
 
 panel:
   eyebrow: "The panel"
-  title: "Experts committed to your success"
+  title: "Specialists who have already solved your problems elsewhere"
   text: "The programme is led by Patrick Grobéty and Eric Fankhauser, joined by a third expert chosen according to your company’s specific needs. More than 120 entrepreneurs have already been supported."
   cta: "Visit advisoryboard.ch"
 
 booking:
-  title: "Is your company ready for an Advisory Board?"
+  title: "Is your company ready? Let’s talk"
   text: "Book a conversation to discuss it and check whether a seat is available in your industry."
+
+teamTitle: "The board your SME doesn’t have yet"

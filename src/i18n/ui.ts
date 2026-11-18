@@ -41,6 +41,7 @@ export const UI = {
     },
     blog: {
       title: 'Blog',
+      headline: 'Immobilier, géopolitique, entreprise : l’analyse d’un investisseur de terrain',
       lead: 'Analyses, marchés et stratégie : mes notes sur l’investissement immobilier, la géopolitique vue du terrain et l’entrepreneuriat.',
       published: 'Publié le',
       minutes: 'min de lecture',
@@ -212,6 +213,7 @@ export const UI = {
     },
     blog: {
       title: 'Blog',
+      headline: 'Real estate, geopolitics, business: the view of a hands-on investor',
       lead: 'Analysis, markets and strategy: my notes on real estate investment, geopolitics seen from the ground and entrepreneurship.',
       published: 'Published on',
       minutes: 'min read',
@@ -383,6 +385,7 @@ export const UI = {
     },
     blog: {
       title: 'Blog',
+      headline: 'Immobilien, Geopolitik, Unternehmen: der Blick eines Investors aus der Praxis',
       lead: 'Analysen, Märkte und Strategie: meine Notizen zu Immobilien-Investments, Geopolitik aus erster Hand und Unternehmertum.',
       published: 'Veröffentlicht am',
       minutes: 'Min. Lesezeit',

@@ -11,7 +11,7 @@ const ui = t(lang);
 const list = await posts(lang);
 const cats = ['immobilier', 'geopolitique', 'entrepreneuriat'].filter((c) => list.some((p) => p.data.category === c));
 ---
-<PageHero eyebrow={ui.blog.title} title={ui.blog.title} lead={ui.blog.lead} />
+<PageHero eyebrow={ui.blog.title} title={ui.blog.headline} lead={ui.blog.lead} />
 <section class="section">
   <div class="wrap">
     {list.length === 0 ? <p class="lead">{ui.blog.empty}</p> : (<>

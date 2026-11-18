@@ -10,7 +10,7 @@ hero:
 
 problem:
   eyebrow: "Pour qui"
-  title: "Pour les dirigeants qui portent seuls les grandes décisions"
+  title: "Diriger seul, c’est décider sans personne pour vous contredire"
   text: "Absorbés par l’opérationnel, de nombreux chefs d’entreprise manquent de recul et d’interlocuteurs de confiance pour challenger leurs choix. L’Advisory Board leur apporte un regard extérieur, structuré et engagé."
   criteria:
     - "PME établie en Suisse"
@@ -47,10 +47,12 @@ domains:
 
 panel:
   eyebrow: "Le panel"
-  title: "Des experts engagés dans votre réussite"
+  title: "Des spécialistes qui ont déjà résolu vos problèmes ailleurs"
   text: "L’accompagnement est mené par Patrick Grobéty et Eric Fankhauser, rejoints par un troisième expert choisi selon les besoins spécifiques de votre entreprise. Plus de 120 entrepreneurs ont déjà été accompagnés."
   cta: "Découvrir advisoryboard.ch"
 
 booking:
-  title: "Votre entreprise est-elle prête pour un Advisory Board ?"
+  title: "Votre entreprise est-elle prête ? Parlons-en"
   text: "Réservez un échange pour en discuter et vérifier si une place est disponible dans votre domaine d’activité."
+
+teamTitle: "Le conseil d’administration que votre PME n’a pas encore"

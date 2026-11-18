@@ -4,10 +4,10 @@ seo:
   description: "Schweizer Unternehmer mit Sitz in Tiflis: Immobilien-Investments in Georgien mit FFI, dem Marktführer, und Unternehmensberatung für die Ansiedlung in Georgien. Advisory Board für Schweizer KMU."
 
 hero:
-  eyebrow: "Schweiz · Europa · Vereinigte Arabische Emirate · Georgien"
+  eyebrow: "Unternehmer · Investor · Strategieberater"
   title: "Eric Fankhauser"
-  subtitle: "Unternehmer, Investor und Strategieberater"
-  lead: "Ein Vermögen und ein Unternehmen wachsen auf dieselbe Weise: mit einer klaren Strategie, einem starken Netzwerk und jemandem, der langfristig an Ihrer Seite bleibt. Genau das bringe ich gemeinsam mit meinen Partnern von Tiflis aus ein: für Investoren, deren Kapital mehr leisten soll, und für Unternehmer, die ihr Unternehmen weiterentwickeln wollen."
+  subtitle: "Ihr Vermögen und Ihr Unternehmen dort wachsen lassen, wo die Chancen wirklich liegen"
+  lead: "Dafür braucht es drei Dinge: eine klare Strategie, ein starkes Netzwerk und jemanden, der langfristig an Ihrer Seite bleibt. Genau das bringe ich gemeinsam mit meinen Partnern von Tiflis aus ein: für Investoren, deren Kapital mehr leisten soll, und für Unternehmer, die ihr Unternehmen weiterentwickeln wollen."
   stats:
     - value: "1’000+"
       label: "begleitete Kunden in Georgien mit FFI"
@@ -18,7 +18,7 @@ hero:
 
 paths:
   eyebrow: "Wie ich Ihnen helfen kann"
-  title: "Alles beginnt bei Ihrer Situation"
+  title: "Sagen Sie uns, wo Sie stehen – wir zeigen Ihnen, wohin es geht"
   lead: "Ob Ihr Kapital mehr leisten, Ihr Unternehmen wachsen oder Sie im Alltag besser entscheiden sollen – der Ansatz ist derselbe: verstehen, wo Sie stehen, und mit Ihnen die Strategie entwickeln, die Sie weiterbringt."
 
 pillars:
@@ -44,16 +44,16 @@ pillars:
 
 about:
   eyebrow: "Mein Werdegang"
-  title: "Vom 15-jährigen Lehrling zum internationalen Unternehmer"
+  title: "Was Praxiserfahrung für Sie verändert"
   text: "Swissair, New York am 11. September 2001, der Aufbau eines Callcenters, die Restrukturierung eines Unternehmens, dann zehn Jahre, um Swiss Auto Glass zur Nummer drei der Schweiz zu machen. Heute lebe ich in Tiflis und stelle diese Erfahrung in den Dienst meiner Kunden."
   cta: "Meine Geschichte lesen"
 
 team:
   eyebrow: "Das Team"
-  title: "Sie arbeiten nie mit mir allein"
+  title: "Hinter jedem Rat ein Team, das den Weg schon gegangen ist"
   text: "Jede Tätigkeit stützt sich auf Partner und anerkannte Experten in der Schweiz, in Europa und in Georgien."
   cta: "Das Team kennenlernen"
 
 final:
-  title: "Sprechen wir über Ihr Projekt"
+  title: "Ein erstes Gespräch, und Sie wissen, wo Sie stehen"
   text: "Ein erstes, unverbindliches Gespräch, um Ihre Ziele zu verstehen und zu sehen, wie wir Sie begleiten können."

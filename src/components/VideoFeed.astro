@@ -11,9 +11,9 @@ import { latestVideos } from '../lib/youtube';
 interface Props { lang: Lang; sand?: boolean }
 const { lang, sand = false } = Astro.props;
 const T = {
-  fr: { eyebrow: 'En vidéo', title: 'Mes dernières vidéos', follow: 'Suivez-moi', channel: 'Voir la chaîne YouTube', empty: 'Retrouvez mes vidéos sur l’investissement immobilier, la Géorgie et l’entrepreneuriat sur mes réseaux.' },
-  en: { eyebrow: 'On video', title: 'My latest videos', follow: 'Follow me', channel: 'See the YouTube channel', empty: 'Find my videos on real estate investment, Georgia and entrepreneurship on my social channels.' },
-  de: { eyebrow: 'Im Video', title: 'Meine neuesten Videos', follow: 'Folgen Sie mir', channel: 'YouTube-Kanal ansehen', empty: 'Meine Videos zu Immobilien-Investments, Georgien und Unternehmertum finden Sie auf meinen Kanälen.' },
+  fr: { eyebrow: 'En vidéo', title: 'Mes analyses, en vidéo', follow: 'Suivez-moi', channel: 'Voir la chaîne YouTube', empty: 'Retrouvez mes vidéos sur l’investissement immobilier, la Géorgie et l’entrepreneuriat sur mes réseaux.' },
+  en: { eyebrow: 'On video', title: 'My analyses, on video', follow: 'Follow me', channel: 'See the YouTube channel', empty: 'Find my videos on real estate investment, Georgia and entrepreneurship on my social channels.' },
+  de: { eyebrow: 'Im Video', title: 'Meine Analysen im Video', follow: 'Folgen Sie mir', channel: 'YouTube-Kanal ansehen', empty: 'Meine Videos zu Immobilien-Investments, Georgien und Unternehmertum finden Sie auf meinen Kanälen.' },
 }[lang];
 const fetched = VIDEOS.youtubeHandle || VIDEOS.youtubeChannelId ? await latestVideos(VIDEOS.youtubeHandle, VIDEOS.youtubeChannelId, VIDEOS.count) : [];
 const videos = (fetched.length ? fetched : VIDEOS.fallback.map((id) => ({ id, title: '', published: '', short: true }))).slice(0, VIDEOS.count);

@@ -127,7 +127,7 @@ const d = await page(lang, 'invest');
 
 
 
-<Team lang={lang} filter={['Eric Fankhauser', 'Adrien Boucher', 'Léo Lawless']} />
+<Team lang={lang} filter={['Eric Fankhauser', 'Adrien Boucher', 'Léo Lawless']} title={d.teamTitle} />
 
 <Faq eyebrow={d.faq.eyebrow} title={d.faq.title} items={d.faq.items} />
 

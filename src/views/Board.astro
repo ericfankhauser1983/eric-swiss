@@ -62,7 +62,7 @@ const d = await page(lang, 'board');
   </div></div>
 </section>
 
-<Team lang={lang} filter={['Eric Fankhauser', 'Patrick Grobéty']} showNetwork={false} />
+<Team lang={lang} filter={['Eric Fankhauser', 'Patrick Grobéty']} showNetwork={false} title={d.teamTitle} />
 
 <Booking lang={lang} url={CALENDLY.advisory} title={d.booking.title} text={d.booking.text} />
 

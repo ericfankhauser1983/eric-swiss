@@ -10,7 +10,7 @@ hero:
 
 challenges:
   eyebrow: "The challenges I address"
-  title: "When day-to-day business leaves no room for perspective"
+  title: "You handle the urgent. Who is thinking about strategy?"
   items:
     - title: "Strategy"
       text: "Clarify the vision, define the positioning, set priorities and turn an ambition into a concrete roadmap."
@@ -24,7 +24,7 @@ challenges:
 
 method:
   eyebrow: "My method"
-  title: "From diagnosis to implementation"
+  title: "No report gathering dust: we implement it with you"
   steps:
     - title: "Diagnosis"
       text: "Analysis of the situation, interviews with management and identification of priority levers."
@@ -35,7 +35,7 @@ method:
 
 georgia:
   eyebrow: "Georgia specialisation"
-  title: "Establishing and growing your business in Georgia"
+  title: "A foothold in Georgia, access to the EU, EFTA and China"
   text: "Georgia offers one of the most favourable tax and administrative environments in the region: a company is usually registered in one business day, reinvested profits are not taxed, and the country has free trade agreements with the European Union, EFTA (including Switzerland) and China. Success, however, requires the right connections on the ground."
   services:
     - "Market study and opportunity validation"
@@ -47,7 +47,7 @@ georgia:
 
 edge:
   eyebrow: "What makes the difference"
-  title: "The bridge between Europe and Georgia"
+  title: "The right doors, opened by the right people"
   items:
     - title: "A network at the highest level"
       text: "Established relationships with the key players of the Georgian market: companies, banks and government."
@@ -57,12 +57,12 @@ edge:
       text: "An understanding of the standards and expectations of Swiss and European companies, to bridge the two cultures seamlessly."
 
 booking:
-  title: "Let’s talk about your company"
+  title: "Let’s talk: you’ll leave with concrete next steps"
   text: "Book a first conversation to present your situation and your goals."
 
 faq:
   eyebrow: "Frequently asked questions"
-  title: "Setting up and growing a company in Georgia"
+  title: "Your company in Georgia, from idea to first clients"
   items:
     - q: "Can a foreigner set up a company in Georgia?"
       a: "Yes. A foreigner can own 100% of a Georgian company, with no local partner. Registration is handled by the National Agency of Public Registry (Public Service Halls), usually in one business day, and can be done remotely by power of attorney."
@@ -76,3 +76,5 @@ faq:
       a: "Since March 2026, the labour migration law may require a work authorisation for some foreigners doing business in Georgia. We check your situation and support you through the process."
     - q: "How does your support work?"
       a: "We start with a call to understand your project, then validate the opportunity, choose the structure, prepare the registration and banking, and open up our network: companies, banks, institutions and government. We stay by your side after the launch."
+
+teamTitle: "Experts who know both sides, Europe and Georgia"
