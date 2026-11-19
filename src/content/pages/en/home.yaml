@@ -4,10 +4,18 @@ seo:
   description: "Swiss entrepreneur based in Tbilisi: real estate investment in Georgia with FFI, the market leader, and business consulting to set up in Georgia. Advisory Board for Swiss SMEs."
 
 hero:
-  eyebrow: "Entrepreneur · Investor · Strategic advisor"
-  title: "Eric Fankhauser"
-  subtitle: "Growing your wealth and your business where the opportunities really are"
-  lead: "It takes three things: a clear strategy, a strong network and someone who stays by your side over time. That is what my partners and I bring from Tbilisi: to investors who want their capital to work harder, and to business leaders who want to grow their company."
+  eyebrow: "Eric Fankhauser · Entrepreneur and investor"
+  title: "The best decisions start with <em>a conversation</em>"
+  lead: "Investing in Georgia, growing your business, surrounding yourself with experts: book a free, no-obligation call. You’ll leave with a clear view of your options."
+  book:
+    title: "Book your free call: what is it about?"
+    options:
+      - "Investing in real estate in Georgia"
+      - "Growing or setting up my business"
+      - "An Advisory Board for my SME"
+    whatsapp: "Or message me directly on WhatsApp"
+    close: "Close"
+    calendar: "Choose your time slot"
   stats:
     - value: "1,000+"
       label: "clients supported in Georgia with FFI"

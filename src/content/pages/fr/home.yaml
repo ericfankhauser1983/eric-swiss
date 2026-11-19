@@ -4,10 +4,18 @@ seo:
   description: "Entrepreneur suisse basé à Tbilissi : investissement immobilier en Géorgie avec FFI, leader du marché, et conseil d’entreprise pour s’implanter en Géorgie. Advisory Board pour PME suisses."
 
 hero:
-  eyebrow: "Entrepreneur · Investisseur · Conseiller stratégique"
-  title: "Eric Fankhauser"
-  subtitle: "Faire grandir votre patrimoine et votre entreprise, là où les opportunités existent vraiment"
-  lead: "Cela demande trois choses : une stratégie claire, un réseau solide et quelqu’un qui reste à vos côtés dans la durée. C’est ce que j’apporte, avec mes associés, depuis Tbilissi : aux investisseurs qui veulent faire travailler leur capital, et aux dirigeants qui veulent développer leur entreprise."
+  eyebrow: "Eric Fankhauser · Entrepreneur et investisseur"
+  title: "Les meilleures décisions commencent par <em>une conversation</em>"
+  lead: "Investir en Géorgie, développer votre entreprise, vous entourer d’experts : réservez un échange gratuit et sans engagement. Vous repartez avec une vision claire de vos options."
+  book:
+    title: "Réservez votre échange gratuit : quel est votre sujet ?"
+    options:
+      - "Investir dans l’immobilier en Géorgie"
+      - "Développer ou implanter mon entreprise"
+      - "Un Advisory Board pour ma PME"
+    whatsapp: "Ou écrivez-moi directement sur WhatsApp"
+    close: "Fermer"
+    calendar: "Choisissez votre créneau"
   stats:
     - value: "1 000+"
       label: "clients accompagnés en Géorgie avec FFI"

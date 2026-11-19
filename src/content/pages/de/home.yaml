@@ -4,10 +4,18 @@ seo:
   description: "Schweizer Unternehmer mit Sitz in Tiflis: Immobilien-Investments in Georgien mit FFI, dem Marktführer, und Unternehmensberatung für die Ansiedlung in Georgien. Advisory Board für Schweizer KMU."
 
 hero:
-  eyebrow: "Unternehmer · Investor · Strategieberater"
-  title: "Eric Fankhauser"
-  subtitle: "Ihr Vermögen und Ihr Unternehmen dort wachsen lassen, wo die Chancen wirklich liegen"
-  lead: "Dafür braucht es drei Dinge: eine klare Strategie, ein starkes Netzwerk und jemanden, der langfristig an Ihrer Seite bleibt. Genau das bringe ich gemeinsam mit meinen Partnern von Tiflis aus ein: für Investoren, deren Kapital mehr leisten soll, und für Unternehmer, die ihr Unternehmen weiterentwickeln wollen."
+  eyebrow: "Eric Fankhauser · Unternehmer und Investor"
+  title: "Die besten Entscheidungen beginnen mit <em>einem Gespräch</em>"
+  lead: "In Georgien investieren, Ihr Unternehmen entwickeln, sich mit Experten umgeben: Buchen Sie ein kostenloses, unverbindliches Gespräch. Danach sehen Sie Ihre Optionen klar."
+  book:
+    title: "Buchen Sie Ihr kostenloses Gespräch: Worum geht es?"
+    options:
+      - "Immobilien-Investment in Georgien"
+      - "Mein Unternehmen entwickeln oder ansiedeln"
+      - "Ein Advisory Board für mein KMU"
+    whatsapp: "Oder schreiben Sie mir direkt auf WhatsApp"
+    close: "Schliessen"
+    calendar: "Wählen Sie Ihren Termin"
   stats:
     - value: "1’000+"
       label: "begleitete Kunden in Georgien mit FFI"

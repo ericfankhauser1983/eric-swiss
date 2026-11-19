@@ -4,13 +4,15 @@ import HeroBg from '../components/HeroBg.astro';
 import Team from '../components/Team.astro';
 import CtaBand from '../components/CtaBand.astro';
 import VideoFeed from '../components/VideoFeed.astro';
-import { PHOTOS, HERO_VIDEOS, path, type Lang } from '../config/site';
+import Calendly from '../components/Calendly.astro';
+import { PHOTOS, HERO_VIDEOS, CALENDLY, SITE, path, type Lang } from '../config/site';
 import { t } from '../i18n/ui';
 import { page } from '../lib/content';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const ui = t(lang);
 const d = await page(lang, 'home');
+const bookUrls = [CALENDLY.invest[lang], CALENDLY.advisory, CALENDLY.advisory];
 const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTOS.consulting, board: PHOTOS.board };
 ---
 <section class="intro">
@@ -18,19 +20,31 @@ const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTO
   <div class="wrap intro__in">
     <div class="intro__txt">
       <p class="eyebrow">{d.hero.eyebrow}</p>
-      <h1>{d.hero.title}</h1>
-      <p class="intro__sub">{d.hero.subtitle}</p>
+      <h1 set:html={d.hero.title} />
       <p class="lead">{d.hero.lead}</p>
+      <div class="book">
+        <p class="book__t">{d.hero.book.title}</p>
+        <div class="book__opts">
+          {d.hero.book.options.map((o: string, i: number) => (
+            <button type="button" class="book__o" data-book={bookUrls[i]}><span>{o}</span><span class="arrow">→</span></button>
+          ))}
+        </div>
+        <a class="book__wa" href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener">{d.hero.book.whatsapp} <span class="arrow">↗</span></a>
+      </div>
       {d.hero.stats && (
         <ul class="stats">
           {d.hero.stats.map((st: any) => <li><strong>{st.value}</strong><span>{st.label}</span></li>)}
         </ul>
       )}
-      <a class="btn btn--ghost" href={path('contact', lang)}>{ui.cta.book}</a>
     </div>
     <div class="intro__photo"><Photo src={PHOTOS.heroPortrait} alt="Eric Fankhauser" ratio="4 / 5" eager /></div>
   </div>
 </section>
+
+<dialog class="bookdlg" data-bookdlg aria-label={d.hero.book.calendar}>
+  <div class="bookdlg__head"><p>{d.hero.book.calendar}</p><button type="button" data-bookclose aria-label={d.hero.book.close}>×</button></div>
+  <Calendly url={bookUrls[0]} lang={lang} height={640} />
+</dialog>
 
 <section class="section paths">
   {d.paths && (
@@ -77,10 +91,26 @@ const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTO
 
 <style>
   .intro { background: var(--navy); color: var(--cream); position: relative; overflow: hidden; }
-  .intro__in { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 96px); align-items: center; padding-top: clamp(56px, 8vw, 110px); padding-bottom: clamp(56px, 8vw, 110px); }
-  .intro h1 { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 400; margin-bottom: 10px; }
+  .intro__in { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 6vw, 96px); align-items: center; padding-top: clamp(32px, 4.5vw, 64px); padding-bottom: clamp(48px, 6vw, 88px); }
+  .intro h1 { font-size: clamp(2rem, 3.5vw, 3.1rem); font-weight: 400; margin-bottom: 16px; line-height: 1.1; }
+  .intro h1 :global(em) { font-style: normal; color: var(--gold-light); }
+  .book { margin: 0 0 32px; }
+  .book__t { font-family: var(--f-title); font-size: 1.02rem; color: var(--cream); margin: 0 0 12px; }
+  .book__opts { display: grid; gap: 8px; max-width: 560px; }
+  .book__o { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 13px 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(173,142,104,0.55); border-radius: var(--radius); color: var(--cream); font: inherit; font-size: 0.98rem; cursor: pointer; transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.25s var(--ease); }
+  .book__o:first-child { background: var(--gold); border-color: var(--gold); color: var(--cream); }
+  .book__o:hover { border-color: var(--gold-light); background: rgba(173,142,104,0.22); transform: translateX(3px); }
+  .book__o:first-child:hover { background: var(--gold-deep); }
+  .book__wa { display: inline-flex; gap: 6px; margin-top: 12px; font-size: 0.86rem; color: var(--muted-light); text-decoration: underline; text-underline-offset: 3px; }
+  .book__wa:hover { color: var(--gold-light); }
+  .bookdlg { width: min(760px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); padding: 0; border: 0; border-radius: var(--radius); background: var(--cream); box-shadow: 0 40px 120px rgba(0,0,0,0.45); overflow: auto; }
+  .bookdlg::backdrop { background: rgba(10, 18, 45, 0.72); }
+  .bookdlg__head { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; background: var(--navy); color: var(--cream); }
+  .bookdlg__head p { margin: 0; font-family: var(--f-title); font-size: 1.05rem; }
+  .bookdlg__head button { background: none; border: 0; color: var(--cream); font-size: 1.8rem; line-height: 1; cursor: pointer; padding: 0 6px; }
+  .bookdlg :global(.cal) { border: 0; }
   .intro__sub { font-family: var(--f-title); font-size: clamp(1.1rem, 1.8vw, 1.45rem); color: var(--gold-light); margin-bottom: 28px; }
-  .intro .lead { color: var(--muted-light); margin-bottom: 32px; }
+  .intro .lead { color: var(--muted-light); margin-bottom: 26px; font-size: 1.05rem; }
   .stats { list-style: none; padding: 0; margin: 0 0 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 24px; }
   .stats strong { display: block; font-family: var(--f-title); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2.1rem); color: var(--gold-light); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 6px; }
   .stats span { display: block; font-size: 0.82rem; line-height: 1.45; color: var(--muted-light); }
@@ -89,7 +119,7 @@ const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTO
   .paths__head h2 { margin: 0 0 18px; }
   .paths__head .lead { color: var(--muted); margin: 0; }
   .intro__photo { max-width: 440px; justify-self: end; width: 100%; }
-  @media (max-width: 860px) { .intro__in { grid-template-columns: 1fr; } .intro__photo { justify-self: start; max-width: 360px; } }
+  @media (max-width: 860px) { .intro__in { grid-template-columns: 1fr; } .intro__photo { display: none; } }
   .paths__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(20px, 2.5vw, 36px); row-gap: 0; }
   /* chaque carte partage les mêmes lignes (photo, surtitre, titre, texte, lien) : tout reste aligné d'une carte à l'autre */
   .path { display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; text-decoration: none; background: var(--cream); }
@@ -109,3 +139,19 @@ const photo: Record<string, string> = { invest: PHOTOS.invest, consulting: PHOTO
   .story h2 { margin: 0; }
   @media (max-width: 860px) { .story { grid-template-columns: 1fr; } }
 </style>
+<script>
+  const dlg = document.querySelector<HTMLDialogElement>('[data-bookdlg]');
+  const cal = dlg?.querySelector<HTMLElement>('[data-calendly]');
+  document.querySelectorAll<HTMLButtonElement>('[data-book]').forEach((b) => b.addEventListener('click', () => {
+    if (!dlg) return;
+    if (cal) {
+      const q = cal.dataset.calendly!.split('?')[1];
+      cal.dataset.calendly = b.dataset.book + '?' + q;
+      cal.querySelector('a.cal__fallback')?.setAttribute('href', b.dataset.book!);
+    }
+    dlg.showModal();
+    if (cal) (window as any).efMountCalendly?.(cal);
+  }));
+  dlg?.querySelector('[data-bookclose]')?.addEventListener('click', () => dlg.close());
+  dlg?.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+</script>
