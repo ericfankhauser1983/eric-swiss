@@ -5,7 +5,7 @@ date: 2026-11-19
 translationKey: advisory-board-pme-eclairage-externe
 category: entrepreneuriat
 tags: ["Advisory Board", "KMU", "Governance", "Strategie", "Führungskräfte"]
-draft: true
+draft: false
 ---
 
 Ein KMU-Chef trifft jede Woche Entscheidungen, die sein Unternehmen für Jahre binden. Meistens trifft er sie allein. Seine Mitarbeitenden sind von ihm abhängig, sein Umfeld kennt das Geschäft nicht, und sein Treuhänder schaut vor allem auf die Vergangenheit. Diese Einsamkeit habe ich bei Swiss Auto Glass selbst erlebt. Deshalb glaube ich an das **Advisory Board für KMU**: einen kleinen Kreis externer Fachleute, die den Chef herausfordern, ohne seinen Platz einzunehmen.

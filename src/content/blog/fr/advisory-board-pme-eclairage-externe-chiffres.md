@@ -5,7 +5,7 @@ date: 2026-11-19
 translationKey: advisory-board-pme-eclairage-externe
 category: entrepreneuriat
 tags: ["Advisory Board", "PME", "Gouvernance", "Stratégie", "Dirigeants"]
-draft: true
+draft: false
 ---
 
 Un dirigeant de PME prend chaque semaine des décisions qui engagent son entreprise pour des années. Le plus souvent, il les prend seul. Ses collaborateurs dépendent de lui, ses proches ne connaissent pas le métier, et son fiduciaire regarde surtout le passé. J'ai vécu cette solitude chez Swiss Auto Glass. C'est pour ça que je crois à l'**Advisory Board pour PME** : un petit cercle de spécialistes externes qui challenge le patron, sans prendre sa place.

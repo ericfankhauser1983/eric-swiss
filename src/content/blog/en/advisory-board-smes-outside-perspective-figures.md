@@ -5,7 +5,7 @@ date: 2026-11-19
 translationKey: advisory-board-pme-eclairage-externe
 category: entrepreneuriat
 tags: ["Advisory Board", "SMEs", "Governance", "Strategy", "Business leaders"]
-draft: true
+draft: false
 ---
 
 Every week, an SME owner makes decisions that commit the company for years. Most of the time, they make them alone. Their employees depend on them, their family does not know the business, and their accountant mostly looks at the past. I lived that loneliness at Swiss Auto Glass. That is why I believe in the **advisory board for SMEs**: a small circle of outside specialists who challenge the boss, without taking their place.
