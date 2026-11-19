@@ -6,8 +6,8 @@ seo:
 
 hero:
   eyebrow: "FFI · Immobilier en Géorgie"
-  title: "Investissez en Géorgie avec <em>le leader du marché</em>"
-  lead: "Avec FFI, nous investissons chaque mois plusieurs millions sur le marché géorgien pour le compte de privés, de family offices et de fonds d’investissement, avec une stratégie adaptée à chaque client. Réservez un appel pour parler de votre projet."
+  title: "Investir juste commence par <em>une conversation</em>"
+  lead: "Avant de parler de biens, nous parlons de vous : vos objectifs, votre budget, votre horizon. C’est ce premier échange, gratuit et sans engagement, qui permet de construire la bonne stratégie, avec FFI, le leader de l’investissement immobilier en Géorgie."
   person: "Eric Fankhauser"
   role: "Associé FFI · basé à Tbilissi"
   proofs:
@@ -16,12 +16,12 @@ hero:
     - "Plusieurs millions investis chaque mois"
 
 steps:
-  - "Réservez votre appel"
+  - "Réservez votre échange"
   - "Simulez votre investissement"
   - "Pourquoi la Géorgie ?"
 
 booking:
-  title: "Choisissez votre créneau"
+  title: "Réservez votre échange gratuit"
   text: "Un appel gratuit et sans engagement : vos objectifs, votre budget et les opportunités du moment."
 
 simulator:

@@ -6,8 +6,8 @@ seo:
 
 hero:
   eyebrow: "FFI · Real estate in Georgia"
-  title: "Invest in Georgia with <em>the market leader</em>"
-  lead: "With FFI, we invest several million every month in the Georgian market on behalf of private investors, family offices and investment funds, with a strategy tailored to each client. Book a call to discuss your project."
+  title: "Investing right starts with <em>a conversation</em>"
+  lead: "Before we talk about properties, we talk about you: your goals, your budget, your time frame. This first conversation, free and with no obligation, is what lets us build the right strategy, with FFI, the leader in real estate investment in Georgia."
   person: "Eric Fankhauser"
   role: "FFI partner · based in Tbilisi"
   proofs:
@@ -21,7 +21,7 @@ steps:
   - "Why Georgia?"
 
 booking:
-  title: "Pick your time slot"
+  title: "Book your free call"
   text: "A free, no-obligation call: your goals, your budget and the current opportunities."
 
 simulator:
