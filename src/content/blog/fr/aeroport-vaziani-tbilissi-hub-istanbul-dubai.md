@@ -6,7 +6,7 @@ translationKey: aeroport-vaziani-tbilissi-hub
 category: immobilier
 tags: ["Géorgie", "Tbilissi", "Aéroport", "Aviation", "Tourisme", "Investir en Géorgie"]
 source: "https://www.francefinance.ae/articles-blog/georgie-nouvel-aeroport-tbilissi-vaziani-20-millions-passagers"
-draft: true
+draft: false
 ---
 
 J'ai commencé ma vie professionnelle à 15 ans, comme apprenti chez Swissair. À 18 ans, la compagnie m'a envoyé un an à New York. J'y étais le 11 septembre 2001. Quelques semaines plus tard, Swissair s'arrêtait. J'en ai gardé une conviction : un aéroport ne vaut que par ce qui s'y connecte. C'est avec ce regard que je lis le projet du nouvel aéroport de Tbilissi, et ce qu'il peut changer pour **investir en Géorgie**.

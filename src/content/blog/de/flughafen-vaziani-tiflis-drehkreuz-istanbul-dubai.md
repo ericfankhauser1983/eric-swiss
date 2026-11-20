@@ -6,7 +6,7 @@ translationKey: aeroport-vaziani-tbilissi-hub
 category: immobilier
 tags: ["Georgien", "Tiflis", "Flughafen", "Luftfahrt", "Tourismus", "In Georgien investieren"]
 source: "https://www.francefinance.ae/articles-blog/georgie-nouvel-aeroport-tbilissi-vaziani-20-millions-passagers"
-draft: true
+draft: false
 ---
 
 Mein Berufsleben begann mit 15 Jahren, als Lehrling bei der Swissair. Mit 18 schickte mich die Fluggesellschaft für ein Jahr nach New York. Am 11. September 2001 war ich dort. Wenige Wochen später stellte die Swissair den Betrieb ein. Eine Überzeugung ist mir geblieben: Ein Flughafen ist nur so viel wert wie das, was mit ihm verbunden ist. Mit diesem Blick lese ich das Projekt des neuen Flughafens von Tiflis, und was es verändern kann für alle, die **in Georgien investieren** wollen.
