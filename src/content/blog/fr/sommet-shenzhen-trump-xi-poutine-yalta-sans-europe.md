@@ -5,7 +5,7 @@ date: 2026-11-21
 translationKey: sommet-shenzhen-trump-xi-poutine
 category: geopolitique
 tags: ["Chine", "Russie", "États-Unis", "Iran", "Caucase", "Géorgie", "APEC"]
-draft: true
+draft: false
 ---
 
 Le 19 novembre, à Shenzhen, en marge du sommet de l'APEC, Donald Trump, Xi Jinping et Vladimir Poutine se sont retrouvés pour la première rencontre à trois de l'histoire entre les dirigeants des États-Unis, de la Chine et de la Russie. Environ une heure et demie de discussion, aucun dirigeant européen à la table. Avant le sommet, Bruxelles et Berlin parlaient d'un nouveau « Yalta ». Depuis Tbilissi, j'ai surtout regardé une ligne : celle sur l'Iran. Elle n'existe pas. Et ce silence en dit plus long, pour ceux qui veulent **investir en Géorgie**, que tout le reste du communiqué.

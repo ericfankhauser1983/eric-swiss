@@ -5,7 +5,7 @@ date: 2026-11-21
 translationKey: sommet-shenzhen-trump-xi-poutine
 category: geopolitique
 tags: ["China", "Russia", "United States", "Iran", "Caucasus", "Georgia", "APEC"]
-draft: true
+draft: false
 ---
 
 On 19 November in Shenzhen, on the sidelines of the APEC summit, Donald Trump, Xi Jinping and Vladimir Putin held the first-ever three-way meeting between the leaders of the United States, China and Russia. Around an hour and a half of talks, and no European leader at the table. Before the summit, Brussels and Berlin were talking about a new "Yalta". From Tbilisi, I mostly watched for one line: the one on Iran. There isn't one. And for anyone who wants to **invest in Georgia**, that silence says more than the rest of the communiqué.
