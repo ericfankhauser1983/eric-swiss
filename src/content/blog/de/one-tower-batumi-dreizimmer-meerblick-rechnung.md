@@ -6,7 +6,7 @@ translationKey: one-tower-batumi-t3-chiffres
 category: immobilier
 tags: ["Batumi", "Immobilien Batumi", "In Georgien investieren", "Kauf ab Plan", "Mietrendite"]
 source: "https://www.francefinance.ae/articles-blog/one-tower-batumi-vue-mer-trois-chambres"
-draft: true
+draft: false
 ---
 
 Wenn mich ein Investor nach **Immobilien in Batumi** fragt, lautet die erste Frage fast immer gleich: «Wie viel bringt das?» Das ist die falsche erste Frage. Die richtige lautet: «Wie viel muss ich einbringen, wann, und was passiert, wenn die Annahmen nicht aufgehen?» Ich nehme hier einen echten Fall, eine Dreizimmerwohnung im One Tower, und rechne ihn Zeile für Zeile durch, so wie ich es mit meinen Kunden mache.

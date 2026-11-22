@@ -6,7 +6,7 @@ translationKey: one-tower-batumi-t3-chiffres
 category: immobilier
 tags: ["Batumi", "Immobilier Batumi", "Investir en Géorgie", "Achat sur plan", "Rendement locatif"]
 source: "https://www.francefinance.ae/articles-blog/one-tower-batumi-vue-mer-trois-chambres"
-draft: true
+draft: false
 ---
 
 Quand un investisseur me parle d'**immobilier à Batumi**, il me demande presque toujours la même chose : « Combien ça rapporte ? » C'est la mauvaise première question. La bonne, c'est : « Combien je dois sortir, quand, et qu'est-ce qui se passe si les hypothèses ne se réalisent pas ? » Je prends ici un cas réel, un trois-pièces à One Tower, et je le chiffre ligne par ligne, comme je le fais avec mes clients.

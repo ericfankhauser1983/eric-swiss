@@ -6,7 +6,7 @@ translationKey: one-tower-batumi-t3-chiffres
 category: immobilier
 tags: ["Batumi", "Batumi real estate", "Invest in Georgia", "Off-plan", "Rental yield"]
 source: "https://www.francefinance.ae/articles-blog/one-tower-batumi-vue-mer-trois-chambres"
-draft: true
+draft: false
 ---
 
 When an investor asks me about **Batumi real estate**, the first question is almost always the same: "What does it return?" That is the wrong first question. The right one is: "How much do I have to put in, when, and what happens if the assumptions don't hold?" Here I take a real case, a three-bedroom apartment at One Tower, and I cost it line by line, the way I do with my clients.
