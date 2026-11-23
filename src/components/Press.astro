@@ -16,14 +16,14 @@ const d = await page(lang, 'press');
     )}
     {d.items.map((it: any) => (
       <article class="press reveal">
-        <a class="press__cover" href={it.pdf} target="_blank" rel="noopener" aria-label={`${it.media} — ${d.read}`}>
+        <a class="press__cover" href={it.pdf ?? it.url} target="_blank" rel="noopener" aria-label={`${it.media} — ${it.cta ?? d.read}`}>
           <img src={it.cover} alt={`${it.media} ${it.meta}`} width="900" height="1200" loading="lazy" />
         </a>
         <div class="press__txt">
           <p class="press__media">{it.media}<span>{it.meta}</span></p>
           <h3>{it.title}</h3>
           <p>{it.text}</p>
-          <a class="btn btn--navy" href={it.pdf} target="_blank" rel="noopener">{d.read} <span class="arrow">↗</span></a>
+          <a class="btn btn--navy" href={it.pdf ?? it.url} target="_blank" rel="noopener">{it.cta ?? d.read} <span class="arrow">↗</span></a>
         </div>
       </article>
     ))}
