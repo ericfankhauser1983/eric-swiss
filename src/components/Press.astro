@@ -15,10 +15,16 @@ const d = await page(lang, 'press');
       </div>
     )}
     {d.items.map((it: any) => (
-      <article class="press reveal">
-        <a class="press__cover" href={it.pdf ?? it.url} target="_blank" rel="noopener" aria-label={`${it.media} — ${it.cta ?? d.read}`}>
-          <img src={it.cover} alt={`${it.media} ${it.meta}`} width="900" height="1200" loading="lazy" />
-        </a>
+      <article class:list={["press reveal", { "press--video": it.youtube }]}>
+        {it.youtube ? (
+          <div class="press__video">
+            <iframe src={`https://www.youtube-nocookie.com/embed/${it.youtube}?rel=0&modestbranding=1`} title={it.title} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+          </div>
+        ) : (
+          <a class="press__cover" href={it.pdf ?? it.url} target="_blank" rel="noopener" aria-label={`${it.media} — ${it.cta ?? d.read}`}>
+            <img src={it.cover} alt={`${it.media} ${it.meta}`} width="900" height="1200" loading="lazy" />
+          </a>
+        )}
         <div class="press__txt">
           <p class="press__media">{it.media}<span>{it.meta}</span></p>
           <h3>{it.title}</h3>
@@ -34,6 +40,9 @@ const d = await page(lang, 'press');
   .press + .press { margin-top: 64px; }
   .press__cover { display: block; max-width: 340px; box-shadow: 0 24px 60px rgba(17, 33, 80, 0.22); transition: transform 0.5s var(--ease); }
   .press__cover:hover { transform: translateY(-6px) rotate(-1deg); }
+  .press--video { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+  .press__video { position: relative; aspect-ratio: 16 / 9; width: 100%; box-shadow: 0 24px 60px rgba(17, 33, 80, 0.22); background: var(--navy); }
+  .press__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .press__cover img { display: block; width: 100%; height: auto; }
   .press__media { font-family: var(--f-title); font-size: 1.05rem; color: var(--gold-deep); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin-bottom: 14px; }
   .press__media span { font-family: var(--f-text); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
