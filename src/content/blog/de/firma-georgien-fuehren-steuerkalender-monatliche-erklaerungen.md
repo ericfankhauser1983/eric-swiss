@@ -5,7 +5,7 @@ date: 2026-11-23
 translationKey: gerer-societe-georgie-calendrier-fiscal
 category: entrepreneuriat
 tags: ["Georgien", "Steuern", "Firmengründung", "KMU", "Buchhaltung"]
-draft: true
+draft: false
 ---
 
 Eine Firma in Georgien zu gründen dauert ein paar Tage. Sie Monat für Monat sauber zu führen, ist eine andere Sache. In der Schweiz war ich einen jährlichen Rhythmus gewohnt: Abschluss, der Treuhänder erstellt die Steuererklärung, man bezahlt. In Georgien funktionieren **die Unternehmenssteuern** im Monatstakt. Wer das nicht von Anfang an versteht, merkt es oft erst an einer Busse. Hier ist der Kalender, den ich mit jedem Kunden aufsetze, der sich hier niederlässt.

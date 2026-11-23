@@ -5,7 +5,7 @@ date: 2026-11-23
 translationKey: gerer-societe-georgie-calendrier-fiscal
 category: entrepreneuriat
 tags: ["Georgia", "Tax", "Company formation", "SME", "Accounting"]
-draft: true
+draft: false
 ---
 
 Setting up a company in Georgia takes a few days. Running it properly, month after month, is another matter. In Switzerland I was used to an annual rhythm: close the accounts, the fiduciary prepares the return, you pay. In Georgia, **business taxation** runs on a monthly cycle. Anyone who doesn't grasp this from the start often finds out through a penalty. Here is the calendar I set up with every client who establishes a business here.

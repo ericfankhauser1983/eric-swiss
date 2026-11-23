@@ -5,7 +5,7 @@ date: 2026-11-23
 translationKey: gerer-societe-georgie-calendrier-fiscal
 category: entrepreneuriat
 tags: ["Géorgie", "Fiscalité", "Créer une société", "PME", "Comptabilité"]
-draft: true
+draft: false
 ---
 
 Créer une société en Géorgie prend quelques jours. La faire vivre proprement, mois après mois, c'est une autre affaire. En Suisse, j'avais l'habitude d'un rythme annuel : on boucle les comptes, la fiduciaire prépare la déclaration, on paie. En Géorgie, **la fiscalité des entreprises** se vit au mois. Celui qui ne l'a pas compris dès le départ le découvre souvent par une pénalité. Voici le calendrier que je mets en place avec chaque client qui s'implante ici.
