@@ -6,7 +6,7 @@ translationKey: impot-fortune-europe-georgie
 category: immobilier
 tags: ["Immobiliensteuer Georgien", "Vermögenssteuer", "In Georgien investieren", "Mietrendite", "Europa"]
 source: "https://www.francefinance.ae/articles-blog/impot-sur-la-fortune-europe-hongrie-pays-bas-parlement-europeen"
-draft: true
+draft: false
 ---
 
 Zwanzig Jahre lang hat Europa seine Vermögenssteuern eine nach der anderen abgeschafft. Diesen Herbst dreht sich der Wind. Ungarn führt eine ein, die Niederlande verschärfen die Besteuerung des Vermögens, und das Europäische Parlament prüft eine Mindeststeuer auf grosse Vermögen. Für einen Investor ist die Schlussfolgerung einfach: Ein Wechsel von einem EU-Land ins andere schützt immer weniger. Deshalb betrachte ich die **Immobiliensteuer in Georgien** nicht als Bonus, sondern als Teil der Rendite.

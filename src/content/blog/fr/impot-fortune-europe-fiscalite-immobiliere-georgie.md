@@ -6,7 +6,7 @@ translationKey: impot-fortune-europe-georgie
 category: immobilier
 tags: ["Fiscalité immobilière Géorgie", "Impôt sur la fortune", "Investir en Géorgie", "Rendement locatif", "Europe"]
 source: "https://www.francefinance.ae/articles-blog/impot-sur-la-fortune-europe-hongrie-pays-bas-parlement-europeen"
-draft: true
+draft: false
 ---
 
 Pendant vingt ans, l'Europe a supprimé ses impôts sur la fortune les uns après les autres. Cet automne, le mouvement s'inverse. La Hongrie en crée un, les Pays-Bas durcissent la taxation du patrimoine et le Parlement européen étudie un impôt minimum sur les grandes fortunes. Pour un investisseur, la conclusion est simple : changer de pays à l'intérieur de l'Union protège de moins en moins. C'est pour cela que je regarde la **fiscalité immobilière en Géorgie** non pas comme un bonus, mais comme une partie du rendement.

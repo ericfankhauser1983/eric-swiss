@@ -6,7 +6,7 @@ translationKey: impot-fortune-europe-georgie
 category: immobilier
 tags: ["Property tax Georgia", "Wealth tax", "Invest in Georgia", "Rental yield", "Europe"]
 source: "https://www.francefinance.ae/articles-blog/impot-sur-la-fortune-europe-hongrie-pays-bas-parlement-europeen"
-draft: true
+draft: false
 ---
 
 For twenty years, Europe abolished its wealth taxes one after another. This autumn, the tide is turning. Hungary is creating one, the Netherlands is tightening the taxation of assets, and the European Parliament is studying a minimum tax on large fortunes. For an investor, the conclusion is simple: moving from one EU country to another protects you less and less. That is why I see **property tax in Georgia** not as a bonus, but as part of the return.
