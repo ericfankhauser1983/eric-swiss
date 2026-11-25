@@ -6,7 +6,7 @@ translationKey: batumi-toutes-saisons-location
 category: immobilier
 tags: ["Batumi", "Batumi real estate", "Invest in Georgia", "Short-term rental", "Rental yield"]
 source: "https://www.francefinance.ae/articles-blog/batumi-meilleure-destination-toutes-saisons-europe-2026"
-draft: true
+draft: false
 ---
 
 On 17 October, in Kotor, Montenegro, Batumi was named "Europe's Leading All-Season Destination" at the World Travel Awards for the fourth year running. It beat Salzburg, Geneva, Munich, Stockholm, Budapest, Oslo and Tallinn. For anyone looking at **Batumi real estate**, the award raises a real question: does the city actually live all year round, or only from July to September? I looked at the numbers, and the answer is more interesting than a simple yes.

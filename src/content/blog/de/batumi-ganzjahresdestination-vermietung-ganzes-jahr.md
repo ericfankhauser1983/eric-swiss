@@ -6,7 +6,7 @@ translationKey: batumi-toutes-saisons-location
 category: immobilier
 tags: ["Batumi", "Immobilien Batumi", "In Georgien investieren", "Kurzzeitvermietung", "Mietrendite"]
 source: "https://www.francefinance.ae/articles-blog/batumi-meilleure-destination-toutes-saisons-europe-2026"
-draft: true
+draft: false
 ---
 
 Am 17. Oktober wurde Batumi in Kotor, Montenegro, zum vierten Mal in Folge bei den World Travel Awards zur «besten Ganzjahresdestination Europas» gekürt. Die Stadt setzte sich gegen Salzburg, Genf, München, Stockholm, Budapest, Oslo und Tallinn durch. Wer sich für **Immobilien in Batumi** interessiert, stellt sich damit eine echte Frage: Lebt die Stadt wirklich das ganze Jahr, oder nur von Juli bis September? Ich habe mir die Zahlen angesehen, und die Antwort ist interessanter als ein einfaches Ja.

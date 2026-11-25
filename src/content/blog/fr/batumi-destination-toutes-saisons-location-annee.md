@@ -6,7 +6,7 @@ translationKey: batumi-toutes-saisons-location
 category: immobilier
 tags: ["Batumi", "Immobilier Batumi", "Investir en Géorgie", "Location courte durée", "Rendement locatif"]
 source: "https://www.francefinance.ae/articles-blog/batumi-meilleure-destination-toutes-saisons-europe-2026"
-draft: true
+draft: false
 ---
 
 Le 17 octobre, à Kotor, au Monténégro, Batoumi a reçu pour la quatrième année consécutive le titre de « meilleure destination toutes saisons d'Europe » aux World Travel Awards. Elle devançait Salzbourg, Genève, Munich, Stockholm, Budapest, Oslo et Tallinn. Pour qui s'intéresse à l'**immobilier à Batumi**, ce prix pose une vraie question : la ville vit-elle vraiment toute l'année, ou seulement de juillet à septembre ? J'ai regardé les chiffres, et la réponse est plus intéressante qu'un simple oui.
