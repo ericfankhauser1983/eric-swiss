@@ -5,7 +5,7 @@ date: 2026-11-26
 translationKey: corridor-median-30-millions-tonnes-2029
 category: geopolitique
 tags: ["Mittlerer Korridor", "Georgien", "Kasachstan", "Aserbaidschan", "China", "Logistik", "Iran"]
-draft: true
+draft: false
 ---
 
 Am 19. November unterzeichneten Donald Trump, Xi Jinping und Wladimir Putin in Shenzhen eine «Friedenserklärung» mit vier Punkten. Einer davon verspricht, das Angebot an raffinierten Erdölprodukten zu erhöhen, und betont die Bedeutung «stabiler Energieflüsse». Laut Reuters sagt der Text kein Wort zum Krieg mit dem Iran. Auch Hormus wird nicht erwähnt, obwohl die Meerenge weiterhin geschlossen ist ([Reuters, via Club of Mozambique](https://clubofmozambique.com/news/trump-xi-and-putin-release-peace-declaration-from-unprecedented-summit/); [NTD](https://www.ntd.com/trump-xi-putin-agree-to-peace-declaration-pledge-nuclear-risk-talks_1186323.html)). Drei Tage zuvor hatte eine georgische Ministerin in Tiflis ein konkretes Ziel für den **Mittleren Korridor** angekündigt. Von hier aus gesehen sagt dieser Kontrast viel. Die Grossmächte reden über Stabilität. Die Region baut die Routen, die sie möglich machen.

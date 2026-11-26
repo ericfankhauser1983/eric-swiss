@@ -5,7 +5,7 @@ date: 2026-11-26
 translationKey: corridor-median-30-millions-tonnes-2029
 category: geopolitique
 tags: ["Corridor médian", "Géorgie", "Kazakhstan", "Azerbaïdjan", "Chine", "Logistique", "Iran"]
-draft: true
+draft: false
 ---
 
 Le 19 novembre, à Shenzhen, Donald Trump, Xi Jinping et Vladimir Poutine ont signé une « déclaration de paix » en quatre points. L'un d'eux promet d'augmenter l'offre de produits pétroliers raffinés et rappelle l'importance de « flux d'énergie stables ». Ce texte ne dit pas un mot de la guerre avec l'Iran, selon Reuters. Il ne parle pas non plus d'Ormuz, alors que le détroit est toujours fermé ([Reuters, via Club of Mozambique](https://clubofmozambique.com/news/trump-xi-and-putin-release-peace-declaration-from-unprecedented-summit/) ; [NTD](https://www.ntd.com/trump-xi-putin-agree-to-peace-declaration-pledge-nuclear-risk-talks_1186323.html)). Trois jours plus tôt, à Tbilissi, une ministre géorgienne annonçait un objectif chiffré pour le **corridor médian**. Vu d'ici, le contraste dit beaucoup. Les grandes puissances parlent de stabilité. La région, elle, construit les routes qui la rendent possible.

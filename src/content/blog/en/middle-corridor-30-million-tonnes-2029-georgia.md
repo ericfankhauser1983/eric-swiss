@@ -5,7 +5,7 @@ date: 2026-11-26
 translationKey: corridor-median-30-millions-tonnes-2029
 category: geopolitique
 tags: ["Middle Corridor", "Georgia", "Kazakhstan", "Azerbaijan", "China", "Logistics", "Iran"]
-draft: true
+draft: false
 ---
 
 On 19 November in Shenzhen, Donald Trump, Xi Jinping and Vladimir Putin signed a four-point "peace declaration". One point pledges to increase the supply of refined petroleum products and stresses the importance of "stable energy flows". According to Reuters, the text says nothing about the war with Iran. It does not mention Hormuz either, although the strait is still closed ([Reuters, via Club of Mozambique](https://clubofmozambique.com/news/trump-xi-and-putin-release-peace-declaration-from-unprecedented-summit/); [NTD](https://www.ntd.com/trump-xi-putin-agree-to-peace-declaration-pledge-nuclear-risk-talks_1186323.html)). Three days earlier in Tbilisi, a Georgian minister had announced a concrete target for the **Middle Corridor**. Seen from here, the contrast says a lot. The great powers talk about stability. The region is building the routes that make it possible.
