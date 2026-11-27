@@ -6,7 +6,7 @@ translationKey: fmi-croissance-georgie-7-2
 category: immobilier
 tags: ["Georgia", "IMF", "Growth", "Invest in Georgia", "Lari", "Inflation"]
 source: "https://www.francefinance.ae/articles-blog/georgie-fmi-croissance-7-2-dette-33-pourcent"
-draft: true
+draft: false
 ---
 
 On 13 November, an IMF mission ended a five-day visit to Tbilisi. Its conclusion: Georgia should grow by **7.2% in 2026**. In April, the same IMF expected 5.3%. If you want to **invest in Georgia**, this figure deserves more than a headline. I read the statement in full, with its good news and its warnings. Here is what I took from it.

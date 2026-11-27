@@ -6,7 +6,7 @@ translationKey: fmi-croissance-georgie-7-2
 category: immobilier
 tags: ["Georgien", "IWF", "Wachstum", "In Georgien investieren", "Lari", "Inflation"]
 source: "https://www.francefinance.ae/articles-blog/georgie-fmi-croissance-7-2-dette-33-pourcent"
-draft: true
+draft: false
 ---
 
 Am 13. November beendete eine Mission des IWF einen fünftägigen Besuch in Tiflis. Ihr Fazit: Georgien dürfte **2026 um 7,2 % wachsen**. Im April rechnete derselbe IWF noch mit 5,3 %. Wer **in Georgien investieren** will, sollte bei dieser Zahl nicht bei der Schlagzeile stehen bleiben. Ich habe die Erklärung vollständig gelesen, mit ihren guten Nachrichten und ihren Warnungen. Hier ist, was ich daraus mitnehme.

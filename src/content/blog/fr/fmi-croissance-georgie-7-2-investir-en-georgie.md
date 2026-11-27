@@ -6,7 +6,7 @@ translationKey: fmi-croissance-georgie-7-2
 category: immobilier
 tags: ["Géorgie", "FMI", "Croissance", "Investir en Géorgie", "Lari", "Inflation"]
 source: "https://www.francefinance.ae/articles-blog/georgie-fmi-croissance-7-2-dette-33-pourcent"
-draft: true
+draft: false
 ---
 
 Le 13 novembre, une mission du FMI a terminé une visite de cinq jours à Tbilissi. Sa conclusion : la Géorgie devrait croître de **7,2 % en 2026**. En avril, le même FMI prévoyait 5,3 %. Pour qui veut **investir en Géorgie**, ce chiffre mérite mieux qu'un titre. Je l'ai lu en entier, avec ses bonnes nouvelles et ses mises en garde. C'est ce que je vous propose ici.
