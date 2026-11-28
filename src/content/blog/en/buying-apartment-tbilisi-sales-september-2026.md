@@ -6,7 +6,7 @@ translationKey: tbilissi-ventes-septembre-2026
 category: immobilier
 tags: ["Tbilisi", "Buying an apartment in Tbilisi", "Invest in Georgia", "Georgia real estate", "Property market"]
 source: "https://www.francefinance.ae/articles-blog/tbilissi-ventes-appartements-septembre-2026-hausse-24-pourcent"
-draft: true
+draft: false
 ---
 
 In September 2026, 4,245 apartments changed hands in Tbilisi, for a total of $376 million. That is 6.4% more transactions than a year earlier, but above all 24.1% more value. These Colliers Georgia figures, reported by [FFI](https://www.francefinance.ae/articles-blog/tbilissi-ventes-appartements-septembre-2026-hausse-24-pourcent), answer the question almost all my clients ask me: is this still the right time for **buying an apartment in Tbilisi**? I took them apart, and they tell a more interesting story than a simple record.

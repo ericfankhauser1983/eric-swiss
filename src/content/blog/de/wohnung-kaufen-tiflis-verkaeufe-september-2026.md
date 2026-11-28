@@ -6,7 +6,7 @@ translationKey: tbilissi-ventes-septembre-2026
 category: immobilier
 tags: ["Tiflis", "Wohnung kaufen in Tiflis", "In Georgien investieren", "Immobilien Georgien", "Immobilienmarkt"]
 source: "https://www.francefinance.ae/articles-blog/tbilissi-ventes-appartements-septembre-2026-hausse-24-pourcent"
-draft: true
+draft: false
 ---
 
 Im September 2026 wechselten in Tiflis 4245 Wohnungen den Besitzer, für insgesamt 376 Millionen Dollar. Das sind 6,4 % mehr Transaktionen als ein Jahr zuvor, vor allem aber 24,1 % mehr Wert. Diese Zahlen von Colliers Georgia, aufgegriffen von [FFI](https://www.francefinance.ae/articles-blog/tbilissi-ventes-appartements-septembre-2026-hausse-24-pourcent), beantworten die Frage, die mir fast alle meine Kunden stellen: Ist jetzt noch der richtige Zeitpunkt, **eine Wohnung in Tiflis zu kaufen**? Ich habe sie genau angeschaut, und sie erzählen eine spannendere Geschichte als einen blossen Rekord.

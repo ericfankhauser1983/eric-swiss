@@ -6,7 +6,7 @@ translationKey: tbilissi-ventes-septembre-2026
 category: immobilier
 tags: ["Tbilissi", "Acheter un appartement à Tbilissi", "Investir en Géorgie", "Immobilier Géorgie", "Marché immobilier"]
 source: "https://www.francefinance.ae/articles-blog/tbilissi-ventes-appartements-septembre-2026-hausse-24-pourcent"
-draft: true
+draft: false
 ---
 
 En septembre 2026, 4 245 appartements ont changé de mains à Tbilissi, pour un total de 376 millions de dollars. C'est 6,4 % de transactions en plus qu'un an plus tôt, mais surtout 24,1 % de valeur en plus. Ces chiffres de Colliers Georgia, repris par [FFI](https://www.francefinance.ae/articles-blog/tbilissi-ventes-appartements-septembre-2026-hausse-24-pourcent), répondent à la question que me posent presque tous mes clients : est-ce encore le bon moment pour **acheter un appartement à Tbilissi** ? Je les ai décortiqués, et ils racontent une histoire plus intéressante qu'un simple record.
